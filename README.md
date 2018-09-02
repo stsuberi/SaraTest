@@ -89,10 +89,10 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 **To add Python packages to the local PyPi Server repository:**
   1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/8.3/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
   2. For each Shell or script you add into CloudShell, do one of the following (from an online computer):
-  * Connect to the Internet and download each dependency specified in the requirements.txt file with the following command: 
+      * Connect to the Internet and download each dependency specified in the requirements.txt file with the following command: 
 pip download -r requirements.txt. The Shell or script's requirements are downloaded as zip files.
 
-  * In the Quali Community’s Integrations page, locate the Shell and click the Shell's Download link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
+      * In the Quali Community’s Integrations page, locate the Shell and click the Shell's Download link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
 
 3. Place these zip files in the local PyPi Server repository.
  
@@ -119,12 +119,12 @@ In CloudShell, the component that models the device is called a resource. It is 
   3. Enter the Ixia chassis **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, as follows: 
-  * If Ixia Chassis is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
-  * If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
-  * Controller TCP Port: 8022 (Linux IxOS ssh port)
-  * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
-  * Controller Address: address of the IxTclServer
-  * Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
+      * If Ixia Chassis is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
+      * If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
+          * Controller TCP Port: 8022 (Linux IxOS ssh port)
+      * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
+          * Controller Address: address of the IxTclServer
+          * Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
   6. Click **Continue**.
 
 This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
