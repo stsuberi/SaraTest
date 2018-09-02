@@ -114,7 +114,7 @@ full path"/>`
 In CloudShell, the component that models the device is called a resource. It is based on the Shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
 **To create a resource for the device:**
-  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. ADD IMAGE
+  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. ![](add_new_resource.png)
   2. From the list, select the **Ixia Chassis 2G Shell**.
   3. Enter the Ixia chassis **Name** and **IP address**.
   4. Click **Create**.
