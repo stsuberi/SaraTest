@@ -114,6 +114,8 @@ full path"/>`
 ### Configuring a new resource
 In CloudShell, the component that models the device is called a resource. It is based on the Shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
+You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
+
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. ADD IMAGE
   2. From the list, select the **Ixia Chassis 2G Shell**.
