@@ -177,7 +177,7 @@ See [Configuring a new device](#configuring-a-new-device).
 ## References
 Additional technical documentation is available in the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
 
-For Quali discussion forums, click here. 
+For Quali discussion forums, click [here](https://community.quali.com/spaces/13/index.html?__hstc=46213176.aaafbe5adb338215377a985e0c025079.1467146361756.1471392182746.1471395614692.11&__hssc=46213176.1.1471395614692&__hsfp=2437115919). 
 
 ## Release Notes
 ### What's new:
