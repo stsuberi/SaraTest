@@ -172,7 +172,7 @@ The attribute names and types are listed in the following table:
 
 Scenario 1 - Discover a new Device
 
-See Configuring a new device.
+See [Configuring a new device](#configuring-a-new-device).
 
 ## References
 Additional technical documentation is available in the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
