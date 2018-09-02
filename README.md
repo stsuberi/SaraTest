@@ -35,11 +35,12 @@ For detailed information about the Shell’s structure and attributes, see the [
 The Ixia Chassis 2G Shell is available from the [Quali Developer Center](https://community.quali.com/integrations). Download the files into a temporary location on your local machine. 
 
 The Shell comprises:
+
 |File name|Description|
 |---|---|
-|`ixia_chassis_shell.zip`|`Shell package`|
-|`ixia_chassis_shell_offline_requirements.zip`|`Shell Python dependecies (for offline deployments only)`|
-|`Ixia Chassis Shell Doc.ReadMe`|`Documentation`|
+|`ixia_chassis_shell.zip`|Shell package|
+|`ixia_chassis_shell_offline_requirements.zip`|Shell Python dependecies (for offline deployments only)|
+|`Ixia Chassis Shell Doc.ReadMe`|Documentation|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
@@ -60,7 +61,7 @@ This section describes how to import, configure and modify the Ixia Chassis 2G S
 
 ### Importing the Shell into CloudShell
 
-**To import the Shell into CloudShell**
+**To import the Shell into CloudShell:**
   1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
   3. Click **Import**.
@@ -68,7 +69,7 @@ This section describes how to import, configure and modify the Ixia Chassis 2G S
 
 The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
-### Offline installation of a Shell
+## Offline installation of a Shell
 ___
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
 ___
@@ -79,12 +80,12 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 2. For CloudShell version 8.2, perform the appropriate procedure: **Add Shell and script packages to the local PyPi Server repository** or **Set the python pythonOfflineRepositoryPath configuration key**.
 3. For CloudShell versions prior to 8.2, see **Set the python pythonOfflineRepositoryPath configuration key**.
 
-#### Add Shell and script packages to the local PyPi Server repository
+### Add Shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Servercomputer (by default `C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository`).
 
 For more information, see [Configuring CloudShell to Execute Python Commands in Offline Mode](http://help.quali.com/Online%20Help/8.3/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=Configuring%20CloudShell%20to%20Execute%20Python%20Commands%20in%20Offline%20Mode).
 
-**To add Python packages to the local PyPi Server repository**
+**To add Python packages to the local PyPi Server repository:**
   1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in **Add Python packages to the local PyPi Server repository (offlinemode)**. 
   2. For each Shell or script you add into CloudShell, do one of the following (from an online computer):
   * Connect to the Internet and download each dependency specified in the **requirements.txt** file with the following command: 
@@ -95,10 +96,10 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the Shell and click the Shell's **Download link**. In the page that is displayed, from the **Downloads** area, extract the dependencies package zip file.
  3. Place these zip files in the local PyPi Server repository.
  
-#### Set the python PythonOfflineRepositoryPath configuration key
+### Set the python PythonOfflineRepositoryPath configuration key
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the PythonOfflineRepositoryPath key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
-**To set the offline python repository**
+**To set the offline python repository:**
 1. Download the `ixia_chassis_shell_offline_requirments.zip` file (see **Downloading the Shell**).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 3.  On the Quali Server machine, in the `~\CloudShell\Server\customer.config` file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
@@ -112,7 +113,7 @@ full path"/>`
 ### Configuring a new device
 In CloudShell, the component that models the device is called a resource. It is based on the Shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
-**To create a resource for the device**
+**To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. ADD IMAGE
   2. From the list, select the **Ixia Chassis 2G Shell**.
   3. Enter the Ixia chassis **Name** and **IP address**.
@@ -127,11 +128,11 @@ c	If Ixia Chassis is not directly accessible to the Execution Server then there 
 
 This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
 
-### Updating Python Dependencies for Shells
+## Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a Shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
 ### Updating offline Python dependencies
-**To update offline Python dependencies**
+**To update offline Python dependencies:**
 1. Download the latest Python dependencies package zip file locally.
 2. Extract the zip file to the suitable offline package folder(s). 
 3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the **Configure the Execution Server** topic of the CloudShell Suite Installation guide. 
@@ -142,17 +143,17 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the Shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-### Data Model
+## Data Model
 **Ixia Chassis Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |---|---|---|
-|`Traffic Generator Chassis`|`Ixia Chassis`|Ixia Chassis|
-|`Module`|`Generic Traffic Generator Module`|Modules located on the chassis|
-|`Port Group`|`Generic Port Group`|Generic Port Group|
-|`Port`|`Generic Traffic Generator Port`|Generic Traffic Generator Port|
+|:Traffic Generator Chassis|:Ixia Chassis|:Ixia Chassis|
+|Module|Generic Traffic Generator Module|Modules located on the chassis|
+|Port Group|Generic Port Group|Generic Port Group|
+|Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
 
 **Ixia Chassis Attributes**
 
@@ -160,28 +161,28 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |---|---|---|---|
-|`Model Name`|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|`Serial Number`|Text||The serial number of the resource.|
-|`Server Description`|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|`Vendor`|String||The firmware version of the resource.|
+|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Serial Number|Text||The serial number of the resource.|
+|Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
+|Vendor|String||The firmware version of the resource.|
 
-### Typical workflow
+## Typical workflow
 
 Scenario 1 - Discover a new Device
 
 See Configuring a new device.
 
-### References
+## References
 Additional technical documentation is available in the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
 
 For Quali discussion forums, click here. 
 
-### Release Notes
-#### What's new:
+## Release Notes
+### What's new:
 
 * Set unknown port speed to zero.
 * Support new card types.
 * Show only active ports instead of all ports.
 
-#### Known Issues:
+### Known Issues:
 * Resource groups are not modeled. Resource groups are modeled as port with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
