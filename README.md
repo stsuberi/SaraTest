@@ -57,7 +57,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 **Controllers compatible with Ixia Chassis 2G Shell**
 
-The Ixia Chassis shell is compatible with two different controllers, see [About Ixia Chassis 2G Shell](#about-ixia-chassis-2G-shell) ### About Ixia Chassis 2G Shell.
+The Ixia Chassis shell is compatible with two different controllers, see [About Ixia Chassis 2G Shell](.#about-ixia-chassis-2G-shell) ### About Ixia Chassis 2G Shell.
 
 ## Import and Configure the Shell
 This section describes how to import, configure and modify the Ixia Chassis 2G Shell.
