@@ -111,7 +111,7 @@ full path"/>`
 full path"/>`
 5. Restart the Execution Server.
 
-### Configuring a new device
+### Configuring a new resource
 In CloudShell, the component that models the device is called a resource. It is based on the Shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
 **To create a resource for the device:**
@@ -169,16 +169,18 @@ The attribute names and types are listed in the following table:
 |Vendor|String||The firmware version of the resource.|
 
 ## References
-Additional technical documentation is available in the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
+For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
 
-For Quali discussion forums, click [here](https://community.quali.com/spaces/13/index.html?__hstc=46213176.aaafbe5adb338215377a985e0c025079.1467146361756.1471392182746.1471395614692.11&__hssc=46213176.1.1471395614692&__hsfp=2437115919). 
+To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
+
+To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums] (https://community.quali.com/forums). 
 
 ## Release Notes
-### What's new:
+### What's new
 
 * Set unknown port speed to zero.
 * Support new card types.
 * Show only active ports instead of all ports.
 
-### Known Issues:
+### Known Issues
 * Resource groups are not modeled. Resource groups are modeled as port with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
