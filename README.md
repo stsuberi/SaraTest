@@ -16,8 +16,7 @@ This 2nd generation Shell provides you with connectivity and management capabili
 
 To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and a controller Shell. The Ixia Chassis shell can be used with either of the following controllers: 
 
-▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_parent">Ixia IxNetwork Controller Shell</a> 
-
+▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_blank">Ixia IxNetwork Controller Shell</a> 
 ▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
 
 ### Standard version
