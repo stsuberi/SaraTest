@@ -137,7 +137,7 @@ This section explains how to update your Python dependencies folder. This is req
 **To update offline Python dependencies:**
 1. Download the latest Python dependencies package zip file locally.
 2. Extract the zip file to the suitable offline package folder(s). 
-3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the **Configure the Execution Server** topic of the CloudShell Suite Installation guide. 
+3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/8.3/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
 
 ### Updating online Python dependencies
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
