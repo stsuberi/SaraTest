@@ -87,8 +87,9 @@ If your Quali Server and/or execution servers work offline, you will need to cop
 For more information, see [Configuring CloudShell to Execute Python Commands in Offline Mode](http://help.quali.com/Online%20Help/8.3/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=Configuring%20CloudShell%20to%20Execute%20Python%20Commands%20in%20Offline%20Mode).
 
 **To add Python packages to the local PyPi Server repository:**
-  1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in **Add Python packages to the local PyPi Server repository (offlinemode)**. 
+  1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)]http://help.quali.com/Online%20Help/8.3/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
   2. For each Shell or script you add into CloudShell, do one of the following (from an online computer):
+  
   	* Connect to the Internet and download each dependency specified in the **requirements.txt** file with the following command: 
 `pip download -r requirements.txt`.
 
