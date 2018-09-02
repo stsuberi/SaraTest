@@ -21,7 +21,7 @@ To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and
 ▪ [Ixia IxLoad Controller Shell](https://community.quali.com/repos/1396/ixia-ixload-controller-shell)
 
 ### Standard version
-The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard cloudshell_traffic_generator_chassis_standard_1_0_3.yaml.
+The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard `cloudshell_traffic_generator_chassis_standard_1_0_3.yaml`.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -32,7 +32,9 @@ For detailed information about the Shell’s structure and attributes, see the [
 ▪ CloudShell version 8.0 and above
 
 ### Downloading the Shell
-The Ixia Chassis 2G Shell is available from the [Quali Developer Center](https://community.quali.com/integrations). Download the files into a temporary location on your local machine. 
+The Ixia Chassis 2G Shell is available from the [Quali Developer Center](https://community.quali.com/integrations). 
+
+Download the files into a temporary location on your local machine. 
 
 The Shell comprises:
 
@@ -48,9 +50,10 @@ This section describes the automation (drivers or scripts) associated with the d
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 **Ixia Chassis 2G Shell**
+
 |Command|Description|
-|---|---|
-|`Autoload`|`Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.`|
+|-----|-----|
+|`Autoload`|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 **Controllers compatible with Ixia Chassis 2G Shell**
 
@@ -149,8 +152,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
-|---|---|---|
-|:Traffic Generator Chassis|:Ixia Chassis|:Ixia Chassis|
+|:---|:---|:---|
+|Traffic Generator Chassis|Ixia Chassis|Ixia Chassis|
 |Module|Generic Traffic Generator Module|Modules located on the chassis|
 |Port Group|Generic Port Group|Generic Port Group|
 |Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
@@ -160,7 +163,7 @@ The chassis families and models are listed in the following table:
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
-|---|---|---|---|
+|:---|:---|:---|:---|
 |Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Serial Number|Text||The serial number of the resource.|
 |Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
