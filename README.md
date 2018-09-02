@@ -118,12 +118,13 @@ In CloudShell, the component that models the device is called a resource. It is 
   2. From the list, select the **Ixia Chassis 2G Shell**.
   3. Enter the Ixia chassis **Name** and **IP address**.
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, as follows:a	If Ixia Chassis is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
-b	If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
-•	Controller TCP Port: 8022 (Linux IxOS ssh port) 
-c	If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
-	Controller Address: address of the IxTclServer
-	Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
+  5. In the **Resource** dialog box, enter the device's settings, as follows: 
+  * If Ixia Chassis is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
+  * If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
+  * Controller TCP Port: 8022 (Linux IxOS ssh port)
+  * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
+  * Controller Address: address of the IxTclServer
+  * Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
   6. Click **Continue**.
 
 This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
