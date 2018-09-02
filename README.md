@@ -39,7 +39,7 @@ Download the files into a temporary location on your local machine.
 The Shell comprises:
 
 |File name|Description|
-|---|---|
+|:---|:---|
 |`ixia_chassis_shell.zip`|Shell package|
 |`ixia_chassis_shell_offline_requirements.zip`|Shell Python dependecies (for offline deployments only)|
 |`Ixia Chassis Shell Doc.ReadMe`|Documentation|
