@@ -32,7 +32,7 @@ For detailed information about the Shell’s structure and attributes, see the [
 ▪ CloudShell version 8.0 and above
 
 ### Downloading the Shell
-The Ixia Chassis 2G Shell is available from the [Quali Developer Center](https://community.quali.com/integrations). 
+The Ixia Chassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
