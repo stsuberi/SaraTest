@@ -1,6 +1,6 @@
 # Ixia Chassis 2G Shell 
-<p align="center">
-<img src="https://github.com/QualiSystems/devguide_source/raw/master/logo.png"></img>
+<p align="left">
+<img src="https://github.com/QualiSystems/devguide_source/raw/master/logo.png" width="150" height="150"></img>
 </p>
 
 ## Overview
