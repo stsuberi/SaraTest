@@ -21,7 +21,7 @@ To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and
 ▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
 
 ### Standard version
-The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard `cloudshell_traffic_generator_chassis_standard_1_0_3.yaml`.
+The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_3.yaml*.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -40,9 +40,9 @@ The Shell comprises:
 
 |File name|Description|
 |:---|:---|
-|`ixia_chassis_shell.zip`|Shell package|
-|`ixia_chassis_shell_offline_requirements.zip`|Shell Python dependecies (for offline deployments only)|
-|`Ixia Chassis Shell Doc.ReadMe`|Documentation|
+|ixia_chassis_shell.zip|Shell package|
+|ixia_chassis_shell_offline_requirements.zip|Shell Python dependecies (for offline deployments only)|
+|Ixia Chassis Shell Doc.ReadMe|Documentation|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
@@ -51,7 +51,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 |Command|Description|
 |-----|-----|
-|`Autoload`|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 **Controllers compatible with Ixia Chassis 2G Shell**
 
@@ -68,7 +68,7 @@ This section describes how to import, configure and modify the Ixia Chassis 2G S
   3. Click **Import**.
   4. In the dialog box, navigate to the Shell's .zip file, select it and click **Open**.
 
-The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ## Offline installation of a Shell
 ___
@@ -82,12 +82,12 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 3. For CloudShell versions prior to 8.2, see [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Add Shell and script packages to the local PyPi Server repository
-If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Servercomputer (by default `C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository`).
+If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Servercomputer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
 
-For more information, see [Configuring CloudShell to Execute Python Commands in Offline Mode](http://help.quali.com/Online%20Help/8.3/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=Configuring%20CloudShell%20to%20Execute%20Python%20Commands%20in%20Offline%20Mode).
+For more information, see [Configuring CloudShell to Execute Python Commands in Offline Mode](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=Configuring%20CloudShell%20to%20Execute%20Python%20Commands%20in%20Offline%20Mode).
 
 **To add Python packages to the local PyPi Server repository:**
-  1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/8.3/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
+  1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
   2. For each Shell or script you add into CloudShell, do one of the following (from an online computer):
       * Connect to the Internet and download each dependency specified in the `requirements.txt` file with the following command: 
 `pip download -r requirements.txt`. 
@@ -101,9 +101,9 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the PythonOfflineRepositoryPath key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the `ixia_chassis_shell_offline_requirments.zip` file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *ixia_chassis_shell_offline_requirments.zip* file, see [Downloading the Shell](#downloading-the-shell).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
-3.  On the Quali Server machine, in the `~\CloudShell\Server\customer.config` file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
+3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
 4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the `~TestShell\Execution Server\customer.config` file, add the following key:  
@@ -137,7 +137,7 @@ This section explains how to update your Python dependencies folder. This is req
 **To update offline Python dependencies:**
 1. Download the latest Python dependencies package zip file locally.
 2. Extract the zip file to the suitable offline package folder(s). 
-3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/8.3/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
+3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
 
 ### Updating online Python dependencies
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
@@ -167,12 +167,6 @@ The attribute names and types are listed in the following table:
 |Serial Number|Text||The serial number of the resource.|
 |Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |Vendor|String||The firmware version of the resource.|
-
-## Typical workflow
-
-Scenario 1 - Discover a new Device
-
-See [Configuring a new device](#configuring-a-new-device).
 
 ## References
 Additional technical documentation is available in the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
