@@ -78,8 +78,8 @@ ___
 In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder. The dependencies folder may differ, depending on the CloudShell version you are using:
 
 1. For CloudShell version 8.3 and above, see [Add Shell and script packages to the local PyPi Server repository](#add-shell-and-script-packages-to-the-local-pypi-server-repository).
-2. For CloudShell version 8.2, perform the appropriate procedure: **Add Shell and script packages to the local PyPi Server repository** or **Set the python pythonOfflineRepositoryPath configuration key**.
-3. For CloudShell versions prior to 8.2, see **Set the python pythonOfflineRepositoryPath configuration key**.
+2. For CloudShell version 8.2, perform the appropriate procedure: [Add Shell and script packages to the local PyPi Server repository](#add-shell-and-script-packages-to-the-local-pypi-server-repository) or [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
+3. For CloudShell versions prior to 8.2, see [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Add Shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Servercomputer (by default `C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository`).
