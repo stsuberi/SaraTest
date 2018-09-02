@@ -57,7 +57,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 The Ixia Chassis shell is compatible with two different controllers, see [About Ixia Chassis 2G Shell](#about-ixia-chassis-2g-shell).
 
-## Import and Configure the Shell
+## Importing and Configuring the Shell
 This section describes how to import, configure and modify the Ixia Chassis 2G Shell.
 
 ### Importing the Shell into CloudShell
@@ -81,7 +81,7 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 2. For CloudShell version 8.2, perform the appropriate procedure: [Add Shell and script packages to the local PyPi Server repository](#add-shell-and-script-packages-to-the-local-pypi-server-repository) or [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
 3. For CloudShell versions prior to 8.2, see [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
 
-### Add Shell and script packages to the local PyPi Server repository
+### Adding Shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Servercomputer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
 
 For more information, see [Configuring CloudShell to Execute Python Commands in Offline Mode](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=Configuring%20CloudShell%20to%20Execute%20Python%20Commands%20in%20Offline%20Mode).
@@ -97,7 +97,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 3. Place these zip files in the local PyPi Server repository.
  
-### Set the python PythonOfflineRepositoryPath configuration key
+### Setting the python PythonOfflineRepositoryPath configuration key
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
