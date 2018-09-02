@@ -173,7 +173,7 @@ For best practices, instructional training and video tutorials, and comprehensiv
 
 To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
-To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums] (https://community.quali.com/forums). 
+To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 ## Release Notes
 ### What's new
