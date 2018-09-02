@@ -118,7 +118,6 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-   
   2. From the list, select the **Ixia Chassis 2G Shell**.
   3. Enter the Ixia chassis **Name** and **IP address**.
   4. Click **Create**.
