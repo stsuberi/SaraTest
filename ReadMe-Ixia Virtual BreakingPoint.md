@@ -194,57 +194,46 @@ The chassis families and models are listed in the following table:
 |Family|Model|Description|
 |:---|:---|:---|
 |Virtual Traffic Generator Chassis|Ixia BreakingPoint Chassis|BreakingPoint Chassis|
-|Module|Generic Traffic Generator Module|Modules located on the chassis|
-|Port Group|Generic Port Group|Generic Port Group|
-|Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
+|Virtual Traffic Generator Module|Ixia Breaking Point Module|Modules located on the chassis|
+|Port|Virtual Port Group|Virtual Traffic Generic Port|
 
-**BreakingPoint Chassis Attributes**
+**Ixia Virtual BreakingPoint Chassis Attributes**
 
 The chassis attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Client Install Path|String||The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
-|Controller Group|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
-|Logical Name|String||The port's logical name in the test configuration. If kept empty, automatic allocation will apply.|
-|Media Type|String||Interface media type. Possible values are **Fiber** and/or **Copper** (comma-separated).|
-|Model|String||The device model. This information is typically used for abstract resource filtering.|
-|Power Management|Boolean|False|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
-|Supported Applications|String||Comma-separated list of traffic applications supported by this traffic generator. For example *IxLoad,IxNetwork*.|
-|Supported Speeds|String||Speed supported by the interface, comma-separated.|
-|Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Version|String||The firmware version of the resource.|
-|Vendor|String||The vendor name.|
-|Logical Name|String||The port's logical name in the test configuration. If kept empty, allocation will be applied in the blueprint.|
+|License Server|String||IP address or hostname of License Server|
+|Password|Password||Password for Ixia BreakingPoiint Chassis|
+|User|String||Username of Ixia BreakingPoint Chassis|
 
-**BreakingPoint Controller Attributes**
+**Ixia Virtual BreakingPoint Module Attributes**
 
-The controller attribute names and types are listed in the following table:
+The module attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Test Files Location|String||Location for test related files.|
+|Memory in GB|Numeric|8|Amount of memory to set for the VM|
+|Number of Ports|Numeric|2|Amount of ports to set for the VM|
+|Number of vCPU|Numeric|4|Amount of virtual CPU to set for the VM|
+|Password|String||Password for Ixia Breaking Point Chassis|
+|SlotId|String|0|Chassis Slot number on which vBlade will be assigned|
+|User|String|0|Username for Ixia Breaking Point Chassis|
+|Virtual Traffic Generator Chassis|String||Name of Virtual Ixia Breaking Point Chassis application|
+
+**Ixia Virtual Port Attributes**
+
+The port attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Logical Name|String||The port's logical name in the test configuration|
+|Requested vNIC|String|||
 
 ## Typical Workflow and Scenarios
 ### Use cases and scenarios
 
-**Scenario 1 - Chassis Autoload**
-See [Configuring a new resource](#configuring-a-new-resource).
-
-**Scenario 2 - Creating a new environment**
-1. Creating a new environment.
-   * Enter CloudShell portal and create a new **Blueprints>Create Blueprint**.
-   * Specify the blueprint name.
-2. Adding resources and services to the environment. 
-   * Click the **Resource** tab and add the Breaking Point Chassis resource and all needed Ports. 
-   * Associate the Port sub resources with the Breaking Point Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
-   * Click the **App/Services** tab and add the **BreakingPointController** service.
-   * Specify the attribute **Test Files Location**, where test files will be downloaded.
-3. Adding teardown script, which runs driver command `cleanup_reservation` when reservation ends. This command releases ports which were used by the reservation. 
-   * Go to the **Scripts** management page **Manage>Scripts>Environment**, click **Add New Script** and choose the **Cleanup Reservarion.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
-   * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. To save changes click **Update**.
-
-**Scenario 3 - Getting test file with network configuration**
+**Scenario 1 - Getting test file with network configuration**
 
 *You cannot change predefined Tests and Network Neighborhoods.  Predefined Network Neighborhoods will not be included in Test files.*
 
@@ -268,7 +257,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
    * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
 
-**Scenario 4 - Running a test**
+**Scenario 2 - Running a test**
 1. Enter your blueprint.
 2. Running BreakingPointController service Load Configuration command.
    * Click BreakingPointController **Commands** and enter the service commands.
@@ -293,9 +282,3 @@ For best practices, instructional training and video tutorials, and comprehensiv
 To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-## Release Notes
-### What's new
-
-* Added Virtual Traffic Generator support.
-
