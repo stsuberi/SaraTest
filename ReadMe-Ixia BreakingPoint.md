@@ -5,34 +5,36 @@
 
 ## Overview
 A Shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
+___
+**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
+__
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
-### About Ixia Chassis 2G Shell
-This 2nd generation Shell provides you with connectivity and management capabilities such as device structure discovery and power management for Ixia chassis. 
+### About Ixia BreakingPoint 1G Shell
+To model an Ixia BreakingPoint chassis device in CloudShell, use the following: 
 
-To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and a controller Shell. The Ixia Chassis shell can be used with either of the following controllers: 
+▪ [BreakingPoint Chassis 1G Shell](https://community.quali.com/repos/1294/breaking-point-chassis-shell), which provides data model and autoload functionality to model and load the BreakingPoint Chassis to resource management.
 
-▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_blank">Ixia IxNetwork Controller Shell</a>
-
-▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
+▪ [BreakingPoint Controller 1G Shell (service)](https://community.quali.com/repos/1295/breaking-point-controller-shell), which provides functionality to load test configuration, run tests, get test results, etc.
 
 ### Standard version
-The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_3.yaml*.
+The BreakingPoint 1G Shells are based on the Traffic Shell standard version 2.0.0.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
-### Supported OS
-▪ Windows
+### Certified models
+▪ BreakingPoint VE
 
 ### Requirements
-▪ CloudShell version 8.0 and above
+▪ CloudShell version 7.0 and above
+▪ BreakingPoint application 8.20 and above
 
 ### Downloading the Shell
-The Ixia Chassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The BreakingPoint Shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -40,22 +42,37 @@ The Shell comprises:
 
 |File name|Description|
 |:---|:---|
-|ixia_chassis_shell.zip|Shell package|
-|ixia_chassis_shell_offline_requirements.zip|Shell Python dependecies (for offline deployments only)|
-|Ixia Chassis Shell Doc.ReadMe|Documentation|
+|breaking_point_controller_shell.zip|BreakingPoint Controller Shell package|
+|breaking_point_chassis_shell.zip|BreakingPoint Chassis Shell package|
+|bp-offline-package-1.0.6.zip|Shell Python dependecies (for offline deployments only)|
+|Ixia-B reakingPoint-Shell.pdf|Teardown script for cleaning reservation|
+|BreakingPoint Shell Doc.ReadMe|Documentation|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
+The following commands are associated with a model inside the Shell:
+
+**BreakingPoint Chassis 1G Shell**
 |Command|Description|
 |-----|-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-**Controllers compatible with Ixia Chassis 2G Shell**
-
-The Ixia Chassis shell is compatible with two different controllers, see [About Ixia Chassis 2G Shell](#about-ixia-chassis-2g-shell).
+**BreakingPoint Chassis 1G Shell**
+|Command|Description|
+|-----|-----|
+|Load Configuration|Load configuration file prepared by your admin. The configuration file includes the settings according to which the traffic test will be run. For example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports.
+**Note** – needs to be accessible from the Execution Server (see TG overview).|
+|Start Traffic|Start the test to generate and send the traffic to the DUT according to the settings provided in the configuration file.|
+|Stop Traffic|Stop running the test to stop sending traffic from the traffic generator.|
+|Get Result|Get test result file and attach it to the reservation.|
+|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format.
+Set the command's inputs as follows:
+▪**View Name**: Type of statistics to return. For example, Port Statistics, Traffic Item Statistics, Flow Statistics, etc. The types available may differ depending on the traffic generator.
+▪**Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the reservation's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox..|
+|Get Test File|Download the test file to the location specified in the **Test Files Location** attribute defined when you added the service to your blueprint.|
 
 ## Importing and Configuring the Shell
 This section describes how to import, configure and modify the Ixia Chassis 2G Shell.
