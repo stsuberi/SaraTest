@@ -86,7 +86,7 @@ This section describes how to import, configure and modify the BreakingPoint 1G 
   4. In the User menu select **Import Package**.
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
-  5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal..
+  5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
 The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
@@ -209,7 +209,7 @@ See [Configuring a new resource](#configuring-a-new-resource).
 
 **Scenario 2 - Creating a new environment**
 1. Creating a new environment.
-   * Enter CloudShell portal and create a a new **Blueprints>Create Blueprint**.
+   * Enter CloudShell portal and create a new **Blueprints>Create Blueprint**.
    * Specify the blueprint name.
 2. Adding resources and services to the environment. 
    * Click the **Resource** tab and add the Breaking Point Chassis resource and all needed Ports. 
@@ -228,7 +228,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
 
 1. Duplicating Breaking Point Network Neighborhood configuration.
    * Open the Breaking Point UI.
-   * Go to **Control Center>Open Neighborhood**
+   * Go to **Control Center>Open Neighborhood**.
    * Find and select **Network Neighborhood** from the list.
    * Click **Save As** and enter **New Network Neighborhood Name**, click **Ok**.
 2. Duplicating the Breaking Point Test.
@@ -239,7 +239,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Find and select the duplicated test from the list and open it.
    * In the section **Network Neighborhood** click ‘…’, find and select the duplicated Network Neighborhood.
    * Click **Save**.
-4. Running the GetTestFile BreakingPointController command.
+4. Running the `GetTestFile BreakingPointController` command.
    * Enter CloudShell Portal, newly created blueprint and reserve it.
    * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
    * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
@@ -249,16 +249,17 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
 2. Running BreakingPointController service Load Configuration command.
    * Click BreakingPointController **Commands** and enter the service commands.
    * Find the Load Configuration command and enter the run menu.
-   * Specify the **Breaking Point config file** with the path of your test configuration file. It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or only *test_name.bpt*, if it is a current sandbox.
-   * Click **Run**, to load test and network configuration from this file and reserve necessary ports.
+   * Specify the **Breaking Point config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or only *test_name.bpt*, if it is a current sandbox.
+   * Click **Run**, to load the test and network configuration from this file and reserve necessary ports.
 3. Running **Start Test**.
    * Click BreakingPointController **Commands** and enter the service commands.
    * Find the **Start Traffic** command and click enter to run the menu.
-   * Set **Blocking** to True, if you have to wait until the test finishes, or False, and click **Run**.
-4. Running **Stop Test**
+   * Set **Blocking** to True, if you have to wait until the test finishes, or False. 
+   * Click **Run**.
+4. Running **Stop Test**.
 <br>If you ran the test with “Blocking” equals False, you can immediately stop the test.
    * Run command `Stop Traffic`.
-5. Getting result file
+5. Getting result file.
    * Run command `Get Result`.
    * The result file is attached to the sandbox.
 
