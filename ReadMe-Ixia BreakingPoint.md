@@ -75,15 +75,16 @@ Set the command's inputs as follows:
 |Get Test File|Download the test file to the location specified in the **Test Files Location** attribute defined when you added the service to your blueprint.|
 
 ## Importing and Configuring the Shell
-This section describes how to import, configure and modify the Ixia Chassis 2G Shell.
+This section describes how to import, configure and modify the BreakingPoint 1G Shell.
 
 ### Importing the Shell into CloudShell
 
 **To import the Shell into CloudShell:**
   1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
-  2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
-  3. Click **Import**.
-  4. In the dialog box, navigate to the Shell's .zip file, select it and click **Open**.
+  2. Backup your database
+  3. Log in to CloudShell Portal as administrator of the relevant domain.
+  4. In the User menu select **Import Package**.
+  5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal..
 
 The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
