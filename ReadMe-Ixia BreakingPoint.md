@@ -84,6 +84,7 @@ This section describes how to import, configure and modify the BreakingPoint 1G 
   2. Backup your database
   3. Log in to CloudShell Portal as administrator of the relevant domain.
   4. In the User menu select **Import Package**.
+  ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
   5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal..
 
 The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
@@ -119,7 +120,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *ixia_chassis_shell_offline_requirments.zip* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *bp-offline-package-1.0.7.zip* file, see [Downloading the Shell](#downloading-the-shell).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
@@ -137,16 +138,10 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select the **Ixia Chassis 2G Shell**.
-  3. Enter the Ixia chassis **Name** and **IP address**.
+  2. From the list, select the **BreakingPoint Chassis 1G Shell** or the **BreakingPoint Controller 1G Shell**.
+  3. Enter the BreakingPoint chassis or controller **Name** and **IP address**.
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, as follows: 
-      * If Ixia Chassis is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
-      * If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
-          * Controller TCP Port: 8022 (Linux IxOS ssh port)
-      * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
-          * Controller Address: address of the IxTclServer
-          * Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
+  5. In the **Resource** dialog box, enter all the fields relevant for this device: 
   6. Click **Continue**.
 
 This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
@@ -167,27 +162,49 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the Shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-**Ixia Chassis Families and Models**
+**BreakingPoint Chassis Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|Traffic Generator Chassis|Ixia Chassis|Ixia Chassis|
+|Traffic Generator Chassis|BreakingPoint Chassis|BreakingPoint Chassis|
 |Module|Generic Traffic Generator Module|Modules located on the chassis|
 |Port Group|Generic Port Group|Generic Port Group|
 |Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
 
-**Ixia Chassis Attributes**
+**BreakingPoint Chassis Attributes**
 
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Serial Number|Text||The serial number of the resource.|
+|Client Install Path|String||The path in which the traffic client is installed on the Execution Server. For example *'C:/Program Files (x86)/Ixia/IxOS/6.90-EA'*.|
+|Controller Group|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
+|Logical Name|String||The port's logical name in the test configuration. If kept empty, automatic allocation will apply.|
+|Media Type|String||Interface media type. Possible values are **Fiber** and/or **Copper** (comma-separated).|
+|Model|String||The device model. This information is typically used for abstract resource filtering.|
+|Power Management|Boolean|False|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
+|Supported Applications|String||Comma-separated list of traffic applications supported by this traffic generator. For example *'IxLoad,IxNetwork'*.|
+|Supported Speeds|String||Speed supported by the interface, comma-separated.|
 |Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Vendor|String||The firmware version of the resource.|
+|Version|String||The firmware version of the resource.|
+|Vendor|String||The vendor name.|
+|Logical Name|String||The port's logical name in the test configuration. If kept empty, allocation will be applied in the blueprint.|
+
+**BreakingPoint Controller Attributes**
+
+The attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Test Files Location|String||Location for test related files.|
+
+## Typical Workflow and Scenarios
+### Use cases and scenarios
+
+**Scenario 1 - Chassis Autoload**
+
 
 ## References
 For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
