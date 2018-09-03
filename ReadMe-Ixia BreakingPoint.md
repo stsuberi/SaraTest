@@ -65,11 +65,11 @@ The following commands are associated with a model inside the Shell:
 
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Load configuration file prepared by your admin. The configuration file includes the settings according to which the traffic test will be run. For example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports. **Note** – needs to be accessible from the Execution Server (see TG overview).|
+|Load Configuration|Load configuration file prepared by your admin. The configuration file includes the settings according to which the traffic test will be run. For example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports. <br>**Note**: needs to be accessible from the Execution Server (see TG overview).|
 |Start Traffic|Start the test to generate and send the traffic to the DUT according to the settings provided in the configuration file.|
 |Stop Traffic|Stop running the test to stop sending traffic from the traffic generator.|
 |Get Result|Get test result file and attach it to the reservation.|
-|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. Set the command's inputs as follows: ▪**View Name**: Type of statistics to return. For example, Port Statistics, Traffic Item Statistics, Flow Statistics, etc. The types available may differ depending on the traffic generator. ▪**Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the reservation's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox..|
+|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. Set the command's inputs as follows: <br>▪**View Name**: Type of statistics to return. For example, Port Statistics, Traffic Item Statistics, Flow Statistics, etc. The types available may differ depending on the traffic generator. <br>▪**Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the reservation's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox..|
 |Get Test File|Download the test file to the location specified in the **Test Files Location** attribute defined when you added the service to your blueprint.|
 
 ## Importing and Configuring the Shell
@@ -82,7 +82,7 @@ This section describes how to import, configure and modify the BreakingPoint 1G 
   2. Backup your database
   3. Log in to CloudShell Portal as administrator of the relevant domain.
   4. In the User menu select **Import Package**.
-  ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+  ![](/image-left.png)(https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
   5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal..
 
 The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
