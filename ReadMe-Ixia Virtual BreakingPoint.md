@@ -158,8 +158,18 @@ and
      ![](https://github.com/stsuberi/SaraTest/blob/master/blade_resource.png)
   2. Click **Done**.
   
-  
-  
+## Configure Teardown Script
+
+This section describes how to modify a teardown script to work with the Ixia Virtual BreakingPoint Generator.
+**To modify the teardown script:**
+
+1. In CloudShell Portal, as administrator of the relevant domain, open the  **Manage – Scripts** page, subsection **Blueprint**, and download the teardown script.
+2. Browse to the location of the downloaded file.
+3. Add `cloudshell-orch-vbp>=1.0.0,<1.1.0` into the *requiremnts.txt* file.
+4. Add the following code into the __main__.py file:
+    * from cloudshell.workflow.orchestration.setup.vbp.configuration_commands import configure_virtual_chassis
+sandbox.workflow.on_configuration_ended(function=configure_virtual_chassis, components=sandbox.components.apps)
+5. Update the teardown script in CloudShell.
   
 ## Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a Shell that uses new/updated dependencies. It applies to both online and offline dependencies.
@@ -177,13 +187,13 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the Shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-**BreakingPoint Chassis Families and Models**
+**BreakingPoint Virtual Chassis Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|Traffic Generator Chassis|BreakingPoint Chassis|BreakingPoint Chassis|
+|Virtual Traffic Generator Chassis|Ixia BreakingPoint Chassis|BreakingPoint Chassis|
 |Module|Generic Traffic Generator Module|Modules located on the chassis|
 |Port Group|Generic Port Group|Generic Port Group|
 |Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
