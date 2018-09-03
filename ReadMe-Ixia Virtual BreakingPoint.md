@@ -138,7 +138,7 @@ Add a least two applications:
 and
 * BreakingPoint Controller service
 
-**To configure the location where you want your test files to be downloaded:**
+**To configure the location where test files will be downloaded:**
   1. On the BreakingPoint Controller Service in your blueprint, select the **Edit** button.
      ![](https://github.com/stsuberi/SaraTest/blob/master/service_details.png)
   2. In the **Test Files Location** attribute, add the location for test files.
@@ -148,19 +148,19 @@ and
   1. In **CloudShell Portal – Manage**, **Apps** section, click on **Edit** from the menu at the right of the App.
      ![](https://github.com/stsuberi/SaraTest/blob/master/app_resource.png)
   2. In the **App Resource** section:
-     * Enter the IP Address of the License Server in the License Server attribute, and
-     * **User** and **Password**, with the credentials to access the Virtual BreakingPoint VChassis.
+     * Enter the IP Address of the License Server in the **License Server** attribute
+     * Enter the **User** and **Password**, with the credentials to access the Virtual BreakingPoint VChassis.
   3. Click **Done**.
   
   **To configure the Virtual BreakingPoint VBlade App:**
-  1. In the App template, **App resource** section:
-     * Enter the name of the **Virtual BreakingPoint Chassis**, for the Virtual Breaking Point Blade application(s) in the **Virtual Traffic Generator Chassis** attribute.
+  1. In the App template, **App resource** section, enter the name of the **Virtual BreakingPoint Chassis**, for the Virtual Breaking Point Blade application(s) in the **Virtual Traffic Generator Chassis** attribute.
      ![](https://github.com/stsuberi/SaraTest/blob/master/blade_resource.png)
   2. Click **Done**.
   
 ## Configure Teardown Script
 
 This section describes how to modify a teardown script to work with the Ixia Virtual BreakingPoint Generator.
+
 **To modify the teardown script:**
 
 1. In CloudShell Portal, as administrator of the relevant domain, open the  **Manage – Scripts** page, subsection **Blueprint**, and download the teardown script.
