@@ -204,7 +204,60 @@ The attribute names and types are listed in the following table:
 ### Use cases and scenarios
 
 **Scenario 1 - Chassis Autoload**
+See [Configuring a new resource](#configuring-a-new-resource)
 
+**Scenario 2 - Creating a new environment**
+1. Creating a new environment
+   * Enter CloudShell portal and create a a new **Blueprints>Create Blueprint**.
+   * Specify the blueprint name.
+2. Adding resources and services to the environment. 
+   * Click the **RESOURCE** tab and add the Breaking Point Chassis resource and all needed Ports. 
+   * Associate the Port sub resources with the Breaking Point Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
+   * Click the **APP/SERVICES** tab and add the **BreakingPointController** service.
+   * Specify the attribute **Test Files Location**, with the location where test files will be downloaded.
+3. Adding teardown script, which runs driver command “cleanup_reservation” when reservation ends. This command releases ports which were used by the reservation. 
+   * Go to the **Scripts** management page **Manage>Scripts>Environment**, click **Add New Script** and chose **Cleanup Reservarion.zip** file. Click **EDIT** for the new added script and change **Script Type** to **Teardown**.
+   * Go back to the created environment and open properties, **ENVIRONMENT>Properties**. In the **DRIVER** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. To save changes click **Update**.
+
+**Scenario 3 - Getting test file with network configuration**
+*You cannot change predefined Tests and Network Neighborhoods.  Predefined Network Neighborhoods will not be included in Test files.*
+This scenario helps you use predefined Tests and Network Neighborhoods.
+
+1. Duplicating Breaking Point Network Neighborhood configuration.
+   * Open the Breaking Point UI
+   * Go to **CONTROL CENTER>Open Neighborhood**
+   * Find and select **Network Neighborhood** from the list
+   * Click **Save A**s and enter **New Network Neighborhood Name**, click **Ok**.
+2. Duplicating Breaking Point Test.
+   * Go to **TEST>Open Test**.
+   * Find and select the **Test** from the list
+   * Press **Save As** and save it with a new name.
+3. Changing Network Neighborhood in the duplicated test.
+   * Find and select the duplicated Test from the list and open it.
+   * In the section **Network Neighborhood** click ‘…’, find and select the duplicated Network Neighborhood.
+   * Click **Save**.
+4. Running GetTestFile BreakingPointController command.
+   * Enter CloudShell Portal, newly created environment and reserve it.
+   * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
+   * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
+
+**Scenario 4 - Running a test**
+1. Enter your reservation.
+2. Running BreakingPointController service Load Configuration command.
+   * Click BreakingPointController **Commands** and enter the service commands
+   * Find the Load Configuration command and enter the run menu
+   * Specify **Breaking Point config file** with the path of your test configuration file. It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as “<reservation_id>/test_name.bpt”, or only “test_name.bpt”, if it is a current reservation.
+   * Click **Run**, to load test and network configuration from this file and reserve necessary ports
+3. Running **Start Test**
+   * Click BreakingPointController **Commands** and enter the service commands
+   * Find the **Start Traffic** command and click enter to run the menu.
+   * Set **Blocking** to True, if you have to wait until the test finishes, or False, and click **Run**.
+4. Running **Stop Test**
+If you ran the test with “Blocking” equals False, you can immediately stop the test.
+   * Run command **Stop Traffic**
+5. Getting result file
+   * Run command **Get Result**
+   * The result file is attached to the reservation.
 
 ## References
 For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
@@ -216,10 +269,4 @@ To connect with Quali users and experts from around the world, ask questions and
 ## Release Notes
 ### What's new
 
-* Set unknown port speed to zero.
-* Support new card types.
-* Show only active ports instead of all ports.
-
-### Known Issues
-* Resource groups are not modeled. Resource groups are modeled as port with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
-
+* Added Virtual Traffic Generator support.
