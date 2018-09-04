@@ -205,4 +205,4 @@ To connect with Quali users and experts from around the world, ask questions and
 * Make Logical Name attribute Available For Abstract Resources
 
 ### Known Issues
-* • All Execution Servers that are used to run Sandboxes with IxNetwork controller should have the same Client Install Path. This means that all Execution Servers must be either Windows or Linux. 
+* All Execution Servers that are used to run Sandboxes with IxNetwork controller should have the same Client Install Path. This means that all Execution Servers must be either Windows or Linux. 
