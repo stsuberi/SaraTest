@@ -1,7 +1,7 @@
 # Ixia Chassis 1G Shell 
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-Release date: June 2017
+**Release date:** June 2017
 
 Shell version 1.3.0
 
