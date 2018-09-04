@@ -1,7 +1,12 @@
-# Ixia Chassis 2G Shell 
-<p align="left">
-<img src="https://github.com/QualiSystems/devguide_source/raw/master/logo.png" width="150" height="150"></img>
-</p>
+![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
+
+# Ixia Chassis 2G Shell  
+
+**Release date:** June 2018
+
+Shell version 2.0.4
+
+Document version A
 
 ## Overview
 A Shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -19,9 +24,6 @@ To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and
 ▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_blank">Ixia IxNetwork Controller Shell</a>
 
 ▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
-
-### Document version
-The Ixia Chassis 2G Shell document version is 1.2.3.
 
 ### Standard version
 The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_2.yaml*.
