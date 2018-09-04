@@ -1,7 +1,12 @@
-# Ixia Virtual BreakingPoint 1G Shell 
-<p align="left">
-<img src="https://github.com/QualiSystems/devguide_source/raw/master/logo.png" width="150" height="150"></img>
-</p>
+![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
+
+# Ixia Virtual BreakingPoint 1G Shell  
+
+**Release date:** October 2017
+
+Shell version 1.0.0
+
+Document version 1.0
 
 ## Overview
 A Shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -23,9 +28,6 @@ To model an Ixia virtual BreakingPoint device in CloudShell, use the following:
 ▪ [BreakingPoint VE VBlade Shell](https://community.quali.com/repos/2152/breakingpoint-ve-vblade-shell)
 
 ▪ [BreakingPoint Controller Shell (service)](https://community.quali.com/repos/1295/breaking-point-controller-shell), which provides functionality to load test configuration, run tests, get test results, etc.
-
-### Document version
-The Ixia Virtual BreakingPoint 1G Shells document verison is 1.0. 
 
 ### Standard version
 The Ixia Virtual BreakingPoint 1G Shells are based on the Traffic Shell standard version 1.0.0.
