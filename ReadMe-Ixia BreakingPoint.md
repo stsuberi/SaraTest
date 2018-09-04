@@ -53,7 +53,6 @@ The Shell comprises:
 |breaking_point_chassis_shell.zip|BreakingPoint Chassis Shell package|
 |bp-offline-package-1.0.6.zip|Shell Python dependecies (for offline deployments only)|
 |Ixia-B reakingPoint-Shell.pdf|Teardown script for cleaning reservation|
-|BreakingPoint Shell Doc.ReadMe|Documentation|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
