@@ -147,9 +147,8 @@ You can also modify existing resources, see [Managing Resources in the Inventory
       * If Ixia Chassis is not directly accessible to the Execution Server than there must be an IxNetwork API server serving as a proxy between the Execution Server and the Ixia chassis, enter the following settings:
           * Client Install Path – The path in which IxNetwork client is installed on the Execution Server.<br>For example, for IxNetwork 8.01 based server, enter the following path:<br>C:\Program Files (x86)\Ixia\IxNetwork\8.01-GA
           * Controller Address - IP address of the IxNetwork API server
-	  * Controller TCP Port – TCP port of the IxNetwork API server. If empty, the default port (8009) will be used.
-	  
-  6. Click **Continue**.
+          * Controller TCP Port - TCP port of the IxNetwork API server. If empty, the default port (8009) will be used.
+ 6. Click **Continue**.
 
 This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
 
