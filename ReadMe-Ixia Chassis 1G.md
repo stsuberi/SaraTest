@@ -55,7 +55,6 @@ The Shell comprises:
 |:---|:---|
 |ixia_chassis_shell.zip |Shell package|
 |ixia_chassis_shell_offline_requirements.zip |Shell Python dependecies (for offline deployments only)|
-|Ixia Chassis 1G Shell Doc.ReadMe|Documentation|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
