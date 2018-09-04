@@ -161,7 +161,7 @@ and
   
 ## Configure Teardown Script
 
-This section describes how to modify a teardown script to work with the Ixia Virtual BreakingPoint Generator.
+This section describes how to modify a teardown script to work with the Ixia Virtual BreakingPoint VChassis and the BreakingPoint VBlade shells.
 
 **To modify the teardown script:**
 
