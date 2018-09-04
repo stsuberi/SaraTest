@@ -136,8 +136,7 @@ See [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/L
 
 Add a least two applications:
 * Virtual BreakingPoint VChassis 
-* Virtual BreakingPoint VBlade
-and
+* Virtual BreakingPoint VBlade<br>and
 * BreakingPoint Controller service
 
 **To configure the location where test files will be downloaded:**
