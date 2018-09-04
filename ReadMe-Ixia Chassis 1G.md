@@ -5,16 +5,20 @@
 
 ## Overview
 A Shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
+___
+**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
+___
+
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
-### About Ixia Chassis 2G Shell
-This 2nd generation Shell provides you with connectivity and management capabilities such as device structure discovery and power management for Ixia chassis. 
+### About Ixia Chassis 1G Shell
+This 1st generation Shell provides you with connectivity and management capabilities such as device structure discovery and power management for Ixia chassis. 
 
-To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and a controller Shell. The Ixia Chassis shell can be used with either of the following controllers: 
+To model an Ixia chassis device in CloudShell, use the Ixia Chassis 1G Shell and a controller Shell. The Ixia Chassis shell can be used with either of the following controllers: 
 
 ▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_blank">Ixia IxNetwork Controller Shell</a>
 
@@ -24,7 +28,7 @@ To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and
 The Ixia Chassis 2G Shell document version is 1.2.3.
 
 ### Standard version
-The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_2.yaml*.
+The Ixia Chassis 1G Shell 1.3.0 is based on the Traffic Shell standard version 3.0.0.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -32,11 +36,13 @@ For detailed information about the Shell’s structure and attributes, see the [
 ▪ Windows
 
 ### Requirements
-▪ 2G Chassis Shell: CloudShell version 8.0 and above
-▪ Controller Shells and 1G Chassis Shell: CloudShell version 7.0 and above
+▪ 1G Chassis Shell: CloudShell version 7.1 and above
+   * If the Ixia chassis is Linux based – IxOS client should be installed on the Execution Server machine.
+   * If the Ixia chassis is on an isolated network and must be accessed via an API (Tcl) server – IxNetwork client should be installed on the Execution Server machine.
+▪ Controller Shells: CloudShell version 7.0 and above
 
 ### Downloading the Shell
-The Ixia Chassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The Ixia Chassis 1G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -44,25 +50,27 @@ The Shell comprises:
 
 |File name|Description|
 |:---|:---|
-|Ixia.Chassis.Shell.2G.zip|Shell package|
-|Ixia.Chassis.Shell.2G.offline.requirements.zip|Shell Python dependecies (for offline deployments only)|
-|Ixia Chassis Shell Doc.ReadMe|Documentation|
+|ixia_chassis_shell.zip |Shell package|
+|ixia_chassis_shell_offline_requirements.zip |Shell Python dependecies (for offline deployments only)|
+|Ixia Chassis 1G Shell Doc.ReadMe|Documentation|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
+**Ixia Chassis 1G Shell**
+
 |Command|Description|
 |-----|-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-**Controllers compatible with Ixia Chassis 2G Shell**
+**Controllers compatible with Ixia Chassis 1G Shell**
 
-The Ixia Chassis shell is compatible with two different controllers, see [About Ixia Chassis 2G Shell](#about-ixia-chassis-2g-shell).
+The Ixia Chassis shell is compatible with two different controllers, see [About Ixia Chassis 1G Shell](#about-ixia-chassis-1g-shell).
 
 ## Importing and Configuring the Shell
-This section describes how to import, configure and modify the Ixia Chassis 2G Shell.
+This section describes how to import, configure and modify the Ixia Chassis 1G Shell.
 
 ### Importing the Shell into CloudShell
 
