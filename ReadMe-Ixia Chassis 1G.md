@@ -41,6 +41,7 @@ For detailed information about the Shell’s structure and attributes, see the [
 ▪ 1G Chassis Shell: CloudShell version 7.1 and above
    * If the Ixia chassis is Linux based – IxOS client should be installed on the Execution Server machine.
    * If the Ixia chassis is on an isolated network and must be accessed via an API (Tcl) server – IxNetwork client should be installed on the Execution Server machine.
+   
 ▪ Controller Shells: CloudShell version 7.0 and above
 
 ### Downloading the Shell
