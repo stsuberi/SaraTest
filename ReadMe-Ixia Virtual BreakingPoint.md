@@ -25,7 +25,7 @@ To model an Ixia virtual BreakingPoint device in CloudShell, use the following:
 
 ▪ [BreakingPoint VE VChassis Shell](https://community.quali.com/repos/2151/breakingpoint-ve-vchassis-shell), which provides data model and autoload functionality to model and load the BreakingPoint Chassis to resource management.
 
-▪ [BreakingPoint VE VBlade Shell](https://community.quali.com/repos/2152/breakingpoint-ve-vblade-shell)
+▪ [BreakingPoint VE VBlade Shell](https://community.quali.com/repos/2152/breakingpoint-ve-vblade-shell), which provides data model and autoload functionality to model and load the BreakingPoint Virtual Blade to resource management.
 
 ▪ [BreakingPoint Controller Shell (service)](https://community.quali.com/repos/1295/breaking-point-controller-shell), which provides functionality to load test configuration, run tests, get test results, etc.
 
@@ -42,7 +42,7 @@ For detailed information about the Shell’s structure and attributes, see the [
 
 ▪ BreakingPoint application 8.20 and above
 
-▪ BreakingPoint Controller Shell 1.2.1 and above
+▪ BreakingPoint Controller Shell 1.2.2 and above
 
 ### Downloading the Shell
 The Ixia Virtual BreakingPoint Shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
