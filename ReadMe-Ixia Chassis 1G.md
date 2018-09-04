@@ -77,9 +77,11 @@ This section describes how to import, configure and modify the Ixia Chassis 1G S
 **To import the Shell into CloudShell:**
   1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   2. Backup your database.
-  3. Log in to CloudShell Portal, as Global administrator.
-  3. Click **Import**.
-  4. In the dialog box, navigate to the Shell's .zip file, select it and click **Open**.
+  3. Log in to CloudShell Portal as administrator of the relevant domain.
+  4. In the User menu select **Import Package**.
+  
+     ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+  5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
 The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
@@ -132,16 +134,17 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select the **Ixia Chassis 2G Shell**.
+  2. From the list, select the **Ixia Chassis 1G Shell**.
   3. Enter the Ixia chassis **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, as follows: 
       * If Ixia Chassis is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
       * If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
-          * Controller TCP Port: 8022 (Linux IxOS ssh port)
-      * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
-          * Controller Address: address of the IxTclServer
-          * Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
+          * Client Install Path – The path in which IxOS client is installed on the Execution Server. <br>For example, for IxOS 8.20 Linux based server, enter the following path:<br>*C:\Program Files (x86)\Ixia\IxOS\8.20-EA*
+      * If Ixia Chassis is not directly accessible to the Execution Server than there must be an IxNetwork API server serving as a proxy between the Execution Server and the Ixia chassis, enter the following settings:
+          * Client Install Path – The path in which IxNetwork client is installed on the Execution Server.<br>For example, for IxNetwork 8.01 based server, enter the following path:<br>C:\Program Files (x86)\Ixia\IxNetwork\8.01-GA
+          * Controller Address - IP address of the IxNetwork API server
+	  * Controller TCP Port – TCP port of the IxNetwork API server. If empty, the default port (8009) will be used.
   6. Click **Continue**.
 
 This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
@@ -179,10 +182,12 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Model Name|String||The device model. This information is typically used for abstract resource filtering.|
 |Serial Number|Text||The serial number of the resource.|
 |Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Vendor|String||The firmware version of the resource.|
+|Supported Applications|String||Comma separated list of traffic applications supported by this traffic generator, for example IxLoad, IxNetwork.|
+|Vendor|String||The name of the device manufacturer.|
+|Version|String||The firmware version of the resource.|
 
 ## References
 For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
@@ -194,9 +199,7 @@ To connect with Quali users and experts from around the world, ask questions and
 ## Release Notes
 ### What's new
 
-* Set unknown port speed to zero.
-* Support new card types.
-* Show only active ports instead of all ports.
+* Make Logical Name attribute Available For Abstract Resources
 
 ### Known Issues
-* Resource groups are not modeled. Resource groups are modeled as port with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
+* • All Execution Servers that are used to run Sandboxes with IxNetwork controller should have the same Client Install Path. This means that all Execution Servers must be either Windows or Linux. 
