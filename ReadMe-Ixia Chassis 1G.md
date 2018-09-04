@@ -1,4 +1,4 @@
-# Ixia Chassis 2G Shell 
+# Ixia Chassis 1G Shell 
 <p align="left">
 <img src="https://github.com/QualiSystems/devguide_source/raw/master/logo.png" width="150" height="150"></img>
 </p>
@@ -76,7 +76,8 @@ This section describes how to import, configure and modify the Ixia Chassis 1G S
 
 **To import the Shell into CloudShell:**
   1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
-  2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  2. Backup your database.
+  3. Log in to CloudShell Portal, as Global administrator.
   3. Click **Import**.
   4. In the dialog box, navigate to the Shell's .zip file, select it and click **Open**.
 
