@@ -56,7 +56,6 @@ The Shell comprises:
 |ixia-breakingpoint-vchassis.zip|Virtual BreakingPoint VE VChassis Shell package|
 |ixia-breakingpoint-ve-vblade.zip|Virtual BreakingPoint VE VBlade Shell package|
 |vbp-offline-package-1.0.0.zip|Shell Python dependecies (for offline deployments only)|
-|Ixia Virutal BreakingPoint Shell Doc.ReadMe|Documentation|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
