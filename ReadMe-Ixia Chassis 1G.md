@@ -1,7 +1,5 @@
 # Ixia Chassis 1G Shell 
-<p align="left">
-<img src="https://github.com/QualiSystems/devguide_source/raw/master/cloudshell_logo.png" width="150" height="150"></img>
-</p>
+![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
 Release date: June 2017
 
