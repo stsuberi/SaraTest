@@ -1,7 +1,12 @@
+![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
+
 # Ixia BreakingPoint 1G Shell 
-<p align="left">
-<img src="https://github.com/QualiSystems/devguide_source/raw/master/logo.png" width="150" height="150"></img>
-</p>
+
+**Release date:** October 2017
+
+Shell version 1.2.2
+
+Document version 1.0
 
 ## Overview
 A Shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
