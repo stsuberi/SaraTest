@@ -53,19 +53,6 @@ This section describes the automation (drivers or scripts) associated with the d
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
-The following commands are associated with a model inside the Shell:
-
-**BreakingPoint Controller 1G Shell**
-
-|Command|Description|
-|:-----|:-----|
-|Load Configuration|Load configuration file prepared by your admin. The load configuration file includes the settings to run the traffic test. For example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports. <br>**Note**: The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).|
-|Start Traffic|Start the test to generate and send the traffic to the DUT according to the settings provided in the configuration file.|
-|Stop Traffic|Stop running the test to stop sending traffic from the traffic generator.|
-|Get Result|Get the test result file and attach it to the sandbox.|
-|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: Type of statistics to return. For example, Port Statistics, Traffic Item Statistics, Flow Statistics, etc. The types available may differ depending on the traffic generator. <br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
-|Get Test File|Download the test file to the location specified in the **Test Files Location** attribute defined when you added the service to your blueprint.|
-
 ## Importing and Configuring the Shell
 This section describes how to import, configure and modify the BreakingPoint VE Static VBlade 2G ShelI.
 
