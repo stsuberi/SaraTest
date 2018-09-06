@@ -37,7 +37,7 @@ The BreakingPoint VE Static VBlade 2G Shell is based on the Deployed App Standar
 
 
 ### Downloading the Shell
-The BreakingPoint SVE Static VBlade Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The BreakingPoint VE Static VBlade Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -149,7 +149,7 @@ The VBlade attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Password|Password||Password is required by some CLI protocols such as Telnet as well as by the device configuration.|
+|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
 |Public IP|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
 |User|String||User with administrative privileges.|
 |vBlade vCenter VM|String||Virtual Blade vCenter VM to use in VM creation. <br>Should include the full path and the vm name, for example:<br>*QualiFolder/VM121*|
