@@ -138,7 +138,7 @@ The Chassis families and models are listed in the following table:
 |Family|Model|Description|
 |:---|:---|:---|
 |CS_GenericAppFamily|BP vChassis|Static Virtual BreakingPoint Chassis|
-|CS_GenericAppFamily|BP vBlade.GenericVPort|Static Virtual BreakingPoint modules located on the chassis|
+|CS_GenericAppFamily|BP vBlade|Static Virtual BreakingPoint modules located on the chassis|
 |CS_Port|BP vChassis.GenericVPort, BP vBlade.GenericVPort|Generic Virtual Port|
 
 **BreakingPoint Static VChassis Attributes**
