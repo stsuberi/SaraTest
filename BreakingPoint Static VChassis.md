@@ -61,7 +61,7 @@ The following commands are associated with a model inside the Shell:
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-The BreakingPoint Static VChassis 2G shell is compatible with the BreakingPoint Controller Shell, see the About BreakingPoint Static VChassis 2G Shell section.
+The BreakingPoint Static VChassis 2G shell is compatible with the BreakingPoint Controller Shell, see [About BreakingPoint Static VChassis 2G Shell section(#about-breakingpoint-static-vchassis-2g-shell-section)
 
 ## Importing and Configuring the Shell
 This section describes how to import, configure and modify the BreakingPoint VE Static VBlade 2G ShelI.
@@ -107,7 +107,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select **BP vBlade** Shell.
+  2. From the list, select **BP vChassis** Shell.
   3. Enter the Blade's **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, enter all the fields relevant for this device: 
@@ -131,35 +131,35 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the Shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-**BreakingPoint Blade Families and Models**
+**BreakingPoint Static VChassis Families and Models**
 
-The Blade families and models are listed in the following table:
+The Chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|CS_GenericAppFamily|BP vBlade|Static Virtual BreakingPoint modules located on the chassis|
-|CS_Port|BP vBlade.GenericVPort|Generic Virtual Port|
+|CS_GenericAppFamily|BP vChassis|Static Virtual BreakingPoint Chassis|
+|CS_GenericAppFamily|BP vBlade.GenericVPort|Static Virtual BreakingPoint modules located on the chassis|
+|CS_Port|BP vChassis.GenericVPort, BP vBlade.GenericVPort|Generic Virtual Port|
 
-**BreakingPoint Static VBlade Attributes**
+**BreakingPoint Static VChassis Attributes**
 
-The VBlade attribute names and types are listed in the following table:
+The VChassis attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
 |Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
-|Public IP|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
+|Public IP|String|||
 |User|String||User with administrative privileges.|
-|vBlade vCenter VM|String||Virtual Blade vCenter VM to use in VM creation. <br>Should include the full path and the vm name, for example:<br>*QualiFolder/VM121*|
 |vCenter Name|String||vCenter resource name in CloudShell|
-|vChassis vCenter VM|String||Virtual Chassis vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM, for example:<br> *QualiFolder/VM121*|
+|vChassis VM|String||vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM, for example:<br> *QualiFolder/VM121*|
 
-**BreakingPoint Controller Attributes**
 
-The controller attribute names and types are listed in the following table:
+## References
+For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Test Files Location|String||Location for test related files.|
+To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
+
+To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 ## Typical Workflow and Scenarios
 ### Use cases and scenarios
@@ -222,11 +222,4 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
 5. Getting result file.
    * Run command `Get Result`.
    * The result file is attached to the sandbox.
-
-## References
-For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
-
-To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
-
-To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
