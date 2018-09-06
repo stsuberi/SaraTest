@@ -145,22 +145,16 @@ The Blade families and models are listed in the following table:
 
 **BreakingPoint Static VBlade Attributes**
 
-The chassis attribute names and types are listed in the following table:
+The VBlade attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Client Install Path|String||The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
-|Controller Group|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
-|Logical Name|String||The port's logical name in the test configuration. If kept empty, automatic allocation will apply.|
-|Media Type|String||Interface media type. Possible values are **Fiber** and/or **Copper** (comma-separated).|
-|Model|String||The device model. This information is typically used for abstract resource filtering.|
-|Power Management|Boolean|False|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
-|Supported Applications|String||Comma-separated list of traffic applications supported by this traffic generator. For example *IxLoad,IxNetwork*.|
-|Supported Speeds|String||Speed supported by the interface, comma-separated.|
-|Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Version|String||The firmware version of the resource.|
-|Vendor|String||The vendor name.|
-|Logical Name|String||The port's logical name in the test configuration. If kept empty, allocation will be applied in the blueprint.|
+|Password|Password||Password is required by some CLI protocols such as Telnet as well as by the device configuration.|
+|Public IP|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
+|User|String||User with administrative privileges.|
+|vBlade vCenter VM|String||Virtual Blade vCenter VM to use in VM creation. <br>Should include the full path and the vm name, for example:<br>*QualiFolder/VM121*|
+|vCenter Name|String||vCenter resource name in CloudShell|
+|vChassis vCenter VM|String||Virtual Chassis vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM, for example:<br> *QualiFolder/VM121*|
 
 **BreakingPoint Controller Attributes**
 
@@ -238,8 +232,3 @@ For best practices, instructional training and video tutorials, and comprehensiv
 To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-## Release Notes
-### What's new
-
-* Added Virtual Traffic Generator support.
