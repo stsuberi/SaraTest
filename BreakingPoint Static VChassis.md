@@ -149,7 +149,7 @@ The VChassis attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
 |Public IP|String|||
-|User|String||User with administrative privileges.|
+|User|String||User with administrative privileges|
 |vCenter Name|String||vCenter resource name in CloudShell|
 |vChassis VM|String||vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM, for example:<br> *QualiFolder/VM121*|
 
