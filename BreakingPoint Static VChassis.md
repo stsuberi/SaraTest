@@ -61,7 +61,7 @@ The following commands are associated with a model inside the Shell:
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-The BreakingPoint Static VChassis 2G shell is compatible with the BreakingPoint Controller Shell, see [About BreakingPoint Static VChassis 2G Shell](#about-breakingpoint-static-vchassis-2g-shell-section)
+The BreakingPoint Static VChassis 2G shell is compatible with the BreakingPoint Controller Shell, see [About BreakingPoint Static VChassis 2G Shell](#about-breakingpoint-static-vchassis-2g-shell).
 
 ## Importing and Configuring the Shell
 This section describes how to import, configure and modify the BreakingPoint VE Static VBlade 2G ShelI.
