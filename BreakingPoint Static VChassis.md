@@ -64,7 +64,7 @@ The following commands are associated with a model inside the Shell:
 The BreakingPoint Static VChassis 2G shell is compatible with the BreakingPoint Controller Shell, see [About BreakingPoint Static VChassis 2G Shell](#about-breakingpoint-static-vchassis-2g-shell).
 
 ## Importing and Configuring the Shell
-This section describes how to import, configure and modify the BreakingPoint VE Static VBlade 2G ShelI.
+This section describes how to import, configure and modify the BreakingPoint VE Static VChassis 2G ShelI.
 
 ### Importing the Shell into CloudShell
 
@@ -81,7 +81,7 @@ ___
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
 ___
 
-In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder, see [Adding Shell and script packages to the local PyPi Server repository](#add-shell-and-script-packages-to-the-local-pypi-server-repository).
+In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
 
 ### Adding Shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Servercomputer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
