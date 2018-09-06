@@ -156,13 +156,9 @@ The VBlade attribute names and types are listed in the following table:
 |vCenter Name|String||vCenter resource name in CloudShell|
 |vChassis vCenter VM|String||Virtual Chassis vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM, for example:<br> *QualiFolder/VM121*|
 
-**BreakingPoint Controller Attributes**
+**Controllers compatible with BreakingPoint Static VChassis 2G Shell**
 
-The controller attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Test Files Location|String||Location for test related files.|
+The BreakingPoint VE Static VBlade shell is compatible with the BreakingPoint Controller Shell, see [About BreakingPoint VE Static VBlade 2G Shell](#about-breakingpoint-ve-static-vblade-2g-shell).
 
 ## Typical Workflow and Scenarios
 ### Use cases and scenarios
