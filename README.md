@@ -26,7 +26,7 @@ To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and
 ▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
 
 ### Standard version
-The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_2.yaml*.
+The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_3.yaml*.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -34,7 +34,7 @@ For detailed information about the Shell’s structure and attributes, see the [
 ▪ Windows
 
 ### Requirements
-▪ 2G Chassis Shell: CloudShell version 8.0 and above
+▪ 2G Chassis Shell: CloudShell version 8.1 and above
 ▪ Controller Shells and 1G Chassis Shell: CloudShell version 7.0 and above
 
 ### Downloading the Shell
