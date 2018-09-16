@@ -107,14 +107,15 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   3. Enter the Blade's **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the resource details as follows to discover the resource: 
+  
   |Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Address|String|NA|BreakingPoint vBlade Public IP.|
-|vBlade vCenter VM|String||Virtual Blade vCenter VM to use in VM creation. <br>Should include the full path and the vm name, for example:<br>*QualiFolder/VM121*|
-|vChassis vCenter VM|String||Virtual Chassis vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM, for example:<br> *QualiFolder/VM121*|
-|vCenter Name|String||vCenter resource name in CloudShell|
-|User|String||User with administrative privileges.|
-|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
+  |:---|:---|:---|:---|
+  |Address|String|NA|BreakingPoint vBlade Public IP.|
+  |vBlade vCenter VM|String||Virtual Blade vCenter VM to use in VM creation. <br>Should include the full path and the vm name.<br>For example:<br>*QualiFolder/VM121*|
+  |vChassis vCenter VM|String||Virtual Chassis vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM.<br>For example: *QualiFolder/VM121*|
+  |vCenter Name|String||vCenter resource name in CloudShell|
+  |User|String||User with administrative privileges.|
+  |Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -171,7 +172,8 @@ The VBlade attribute names and types are listed in the following table:
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
 3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
    * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservarion.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
-   * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and choose **Cleanup Reservation** from the list. To save changes click **Update**.
+   * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and choose **Cleanup Reservation** from the list. 
+   * To save changes, click **Update**.
 
 **Scenario 2 - Getting a test file with network configuration**
 
