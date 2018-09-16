@@ -36,9 +36,13 @@ For detailed information about the Shell’s structure and attributes, see the [
 ▪ Windows
 
 ### Requirements
+
 Release 2.0.4:
+
 ▪ 2G Chassis Shell: CloudShell version 8.1 and above
+
 ▪ 1G Chassis Shell: CloudShell version 7.0 and above
+
 ▪ Controller Shells: CloudShell version 7.0 and above
 
 ### Downloading the Shell
