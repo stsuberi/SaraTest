@@ -6,20 +6,22 @@
 
 Shell version 2.0.4
 
-Document version A
+Document version 1.2.3
 
 ## Overview
-A Shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
+A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.dShell.
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
-### About Ixia Chassis 2G Shell
-This 2nd generation Shell provides you with connectivity and management capabilities such as device structure discovery and power management for Ixia chassis. 
+### Ixia Chassis 2G Shell
+The Ixia Chassis 2G Shell provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
 
-To model an Ixia chassis device in CloudShell, use the Ixia Chassis 2G Shell and a controller Shell. The Ixia Chassis shell can be used with either of the following controllers: 
+For more information on the Ixia Chassis, see the Ixia official product documentation.
+
+To model an Ixia chassis device in CloudShell, use one of the following controllers, which provide automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
 
 ▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_blank">Ixia IxNetwork Controller Shell</a>
 
@@ -34,46 +36,43 @@ For detailed information about the Shell’s structure and attributes, see the [
 ▪ Windows
 
 ### Requirements
+Release 2.0.4:
 ▪ 2G Chassis Shell: CloudShell version 8.1 and above
-▪ Controller Shells and 1G Chassis Shell: CloudShell version 7.0 and above
+▪ 1G Chassis Shell: CloudShell version 7.0 and above
+▪ Controller Shells: CloudShell version 7.0 and above
 
 ### Downloading the Shell
 The Ixia Chassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
-The Shell comprises:
+The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|Ixia.Chassis.Shell.2G.zip|Shell package|
-|Ixia.Chassis.Shell.2G.offline.requirements.zip|Shell Python dependecies (for offline deployments only)|
+|Ixia.Chassis.Shell.2G.zip|Ixia Chassis Shell package|
+|Ixia.Chassis.Shell.2G.offline.requirements.zip|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The automation code (either script or driver) is associated with the model and provided as part of the Shell package (in the .zip file). 
-
-For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
+For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 |Command|Description|
 |-----|-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-**Controllers compatible with Ixia Chassis 2G Shell**
-
-The Ixia Chassis shell is compatible with two different controllers, see [About Ixia Chassis 2G Shell](#about-ixia-chassis-2g-shell).
-
 ## Importing and Configuring the Shell
-This section describes how to import, configure and modify the Ixia Chassis 2G Shell.
+This section describes how to import the Ixia Chassis 2G Shell and configure and modify the shell’s devices.
 
-### Importing the Shell into CloudShell
+### Importing the shell into CloudShell
 
-**To import the Shell into CloudShell:**
-  1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+**To import the shell into CloudShell:**
+  1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
   3. Click **Import**.
-  4. In the dialog box, navigate to the Shell's .zip file, select it and click **Open**.
+  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
 
-The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a Shell
 ___
@@ -87,16 +86,16 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 3. For CloudShell versions prior to 8.2, see [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding Shell and script packages to the local PyPi Server repository
-If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Servercomputer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
+If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
 
 For more information, see [Configuring CloudShell to Execute Python Commands in Offline Mode](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=Configuring%20CloudShell%20to%20Execute%20Python%20Commands%20in%20Offline%20Mode).
 
 **To add Python packages to the local PyPi Server repository:**
   1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
-  2. For each Shell or script you add into CloudShell, do one of the following (from an online computer):
+  2. For each shell or script you add into CloudShell, do one of the following (from an online computer):
       * Connect to the Internet and download each dependency specified in the *requirements.txt* file with the following command: 
 *pip download -r requirements.txt*. 
-     The Shell or script's requirements are downloaded as zip files.
+     The shell or script's requirements are downloaded as zip files.
 
       * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the Shell and click the Shell's **Download** link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
 
@@ -117,7 +116,9 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new resource
-In CloudShell, the component that models the device is called a resource. It is based on the Shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
+This section explains how to create a new resource from the shell.
+
+In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
 You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
@@ -136,10 +137,10 @@ You can also modify existing resources, see [Managing Resources in the Inventory
           * Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
   6. Click **Continue**.
 
-This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
+CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
 ## Updating Python Dependencies for Shells
-This section explains how to update your Python dependencies folder. This is required when you upgrade a Shell that uses new/updated dependencies. It applies to both online and offline dependencies.
+This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
 ### Updating offline Python dependencies
 **To update offline Python dependencies:**
@@ -151,7 +152,7 @@ This section explains how to update your Python dependencies folder. This is req
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
 
 **To update online Python dependencies:**
-* If there is a live instance of the Shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
+* If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
 **Ixia Chassis Families and Models**
@@ -177,9 +178,13 @@ The attribute names and types are listed in the following table:
 |Vendor|String||The firmware version of the resource.|
 
 ## References
-For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
+To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
-To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
+For comprehensive product and API documentation, see the [Quali Online Help](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/Portal-Help.htm).
+
+For best practices, instructional training and video tutorials, see [Quali University](http://courses.quali.com/).
+
+To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
