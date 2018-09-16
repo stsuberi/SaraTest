@@ -163,14 +163,6 @@ The VChassis attribute names and types are listed in the following table:
 |vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
 |vChassis VM|String||vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
-
-## References
-For best practices, instructional training and video tutorials, and comprehensive product and API documentation, see the [Quali Community's Integrations](https://community.quali.com/integrations) page. 
-
-To suggest an idea for the product and improve the product for everyone, see [Quali's Idea box](https://community.quali.com/ideabox). 
-
-To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
 ## Typical Workflow and Scenarios
 ### Use cases and scenarios
 
