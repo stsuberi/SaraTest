@@ -8,8 +8,8 @@ Shell version 2.0.4
 
 Document version 1.2.3
 
-[Overview](#overview)
-[Importing and Configuring the Shell](#importing-and-configuring-the-shell)
+* [Overview](#overview)
+* [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 
 
 
