@@ -8,8 +8,7 @@
 
 **Document version:** 1.2.3
 
-# Table of Contents
-In this guide:
+# In This Guide:
 
 * [Overview](#overview)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
