@@ -88,15 +88,14 @@ This section describes how to import the Ixia Chassis 2G Shell and configure and
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a Shell
-___
+
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
-___
 
 In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder. The dependencies folder may differ, depending on the CloudShell version you are using:
 
-1. For CloudShell version 8.3 and above, see [Add Shell and script packages to the local PyPi Server repository](#add-shell-and-script-packages-to-the-local-pypi-server-repository).
-2. For CloudShell version 8.2, perform the appropriate procedure: [Add Shell and script packages to the local PyPi Server repository](#add-shell-and-script-packages-to-the-local-pypi-server-repository) or [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
-3. For CloudShell versions prior to 8.2, see [Set the python pythonOfflineRepositoryPath configuration key](#set-the-python-pythonofflinerepositorypath-configuration-key).
+* For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
+* For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
+* For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding Shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
@@ -107,7 +106,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
   1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
   2. For each shell or script you add into CloudShell, do one of the following (from an online computer):
       * Connect to the Internet and download each dependency specified in the *requirements.txt* file with the following command: 
-*pip download -r requirements.txt*. 
+`pip download -r requirements.txt`. 
      The shell or script's requirements are downloaded as zip files.
 
       * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the Shell and click the Shell's **Download** link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
@@ -146,8 +145,8 @@ You can also modify existing resources, see [Managing Resources in the Inventory
       * If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
           * Controller TCP Port: 8022 (Linux IxOS ssh port)
       * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
-          * Controller Address: address of the IxTclServer
-          * Controller TCP Port: TCP port of IxTclServer (leave empty for default 4555 port) 
+          * **Controller Address**: address of the IxTclServer
+          * **Controller TCP Port**: TCP port of IxTclServer (leave empty for default 4555 port) 
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
