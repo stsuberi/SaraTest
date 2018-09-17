@@ -4,10 +4,11 @@
 
 **Release date:** June 2018
 
-Shell version 2.0.4
+**Shell version:** 2.0.4
 
-Document version 1.2.3
+**Document version:** 1.2.3
 
+# Table of Contents
 In this guide:
 
 * [Overview](#overview)
