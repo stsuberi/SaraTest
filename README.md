@@ -9,11 +9,11 @@ Shell version 2.0.4
 Document version 1.2.3
 
 [Overview](#overview)
+[Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 
 
 
-
-## Overview
+# Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Traffic Generator Shells
@@ -70,7 +70,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |-----|-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-## Importing and Configuring the Shell
+# Importing and Configuring the Shell
 This section describes how to import the Ixia Chassis 2G Shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
@@ -148,7 +148,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
-## Updating Python Dependencies for Shells
+# Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
 ### Updating offline Python dependencies
@@ -186,7 +186,7 @@ The attribute names and types are listed in the following table:
 |Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |Vendor|String||The firmware version of the resource.|
 
-## References
+# References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
 For comprehensive product and API documentation, see the [Quali Online Help](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/Portal-Help.htm).
@@ -197,7 +197,7 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
-## Release Notes
+# Release Notes
 ### What's new
 
 * Set unknown port speed to zero.
