@@ -38,7 +38,7 @@ To model an **[Device Name]** device in CloudShell, use one of the following con
 ▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Traffic Shell standard ***[Name of Standard File]***.
+**[Shell Name x.x.x]** is based on the Traffic Shell standard **[Name of Standard File]**.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -62,8 +62,8 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|_**[Shell .zip File Name]**_|_**[Device Name]**_ shell package|
-|_**[Shell Offline Requirements .zip File Name]**_|Shell Python dependencies (for offline deployments only)|
+|**[Shell .zip File Name]**|**[Device Name]** shell package|
+|**[Shell Offline Requirements .zip File Name]**|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
@@ -74,7 +74,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Importing and Configuring the Shell
-This section describes how to import the _**[Shell Name x.x.x]**_ and configure and modify the shell’s devices.
+This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -116,7 +116,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *_**[Shell Offline Requirements .zip File Name]**_* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the **[Shell Offline Requirements .zip File Name]** file, see [Downloading the Shell](#downloading-the-shell).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
@@ -136,8 +136,8 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select the _**[Shell Name]**_.
-  3. Enter the _**[Device Name]**_ **Name** and **IP address** (if applicable).
+  2. From the list, select the **[Shell Name]**.
+  3. Enter the **[Device Name]** **Name** and **IP address** (if applicable).
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
   6. Click **Continue**.
@@ -160,7 +160,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-_**[Device Name]**_ **Families and Models**
+**[Device Name]** **Families and Models**
 
 The chassis families and models are listed in the following table:
 
@@ -171,7 +171,7 @@ The chassis families and models are listed in the following table:
 ||||
 ||||
 
-_**[Device Name]**_ **Attributes**
+**[Device Name]** **Attributes**
 
 The attribute names and types are listed in the following table:
 
