@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# _**[Shell Name]**_  
+# IxChariot Server 1G Shell 
 
-Release date: _**[Month Year]**_
+Release date: _**September 2018**_
 
-Shell version: _**[x.x.x]**_
+Shell version: _**1.1.1**_
 
-Document version: _**[x.x.x]**_
+Document version: _**A**_
 
 # In This Guide:
 
