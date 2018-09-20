@@ -139,7 +139,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   2. From the list, select the _**[Shell Name]**_.
   3. Enter the _**[Device Name]**_ **Name** and **IP address**.
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes) 
+  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
