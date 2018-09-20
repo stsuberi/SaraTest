@@ -38,25 +38,23 @@ To model an _**[Device Name]**_ device in CloudShell, use one of the following c
 ▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
 
 ### Standard version
-_**[Shell Name x.x.x]**_ is based on the Traffic Shell standard *[name of standard file]*.
+_**[Shell Name x.x.x]**_ is based on the Traffic Shell standard *_**[Name of Standard File]**_.
 
-For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Supported OS
-▪ Windows
+▪ _**[OS Name]**_
 
 ### Requirements
 
-Release x.x.x:
+Release _**[x.x.x]**_:
 
-▪ 2G Chassis Shell: CloudShell version 8.1 and above
+▪ _**[Chassis Shell Name]**_: CloudShell version _**[Version Number]**_
 
-▪ 1G Chassis Shell: CloudShell version 7.0 and above
-
-▪ Controller Shells: CloudShell version 7.0 and above
+▪ _**[Controller Name]**_: CloudShell version _**[Version Number]**_
 
 ### Downloading the Shell
-The [Shell Name] is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The _**[Shell Name]**_ is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -64,8 +62,8 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|Shell .zip file name|Ixia Chassis Shell package|
-|Shell offline requirements.zip file name|Shell Python dependencies (for offline deployments only)|
+|_**[Shell .zip File Name]**_|_**[Device Name]**_ shell package|
+|_**[Shell Offline Requirements.zip File Name]**_|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
@@ -76,7 +74,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Importing and Configuring the Shell
-This section describes how to import the [Shell Name] and configure and modify the shell’s devices.
+This section describes how to import the _**[Shell Name x.x.x]**_ and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -110,7 +108,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 `pip download -r requirements.txt`. 
      The shell or script's requirements are downloaded as zip files.
 
-      * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the Shell and click the Shell's **Download** link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
+      * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the shell and click the shell's **Download** link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
 
 3. Place these zip files in the local PyPi Server repository.
  
@@ -118,7 +116,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell offline requirements.zip file name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *_**[Shell Offline Requirements.zip File Name]**_* file, see [Downloading the Shell](#downloading-the-shell).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
@@ -138,14 +136,14 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select the **[Shell Name]**.
-  3. Enter the Ixia chassis **Name** and **IP address**.
+  2. From the list, select the _**[Shell Name]**_.
+  3. Enter the _**[Device Name]**_ **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, as follows: 
-      * If Ixia Chassis is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
-      * If Ixia Chassis is Linux based and is accessible directly to the Execution Server then enter the following setting:
+      * If _**[Device Name]**_ is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
+      * If _**[Device Name]**_ is Linux based and is accessible directly to the Execution Server then enter the following setting:
           * **Controller TCP Port**: **8022** (Linux IxOS ssh port)
-      * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
+      * If _**[Device Name]**_ is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
           * **Controller Address**: address of the IxTclServer
           * **Controller TCP Port**: TCP port of IxTclServer (leave empty for default 4555 port) 
   6. Click **Continue**.
@@ -168,18 +166,18 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-**Ixia Chassis Families and Models**
+**_**[Device Name]**_ Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|Traffic Generator Chassis|Ixia Chassis|Ixia Chassis|
+|Traffic Generator Chassis|_**[Device Name]**_|_**[Device Name]**_|
 |Module|Generic Traffic Generator Module|Modules located on the chassis|
 |Port Group|Generic Port Group|Generic Port Group|
 |Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
 
-**Ixia Chassis Attributes**
+**_**[Device Name]**_ Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -211,4 +209,6 @@ To connect with Quali users and experts from around the world, ask questions and
 * 
 
 ### Known Issues
+* 
+* 
 * 
