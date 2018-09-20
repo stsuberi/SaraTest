@@ -49,9 +49,9 @@ For detailed information about the shell’s structure and attributes, see the [
 
 Release **[x.x.x]**:
 
-▪ **[Chassis Shell Name]**: CloudShell version **[Version Number]**
+	▪ **[Chassis Shell Name]**: CloudShell version **[Version Number]**
 
-▪ **[Controller Name]**: CloudShell version **[Version Number]**
+	▪ **[Controller Name]**: CloudShell version **[Version Number]**
 
 ### Downloading the Shell
 The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
