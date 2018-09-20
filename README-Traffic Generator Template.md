@@ -2,8 +2,8 @@
 
 # Shell Name  
 
-**Release date:** <span style="background-color: #FFFF00">Month Year</span>
-
+**Release date:** <span style="color:yellow">Month Year</span>
+<span style=“color:purple;”> text goes here</span>
 **Shell version:** x.x.x
 
 **Document version:** x.x.x
