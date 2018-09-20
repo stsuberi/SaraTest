@@ -19,6 +19,8 @@ For more information, see [Traffic Generators Overview](http://help.quali.com/On
 ### About BreakingPoint VE Static VBlade 2G Shell
 The **BreakingPoint VE Static VBlade 2G** Shell provides you with connectivity and management capabilities such as device structure discovery and power management for the BreakingPoint VE Static VBlade.
 
+The blade's main purpose is to autoload and map ports on its VM with the autoloaded ports on the CloudShell resource.
+
 For more information on the BreakingPoint VE Static VBlade, see the BreakingPoint official product documentation.
 
 To model a BreakingPoint VE Static VBlade device in CloudShell, use the following:
