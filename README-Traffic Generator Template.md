@@ -139,13 +139,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   2. From the list, select the _**[Shell Name]**_.
   3. Enter the _**[Device Name]**_ **Name** and **IP address**.
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, as follows: 
-      * If _**[Device Name]**_ is Windows based and is accessible directly to the Execution Server then there is no need for additional settings.
-      * If _**[Device Name]**_ is Linux based and is accessible directly to the Execution Server then enter the following setting:
-          * **Controller TCP Port**: **8022** (Linux IxOS ssh port)
-      * If _**[Device Name]**_ is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
-          * **Controller Address**: address of the IxTclServer
-          * **Controller TCP Port**: TCP port of IxTclServer (leave empty for default 4555 port) 
+  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes) 
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
