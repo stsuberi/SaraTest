@@ -20,6 +20,9 @@ Document version: **1.0.0**
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
+___
+**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
+___
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
@@ -82,10 +85,13 @@ This section describes how to import the **IxChariot Server 1G Shell** and confi
 ### Importing the shell into CloudShell
 
 **To import the shell into CloudShell:**
-  1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
-  2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
-  3. Click **Import**.
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
+  1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  2. Backup your database.
+  3. Log in to CloudShell Portal as administrator of the relevant domain.
+  4. In the User menu select **Import Package**.
+  
+     ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+  5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
