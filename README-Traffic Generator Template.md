@@ -13,6 +13,7 @@
 * [Overview](#overview)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
+* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
 * [Release Notes](#release-notes)
 
@@ -188,6 +189,8 @@ The attribute names and types are listed in the following table:
 |Serial Number|Text||The serial number of the resource.|
 |Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |Vendor|String||The firmware version of the resource.|
+
+### Typical Workflow and Scenarios
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
