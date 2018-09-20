@@ -63,7 +63,7 @@ The shell comprises:
 |File name|Description|
 |:---|:---|
 |_**[Shell .zip File Name]**_|_**[Device Name]**_ shell package|
-|_**[Shell Offline Requirements.zip File Name]**_|Shell Python dependencies (for offline deployments only)|
+|_**[Shell Offline Requirements .zip File Name]**_|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
