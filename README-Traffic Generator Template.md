@@ -27,7 +27,7 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
 ### Shell Name
-The _**[SHELL NAME]**_ [SHELL NAME] provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
+_**[SHELL NAME]**_ provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
 
 For more information on the Ixia Chassis, see the Ixia official product documentation.
 
@@ -38,7 +38,7 @@ To model an Ixia chassis device in CloudShell, use one of the following controll
 ▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
 
 ### Standard version
-The [Shell Name] x.x.x is based on the Traffic Shell standard *[name of standard file]*.
+**_[Shell Name x.x.x]**_ is based on the Traffic Shell standard *[name of standard file]*.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
