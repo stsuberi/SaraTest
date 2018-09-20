@@ -29,7 +29,7 @@ For more information, see [Traffic Generators Overview](http://help.quali.com/On
 ### **[Shell Name]**
 **[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
 
-For more information on the **[Device Name]**, see the **[Device Manufacturer]** product documentation.
+For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
 
 To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
 
