@@ -64,7 +64,7 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|**Ixia-IxChariotServer-Shell.zip**|**IxChariot** shell package|
+|**Ixia-IxChariotServer-Shell.zip**|IxChariot shell package|
 |**Ixia-IxChariotServer-Shell_offline_requirements.zip**|Shell Python dependencies (for offline deployments only)|
 |**ReadMe-IxChariot Server Shell.md**|Documentation|
 
