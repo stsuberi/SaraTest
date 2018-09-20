@@ -27,34 +27,36 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
 ### **IxChariot Server 1G Shell**
-_**[Shell Name]**_ provides you with connectivity and management capabilities such as device structure discovery and power management for the _**[Device Name]**_. 
+**IxChariot Server 1G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxChariot server**. 
 
-For more information on the _**[Device Name]**_, see the _**[Device Manufacturer]**_ product documentation.
+For more information on the **IxChariot server**, see the official **IxChariot** product documentation.
 
-To model an _**[Device Name]**_ device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+To model an _**[Device Name]**_ device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: (**Is this section relevant for this shell?**)
 
 ▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
 
 ▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
 
 ### Standard version
-_**[Shell Name x.x.x]**_ is based on the Traffic Shell standard *_**[Name of Standard File]**_*.
+**IxChariot Server 1G Shell** 1.1.1 is based on the Traffic Shell 1st generation standard version 3.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Supported OS
-▪ _**[OS Name]**_
+▪ Windows
 
 ### Requirements
 
-Release _**[x.x.x]**_:
+Release 1.1.1:
 
-▪ _**[Chassis Shell Name]**_: CloudShell version _**[Version Number]**_
+▪ **CloudShell version:** 8.1 and above
 
-▪ _**[Controller Name]**_: CloudShell version _**[Version Number]**_
+▪ **IxChariot versions:** 9.5, 9.6
+
+▪ **IxChariot python API library:** Downloadable from the IxChariot server
 
 ### Downloading the Shell
-The _**[Shell Name]**_ is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **IxChariot Server 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -62,10 +64,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|_**[Shell .zip File Name]**_|_**[Device Name]**_ shell package|
-|_**[Shell Offline Requirements .zip File Name]**_|Shell Python dependencies (for offline deployments only)|
+|**Ixia-IxChariotServer-Shell.zip**|**IxChariot** shell package|
+|**Ixia-IxChariotServer-Shell_offline_requirements.zip**|Shell Python dependencies (for offline deployments only)|
+|**ReadMe-IxChariot Server Shell.md**|Documentation|
 
-### Automation
+### Automation (Is this section relevant for this shell?)
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
 For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -74,7 +77,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Importing and Configuring the Shell
-This section describes how to import the _**[Shell Name x.x.x]**_ and configure and modify the shell’s devices.
+This section describes how to import the **IxChariot Server 1G Shell** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -116,7 +119,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *_**[Shell Offline Requirements .zip File Name]**_* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *Ixia-IxChariotServer-Shell_offline_requirments.zip* file, see [Downloading the Shell](#downloading-the-shell).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
@@ -136,10 +139,17 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select the _**[Shell Name]**_.
-  3. Enter the _**[Device Name]**_ **Name** and **IP address** (if applicable).
+  2. From the list, select **IxChariot Server**.
+  3. Enter the **IxChariot Server** **Name** and **IP address**.
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings, as follows:
+  
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Client Install Path|||the path where IxChariot python API library was downloaded to.|
+|User|||user name for IxChariot server|
+|Password|||password for IxChariot server|
+|Power Management|||whether to automatically manage the device power status or not (standard CloudShell attribute).| 
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -182,14 +192,6 @@ The attribute names and types are listed in the following table:
 |||||
 |||||
 
-# Typical Workflow and Scenarios 
-(if not applicable - remove section)
-
-**Scenario 1 -** 
-
-**Scenario 2 -**
-
-**Scenario 3 -**
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -201,14 +203,10 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes 
-(if not applicable - remove section)
+
 ### What's New
 
-* 
-* 
-* 
+* No new functionality, just standardization.
 
 ### Known Issues
-* 
-* 
-* 
+* NA
