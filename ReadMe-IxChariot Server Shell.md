@@ -53,7 +53,7 @@ Release 1.1.1:
 
 ▪ **IxChariot versions:** 9.5, 9.6
 
-▪ **IxChariot python API library:** Can be downloaded from the IxChariot Server
+▪ **IxChariot Python API library:** Can be downloaded from the IxChariot Server
 
 ### Downloading the Shell
 The **IxChariot Server 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
