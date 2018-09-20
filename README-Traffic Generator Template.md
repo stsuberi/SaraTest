@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# Shell Name  
+# _**[Shell Name]**_  
 
 Release date: _**[Month Year]**_
 
@@ -26,16 +26,16 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
-### Shell Name
-_**[SHELL NAME]**_ provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
+### _**[Shell Name]**_
+_**[Shell Name]**_ provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
 
-For more information on the Ixia Chassis, see the Ixia official product documentation.
+For more information on the _**[Device Name]**, see the _**[Device Manufacturer]**_ product documentation.
 
-To model an Ixia chassis device in CloudShell, use one of the following controllers, which provide automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+To model an _**[Device Name]** device in CloudShell, use one of the following controllers, which provide automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
 
-▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_blank">Ixia IxNetwork Controller Shell</a>
+▪ <a href="_**[Controller Shell https from Quali's Community Integrations]**" target="_blank">_**[Controller Shell Name]**</a>
 
-▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
+▪ <a href="_**[Controller Shell https from Quali's Community Integrations]**" target="_blank">_**[Controller Shell Name]**</a>
 
 ### Standard version
 _**[Shell Name x.x.x]**_ is based on the Traffic Shell standard *[name of standard file]*.
