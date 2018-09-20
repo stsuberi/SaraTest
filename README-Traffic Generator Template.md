@@ -2,7 +2,7 @@
 
 # Shell Name  
 
-**Release date:** <mark>Month Year</mark>
+**Release date:** <span style="background-color: #FFFF00">Month Year</span>
 
 **Shell version:** x.x.x
 
