@@ -52,11 +52,11 @@ For detailed information about the shell’s structure and attributes, see the [
 
 Release 1.2.1:
 
-	* **CloudShell version:** 8.1 and above
+	▪ **CloudShell version:** 8.1 and above
 
-	* **IxChariot versions:** 9.5, 9.6
+	▪ **IxChariot versions:** 9.5, 9.6
 
-	* **IxChariot Python API library:** Can be downloaded from the IxChariot Server
+	▪ **IxChariot Python API library:** Can be downloaded from the IxChariot Server
 
 ### Downloading the Shell
 The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
