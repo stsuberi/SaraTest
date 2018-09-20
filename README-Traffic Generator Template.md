@@ -184,6 +184,7 @@ The attribute names and types are listed in the following table:
 
 # Typical Workflow and Scenarios 
 (if not applicable - remove section)
+
 **Scenario 1 -** 
 
 **Scenario 2 -**
