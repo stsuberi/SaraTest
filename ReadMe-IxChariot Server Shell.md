@@ -2,11 +2,11 @@
 
 # IxChariot Server 1G Shell 
 
-Release date: _**September 2018**_
+Release date: **September 2018**
 
-Shell version: _**1.1.1**_
+Shell version: **1.1.1**
 
-Document version: _**A**_
+Document version: **A**
 
 # In This Guide:
 
