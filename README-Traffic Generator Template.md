@@ -137,7 +137,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select the _**[Shell Name]**_.
-  3. Enter the _**[Device Name]**_ **Name** and **IP address**.
+  3. Enter the _**[Device Name]**_ **Name** and **IP address** (if applicable).
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
   6. Click **Continue**.
@@ -182,7 +182,8 @@ The attribute names and types are listed in the following table:
 |||||
 |||||
 
-# Typical Workflow and Scenarios
+# Typical Workflow and Scenarios 
+(if not applicable - remove section)
 **Scenario 1 -** 
 
 **Scenario 2 -**
@@ -192,16 +193,15 @@ The attribute names and types are listed in the following table:
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
-For comprehensive product and API documentation, see the [Quali Online Help](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/Portal-Help.htm).
-
-For best practices, instructional training and video tutorials, see [Quali University](http://courses.quali.com/).
+For instructional training and documentation resources, see the [Quali University](https://www.quali.com/university/).
 
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
-# Release Notes
-### What's new
+# Release Notes 
+(if not applicable - remove section)
+### What's New
 
 * 
 * 
