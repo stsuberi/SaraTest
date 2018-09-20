@@ -3,7 +3,11 @@
 # Shell Name  
 
 **Release date:** <span style="color:yellow">Month Year</span>
-<span style=“color:purple;”> text goes here</span>
+
+```diff
+- red
+```
+
 **Shell version:** x.x.x
 
 **Document version:** x.x.x
