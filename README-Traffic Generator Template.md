@@ -2,11 +2,11 @@
 
 # Shell Name  
 
-**Release date:** Month Year
+Release date: _**[Month Year]**_
 
-**Shell version:** x.x.x
+Shell version: _**[x.x.x]**_
 
-**Document version:** x.x.x
+Document version: _**[x.x.x]**_
 
 # In This Guide:
 
