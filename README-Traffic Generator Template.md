@@ -31,7 +31,7 @@ _**[Shell Name]**_ provides you with connectivity and management capabilities su
 
 For more information on the _**[Device Name]**_, see the _**[Device Manufacturer]**_ product documentation.
 
-To model an _**[Device Name]**_ device in CloudShell, use one of the following controllers, which provide automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+To model an _**[Device Name]**_ device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
 
 ▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
 
