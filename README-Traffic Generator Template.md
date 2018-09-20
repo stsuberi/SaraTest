@@ -38,7 +38,7 @@ To model an _**[Device Name]**_ device in CloudShell, use one of the following c
 ▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
 
 ### Standard version
-_**[Shell Name x.x.x]**_ is based on the Traffic Shell standard *_**[Name of Standard File]**_.
+_**[Shell Name x.x.x]**_ is based on the Traffic Shell standard *_**[Name of Standard File]**_*.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
