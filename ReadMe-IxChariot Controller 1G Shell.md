@@ -110,6 +110,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. In the **Traffic Generator Controller** folder, select **IxChariot Controller**.
   3. In the **Attributes** tab, enter the **Default Values** for the IxChariot Controller service as follows:
+  
     * Client Install Path - Path where IxChariot Python API library was downloaded to.
     * Controller Address - IP address of the IxChariot Server.
     * User - User name for the IxChariot Server.
