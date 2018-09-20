@@ -2,11 +2,11 @@
 
 # _**[Shell Name]**_  
 
-Release date: _**[Month Year]**_
+Release date: **[Month Year]**
 
-Shell version: _**[x.x.x]**_
+Shell version: **[x.x.x]**
 
-Document version: _**[x.x.x]**_
+Document version: **[x.x.x]**
 
 # In This Guide:
 
