@@ -183,12 +183,17 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-||||
+|----|-----|----|----|
 ||||
 ||||
 ||||
 
 # Typical Workflow and Scenarios
+**Scenario 1 - 
+
+**Scenario 2 -
+
+**Scenario 3 -
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
