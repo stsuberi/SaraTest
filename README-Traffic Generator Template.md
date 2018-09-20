@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# Ixia Chassis 2G Shell  
+# Shell Name  
 
-**Release date:** June 2018
+**Release date:** Month Year
 
-**Shell version:** 2.0.4
+**Shell version:** x.x.x
 
-**Document version:** 1.2.3
+**Document version:** x.x.x
 
 # In This Guide:
 
@@ -25,8 +25,8 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
-### Ixia Chassis 2G Shell
-The Ixia Chassis 2G Shell provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
+### Shell Name
+The [Shell Name] provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
 
 For more information on the Ixia Chassis, see the Ixia official product documentation.
 
@@ -37,7 +37,7 @@ To model an Ixia chassis device in CloudShell, use one of the following controll
 ▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
 
 ### Standard version
-The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_3.yaml*.
+The [Shell Name] x.x.x is based on the Traffic Shell standard *[name of standard file]*.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -46,7 +46,7 @@ For detailed information about the Shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release 2.0.4:
+Release x.x.x:
 
 ▪ 2G Chassis Shell: CloudShell version 8.1 and above
 
@@ -55,7 +55,7 @@ Release 2.0.4:
 ▪ Controller Shells: CloudShell version 7.0 and above
 
 ### Downloading the Shell
-The Ixia Chassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The [Shell Name] is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -63,8 +63,8 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|Ixia.Chassis.Shell.2G.zip|Ixia Chassis Shell package|
-|Ixia.Chassis.Shell.2G.offline.requirements.zip|Shell Python dependencies (for offline deployments only)|
+|Shell .zip file name|Ixia Chassis Shell package|
+|Shell offline requirements.zip file name|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
@@ -75,7 +75,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Importing and Configuring the Shell
-This section describes how to import the Ixia Chassis 2G Shell and configure and modify the shell’s devices.
+This section describes how to import the [Shell Name] and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -117,7 +117,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *Ixia.Chassis.Shell.2G.offline.requirements.zip* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *[Shell offline requirements.zip file name]* file, see [Downloading the Shell](#downloading-the-shell).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
@@ -132,12 +132,12 @@ This section explains how to create a new resource from the shell.
 
 In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
+You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select the **Ixia Chassis 2G Shell**.
+  2. From the list, select the **[Shell Name]**.
   3. Enter the Ixia chassis **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, as follows: 
@@ -203,9 +203,9 @@ To connect with Quali users and experts from around the world, ask questions and
 # Release Notes
 ### What's new
 
-* Set unknown port speed to zero.
-* Support new card types.
-* Show only active ports instead of all ports.
+* 
+* 
+* 
 
 ### Known Issues
-* Resource groups are not modeled. Resource groups are modeled as port with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
+* 
