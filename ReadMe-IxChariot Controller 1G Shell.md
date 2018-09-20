@@ -80,8 +80,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Load Configuration <br>(load_config)|Reserves endpoints and loads configuration|IxChariot Config (ixc_config) - loads IxChariot config|Session ID|
 |Start Test <br>(start_test)|Starts the test|Blocking <br> (blocking)|True - returns after test is finished<br> False - returns immediately|
 |Stop Test <br>(stop_test)|||
-|Get Statistics <br>(get_statistics)|Gets the statistics view|View Name (view_name) - The name of the view to retrieve. <br> NA if output type is PDF - NA.|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
-|Get Statistics <br>(get_statistics)|Gets the statistics view|Output Type (output_type) - CSV or PDF. The requested statistics will be attached to the reservation CSV file.|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
+|Get Statistics <br>(get_statistics)|Gets the statistics view|View Name (view_name) - The name of the view to retrieve. NA if output type is PDF - NA.<br>Output Type (output_type) - CSV or PDF. The requested statistics will be attached to the reservation CSV file.|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
 
 # Importing and Configuring the Shell
 This section describes how to import the **IxChariot Controller 1G Shell** and configure and modify the shell’s service.
