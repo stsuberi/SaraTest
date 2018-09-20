@@ -2,7 +2,7 @@
 
 # Shell Name  
 
-**Release date:** Month Year
+**Release date:** <mark>Month Year</mark>
 
 **Shell version:** x.x.x
 
