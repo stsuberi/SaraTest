@@ -77,13 +77,14 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 
 |Command|Description|Parameters|Returns
 |:-----|:-----|:-----|:-----|
-|Load Configuration (load_config)|Reserves endpoints and loads configuration|IxChariot Config (ixc_config) - loads IxChariot config|Session ID|
-|Stop Test (stop_test)|Stops the test|||
-|Get Statistics (get_statistics)|Gets the statistics view|View Name (view_name) - the name of the view to retrieve. NA if output type is PDF - NA|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
-|Get Statistics (get_statistics)|Gets the statistics view|Output Type (output_type) - CSV or PDF. The requested statistics will be attached to the reservation CSV file.|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
+|Load Configuration <br>(load_config)|Reserves endpoints and loads configuration|IxChariot Config (ixc_config) - loads IxChariot config|Session ID|
+|Start Test <br>(start_test)|Starts the test|Blocking <br> (blocking)|True - returns after test is finished<br> False - returns immediately|
+|Stop Test <br>(stop_test)|||
+|Get Statistics <br>(get_statistics)|Gets the statistics view|View Name (view_name) - The name of the view to retrieve. <br> NA if output type is PDF - NA.|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
+|Get Statistics <br>(get_statistics)|Gets the statistics view|Output Type (output_type) - CSV or PDF. The requested statistics will be attached to the reservation CSV file.|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+This section describes how to import the **IxChariot Controller 1G Shell** and configure and modify the shell’s service.
 
 ### Importing the shell into CloudShell
 
@@ -100,10 +101,6 @@ The shell is displayed in the **Shells** page and can be used by domain administ
 
 ### Configuring a new service
 This section explains how to configure a service from the shell.
-
-In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
-
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
@@ -199,7 +196,6 @@ The attribute names and types are listed in the following table:
 |||||
 
 # Typical Workflow and Scenarios 
-(if not applicable - remove section)
 
 **Scenario 1 - Using a controller to run IxChariot Traffic** 
 1. Create a blueprint
@@ -223,7 +219,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 * Multiple endpoints per flow
 * Multiple flows
-* Generate PDF report – for IxChariot server version 9.6
+* Generating of PDF report – for IxChariot server version 9.6
 
 ### Known Issues
 * NA
