@@ -1,9 +1,8 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
 # Shell Name  
-```diff
-- **Release date:** <span style="color:yellow">Month Year</span>
-```
+
+**Release date:** Month Year
 
 **Shell version:** x.x.x
 
