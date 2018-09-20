@@ -38,7 +38,7 @@ To model an Ixia chassis device in CloudShell, use one of the following controll
 ▪ <a href="https://community.quali.com/repos/1396/ixia-ixload-controller-shell" target="_blank">Ixia IxLoad Controller Shell</a>
 
 ### Standard version
-**_[Shell Name x.x.x]**_ is based on the Traffic Shell standard *[name of standard file]*.
+_**[Shell Name x.x.x]**_ is based on the Traffic Shell standard *[name of standard file]*.
 
 For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
