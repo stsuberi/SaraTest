@@ -190,7 +190,7 @@ The attribute names and types are listed in the following table:
 |Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |Vendor|String||The firmware version of the resource.|
 
-### Typical Workflow and Scenarios
+# Typical Workflow and Scenarios
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
