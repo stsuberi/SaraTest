@@ -32,7 +32,7 @@ For more information, see [Traffic Generators Overview](http://help.quali.com/On
 ### **IxChariot Server 1G Shell**
 **IxChariot Server 1G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxChariot server**. 
 
-For more information on the **IxChariot server**, see the official **IxChariot** product documentation.
+For more information on the **IxChariot Server**, see the official **IxChariot** product documentation.
 
 To model an _**[Device Name]**_ device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: (**Is this section relevant for this shell?**)
 
@@ -41,7 +41,7 @@ To model an _**[Device Name]**_ device in CloudShell, use one of the following c
 ▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
 
 ### Standard version
-**IxChariot Server 1G Shell** 1.1.1 is based on the Traffic Shell 1st generation standard version 3.0.0. **(The link to the Traffic Shell standard is to 2.0.0)**
+**IxChariot Server 1G Shell** 1.1.1 is based on the Traffic Shell standard version 3.0.0. **(The link to the Traffic Shell standard is to 2.0.0)**
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -67,7 +67,7 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|**Ixia-IxChariotServer-Shell.zip**|IxChariot shell package|
+|**Ixia-IxChariotServer-Shell.zip**|IxChariot Server shell package|
 |**Ixia-IxChariotServer-Shell_offline_requirements.zip**|Shell Python dependencies (for offline deployments only)|
 |**ReadMe-IxChariot Server Shell.md**|Documentation|
 
