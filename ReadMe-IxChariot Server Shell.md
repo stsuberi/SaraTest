@@ -146,7 +146,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   	 * Client Install Path - Path where the IxChariot Python API library was downloaded to.
   	 * User - User name for the IxChariot Server.
   	 * Password - Password for IxChariot Server. 
-   	* Power Management- Whether to automatically manage the device power status or not (standard CloudShell attribute).
+   	 * Power Management- Whether to automatically manage the device power status or not (standard CloudShell attribute).
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
