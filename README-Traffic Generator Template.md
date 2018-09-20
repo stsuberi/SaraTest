@@ -166,27 +166,27 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-_**[Device Name]**_ Families and Models
+_**[Device Name]**_ **Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|Traffic Generator Chassis|_**[Device Name]**_|_**[Device Name]**_|
-|Module|Generic Traffic Generator Module|Modules located on the chassis|
-|Port Group|Generic Port Group|Generic Port Group|
-|Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
+||||
+||||
+||||
+||||
 
-_**[Device Name]**_ Attributes
+_**[Device Name]**_ **Attributes**
 
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Serial Number|Text||The serial number of the resource.|
-|Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Vendor|String||The firmware version of the resource.|
+||||
+||||
+||||
+||||
 
 # Typical Workflow and Scenarios
 
