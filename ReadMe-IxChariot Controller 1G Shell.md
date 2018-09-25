@@ -93,7 +93,6 @@ This section describes how to import the **IxChariot Controller 1G Shell** and c
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Configuring a new service
-This section explains how to configure a service from the shell.
 
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
