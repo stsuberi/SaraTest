@@ -30,7 +30,7 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
 ### **IxChariot Controller 1G Shell**
-The **IxChariot Controller Shell** provides you with connectivity and management capabilities such as device structure discovery, running tests, and test results for the **IxChariot** application. 
+The **IxChariot Controller 1G Shell** provides you with connectivity and management capabilities such as device structure discovery, running tests, and test results for the **IxChariot** application. 
 
 For more information on the **IxChariot Controller**, see the official **IxChariot** product documentation.
 
@@ -53,7 +53,7 @@ Release 1.2.1:
 	▪ IxChariot Python API library: Can be downloaded from the IxChariot Server
 
 ### Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **IxChariot Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
