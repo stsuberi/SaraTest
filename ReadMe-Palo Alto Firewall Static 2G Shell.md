@@ -115,10 +115,10 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select **[Shell Name]**.
-  3. Enter the **[Device Name]** **Name** and **IP address** (if applicable).
+  2. From the list, select **Palo Alto Firewall Static** shell.
+  3. Enter the **Router;s** **Name** and **IP address** (if applicable).
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings, as required. Make sure you enter the device's SNMP version and credentials. 
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
