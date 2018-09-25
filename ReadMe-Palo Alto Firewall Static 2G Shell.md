@@ -29,12 +29,6 @@ The **Palo Alto Firewall Static 2G Shell** provides you with connectivity and ma
 
 For more information on the **Palo Alto Firewall**, see the official **Palo Alto** product documentation.
 
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
 ### Standard version
 The **Palo Alto Firewall Static 2G Shell 1.0.0** is based on the Deployed App Shell standard version 1.0.3.
 
@@ -196,11 +190,3 @@ For instructional training and documentation resources, see the [Quali Universit
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-# Release Notes 
-
-**Version 1.0.0**
-### What's New
-
-* Shell is based on the TOSCA Standards
-* Separate namespace for each shell
