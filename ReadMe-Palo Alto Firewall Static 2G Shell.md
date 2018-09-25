@@ -57,12 +57,15 @@ The shell comprises:
 |**ReadMe-Palo Alto Firewall Static 2G Shell.md**|Documentation|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
-For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+The following commands are associated with the Palo Alto Firewall Static shell :
 
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Health Check|Checks if the device is up and connectable.|
+|Send Custom Command|Executes a custom command on the device.|
+|Save|Creates a configuration file and saves it to the provided destination.|
+|Restore|Restores a configuration from the saved file.|
+|Load Firmware|Uploads and updates the firmware on the resource.|
 
 # Importing and Configuring the Shell
 This section describes how to import the **Palo Alto Firewall Static 2G Shell.md** and configure and modify the shell’s devices.
