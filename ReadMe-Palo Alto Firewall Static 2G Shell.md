@@ -136,7 +136,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-**Palo Alto Static Firewall Families and Models**
+### **Palo Alto Static Firewall Families and Models**
 
 The chassis families and models are listed in the following table:
 
@@ -145,7 +145,7 @@ The chassis families and models are listed in the following table:
 |CS_GenericAppFamily|PaloAlto Static vFirewall|Static Virtual PaloAlto Firewall|
 |CS_Port|PaloAlto Static vFirewall.GenericVPort|Generic Virtual Port|
 
-**Palo Alto Static Firewall Attributes**
+### **Palo Alto Static Firewall Attributes**
 
 The attribute names and types are listed in the following table:
 
