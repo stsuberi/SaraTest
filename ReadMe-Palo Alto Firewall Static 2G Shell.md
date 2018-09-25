@@ -47,7 +47,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 Release **1.0.0**:
 
-	▪ CloudShell version **8.3** with the lates patch and above
+	▪ CloudShell version 8.3 with the lates patch and above
 	
 ### Downloading the Shell
 The **Palo Alto Firewall Static 2G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
