@@ -115,7 +115,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   2. From the list, select **Palo Alto Firewall Static** shell.
   3. Enter the **Name** and **IP address** (if applicable).
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, as required. Make sure you enter the device's SNMP version and credentials. 
+  5. In the **Resource** dialog box, enter the device's settings, as required.  
   
 |Device Setting|Default|Description|
 |:-----|:-----|:-----|
