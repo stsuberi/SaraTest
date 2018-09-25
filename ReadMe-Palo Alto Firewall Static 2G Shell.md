@@ -58,7 +58,7 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|**PaloAltoStaticFirewallShell.zip**|**Palo Alto Firewall Static** shell package|
+|**PaloAltoStaticFirewallShell.zip**|Palo Alto Firewall Static shell package|
 |**cloudshell-firewall-paloalto-dependencies-package-1.0.0.zip**|Shell Python dependencies (for offline deployments only)|
 |**ReadMe-Palo Alto Firewall Static 2G Shell.md**|Documentation|
 
