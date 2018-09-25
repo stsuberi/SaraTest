@@ -179,11 +179,11 @@ The configuration is saved to a file named `<ResourceName><startup/running-confi
 2. Run the **Restore** resource command.
 3. Enter the following parameters:
     * **Path** (mandatory): Enter the full path of the configuration file. 
-    * **Restore Method** (optional): Append or Override. If you do not enter any value in this field, the **Append** method will be used. 
-    * **Configuration Type** (mandatory): Startup or Running. 
+    * **Restore Method** (optional): **Append** or **Override**. If you do not enter any value in this field, the **Append** method will be used. 
+    * **Configuration Type** (mandatory): **Startup** or **Running**. 
 	
 **Scenario 3 - _Load firmware_**
-1. In CloudShell Portal, reserve the Cisco device resource.
+1. In CloudShell Portal, reserve the device resource.
 2. Run the **Load Firware** resource command.
 3. Enter the following parameters:
     * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, `tftp://10.1.1.1/PanOS_200-5.0.5`.
