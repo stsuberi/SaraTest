@@ -197,8 +197,12 @@ The attribute names and types are listed in the following table:
 # Typical Workflow and Scenarios 
 
 **Scenario 1 - Using a controller to run IxChariot Traffic** 
-1. Create a blueprint
-2. Create a Sandbox from the blueprint
+1. Create a Blueprint with an IxChariot Controller service and IxChariot resource endpoints.
+For example, for a configuration with a single flow:
+![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+Create a blueprint with two IxChariot endpoints:
+![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+2. Create a Sandbox from the Blueprint
 3. Edit IxChariot Controller Service parameters if required
 4. Map configuration ports to Sandbox ports
 
