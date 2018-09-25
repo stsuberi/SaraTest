@@ -116,32 +116,30 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   3. Enter the **Name** and **IP address** (if applicable).
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, as required. Make sure you enter the device's SNMP version and credentials. 
-      * **vFirewall Name**: Virtual Firewall vCenter VM to use in VM creation. Should include the full path and the VM name, for example: `QualiFolder/VM121`.
-      * **vCenter Name** - The vCenter resource name in CloudShell.
-      * **User** - User with administrative privileges.
-      * **Password** - Password is required by some CLI protocols, such as Telnet. It is also required according to the device configuration.
-      * **Sessions Concurrency Limit** - The maximum number of concurrent sessions permitted on the device that the driver will allow. Default value = 1 (no concurrency).
-      * **CLI Connection Type** - The CLI connection type used by the driver. <br>Possible values include:
-      
-      		* Auto (default)
+  
+|Device Setting|Default|Description|
+|:-----|:-----|:-----|
+vFirewall Name||Virtual Firewall vCenter VM to use in VM creation. Should include the full path and the VM name, for example: `QualiFolder/VM121`.|
+|vCenter Name||The vCenter resource name in CloudShell|
+|User||User with administrative privileges|
+|Password||Password is required by some CLI protocols, such as Telnet. It is also required according to the device configuration.|
+|Sessions Concurrency Limit|1 (no concurrency)|The maximum number of concurrent sessions permitted on the device that the driver will allow.|
+|CLI Connection Type||The CLI connection type used by the driver. <br>Possible values include:
+		* Auto (default)
 		* Console 
 		* SSH 
 		* Telnet
-		* TCP
-		
-	If Auto is selected, the driver will choose the available connection type automatically. 
-      * **CLI TCP Port** - TCP Port to use for CLI connection. If kept empty a default CLI port will be used based on the chosen protocol, for example, Telnet will use port 23.
-      * **Backup Location** - Used by the save/restore orchestration to determine where backups should be saved.
-      * **Backup Type** - Supported protocols for saving and restoring of configuration and firmware files. 
-      Possible values include:
+		* TCP<br>If Auto is selected, the driver will choose the available connection type automatically. |
+|CLI TCP Port||TCP Port to use for CLI connection. If kept empty a default CLI port will be used based on the chosen protocol, for example, Telnet will use port 23.|
+|Backup Location||Used by the save/restore orchestration to determine where backups should be saved.|               
+|Backup Type||Supported protocols for saving and restoring of configuration and firmware files.<br>Possible values include:
       
       		* File System (default)
 		* FTP 
-		* TFTP
-      * **Backup User** - User name for the storage server used for saving and restoring configuration and firmware files.
-      * **Backup Password** - Password for the storage server used for saving and restoring configuration and firmware files.
-
-  6. Click **Continue**.
+		* TFTP|
+|Backup User||User name for the storage server used for saving and restoring configuration and firmware files.|
+|Backup Password||Password for the storage server used for saving and restoring configuration and firmware files.|
+   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
