@@ -154,18 +154,17 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|User|String||Username for the PaloAlto Firewall CLI (should be a privileged user).|
+|User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Cisco CLI.|
 |Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. <br>Defines the number of commands that can run concurrently.|
-|CLI Connection Type|Lookup|Auto|The protocol which the shell will use to connect to the device. <br>Available methods inlcude: Auto, Console, SSH, Telnet, TCP.|
+|CLI Connection Type|Lookup|Auto|The protocol which the shell will use to connect to the device. <br>Available methods include: Auto, Console, SSH, Telnet, TCP.|
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
-|Backup Type|String|File System|Supported protocols for saving and restoring the configuration and firware files. <br> Possible values inlcude: File System, FTP, TFTP.|
+|Backup Type|String|File System|Supported protocols for saving and restoring the configuration and firware files. <br> Possible values include: File System, FTP, TFTP.|
 |Backup Location|String||Default location where files will be saved by the **Save** method.|
-|Backup User|String||Username for the storage server used for saving and restoring the congiguration and firware files.|
-|Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firware files.|
+|Backup User|String||User name for the storage server used for saving and restoring the congiguration and firmware files.|
+|Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
 
 # Typical Workflow and Scenarios 
-(if not applicable - remove section)
 
 **Scenario 1 - _Save configuration_** 
 1. In CloudShell Portal, add the device resource to an active sandbox.
