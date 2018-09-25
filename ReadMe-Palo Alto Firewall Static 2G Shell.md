@@ -68,7 +68,7 @@ The following commands are associated with the Palo Alto Firewall Static shell :
 |Load Firmware|Uploads and updates the firmware on the resource.|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Palo Alto Firewall Static 2G Shell.md** and configure and modify the shell’s devices.
+This section describes how to import the **Palo Alto Firewall Static 2G Shell** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
