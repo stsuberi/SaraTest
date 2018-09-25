@@ -115,21 +115,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   2. From the list, select **Palo Alto Firewall Static** shell.
   3. Enter the **Name** and **IP address** (if applicable).
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, as required.  
-  
-|Device Setting|Default|Description|
-|:-----|:-----|:-----|
-vFirewall Name||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: `QualiFolder/VM121`.|
-|vCenter Name||The vCenter resource name in CloudShell.|
-|User||User with administrative privileges.|
-|Password||Password is required by some CLI protocols, such as Telnet. It is also required according to the device configuration.|
-|Sessions Concurrency Limit|1 (no concurrency)|The maximum number of concurrent sessions permitted on the device that the driver will allow.|
-|CLI Connection Type|Auto|The CLI connection type used by the driver. <br>Possible values include: **Auto**, **Console**, **SSH**, **Telnet**, **TCP**. <br>If Auto is selected, the driver will choose the available connection type automatically.|
-|CLI TCP Port||TCP Port to use for CLI connection. <br>If kept empty a default CLI port will be used based on the chosen protocol, for example, Telnet will use port 23.|
-|Backup Location||Used by the save/restore orchestration to determine where backups should be saved.|               
-|Backup Type|File System|Supported protocols for saving and restoring of configuration and firmware files.<br>Possible values include: **File System**, **FTP**, **TFTP**.
-|Backup User||User name for the storage server used for saving and restoring configuration and firmware files.|
-|Backup Password||Password for the storage server used for saving and restoring configuration and firmware files.|
+  5. In the **Resource** dialog box, enter the device's settings, as required. See [Palo Alto Static Firewall Attributes] (#palo-alto-static-firewall-attributes).
    6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -165,6 +151,8 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
+|vFirewall Name|||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: `QualiFolder/VM121`.|
+|vCenter Name|||The vCenter resource name in CloudShell.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Cisco CLI.|
 |Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. <br>Defines the number of commands that can run concurrently.|
