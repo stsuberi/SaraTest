@@ -30,15 +30,9 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
 ### **IxChariot Controller 1G Shell**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery, running tests, and test results for the **IxChariot** application. 
+The **IxChariot Controller Shell** provides you with connectivity and management capabilities such as device structure discovery, running tests, and test results for the **IxChariot** application. 
 
 For more information on the **IxChariot Controller**, see the official **IxChariot** product documentation.
-
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
 
 ### Standard version
 **IxChariot Controller 1G Shell** 1.2.0 is based on the Traffic Shell standard version 3.0.0. This shell works with Ixia IxChariot Shell 1st generatior resources.  
