@@ -113,15 +113,15 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select **Palo Alto Firewall Static** shell.
-  3. Enter the **Router's** **Name** and **IP address** (if applicable).
+  3. Enter the **Name** and **IP address** (if applicable).
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, as required. Make sure you enter the device's SNMP version and credentials. 
       * vFirewall Name: Virtual Firewall vCenter VM to use in VM creation. Should include the full path and the VM name, for example: `QualiFolder/VM121`.
-      * vCenter Name - The vCenter resource name in CloudShell.
-      * User - User with administrative privileges.
-      * Password - Password is required by some CLI protocols, such as Telnet. It is also required according to the device configuration.
-      * Sessions Concurrency Limit - The maximum number of concurrent sessions that the driver will open to the device. Default is 1 (no concurrency).
-      * CLI Connection Type - The CLI connection type that will be used by the driver. <br>Possible values include: 
+      * **vCenter Name** - The vCenter resource name in CloudShell.
+      * **User** - User with administrative privileges.
+      * **Password** - Password is required by some CLI protocols, such as Telnet. It is also required according to the device configuration.
+      * **Sessions Concurrency Limit** - The maximum number of concurrent sessions that the driver will open to the device. Default is 1 (no concurrency).
+      * **CLI Connection Type** - The CLI connection type that will be used by the driver. <br>Possible values include: 
       		* Auto (default)
 		* Console 
 		* SSH 
@@ -134,8 +134,8 @@ You can also modify existing resources, see [Managing Resources in the Inventory
       		* File System (default)
 		* FTP 
 		* TFTP
-      * Backup User - User name for the storage server used for saving and restoring configuration and firmware files.
-      * Backup Password - Password for the storage server used for saving and restoring configuration and firmware files.
+      * **Backup User** - User name for the storage server used for saving and restoring configuration and firmware files.
+      * **Backup Password** - Password for the storage server used for saving and restoring configuration and firmware files.
 
   6. Click **Continue**.
 
