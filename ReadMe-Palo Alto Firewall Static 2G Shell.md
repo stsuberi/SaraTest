@@ -145,7 +145,7 @@ The chassis families and models are listed in the following table:
 |CS_GenericAppFamily|PaloAlto Static vFirewall|Static Virtual PaloAlto Firewall|
 |CS_Port|PaloAlto Static vFirewall.GenericVPort|Generic Virtual Port|
 
-**Palo Alto Static Firewall** **Attributes**
+**Palo Alto Static Firewall Attributes**
 
 The attribute names and types are listed in the following table:
 
