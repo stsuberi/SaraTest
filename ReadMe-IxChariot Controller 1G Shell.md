@@ -199,12 +199,23 @@ The attribute names and types are listed in the following table:
 **Scenario 1 - Using a controller to run IxChariot Traffic** 
 1. Create a Blueprint with an IxChariot Controller service and IxChariot resource endpoints.
 For example, for a configuration with a single flow:
-![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_single_flow.png)
 Create a blueprint with two IxChariot endpoints:
-![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_blueprint_two_endpoints.png)
 2. Create a Sandbox from the Blueprint
-3. Edit IxChariot Controller Service parameters if required
-4. Map configuration ports to Sandbox ports
+3. Edit the IxChariot Controller Service parameters if required.
+
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_parameters.png)
+See [Configuring a new service](#configuring-a-new-service).
+4. Map configuration ports to Sandbox ports.
+For Source/Destination ends in IxChariot configuration, assign endpoints from the endpoints in the Sandbox. Open the attributes tab and set the **Logical Name** attribute to **Source** or **Destination** as follows:
+     * For single flow configuration, set **Logical Name** to **Src** or **Dst** based on the role of the endpoint in the configuration setup.
+     * For multiple flow configuration, set the flow number as well to **SRC-1**, **DST-2**, etc.
+     * If you want to use the same endpoint for a Src of one flow and a Dst of another flow, set a list of roles separated by a space, **Src-1 Dst-2 and Src-2 Dst**.
+     
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_resource_attributes.png)     
 
 
 # References
