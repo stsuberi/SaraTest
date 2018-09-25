@@ -161,7 +161,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
-**[Device Name]** **Families and Models**
+### **[Device Name] Families and Models**
 
 The chassis families and models are listed in the following table:
 
@@ -172,7 +172,7 @@ The chassis families and models are listed in the following table:
 ||||
 ||||
 
-**[Device Name]** **Attributes**
+### **[Device Name] Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -186,11 +186,11 @@ The attribute names and types are listed in the following table:
 # Typical Workflow and Scenarios 
 (if not applicable - remove section)
 
-**Scenario 1 -** 
+**Scenario 1** - *[Name of Scenario 1]* 
 
-**Scenario 2 -**
+**Scenario 2** - *[Name of Scenario 2]* 
 
-**Scenario 3 -**
+**Scenario 3** - *[Name of Scenario 3]* 
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
