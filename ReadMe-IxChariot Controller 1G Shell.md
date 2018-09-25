@@ -197,6 +197,7 @@ For example, for a configuration with a single flow:
 Create a blueprint with two IxChariot endpoints:
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_blueprint_two_endpoints.png)
+
 2. Create a Sandbox from the Blueprint
 3. Edit the IxChariot Controller Service parameters if required.
 
