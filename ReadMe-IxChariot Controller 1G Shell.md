@@ -202,7 +202,9 @@ Create a blueprint with two IxChariot endpoints:
 3. Edit the IxChariot Controller Service parameters if required.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_parameters.png)
+
 See [Configuring a new service](#configuring-a-new-service).
+
 4. Map configuration ports to Sandbox ports.
 For Source/Destination ends in IxChariot configuration, assign endpoints from the endpoints in the Sandbox. Open the attributes tab and set the **Logical Name** attribute to **Source** or **Destination** as follows:
      * For single flow configuration, set **Logical Name** to **Src** or **Dst** based on the role of the endpoint in the configuration setup.
