@@ -78,7 +78,7 @@ The VBlade attribute names and types are listed in the following table:
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
-### Downloading the Shell
+### Downloading the shell
 The **BreakingPoint VE Static VBlade** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
@@ -138,8 +138,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   2. From the list, select the **BP vBlade** shell.
   3. Enter the Blade's **Name** and **IP address**.
   4. Click **Create**.
-  5. In the **Resource** dialog box, edit the device's settings as follows to discover the resource: 
-  **Note:** You must provide values for each of the device settings.
+  5. In the **Resource** dialog box, edit the device's settings as follows to discover the resource: You must provide values for each of the device settings.
   
   |Attribute|Type|Description|
   |:---|:---|:---|:---|
