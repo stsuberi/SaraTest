@@ -54,7 +54,7 @@ Release: **[Shell Name x.x.x]**
 
 ▪ [Controller Name]: CloudShell version **[Version Number]**
 
-## Data Model
+### Data Model
 ### **[Device Name] Families and Models**
 
 The chassis families and models are listed in the following table:
