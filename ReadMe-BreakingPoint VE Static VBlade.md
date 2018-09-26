@@ -141,7 +141,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   5. In the **Resource** dialog box, edit the device's settings as follows to discover the resource: You must provide values for each of the device settings.
   
   |Attribute|Type|Description|
-  |:---|:---|:---|:---|
+  |:---|:---|:---|
   |Address|String|BreakingPoint vBlade Public IP.|
   |vBlade vCenter VM|String|Name of Virtual Blade vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example:<br>*QualiFolder/VM121*.|
   |vChassis vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example: *QualiFolder/VM121*.|
