@@ -66,14 +66,14 @@ The Blade families and models are listed in the following table:
 
 The VBlade attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
-|Public IP|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
-|User|String||User with administrative privileges.|
-|vBlade vCenter VM|String||Name of Virtual Blade vCenter VM in VCenter. <br>Should include the full path (realtive to the datacenter)  and the name of the VM.<br> For example: *QualiFolder/VM121*.|
-|vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
-|vChassis vCenter VM|String||Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
+|Public IP|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
+|User|String|User with administrative privileges.|
+|vBlade vCenter VM|String|Name of Virtual Blade vCenter VM in VCenter. <br>Should include the full path (realtive to the datacenter)  and the name of the VM.<br> For example: *QualiFolder/VM121*.|
+|vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
+|vChassis vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
