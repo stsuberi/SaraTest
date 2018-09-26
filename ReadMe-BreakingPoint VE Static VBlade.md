@@ -113,7 +113,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   |Attribute|Type|Default value|Description|
   |:---|:---|:---|:---|
   |Address|String|NA|BreakingPoint vBlade Public IP.|
-  |vBlade vCenter VM|String||Name of Virtual Blade vCenter VM in vCenter. <br>Should include the full path and the vm name.<br>For example:<br>*QualiFolder/VM121*.|
+  |vBlade vCenter VM|String||Name of Virtual Blade vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example:<br>*QualiFolder/VM121*.|
   |vChassis vCenter VM|String||Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example: *QualiFolder/VM121*.|
   |vCenter Name|String||vCenter resource name in CloudShell.|
   |User|String||User with administrative privileges.|
