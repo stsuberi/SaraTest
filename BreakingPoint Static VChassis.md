@@ -2,11 +2,21 @@
 
 # BreakingPoint Static VChassis 2G Shell 
 
-**Release date:** July 2018
+Release date: July 2018
 
-Shell version 1.0.0
+Shell version: 1.0.0
 
-Document version 1.0.0
+Document version: 1.0.0
+
+# In This Guide
+
+* [Overview](#overview)
+* [Downloading the Shell](#downloading-the-shell)
+* [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
+* [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
+* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
+* [References](#references)
+* [Release Notes](#release-notes)
 
 ## Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -17,11 +27,11 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
 ### BreakingPoint Static VChassis 2G Shell
-The **BreakingPoint Static VChassis Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the BreakingPoint Static VChassis. 
+The **BreakingPoint Static VChassis** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the BreakingPoint Static VChassis. 
 
 For more information on the BreakingPoint Static VChassis, see the BreakingPoint official product documentation.
 
-To model a BreakingPoint static virtual chassis device in CloudShell, use the following: 
+To model a BreakingPoint Static Virtual Chassis device in CloudShell, use the following: 
  
 ▪ [BreakingPoint VE Static VBlade](https://community.quali.com/repos/3912/breakingpoint-ve-static-vblade-shell), which provides data model and autoload functionality to model and load the BreakingPoint Virtual Blade to resource management.
 
@@ -30,9 +40,11 @@ To model a BreakingPoint static virtual chassis device in CloudShell, use the fo
 ### Standard version
 The BreakingPoint Static VChassis 2G Shell is based on the Deployed App Standard version 1.0.3.
 
+For detailed information about the shell’s structure and attributes, see the [Shell Standard: Deployed App Standard](https://community.quali.com/repos/423/shell-standard-deployed-app) in GitHub.
+
 ### Requirements
 
-Release 1.0.0:
+Release: BreakingPoint Static VChassis 2G Shell 1.0.0
 
 ▪ CloudShell version 8.3 and above
 
@@ -40,6 +52,38 @@ Release 1.0.0:
 
 ▪ [BreakingPoint Controller Shell](https://community.quali.com/repos/1295/breaking-point-controller-shell) 1.2.3 and above
 
+### Data Model
+**BreakingPoint Static VChassis Families and Models**
+
+The Chassis families and models are listed in the following table:
+
+|Family|Model|Description|
+|:---|:---|:---|
+|CS_GenericAppFamily|BP vChassis|Static Virtual BreakingPoint Chassis modules|
+|CS_GenericAppFamily|BP vBlade|Static Virtual BreakingPoint modules located on the chassis|
+|CS_Port|BP vChassis.GenericVPort, BP vBlade.GenericVPort|Generic Virtual Ports|
+
+**BreakingPoint Static VChassis Attributes**
+
+The VChassis attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
+|Public IP|String|||
+|User|String||User with administrative privileges.|
+|vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
+|vChassis VM|String||vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+
+**BreakingPoint Static VChassis 2G Shell**
+
+|Command|Description|
+|:-----|:-----|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+
+### Automation
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
+For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 ### Downloading the Shell
 The BreakingPoint Static VChassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -53,23 +97,13 @@ The shell comprises:
 |Breaking Point Static Virtual Chassis Shell.zip|BreakingPoint Static VChassis 2G Shell package|
 |breakingpoint-static-offline-dependencies.zip|Shell Python dependencies (for offline deployments only)|
 
-### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
-For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
-
-**BreakingPoint Static VChassis 2G Shell**
-
-|Command|Description|
-|:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
-
 ## Importing and Configuring the Shell
 This section describes how to import the BreakingPoint Static VChassis 2G Shell and configure and modify the shell’s devices.
 
-### Importing the Shell into CloudShell
+### Importing the shell into CloudShell
 
-**To import the Shell into CloudShell:**
-  1. Make sure you have the shell’s zip package. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+**To import the shell into CloudShell:**
+  1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
   3. Click **Import**.
   4. In the dialog box, navigate to the shell’s zip package, select it and click **Open**.
@@ -77,9 +111,8 @@ This section describes how to import the BreakingPoint Static VChassis 2G Shell 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a Shell
-___
+
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
-___
 
 In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder.
 
@@ -102,7 +135,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 ### Configuring a new resource
 This section explains how to create a new resource from the shell.
 
-In CloudShell, the component that represents the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
+In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
 You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
@@ -114,7 +147,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the resource details as follows to discover the resource: 
   
-  |Attribute|Type|Default value|Description|
+|Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
 |Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
 |Public IP|String|||
@@ -139,29 +172,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
-
-## Data Model
-**BreakingPoint Static VChassis Families and Models**
-
-The Chassis families and models are listed in the following table:
-
-|Family|Model|Description|
-|:---|:---|:---|
-|CS_GenericAppFamily|BP vChassis|Static Virtual BreakingPoint Chassis modules|
-|CS_GenericAppFamily|BP vBlade|Static Virtual BreakingPoint modules located on the chassis|
-|CS_Port|BP vChassis.GenericVPort, BP vBlade.GenericVPort|Generic Virtual Ports|
-
-**BreakingPoint Static VChassis Attributes**
-
-The VChassis attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
-|Public IP|String|||
-|User|String||User with administrative privileges.|
-|vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
-|vChassis VM|String||vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ## Typical Workflow and Scenarios
 ### Use cases and scenarios
