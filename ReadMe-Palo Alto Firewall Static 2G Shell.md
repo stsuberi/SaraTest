@@ -43,6 +43,27 @@ For detailed information about the shell’s structure and attributes, see the [
 Release: **Palo Alto Firewall Static 2G Shell 1.0.0**
 
 * CloudShell version 8.3 (with the latest patch) and above
+
+### Data Model
+#### **Palo Alto Static Firewall Families and Models**
+
+The chassis families and models are listed in the following table:
+
+|Family|Model|Description|
+|:---|:---|:---|
+|CS_GenericAppFamily|PaloAlto Static vFirewall|Static Virtual PaloAlto Firewall|
+|CS_Port|PaloAlto Static vFirewall.GenericVPort|Generic Virtual Port|
+
+### Automation
+The following commands are associated with the Palo Alto Firewall Static shell:
+
+|Command|Description|
+|:-----|:-----|
+|Health Check|Checks if the device is up and connectable.|
+|Send Custom Command|Executes a custom command on the device.|
+|Save|Creates a configuration file and saves it to the provided destination.|
+|Restore|Restores a configuration from the saved file.|
+|Load Firmware|Uploads and updates the firmware on the resource.|
 	
 # Downloading the Shell
 The **Palo Alto Firewall Static 2G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -55,17 +76,6 @@ The shell comprises:
 |:---|:---|
 |PaloAltoStaticFirewallShell.zip|Palo Alto Firewall Static shell package|
 |cloudshell-firewall-paloalto-dependencies-package-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
-
-### Automation
-The following commands are associated with the Palo Alto Firewall Static shell:
-
-|Command|Description|
-|:-----|:-----|
-|Health Check|Checks if the device is up and connectable.|
-|Send Custom Command|Executes a custom command on the device.|
-|Save|Creates a configuration file and saves it to the provided destination.|
-|Restore|Restores a configuration from the saved file.|
-|Load Firmware|Uploads and updates the firmware on the resource.|
 
 # Importing and Configuring the Shell
 This section describes how to import the **Palo Alto Firewall Static 2G Shell** and configure and modify the shell’s devices.
@@ -134,16 +144,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
-
-## Data Model
-### **Palo Alto Static Firewall Families and Models**
-
-The chassis families and models are listed in the following table:
-
-|Family|Model|Description|
-|:---|:---|:---|
-|CS_GenericAppFamily|PaloAlto Static vFirewall|Static Virtual PaloAlto Firewall|
-|CS_Port|PaloAlto Static vFirewall.GenericVPort|Generic Virtual Port|
 
 ### **Palo Alto Static Firewall Attributes**
 
