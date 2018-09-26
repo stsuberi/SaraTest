@@ -52,6 +52,31 @@ Release: BreakingPoint VE Static VBlade 2G Shell 1.0.0
 
 ▪ Breaking Point Controller Shell version 1.2.3 and above
 
+## Data Model
+**BreakingPoint Blade Families and Models**
+
+The Blade families and models are listed in the following table:
+
+|Family|Model|Description|
+|:---|:---|:---|
+|CS_GenericAppFamily|BP vBlade|Static Virtual BreakingPoint modules located on the chassis.|
+|CS_Port|BP vBlade.GenericVPort|Generic Virtual Port.|
+
+**BreakingPoint Static VBlade Attributes**
+
+The VBlade attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
+|Public IP|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
+|User|String||User with administrative privileges.|
+|vBlade vCenter VM|String||Name of Virtual Blade vCenter VM in VCenter. <br>Should include the full path (realtive to the datacenter)  and the name of the VM.<br> For example: *QualiFolder/VM121*.|
+|vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
+|vChassis vCenter VM|String||Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+
+### Automation
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 ### Downloading the Shell
 The **BreakingPoint VE Static VBlade** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -64,9 +89,6 @@ The shell comprises:
 |:-----|:-----|
 |Breaking.Point.Static.Virtual.Blade.Shell.zip|BreakingPoint VE Static VBlade 2G Shell package|
 |breakingpoint-static-offline-dependencies.zip|Shell Python dependencies (for offline deployments only)|
-
-### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 ## Importing and Configuring the Shell
 This section describes how to import the BreakingPoint VE Static VBlade 2G shell and configure and modify the shell’s devices.
@@ -117,15 +139,16 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   3. Enter the Blade's **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the device's settings as follows to discover the resource: 
+  **Note:** You must provide values for each of the device settings.
   
-  |Attribute|Type|Default value|Description|
+  |Attribute|Type|Description|
   |:---|:---|:---|:---|
-  |Address|String|NA|BreakingPoint vBlade Public IP.|
-  |vBlade vCenter VM|String||Name of Virtual Blade vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example:<br>*QualiFolder/VM121*.|
-  |vChassis vCenter VM|String||Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example: *QualiFolder/VM121*.|
-  |vCenter Name|String||vCenter resource name in CloudShell.|
-  |User|String||User with administrative privileges.|
-  |Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
+  |Address|String|BreakingPoint vBlade Public IP.|
+  |vBlade vCenter VM|String|Name of Virtual Blade vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example:<br>*QualiFolder/VM121*.|
+  |vChassis vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example: *QualiFolder/VM121*.|
+  |vCenter Name|String|vCenter resource name in CloudShell.|
+  |User|String|User with administrative privileges.|
+  |Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -144,29 +167,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
-
-## Data Model
-**BreakingPoint Blade Families and Models**
-
-The Blade families and models are listed in the following table:
-
-|Family|Model|Description|
-|:---|:---|:---|
-|CS_GenericAppFamily|BP vBlade|Static Virtual BreakingPoint modules located on the chassis.|
-|CS_Port|BP vBlade.GenericVPort|Generic Virtual Port.|
-
-**BreakingPoint Static VBlade Attributes**
-
-The VBlade attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
-|Public IP|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
-|User|String||User with administrative privileges.|
-|vBlade vCenter VM|String||Name of Virtual Blade vCenter VM in VCenter. <br>Should include the full path (realtive to the datacenter)  and the name of the VM.<br> For example: *QualiFolder/VM121*.|
-|vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
-|vChassis vCenter VM|String||Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ## Typical Workflow and Scenarios
 ### Use cases and scenarios
