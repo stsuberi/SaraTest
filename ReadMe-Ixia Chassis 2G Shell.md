@@ -55,8 +55,8 @@ Release: Ixia Chassis 2G Shell 2.0.4
 
 ▪ Controller Shells: CloudShell version 7.0 and above
 
-## Data Model
-**Ixia Chassis Families and Models**
+### Data Model
+#### **Ixia Chassis Families and Models**
 
 The chassis families and models are listed in the following table:
 
@@ -67,7 +67,7 @@ The chassis families and models are listed in the following table:
 |Port Group|Generic Port Group|Generic Port Group|
 |Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
 
-**Ixia Chassis Attributes**
+#### **Ixia Chassis Attributes**
 
 The attribute names and types are listed in the following table:
 
