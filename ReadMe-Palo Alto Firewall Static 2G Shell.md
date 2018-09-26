@@ -61,7 +61,7 @@ The following commands are associated with the Palo Alto Firewall Static shell:
 |:-----|:-----|
 |Health Check|Checks if the device is up and connectable.|
 |Send Custom Command|Executes a custom command on the device. <br></br>Command Inputs:</br>**Command**: CLI command to run on the resource.</br>|
-|Save|Creates a configuration file and saves it to the provided destination.<br></br>Command Inputs:</br>**Folder Path**: Path to the configuration file. The file must be accessible to the execution server that will run the traffic test.</br>**Configuration Type**: xxx.  </br>|
+|Save|Creates a configuration file and saves it to the provided destination.<br></br>Command Inputs:</br>- **Folder Path**: Path to the configuration file. The file must be accessible to the execution server that will run the traffic test.</br>**Configuration Type**: xxx.  </br>|
 |Restore|Restores a configuration from the saved file.|
 |Load Firmware|Uploads and updates the firmware on the resource.|
 	
