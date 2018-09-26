@@ -183,7 +183,7 @@ The configuration is saved to a file named *<ResourceName><startup/running-confi
 	
 **Scenario 3 - _Load firmware_**
 1. In CloudShell Portal, reserve the device resource.
-2. Run the **Load Firware** resource command.
+2. Run the **Load Firmware** resource command.
 3. Enter the following parameters:
     * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/PanOS_200-5.0.5*.
    
