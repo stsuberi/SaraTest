@@ -4,9 +4,19 @@
 
 **Release date:** July 2018
 
-Shell version 1.0.0
+Shell version: 1.0.0
 
-Document version 1.0.0
+Document version: 1.0.0
+
+# In This Guide
+
+* [Overview](#overview)
+* [Downloading the Shell](#downloading-the-shell)
+* [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
+* [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
+* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
+* [References](#references)
+* [Release Notes](#release-notes)
 
 ## Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -16,24 +26,26 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
-### About BreakingPoint VE Static VBlade 2G Shell
-The **BreakingPoint VE Static VBlade 2G** Shell provides you with connectivity and management capabilities such as device structure discovery and power management for the BreakingPoint VE Static VBlade.
+### BreakingPoint VE Static VBlade 2G Shell
+The **BreakingPoint VE Static VBlade 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the BreakingPoint VE Static VBlade.
 
-The blade's main purpose is to autoload and map ports on its VM with the autoloaded ports on the CloudShell resource.
+The blade's main function is to autoload and map the ports on its VM with the autoloaded ports on the CloudShell resource.
 
 For more information on the BreakingPoint VE Static VBlade, see the BreakingPoint official product documentation.
 
 To model a BreakingPoint VE Static VBlade device in CloudShell, use the following:
  
-▪ [BreakingPoint Static VChassis](https://community.quali.com/repos/3910/breakingpoint-static-vchassis-shell), which  models the BreakingPoint VE static VBlade and enables autoloading the VBlade structure and attributes of specific BreakingPoint VE Static VChassis to CloudShell.
+▪ [BreakingPoint Static VChassis](https://community.quali.com/repos/3910/breakingpoint-static-vchassis-shell), which enables autoloading the VChassis structure and attributes of a specific BreakingPoint VE Static VChassis to CloudShell.
 
 ▪ [BreakingPoint Controller 1G Shell (service)](https://community.quali.com/repos/1295/breaking-point-controller-shell), which provides automation commands to run on the VChassis, such as Load Test Configuration, Start Traffic, Get Statistics.
 
 ### Standard version
-The BreakingPoint VE Static VBlade 2G Shell is based on the Deployed App Standard version 1.0.3.
+The BreakingPoint VE Static VBlade 2G shell is based on the Deployed App Standard version 1.0.3.
+
+For detailed information about the shell’s structure and attributes, see the [Shell Standard: Deployed App](https://community.quali.com/repos/423/shell-standard-deployed-app) in GitHub.
 
 ### Requirements
-Release 1.0.0:
+Release: BreakingPoint VE Static VBlade 2G Shell 1.0.0
 
 ▪ CloudShell version 8.3 and above
 
@@ -43,7 +55,7 @@ Release 1.0.0:
 
 
 ### Downloading the Shell
-The **BreakingPoint VE Static VBlade** Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **BreakingPoint VE Static VBlade** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -55,27 +67,24 @@ The shell comprises:
 |breakingpoint-static-offline-dependencies.zip|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
-
-For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 ## Importing and Configuring the Shell
-This section describes how to import the BreakingPoint VE Static VBlade 2G ShelI and configure and modify the shell’s devices.
+This section describes how to import the BreakingPoint VE Static VBlade 2G shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
 **To import the shell into CloudShell:**
-  1. Make sure you have the shell’s .zip pcakage. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  1. Make sure you have the shell’s zip pcakage. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
   3. Click **Import**.
-  4. In the dialog box, navigate to the shell’s .zip package, select it and click **Open**.
+  4. In the dialog box, navigate to the shell’s zip package, select it and click **Open**.
     
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a Shell
-___
+
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
-___
 
 In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder.
 
@@ -95,10 +104,10 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 3. Place these zip files in the local PyPi Server repository.
  
-### Configuring a new resource
+# Configuring a new resource
 This section explains how to create a new resource from the shell.
 
-In CloudShell, the component that represents the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
+In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
 You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
@@ -108,7 +117,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   2. From the list, select the **BP vBlade** shell.
   3. Enter the Blade's **Name** and **IP address**.
   4. Click **Create**.
-  5. In the **Resource** dialog box, edit the resource details as follows to discover the resource: 
+  5. In the **Resource** dialog box, edit the device's settings as follows to discover the resource: 
   
   |Attribute|Type|Default value|Description|
   |:---|:---|:---|:---|
@@ -223,9 +232,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
 ## References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
-For comprehensive product and API documentation, see the [Quali Online Help](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/Portal-Help.htm).
-
-For best practices, instructional training and video tutorials, see [Quali University](http://courses.quali.com/).
+For instructional training and documentation resources, see the [Quali University](https://www.quali.com/university/).
 
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
