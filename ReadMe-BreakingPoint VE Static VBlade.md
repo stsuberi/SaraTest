@@ -171,8 +171,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 ### Use cases and scenarios
 
 **Scenario 1 - Creating a new blueprint**
-1. Creating a new blueprint.
-   * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+1. Create a new blueprint.
+   * In CloudShell Portal, create a new blueprint **Blueprints>Create Blueprint**.
    * Give the blueprint a name.
 2. Add resources and services to the blueprint. 
    * Click the **Resource** tab and add the BreakingPoint Chassis resource and all needed ports. 
@@ -180,9 +180,13 @@ In online mode, the execution server automatically downloads and extracts the ap
    * Click the **App/Services** tab and add the **BreakingPointController** service.
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
 3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
-   * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservarion.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
-   * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and choose **Cleanup Reservation** from the list. 
-   * To save changes, click **Update**.
+   * In CloudShell Portal, **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script**.
+   * Select the **Cleanup Reservation.zip** file. 
+   * Click **Edit** and change **Script Type** to **Teardown**.
+   * Return to the blueprint and open the properties, **Blueprint>Properties**. 
+   * In the **Driver** section, select **Python Setup & Teardown**, and edit the **Estimated teardown duration** to 1 min.
+   * Click **Add Scripts** and choose **Cleanup Reservation** from the list. 
+   * Click **Update** to save changes.
 
 **Scenario 2 - Getting a test file with network configuration**
 
@@ -194,7 +198,8 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Open the BreakingPoint UI.
    * Go to **Control Center>Open Neighborhood**.
    * Find and select **Network Neighborhood** from the list.
-   * Click **Save As** and enter **New Network Neighborhood Name**, click **Ok**.
+   * Click **Save As** and enter **New Network Neighborhood Name**.
+   * Click **Ok**.
 2. Duplicate the BreakingPoint Test.
    * Go to **Test>Open Test**.
    * Find and select the **Test** from the list.
@@ -204,7 +209,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * In the section **Network Neighborhood** click ‘…’, find and select the duplicated Network Neighborhood.
    * Click **Save**.
 4. Run the `GetTestFile BreakingPointController` command.
-   * Enter CloudShell Portal, newly created blueprint and reserve it.
+   * In CloudShell Portal, reserve the new blueprint.
    * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
    * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
 
