@@ -16,7 +16,6 @@ Document version: **1.0.0**
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
-* [Release Notes](#release-notes)
 
 
 # Overview
