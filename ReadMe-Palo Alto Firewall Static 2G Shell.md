@@ -57,7 +57,7 @@ The shell comprises:
 |cloudshell-firewall-paloalto-dependencies-package-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
-The following commands are associated with the Palo Alto Firewall Static shell :
+The following commands are associated with the Palo Alto Firewall Static shell:
 
 |Command|Description|
 |:-----|:-----|
