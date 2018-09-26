@@ -192,9 +192,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
-For comprehensive product and API documentation, see the [Quali Online Help](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/Portal-Help.htm).
-
-For best practices, instructional training and video tutorials, see [Quali University](http://courses.quali.com/).
+For instructional training and documentation resources, see the [Quali University](https://www.quali.com/university/).
 
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
