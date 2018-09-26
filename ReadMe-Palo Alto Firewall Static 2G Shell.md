@@ -151,8 +151,8 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|vFirewall Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
-|vCenter Name|String||The vCenter resource name in CloudShell.|
+|vFirewall Name*|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
+|vCenter Name*|String||The vCenter resource name in CloudShell.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Palo Alto Firewall CLI.|
 |Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. <br>Defines the number of commands that can run concurrently.|
@@ -162,6 +162,8 @@ The attribute names and types are listed in the following table:
 |Backup Location|String||Default location where files will be saved by the **Save** method.|
 |Backup User|String||User name for the storage server used for saving and restoring the congiguration and firmware files.|
 |Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
+
+* Discovery attibute
 
 # Typical Workflow and Scenarios 
 
