@@ -199,11 +199,11 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes
-### What's new
+### What's New
 
-* Set unknown port speed to zero.
-* Support new card types.
-* Show only active ports instead of all ports.
+* Sets unknown port speed to zero.
+* Supports new card types.
+* Displays only active ports instead of all ports.
 
 ### Known Issues
-* Resource groups are not modeled. Resource groups are modeled as port with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
+* Resource groups are not modeled. Resource groups are modeled as ports with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
