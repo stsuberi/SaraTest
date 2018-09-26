@@ -14,7 +14,6 @@ Document version: 1.2.3
 * [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
 * [Release Notes](#release-notes)
 
