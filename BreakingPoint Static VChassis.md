@@ -74,15 +74,15 @@ The VChassis attribute names and types are listed in the following table:
 |vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
 |vChassis VM|String||vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
+### Automation
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
+For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+
 **BreakingPoint Static VChassis 2G Shell**
 
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
-
-### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
-For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 ### Downloading the Shell
 The BreakingPoint Static VChassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
