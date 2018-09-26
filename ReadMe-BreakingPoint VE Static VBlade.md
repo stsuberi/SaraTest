@@ -74,7 +74,7 @@ This section describes how to import the BreakingPoint VE Static VBlade 2G shell
 ### Importing the shell into CloudShell
 
 **To import the shell into CloudShell:**
-  1. Make sure you have the shell’s zip pcakage. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
   3. Click **Import**.
   4. In the dialog box, navigate to the shell’s zip package, select it and click **Open**.
