@@ -2,20 +2,21 @@
 
 # Ixia Chassis 2G Shell  
 
-**Release date:** June 2018
+Release date: June 2018
 
-**Shell version:** 2.0.4
+Shell version: 2.0.4
 
-**Document version:** 1.2.3
+Document version: 1.2.3
 
-# In This Guide:
+# In This Guide
 
 * [Overview](#overview)
+* [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
+* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
 * [Release Notes](#release-notes)
-
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -30,7 +31,7 @@ The Ixia Chassis 2G Shell provides you with connectivity and management capabili
 
 For more information on the Ixia Chassis, see the Ixia official product documentation.
 
-To model an Ixia chassis device in CloudShell, use one of the following controllers, which provide automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+To model an Ixia Chassis device in CloudShell, use one of the following controllers, which provide automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
 
 ▪ <a href="https://community.quali.com/repos/1259/ixia-ixnetwork-controller-shell" target="_blank">Ixia IxNetwork Controller Shell</a>
 
@@ -39,20 +40,28 @@ To model an Ixia chassis device in CloudShell, use one of the following controll
 ### Standard version
 The Ixia Chassis 2G Shell 2.0.4 is based on the Traffic Shell standard *cloudshell_traffic_generator_chassis_standard_1_0_3.yaml*.
 
-For detailed information about the Shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Supported OS
 ▪ Windows
 
 ### Requirements
 
-Release 2.0.4:
+Release: Ixia Chassis 2G Shell 2.0.4
 
 ▪ 2G Chassis Shell: CloudShell version 8.1 and above
 
 ▪ 1G Chassis Shell: CloudShell version 7.0 and above
 
 ▪ Controller Shells: CloudShell version 7.0 and above
+
+### Automation
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
+For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+
+|Command|Description|
+|-----|-----|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 ### Downloading the Shell
 The Ixia Chassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -65,14 +74,6 @@ The shell comprises:
 |:---|:---|
 |Ixia.Chassis.Shell.2G.zip|Ixia Chassis Shell package|
 |Ixia.Chassis.Shell.2G.offline.requirements.zip|Shell Python dependencies (for offline deployments only)|
-
-### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
-For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
-
-|Command|Description|
-|-----|-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Importing and Configuring the Shell
 This section describes how to import the Ixia Chassis 2G Shell and configure and modify the shell’s devices.
