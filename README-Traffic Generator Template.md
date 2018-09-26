@@ -8,9 +8,10 @@ Shell version: **[x.x.x]**
 
 Document version: **[x.x.x]**
 
-# In This Guide:
+# In This Guide
 
 * [Overview](#overview)
+* [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
@@ -38,7 +39,7 @@ To model an **[Device Name]** device in CloudShell, use one of the following con
 ▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Traffic Shell standard **[Name of Standard File]**.
+**[Shell Name x.x.x]** is based on the Traffic Shell Standard **[Name of Standard File]**.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -47,13 +48,13 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release **[x.x.x]**:
+Release: **[Shell Name x.x.x]**
 
-	▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
+▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
 
-	▪ [Controller Name]: CloudShell version **[Version Number]**
+▪ [Controller Name]: CloudShell version **[Version Number]**
 
-### Downloading the Shell
+# Downloading the Shell
 The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
@@ -62,9 +63,8 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|**[Shell .zip File Name]**|**[Device Name]** shell package|
-|**[Shell Offline Requirements .zip File Name]**|Shell Python dependencies (for offline deployments only)|
-|**[Name of Documentation ReadMe file]**|Documentation|
+|[Shell .zip File Name]|[Device Name] shell package|
+|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
