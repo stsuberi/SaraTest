@@ -169,10 +169,10 @@ The attribute names and types are listed in the following table:
 **Scenario 1 - _Save configuration_** 
 1. In CloudShell Portal, add the device resource to an active sandbox.
 2. Run the **Save** command on the device with the following inputs:
-    * **Folder Path**: For example, `tftp://ipaddress/shared folder` 
+    * **Folder Path**: For example, *tftp://ipaddress/shared folder* 
     * **Configuration Type**: **Running** or **Startup**
 
-The configuration is saved to a file named `<ResourceName><startup/running-config>-<timestamp>`, which will reside in the folder path you entered.    
+The configuration is saved to a file named *<ResourceName><startup/running-config>-<timestamp>*, which will reside in the folder path you entered.    
 
 **Scenario 2 - _Restore Configuration_**
 1. In CloudShell Portal, reserve the device resource.
@@ -186,7 +186,7 @@ The configuration is saved to a file named `<ResourceName><startup/running-confi
 1. In CloudShell Portal, reserve the device resource.
 2. Run the **Load Firware** resource command.
 3. Enter the following parameters:
-    * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, `tftp://10.1.1.1/PanOS_200-5.0.5`.
+    * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/PanOS_200-5.0.5*.
    
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
