@@ -160,7 +160,7 @@ The attribute names and types are listed in the following table:
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
 |Backup Type|String|File System|Supported protocols for saving and restoring the configuration and firware files. <br> Possible values include: File System, FTP, TFTP.|
 |Backup Location|String||Default location where files will be saved by the **Save** method.|
-|Backup User|String||User name for the storage server used for saving and restoring the congiguration and firmware files.|
+|Backup User|String||User name for the storage server used for saving and restoring the configuration and firmware files.|
 |Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
 
 # Typical Workflow and Scenarios 
