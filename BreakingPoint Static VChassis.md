@@ -16,7 +16,6 @@ Document version: 1.0.0
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
-* [Release Notes](#release-notes)
 
 ## Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -233,12 +232,10 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Run the **Get Result** command.
    * The result file is attached to the sandbox.
 
-## References
+# References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
-For comprehensive product and API documentation, see the [Quali Online Help](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/Portal-Help.htm).
-
-For best practices, instructional training and video tutorials, see [Quali University](http://courses.quali.com/).
+For instructional training and documentation resources, see the [Quali University](https://www.quali.com/university/).
 
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
