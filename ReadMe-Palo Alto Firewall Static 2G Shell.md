@@ -59,10 +59,10 @@ The following commands are associated with the Palo Alto Firewall Static shell:
 
 |Command|Description|
 |:-----|:-----|
-|Health Check|Checks if the device is up and connectable.|
-|Send Custom Command|Executes a custom command on the device. <br></br>Command Inputs:</br>- **Command**: CLI command to run on the resource.</br>|
-|Save|Creates a configuration file and saves it to the provided destination.<br></br>Command Inputs:</br>- **Folder Path**: Path to the configuration file. The file must be accessible to the execution server that will run the traffic test.</br>- **Configuration Type**: xxx.  </br>|
-|Restore|Restores a configuration from the saved file.|
+|Health Check|Checks if the device is powered-on and connectable.|
+|Send Custom Command|Executes a custom command on the device. <br></br>Command Inputs:</br>- **Command**: The command to run. Note that commands that require a respone are not supported.</br>|
+|Save|Creates a configuration file and saves it to the provided destination.<br></br>Command Inputs:</br>- **Folder Path**: Path where the configuration file will be saved. The path shold include the protocol type, for example: tftp://asdf). The file must be accessible to the execution server that will run the traffic test.</br>- **Configuration Type**: Specify whether the file should update the startup or running config. Startup configuration is not supported on all switches.  </br>|
+|Restore|Restores a configuration from the saved file.<br></br>Command Inputs:</br>- **Path**: The command to run. Note that commands that require a respone are not supported.</br>- **Configuration Type**: Specy whether the file should update the Startup or running config. Startup configutaion is otsupported on all switches. Choose eithe Atary up or Running</br>- ** Restore Method**: Determines whether the restore should append or override the current configuration. Select either Startup or Running.|
 |Load Firmware|Uploads and updates the firmware on the resource.|
 	
 # Downloading the Shell
