@@ -206,4 +206,4 @@ To connect with Quali users and experts from around the world, ask questions and
 * Displays only active ports instead of all ports.
 
 ### Known Issues
-* Resource groups are not modeled. Resource groups are modeled as ports with speed that represents to total speed of the group. The index of the representing port is the index of the active port of the group.
+* Resource groups are not modeled. Resource groups are modeled as ports with a speed that represents to total speed of the group. The index of the represented port is the index of the active port of the group.
