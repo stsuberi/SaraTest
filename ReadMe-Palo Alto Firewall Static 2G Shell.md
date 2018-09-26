@@ -151,7 +151,7 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|vFirewall Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: `QualiFolder/VM121`.|
+|vFirewall Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Palo Alto Firewall CLI.|
