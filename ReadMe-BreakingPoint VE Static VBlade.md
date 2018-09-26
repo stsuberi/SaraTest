@@ -156,9 +156,9 @@ The VBlade attribute names and types are listed in the following table:
 |Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
 |Public IP|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
 |User|String||User with administrative privileges.|
-|vBlade vCenter VM|String||Virtual Blade vCenter VM to use in VM creation. <br>Should include the full path (realtive to the datacenter)  and the name of the VM.<br> For example: *QualiFolder/VM121*.|
+|vBlade vCenter VM|String||Name of Virtual Blade vCenter VM in VCenter. <br>Should include the full path (realtive to the datacenter)  and the name of the VM.<br> For example: *QualiFolder/VM121*.|
 |vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
-|vChassis vCenter VM|String||Virtual Chassis vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|vChassis vCenter VM|String||Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ## Typical Workflow and Scenarios
 ### Use cases and scenarios
