@@ -27,6 +27,33 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
 
+### **[Shell Name]**
+**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+
+For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+
+To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+
+▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+
+▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+
+### Standard version
+**[Shell Name x.x.x]** is based on the Traffic Shell Standard **[Name of Standard File]**.
+
+For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
+
+### Supported OS
+▪ **[OS Name]**
+
+### Requirements
+
+Release: **[Shell Name x.x.x]**
+
+▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
+
+▪ [Controller Name]: CloudShell version **[Version Number]**
+
 ## Data Model
 ### **[Device Name] Families and Models**
 
@@ -57,33 +84,6 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
-
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
-
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
-
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-### Standard version
-**[Shell Name x.x.x]** is based on the Traffic Shell Standard **[Name of Standard File]**.
-
-For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
-
-### Supported OS
-▪ **[OS Name]**
-
-### Requirements
-
-Release: **[Shell Name x.x.x]**
-
-▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
-
-▪ [Controller Name]: CloudShell version **[Version Number]**
 
 # Downloading the Shell
 The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
