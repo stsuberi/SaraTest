@@ -8,9 +8,10 @@ Shell version: **1.0.0**
 
 Document version: **1.0.0**
 
-# In This Guide:
+# In This Guide
 
 * [Overview](#overview)
+* [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
@@ -30,20 +31,20 @@ The **Palo Alto Firewall Static 2G Shell** provides you with connectivity and ma
 For more information on the **Palo Alto Firewall**, see the official **Palo Alto** product documentation.
 
 ### Standard version
-The **Palo Alto Firewall Static 2G Shell 1.0.0** is based on the Deployed App Shell standard version 1.0.3.
+The **Palo Alto Firewall Static 2G Shell 1.0.0** is based on the Deployed App Shell Standard version 1.0.3.
 
-For detailed information about the shell’s structure and attributes, see the [Shell Standard: Deployed App](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/deployed_app_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [Deployed App Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/deployed_app_standard.md) in GitHub.
 
 ### Supported OS
 ▪ **PanOS**
 
 ### Requirements
 
-Release **1.0.0**:
+Release: **Palo Alto Firewall Static 2G Shell 1.0.0**
 
-	▪ CloudShell version 8.3 (with the latest patch) and above
+* CloudShell version 8.3 (with the latest patch) and above
 	
-### Downloading the Shell
+# Downloading the Shell
 The **Palo Alto Firewall Static 2G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
@@ -52,9 +53,9 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|**PaloAltoStaticFirewallShell.zip**|Palo Alto Firewall Static shell package|
-|**cloudshell-firewall-paloalto-dependencies-package-1.0.0.zip**|Shell Python dependencies (for offline deployments only)|
-|**ReadMe-Palo Alto Firewall Static 2G Shell.md**|Documentation|
+|PaloAltoStaticFirewallShell.zip|Palo Alto Firewall Static shell package|
+|cloudshell-firewall-paloalto-dependencies-package-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
+|ReadMe-Palo Alto Firewall Static 2G Shell.md|Documentation|
 
 ### Automation
 The following commands are associated with the Palo Alto Firewall Static shell :
@@ -154,7 +155,7 @@ The attribute names and types are listed in the following table:
 |vFirewall Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: `QualiFolder/VM121`.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
-|Password|Password||Password for Cisco CLI.|
+|Password|Password||Password for Palo Alto Firewall CLI.|
 |Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. <br>Defines the number of commands that can run concurrently.|
 |CLI Connection Type|Lookup|Auto|The protocol which the shell will use to connect to the device. <br>Available methods include: Auto, Console, SSH, Telnet, TCP.|
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
