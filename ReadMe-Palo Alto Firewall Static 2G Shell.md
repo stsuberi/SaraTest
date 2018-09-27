@@ -153,11 +153,11 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|vFirewall Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*. (Discovery attribute)|
-|vCenter Name|String||The vCenter resource name in CloudShell. (Discovery attribute)|
+|vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*. (Discovery attribute)|
+|vCenter Name|String||The vCenter resource name in CloudShell.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Palo Alto Firewall CLI.|
-|Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. <br>Defines the number of commands that can run concurrently.|
+|Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open on the device. <br>Defines the number of commands that can run concurrently.|
 |CLI Connection Type|Lookup|Auto|The protocol which the shell will use to connect to the device. <br>Available methods include: Auto, Console, SSH, Telnet, TCP.|
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
 |Backup Type|String|File System|Supported protocols for saving and restoring the configuration and firware files. <br> Possible values include: File System, FTP, TFTP.|
