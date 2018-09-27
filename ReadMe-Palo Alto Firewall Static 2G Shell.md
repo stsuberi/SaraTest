@@ -63,8 +63,8 @@ The following commands are associated with the Palo Alto Firewall Static shell:
 |:-----|:-----|
 |Health Check|Checks if the device is powered-on and connectable.|
 |Send Custom Command|Executes a custom command on the device. <br>Command Inputs:</br><li>**Command**: The command to run. Note that commands that require a response are not supported.</br>|
-|Save|Creates a configuration file and saves it to the provided destination.<br>Command Inputs:</br><li>**Folder Path**: Path where the configuration file will be saved. It should be accessible from the execution server. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the startup or running config. Startup configuration is not supported on all switches.  </br>|
-|Restore|Restores a configuration from the saved file.<br>Command Inputs:</br><li>**Path**: The full path from which the configuration file will be restored. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the Startup or Running config.<br>- Startup: Configuration that is loaded when the device boots or powers up.<br>- Running: Current configuration in the device. It may have been modified since the last boot.<br>Startup configuration is not supported on all switches.</br><li>**Restore Method**: Determines whether the restore should append or override the current configuration.|
+|Save|Creates a configuration file and saves it to the provided destination.<br>Command Inputs:</br><li>**Folder Path**: Path where the configuration file will be saved. It should be accessible from the execution server. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the Startup or Running config.<br>- Startup: Configuration that is loaded when the device boots or powers up. Startup configuration is not supported on all switches.<br>- Running: Current configuration in the device. It may have been modified since the last boot.<br></br>|
+|Restore|Restores a configuration from the saved file.<br>Command Inputs:</br><li>**Path**: The full path from which the configuration file will be restored. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the Startup or Running config.<br>- Startup: Configuration that is loaded when the device boots or powers up. Startup configuration is not supported on all switches.<br>- Running: Current configuration in the device. It may have been modified since the last boot.<br></br><li>**Restore Method**: Determines whether the restore should append or override the current configuration.|
 |Load Firmware|Uploads and updates the firmware on the resource. <br>Command Inputs:</br><li>**Path**: Path to tftp://server where the firmware file is stored.|
 	
 # Downloading the Shell
@@ -151,13 +151,13 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 The attribute names and types are listed in the following table. 
 
-**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit) and the **Discover** resource dialog box (Inventory>Resource>Discover) except for those noted with an * which appear only in the **Edit** resource dialog box. 
+**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit) and the **Discover** resource dialog box (Inventory>Resource>Discover) except for those noted with an *, which appear only in the **Edit** resource dialog box. 
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name*|String||Shell name|
+|Name*|String||CloudShell resource display name|
 |Address*|String||Shell address|
-|Folder*|String|Root|xxx|
+|Folder*|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
 |Visibility*|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values are Family Default (Everyone), Admin only, and Everyone.|
 |Remote Connection*|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values are Family Default (Enable), Enable, and Disable.|
 |vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
