@@ -22,7 +22,7 @@ Document version: **1.0.0**
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Firewall Shells
-CloudShell's firewall shells enable you to **[xxxx]** from a sandbox. In CloudShell, a firewall is typically modeled using a **[xxxx]**.
+CloudShell's Firewall shells enable you to manage your Firewall device similar to your networking equipment but without connectivity. In CloudShell, a Firewall shell runs commands, such as Autoload, Load, and Save Configuration. 
 
 ### **Palo Alto Firewall Static 2G Shell**
 The **Palo Alto Firewall Static 2G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **Palo Alto Firewall**. 
