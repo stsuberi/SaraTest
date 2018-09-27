@@ -53,6 +53,9 @@ Release: BreakingPoint VE Static VBlade 2G Shell 1.0.0
 ▪ Breaking Point Controller Shell version 1.2.3 and above
 
 ## Data Model
+
+The shell's data model includes all shell metadata, famiies, and attributes.
+
 **BreakingPoint Blade Families and Models**
 
 The Blade families and models are listed in the following table:
