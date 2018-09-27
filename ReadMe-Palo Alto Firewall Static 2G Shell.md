@@ -44,6 +44,9 @@ Release: **Palo Alto Firewall Static 2G Shell 1.0.0**
 * CloudShell version 8.3 (with the latest patch) and above
 
 ### Data Model
+
+The shell's data model includes all shell metadata, famiies, and attributes.
+
 #### **Palo Alto Static Firewall Families and Models**
 
 The chassis families and models are listed in the following table:
