@@ -81,8 +81,9 @@ The attribute names and types are listed in the following table:
 |||||
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
-For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is run during resource creation in the Inventory dashboard, while resource automation is run in a Sandbox providing that the resource has been discovered and is online.
+
+For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 |Command|Description|
 |:-----|:-----|
