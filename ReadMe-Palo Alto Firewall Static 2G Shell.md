@@ -155,11 +155,11 @@ The attribute names and types are listed in the following table.
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name|String||Shell name*|
-|Address|||Shell address*|
-|Folder|||xxx*|
-|Visibility|||(Edit Resource Attribute) Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
-|Remote Connection|||(Edit Resource) Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
+|Name*|String||Shell name|
+|Address*|||Shell address|
+|Folder*|||xxx|
+|Visibility*|||Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
+|Remote Connection*|||Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
 |vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
 |Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. <br>Default value of 1 = no concurrent sessions.|
@@ -171,7 +171,7 @@ The attribute names and types are listed in the following table.
 |Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Palo Alto Firewall CLI.|
-Public IP|||xxx*|
+Public IP*|||xxx|
 
 # Typical Workflow and Scenarios 
 
