@@ -50,9 +50,9 @@ Release: Ixia Chassis 2G Shell 2.0.4
 
 ▪ 2G Chassis Shell: CloudShell version 8.1 and above
 
-▪ 1G Chassis Shell: CloudShell version 7.0 and above
-
-▪ Controller Shells: CloudShell version 7.0 and above
+▪ Controller Shells: 
+	* Ixia IxNetwork Controller Shell - CloudShell version 8.0 and above
+	* Ixia IxLoad Controller Shell - CloudShell version 7.0 and above
 
 ### Data Model
 #### **Ixia Chassis Families and Models**
@@ -70,15 +70,16 @@ The chassis families and models are listed in the following table:
 
 The attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Serial Number|Text||The serial number of the resource.|
-|Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Vendor|String||The firmware version of the resource.|
+|Attribute|Type|Description|
+|:---|:---|:---
+|Model Name|String|The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Serial Number|Text|The serial number of the resource.|
+|Server Description|String|The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
+|Vendor|String|The firmware version of the resource.|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+
 For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 |Command|Description|
