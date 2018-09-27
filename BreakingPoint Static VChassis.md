@@ -78,7 +78,8 @@ The VChassis attribute names and types are listed in the following table:
 |vChassis VM|String|vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+
 For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 **BreakingPoint Static VChassis 2G Shell**
@@ -149,13 +150,13 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the resource details as follows to discover the resource: 
   
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
 |Public IP|String|||
-|User|String||User with administrative privileges.|
-|vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
-|vChassis VM|String||vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|User|String|User with administrative privileges.|
+|vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
+|vChassis VM|String|vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
