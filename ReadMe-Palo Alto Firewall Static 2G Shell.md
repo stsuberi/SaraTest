@@ -156,7 +156,7 @@ The attribute names and types are listed in the following table.
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
 |Name*|String||Shell name|
-|Address*|||Shell address|
+|Address*|String||Shell address|
 |Folder*|String|Root|xxx|
 |Visibility*|||Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
 |Remote Connection*|||Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
