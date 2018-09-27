@@ -141,7 +141,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select the **BP vBlade** shell.
-  3. Enter the blade's **Name** and **IP address**.
+  3. Enter the **Name** and **IP address** of the blade.
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the device's settings as follows to discover the resource: You must provide values for each of the device settings.
   
