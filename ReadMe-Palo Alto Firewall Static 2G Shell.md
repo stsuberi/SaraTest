@@ -151,7 +151,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 The attribute names and types are listed in the following table. 
 
-Unless otherwise stated, all attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit) and the **Discover** resource dialog box (Inventory>Resource>Discover) except for those noted with an * which represent those attributes that only appear in the Edit resource dialog box. 
+**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit) and the **Discover** resource dialog box (Inventory>Resource>Discover) except for those noted with an * which appear only in the **Edit** resource dialog box. 
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
