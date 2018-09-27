@@ -52,6 +52,9 @@ Release: BreakingPoint Static VChassis 2G Shell 1.0.0
 ▪ [BreakingPoint Controller Shell](https://community.quali.com/repos/1295/breaking-point-controller-shell) 1.2.3 and above
 
 ### Data Model
+
+The shell's data model includes all shell metadata, famiies, and attributes.
+
 **BreakingPoint Static VChassis Families and Models**
 
 The Chassis families and models are listed in the following table:
