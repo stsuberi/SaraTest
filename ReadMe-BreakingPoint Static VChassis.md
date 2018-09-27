@@ -75,7 +75,7 @@ The VChassis attribute names and types are listed in the following table:
 |Public IP|String||
 |User|String|User with administrative privileges.|
 |vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
-|vCenter VM|String|vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
@@ -153,7 +153,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 |Attribute|Type|Description|
 |:---|:---|:---|
 |Address|String||
-|vCenter VM|String|vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 |vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
 |User|String|User with administrative privileges.|
 |Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
