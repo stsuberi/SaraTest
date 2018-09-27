@@ -153,7 +153,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 |Attribute|Type|Description|
 |:---|:---|:---|
 |Address|String||
-|vChassis VM|String|vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|vCenter VM|String|vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 |vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
 |User|String|User with administrative privileges.|
 |Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
