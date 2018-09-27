@@ -113,7 +113,7 @@ This section describes how to import the BreakingPoint Static VChassis 2G Shell 
     
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
-### Offline installation of a Shell
+### Offline installation of a shell
 
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
 
@@ -152,11 +152,11 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
 |Attribute|Type|Description|
 |:---|:---|:---|
-|Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
-|Public IP|String|||
-|User|String|User with administrative privileges.|
-|vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
+|Address|String||
 |vChassis VM|String|vCenter VM to use in the VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
+|User|String|User with administrative privileges.|
+|Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
