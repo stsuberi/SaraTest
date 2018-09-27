@@ -167,6 +167,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the Shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 ## Data Model
+
+The shell's data model includes all shell metadata, famiies, and attributes.
+
 **BreakingPoint Chassis Families and Models**
 
 The chassis families and models are listed in the following table:
