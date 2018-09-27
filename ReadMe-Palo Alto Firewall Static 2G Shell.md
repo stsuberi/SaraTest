@@ -155,21 +155,21 @@ The attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |Name|String||(Edit Resource Attribute) Shell name.|
 |Address|||(Edit Resource Attribute) Shell address.|
-|Folder|||(Edit Resource Attribute)---|
+|Folder|||(Edit Resource Attribute)|
 |Visibility|||(Edit Resource Attribute) Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
-|Remote Connection|||(Edit Resource) Remote connection determines if can remotely connect to the resource . By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
+|Remote Connection|||(Edit Resource) Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
 |vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
-|Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. Default value of 1 = no concurrent sessions.|
-|CLI Connection Type|Lookup|Auto|The CLI connection type that will be used by the driver. Possible values are Auto, Console, SSH, Telnet and TCP. If Auto is selected the driver will choose the available connection type automatically.|
+|Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. <br>Default value of 1 = no concurrent sessions.|
+|CLI Connection Type|Lookup|Auto|The CLI connection type that will be used by the driver. <br>Possible values are Auto, Console, SSH, Telnet and TCP. If Auto is selected the driver will choose the available connection type automatically.|
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
 |Backup Location|String||Used by the save/restore orchestration to determine where backups should be saved.|
-|Backup Type|String|File System|Supported protocols for saving and restoring configuration and firmware files. Possible values inlcude: File System, FTP, and TFTP.|
+|Backup Type|String|File System|Supported protocols for saving and restoring configuration and firmware files. <br>Possible values include: File System, FTP, and TFTP.|
 |Backup User|String||User name for the storage server used for saving and restoring the configuration and firmware files.|
 |Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Palo Alto Firewall CLI.|
-Public IP|||(Edit Resource Attribute|
+Public IP|||(Edit Resource Attribute)|
 
 # Typical Workflow and Scenarios 
 
