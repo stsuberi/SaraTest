@@ -8,7 +8,7 @@ Shell version: **1.2.0**
 
 Document version: **1.0.0**
 
-# In This Guide:
+# In This Guide
 
 * [Overview](#overview)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
@@ -20,14 +20,15 @@ Document version: **1.0.0**
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
-___
+
 **Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
-___
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
 For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
+
+To model an IxNetwork in CloudShell, you need the IxChariot Controller 1G Shell and the IxChariot Server 1G Shell.
 
 ### **IxChariot Controller 1G Shell**
 The **IxChariot Controller 1G Shell** provides you with connectivity and management capabilities such as device structure discovery, running tests, and test results for the **IxChariot** application. 
@@ -35,7 +36,9 @@ The **IxChariot Controller 1G Shell** provides you with connectivity and managem
 For more information on the **IxChariot Controller**, see the official **IxChariot** product documentation.
 
 ### Standard version
-**IxChariot Controller 1G Shell** 1.2.0 is based on the Traffic Shell standard version 3.0.0. This shell works with Ixia IxChariot Shell 1st generatior resources.  
+**IxChariot Controller 1G Shell** 1.2.0 is based on the Traffic Shell standard version 3.0.0. 
+
+**Note:** This shell can only be used with a 1st generation IxChariot Server shell resource.  
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -178,17 +181,6 @@ The chassis families and models are listed in the following table:
 ||||
 ||||
 ||||
-
-**[Device Name]** **Attributes**
-
-The attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
 
 # Typical Workflow and Scenarios 
 
