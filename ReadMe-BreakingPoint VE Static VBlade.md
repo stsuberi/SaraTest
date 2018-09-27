@@ -79,7 +79,9 @@ The VBlade attribute names and types are listed in the following table:
 |vChassis vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+
+For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 ### Downloading the shell
 The **BreakingPoint VE Static VBlade** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -139,7 +141,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select the **BP vBlade** shell.
-  3. Enter the Blade's **Name** and **IP address**.
+  3. Enter the blade's **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the device's settings as follows to discover the resource: You must provide values for each of the device settings.
   
@@ -178,7 +180,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    * In CloudShell Portal, create a new blueprint **Blueprints>Create Blueprint**.
    * Give the blueprint a name.
 2. Add resources and services to the blueprint. 
-   * Click the **Resource** tab and add the BreakingPoint Chassis resource and all needed ports. 
+   * Click the **Resource** button and add the BreakingPoint Chassis resource and all needed ports into the diagram. 
    * Associate the port sub resources with the BreakingPoint Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
    * Click the **App/Services** tab and add the **BreakingPointController** service.
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
