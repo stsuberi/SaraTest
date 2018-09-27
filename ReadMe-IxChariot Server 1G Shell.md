@@ -34,7 +34,7 @@ For more information, see [Traffic Generators Overview](http://help.quali.com/On
 For more information on the **IxChariot Server**, see the official **IxChariot** product documentation.
 
 ### Standard version
-**IxChariot Server 1G Shell** 1.1.1 is based on the Traffic Shell standard version 3.0.0. **(The link to the Traffic Shell standard is to 2.0.0)**
+**IxChariot Server 1G Shell** 1.1.1 is based on the Traffic Shell standard version 3.0.0. 
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -49,7 +49,7 @@ Release 1.1.1:
 
 	▪ IxChariot versions: 9.5, 9.6
 
-	▪ IxChariot Python API library: Can be downloaded from the IxChariot Server
+	▪ IxChariot Python API library: Can be downloaded from the IxChariot Server shell **Configuration>Help>Python API Library**
 
 ### Downloading the Shell
 The **IxChariot Server 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -62,7 +62,6 @@ The shell comprises:
 |:---|:---|
 |**Ixia-IxChariotServer-Shell.zip**|IxChariot Server shell package|
 |**Ixia-IxChariotServer-Shell_offline_requirements.zip**|Shell Python dependencies (for offline deployments only)|
-|**ReadMe-IxChariot Server Shell.md**|Documentation|
 
 # Importing and Configuring the Shell
 This section describes how to import the **IxChariot Server 1G Shell** and configure and modify the shell’s devices.
