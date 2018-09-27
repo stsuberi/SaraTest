@@ -153,12 +153,12 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name|String|---|(Edit Resource) Shell name.|
-|Address|---|---|(Edit Resource) Shell address.|
-|Folder|---|---|(Edit Resource)---|
-|Visibility|---|---| (Edit Resource) Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
-|Remote Connection|---|---|(Edit Resource) Remote connection determines if can remotely connect to the resource . By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
-|vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*. (Discovery attribute)|
+|Name|String||(Edit Resource Attribute) Shell name.|
+|Address|||(Edit Resource Attribute) Shell address.|
+|Folder|||(Edit Resource Attribute)---|
+|Visibility|||(Edit Resource Attribute) Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
+|Remote Connection|||(Edit Resource) Remote connection determines if can remotely connect to the resource . By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
+|vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Palo Alto Firewall CLI.|
@@ -169,7 +169,7 @@ The attribute names and types are listed in the following table:
 |Backup Location|String||Default location where files will be saved by the **Save** method.|
 |Backup User|String||User name for the storage server used for saving and restoring the configuration and firmware files.|
 |Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
-Public IP||||
+Public IP|||(Edit Resource Attribute|
 
 # Typical Workflow and Scenarios 
 
