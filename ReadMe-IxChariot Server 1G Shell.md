@@ -8,7 +8,7 @@ Shell version: **1.1.1**
 
 Document version: **1.0.0**
 
-# In This Guide:
+# In This Guide
 
 * [Overview](#overview)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
@@ -20,9 +20,8 @@ Document version: **1.0.0**
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
-___
+
 **Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
-___
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
@@ -33,12 +32,6 @@ For more information, see [Traffic Generators Overview](http://help.quali.com/On
 **IxChariot Server 1G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxChariot server**. 
 
 For more information on the **IxChariot Server**, see the official **IxChariot** product documentation.
-
-To model an _**[Device Name]**_ device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: (**Is this section relevant for this shell?**)
-
-▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
-
-▪ <a href="_**[Controller Shell https from Quali's Community Integrations page]**_" target="_blank">_**[Controller Shell Name]**_</a>
 
 ### Standard version
 **IxChariot Server 1G Shell** 1.1.1 is based on the Traffic Shell standard version 3.0.0. **(The link to the Traffic Shell standard is to 2.0.0)**
@@ -70,14 +63,6 @@ The shell comprises:
 |**Ixia-IxChariotServer-Shell.zip**|IxChariot Server shell package|
 |**Ixia-IxChariotServer-Shell_offline_requirements.zip**|Shell Python dependencies (for offline deployments only)|
 |**ReadMe-IxChariot Server Shell.md**|Documentation|
-
-### Automation (Is this section relevant for this shell?)
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
-For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
-
-|Command|Description|
-|:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Importing and Configuring the Shell
 This section describes how to import the **IxChariot Server 1G Shell** and configure and modify the shell’s devices.
@@ -152,7 +137,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   	 * Client Install Path - Path where the IxChariot Python API library was downloaded to.
   	 * User - User name for the IxChariot Server.
   	 * Password - Password for IxChariot Server. 
-   	 * Power Management- Whether to automatically manage the device power status or not (standard CloudShell attribute).
+   	 * Power Management- Whether to automatically manage the device power status or not.
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -186,18 +171,6 @@ The chassis families and models are listed in the following table:
 ||||
 ||||
 ||||
-
-**[Device Name]** **Attributes**
-
-The attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
-
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
