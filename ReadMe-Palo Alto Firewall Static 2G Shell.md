@@ -158,8 +158,8 @@ The attribute names and types are listed in the following table.
 |Name*|String||Shell name|
 |Address*|String||Shell address|
 |Folder*|String|Root|xxx|
-|Visibility*|Lookup||Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
-|Remote Connection*|||Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
+|Visibility*|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values are Family Default (Everyone), Admin only, and Everyone.|
+|Remote Connection*|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values are Family Default (Enable), Enable, and Disable.|
 |vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
 |Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. <br>Default value of 1 = no concurrent sessions.|
