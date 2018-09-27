@@ -55,6 +55,9 @@ Release: **[Shell Name x.x.x]**
 ▪ [Controller Name]: CloudShell version **[Version Number]**
 
 ### Data Model
+
+The shell's data model includes all shell metadata, famiies, and attributes.
+
 #### **[Device Name] Families and Models**
 
 The chassis families and models are listed in the following table:
