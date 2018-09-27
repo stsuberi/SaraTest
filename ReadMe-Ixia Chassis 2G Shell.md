@@ -51,8 +51,8 @@ Release: Ixia Chassis 2G Shell 2.0.4
 ▪ 2G Chassis Shell: CloudShell version 8.1 and above
 
 ▪ Controller Shells: 
-	* Ixia IxNetwork Controller Shell - CloudShell version 8.0 and above
-	* Ixia IxLoad Controller Shell - CloudShell version 7.0 and above
+* Ixia IxNetwork Controller Shell - CloudShell version 8.0 and above
+* Ixia IxLoad Controller Shell - CloudShell version 7.0 and above
 
 ### Data Model
 #### **Ixia Chassis Families and Models**
