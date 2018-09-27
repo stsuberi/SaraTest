@@ -160,7 +160,7 @@ The attribute names and types are listed in the following table:
 |Remote Connection|||(Edit Resource) Remote connection determines if can remotely connect to the resource . By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
 |vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
-|Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open on the device. <br>Defines the number of commands that can run concurrently.|
+|Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. Default value of 1 = no concurrent sessions.|
 |CLI Connection Type|Lookup|Auto|The protocol which the shell will use to connect to the device. <br>Available methods include: Auto, Console, SSH, Telnet, TCP.|
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
 |Backup Location|String||Default location where files will be saved by the **Save** method.|
