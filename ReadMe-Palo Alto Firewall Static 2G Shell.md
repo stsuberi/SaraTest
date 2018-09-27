@@ -161,7 +161,7 @@ The attribute names and types are listed in the following table:
 |vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
 |Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. Default value of 1 = no concurrent sessions.|
-|CLI Connection Type|Lookup|Auto|The protocol which the shell will use to connect to the device. <br>Available methods include: Auto, Console, SSH, Telnet, TCP.|
+|CLI Connection Type|Lookup|Auto|The CLI connection type that will be used by the driver. Possible values are Auto, Console, SSH, Telnet and TCP. If Auto is selected the driver will choose the available connection type automatically.|
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
 |Backup Location|String||Default location where files will be saved by the **Save** method.|
 |Backup Type|String|File System|Supported protocols for saving and restoring the configuration and firware files. <br> Possible values include: File System, FTP, TFTP.|
