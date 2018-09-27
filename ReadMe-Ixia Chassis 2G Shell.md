@@ -71,7 +71,7 @@ The chassis families and models are listed in the following table:
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
-|:---|:---|:---
+|:---|:---|:---|
 |Model Name|String|The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Serial Number|Text|The serial number of the resource.|
 |Server Description|String|The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
@@ -162,7 +162,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select the **Ixia Chassis 2G Shell**.
-  3. Enter the Ixia chassis **Name** and **IP address**.
+  3. Enter the **Name** and **IP address** of the Ixia Chassis.
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, as follows: 
       * If Ixia Chassis is Windows-based and is accessible directly to the Execution Server then there is no need for additional settings.
