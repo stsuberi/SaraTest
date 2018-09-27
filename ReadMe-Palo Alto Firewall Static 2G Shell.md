@@ -158,7 +158,7 @@ The attribute names and types are listed in the following table.
 |Name*|String||Shell name|
 |Address*|String||Shell address|
 |Folder*|String|Root|xxx|
-|Visibility*|||Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
+|Visibility*|Lookup||Visibility determines who can see the resource in the diagram, search pane, and in the inventory dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.|
 |Remote Connection*|||Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.|
 |vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
 |vCenter Name|String||The vCenter resource name in CloudShell.|
