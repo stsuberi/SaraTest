@@ -165,7 +165,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select **[Shell Name]**.
-  3. Enter the **[Device Name]** **Name** and **IP address** (if applicable).
+  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
   4. Click **Create**.
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
   6. Click **Continue**.
