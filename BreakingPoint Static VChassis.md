@@ -69,13 +69,13 @@ The Chassis families and models are listed in the following table:
 
 The VChassis attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Password|Password||Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
-|Public IP|String|||
-|User|String||User with administrative privileges.|
-|vCenter Name|String||vCenter cloud provider resource name in CloudShell.|
-|vChassis VM|String||vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Password|Password|Password is required by some CLI protocols, such as Telnet, as well as for device configuration.|
+|Public IP|String||
+|User|String|User with administrative privileges.|
+|vCenter Name|String|vCenter cloud provider resource name in CloudShell.|
+|vChassis VM|String|vCenter VM to use in VM creation. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
@@ -145,7 +145,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select **BP vChassis** Shell.
-  3. Enter the Chassis's **Name** and **IP address**.
+  3. Enter the chassis's **Name** and **IP address**.
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the resource details as follows to discover the resource: 
   
@@ -183,7 +183,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
    * Give the blueprint a name.
 2. Add resources and services to the blueprint. 
-   * Click the **Resource** tab and add the BreakingPoint Chassis resource and all needed ports. 
+   * Click the **Resource** button and add the BreakingPoint Chassis resource and all needed ports into the diagram. 
    * Associate the port sub resources with the BreakingPoint Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
    * Click the **App/Services** tab and add the **BreakingPointController** service.
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
