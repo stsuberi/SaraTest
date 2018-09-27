@@ -163,8 +163,8 @@ The attribute names and types are listed in the following table:
 |Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. Default value of 1 = no concurrent sessions.|
 |CLI Connection Type|Lookup|Auto|The CLI connection type that will be used by the driver. Possible values are Auto, Console, SSH, Telnet and TCP. If Auto is selected the driver will choose the available connection type automatically.|
 |CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
-|Backup Location|String||Default location where files will be saved by the **Save** method.|
-|Backup Type|String|File System|Supported protocols for saving and restoring the configuration and firware files. <br> Possible values include: File System, FTP, TFTP.|
+|Backup Location|String||Used by the save/restore orchestration to determine where backups should be saved.|
+|Backup Type|String|File System|Supported protocols for saving and restoring configuration and firmware files. Possible values inlcude: File System, FTP, and TFTP.|
 |Backup User|String||User name for the storage server used for saving and restoring the configuration and firmware files.|
 |Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
