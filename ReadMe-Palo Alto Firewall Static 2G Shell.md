@@ -171,7 +171,7 @@ The attribute names and types are listed in the following table.
 |Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
 |User|String||User name for the Palo Alto Firewall CLI (should be a privileged user).|
 |Password|Password||Password for Palo Alto Firewall CLI.|
-Public IP*|||xxx|
+Public IP*|String|||
 
 # Typical Workflow and Scenarios 
 
