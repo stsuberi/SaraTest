@@ -39,11 +39,11 @@ For more information on the **IxChariot Server**, see the official **IxChariot**
 
 Release IxChariot Server 1G Shell 1.1.1:
 
-	▪ CloudShell version: 8.1 and above
+▪ CloudShell version: 8.1 and above
 
-	▪ IxChariot versions: 9.5, 9.6
+▪ IxChariot versions: 9.5, 9.6
 
-	▪ IxChariot Python API library: Can be downloaded from the IxChariot Server shell **Configuration>Help>Python API Library**
+▪ IxChariot Python API library: Can be downloaded from the IxChariot Server shell **Configuration>Help>Python API Library**
 	
 ## Data Model
 
@@ -59,14 +59,6 @@ The server families and models are listed in the following table:
 ||||
 ||||
 ||||
-
-Server:
-ResourceFamily Name="Traffic Generator Server"
-ResourceModel Name="IxChariot Server"
-ResourceFamily Name="Traffic Generator Endpoint"
-     ResourceModel Name="IxChariot Endpoint"
-          ResourceFamily Name="IxChariot test IP"
-ResourceModel Name="Traffic Generator Test IP"
 
 ## Automation
 
