@@ -4,7 +4,7 @@
 
 Release date: September 2018
 
-Shell version: 1.2.0**
+Shell version: 1.2.0
 
 Document version: 1.0.0
 
