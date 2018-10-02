@@ -45,7 +45,7 @@ Release: **Palo Alto Firewall Static 2G Shell 1.0.0**
 
 ### Data Model
 
-The shell's data model includes all shell metadata, famiies, and attributes.
+The shell's data model includes all shell metadata, families, and attributes.
 
 #### **Palo Alto Static Firewall Families and Models**
 
