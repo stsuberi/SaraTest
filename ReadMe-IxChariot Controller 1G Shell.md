@@ -29,10 +29,10 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-To model an IxNetwork in CloudShell, you need the IxChariot Controller 1G Shell and the IxChariot Server 1G Shell.
-
 ### **IxChariot Controller 1G Shell**
 The **IxChariot Controller 1G Shell** provides you with connectivity and management capabilities such as device structure discovery, running tests, and test results for the **IxChariot** application. 
+
+To model an IxNetwork in CloudShell, you need the IxChariot Controller 1G shell and the IxChariot Server 1G shell.
 
 For more information on the **IxChariot Controller**, see the official **IxChariot** product documentation.
 
@@ -45,11 +45,11 @@ For more information on the **IxChariot Controller**, see the official **IxChari
 
 Release IxChariot Controller 1G Shell 1.2.1:
 
-	▪ CloudShell version: 8.1 and above
+▪ CloudShell version: 8.1 and above
 
-	▪ IxChariot versions: 9.5, 9.6
+▪ IxChariot versions: 9.5, 9.6
 
-	▪ IxChariot Python API library: Can be downloaded from the IxChariot Server
+▪ IxChariot Python API library: Can be downloaded from the IxChariot Server
 	
 ## Data Model
 
@@ -65,6 +65,7 @@ The controller families and models are listed in the following table:
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package).
+
 For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 |Command|Description|Parameters|Returns
