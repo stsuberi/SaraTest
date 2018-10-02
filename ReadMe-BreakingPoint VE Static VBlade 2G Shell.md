@@ -2,7 +2,7 @@
 
 # BreakingPoint VE Static VBlade 2G Shell 
 
-**Release date:** July 2018
+Release date: July 2018
 
 Shell version: 1.0.0
 
@@ -23,7 +23,7 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
-For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
+For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### BreakingPoint VE Static VBlade 2G Shell
 The **BreakingPoint VE Static VBlade 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the BreakingPoint VE Static VBlade.
@@ -54,7 +54,7 @@ Release: BreakingPoint VE Static VBlade 2G Shell 1.0.0
 
 ## Data Model
 
-The shell's data model includes all shell metadata, famiies, and attributes.
+The shell's data model includes all shell metadata, families, and attributes.
 
 **BreakingPoint Blade Families and Models**
 
@@ -130,7 +130,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 3. Place these zip files in the local PyPi Server repository.
  
-# Configuring a new resource
+### Configuring a new resource
 This section explains how to create a new resource from the shell.
 
 In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
@@ -148,7 +148,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   |Attribute|Type|Description|
   |:---|:---|:---|
   |Address|String|BreakingPoint vBlade Public IP.|
-  |vBlade vCenter VM|String|Name of Virtual Blade vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example:<br>*QualiFolder/VM121*.|
+  |vBlade vCenter VM|String|Name of Virtual Blade vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example:*QualiFolder/VM121*.|
   |vChassis vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM.<br>For example: *QualiFolder/VM121*.|
   |vCenter Name|String|vCenter resource name in CloudShell.|
   |User|String|User with administrative privileges.|
@@ -209,7 +209,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Go to **Test>Open Test**.
    * Find and select the **Test** from the list.
    * Press **Save As** and save it with a new name.
-3. Change the Network Neighborhood in the duplicated test.
+3. Change the **Network Neighborhood** in the duplicated test.
    * Find and select the duplicated test from the list and open it.
    * In the section **Network Neighborhood** click ‘…’, find and select the duplicated Network Neighborhood.
    * Click **Save**.
@@ -231,7 +231,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Set **Blocking** to **True**, if you want subsequent commands to wait until the test finishes, or **False** to allow additional commands to run during the command's execution. 
    * Click **Run**.
 4. Run the **Stop Traffic** command.
-<br>If you ran the **Start Traffic** test with **Blocking** disabled, you can immediately stop the test.
+<br>If the **Start Traffic** test was run with **Blocking** disabled, you can immediately stop the test.
    * Run the **Stop Traffic** command.
 5. Get the test's result file.
    * Run the **Get Result** command.
