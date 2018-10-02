@@ -35,12 +35,7 @@ The **IxChariot Controller 1G Shell** provides you with connectivity and managem
 
 For more information on the **IxChariot Controller**, see the official **IxChariot** product documentation.
 
-### Standard version
-**IxChariot Controller 1G Shell** 1.2.0 is based on the Traffic Shell standard version 3.0.0. 
-
 **Note:** This shell can only be used with a 1st generation IxChariot Server shell resource.  
-
-For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Supported OS
 ▪ **Windows**
@@ -169,18 +164,15 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 ## Data Model
 
-The shell's data model includes all shell metadata, famiies, and attributes.
+The shell's data model includes all shell metadata, families, and attributes.
 
 **[Device Name]** **Families and Models**
 
-The chassis families and models are listed in the following table:
+The controller families and models are listed in the following table:
 
-|Family|Model|Description|
-|:---|:---|:---|
-||||
-||||
-||||
-||||
+|Family|Model|
+|:---|:---|
+|Traffic Generator Controller|IxChariot Controller|
 
 # Typical Workflow and Scenarios 
 
