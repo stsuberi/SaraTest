@@ -36,13 +36,13 @@ For more information on the **[Device Name]**, see the official **[Device Manufa
 For detailed information about the shell’s structure and attributes, see the **[Name of Standard File]**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/deployed_app_standard.md) in GitHub.
 
 ### Supported OS
-▪ **OS Name**
+▪ [**OS Name**]
 
 ### Requirements
 
 Release: **[Shell Name x.x.x]**
 
-* CloudShell version x.x
+* CloudShell [version x.x]
 * Other
 
 ### Data Model
