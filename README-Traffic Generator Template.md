@@ -56,7 +56,7 @@ Release: **[Shell Name x.x.x]**
 
 ### Data Model
 
-The shell's data model includes all shell metadata, famiies, and attributes.
+The shell's data model includes all shell metadata, families, and attributes.
 
 #### **[Device Name] Families and Models**
 
