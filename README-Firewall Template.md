@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **Palo Alto Firewall Static 2G Shell**  
+# **[Shell Name]**  
 
-Release date: **September 2018**
+Release date: [Month Year]
 
-Shell version: **1.0.0**
+Shell version: [x.x.x]
 
-Document version: **1.0.0**
+Document version: [x.x.x]
 
 # In This Guide
 
@@ -16,6 +16,7 @@ Document version: **1.0.0**
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
+* [Release Notes](#release-notes)
 
 
 # Overview
@@ -24,51 +25,63 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Firewall Shells
 CloudShell's Firewall shells enable you to manage your Firewall device similar to your networking equipment but without connectivity. In CloudShell, a Firewall shell runs commands, such as Autoload, Load, and Save Configuration. 
 
-### **Palo Alto Firewall Static 2G Shell**
-The **Palo Alto Firewall Static 2G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **Palo Alto Firewall**. 
+### **[Shell Name]**
+**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
 
-For more information on the **Palo Alto Firewall**, see the official **Palo Alto** product documentation.
+For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
 
 ### Standard version
-The **Palo Alto Firewall Static 2G Shell 1.0.0** is based on the Deployed App Shell Standard version 1.0.3.
+**[Shell Name x.x.x]** is based on the **[Name of Standard File]**.
 
-For detailed information about the shell’s structure and attributes, see the [Deployed App Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/deployed_app_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the **[Name of Standard File]**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/deployed_app_standard.md) in GitHub.
 
 ### Supported OS
-▪ **PanOS**
+▪ **OS Name**
 
 ### Requirements
 
-Release: **Palo Alto Firewall Static 2G Shell 1.0.0**
+Release: **[Shell Name x.x.x]**
 
-* CloudShell version 8.3 (with the latest patch) and above
+* CloudShell version x.x
+* Other
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **Palo Alto Static Firewall Families and Models**
+#### **[Device Name] Families and Models**
 
-The chassis families and models are listed in the following table:
+The [Device Name] families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|CS_GenericAppFamily|PaloAlto Static vFirewall|Static Virtual PaloAlto Firewall|
-|CS_Port|PaloAlto Static vFirewall.GenericVPort|Generic Virtual Port|
+||||
+||||
+||||
+||||
+
+#### **[Device Name] Attributes**
+
+The attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|||||
+|||||
+|||||
+|||||
 
 ### Automation
-The following commands are associated with the Palo Alto Firewall Static shell:
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 |Command|Description|
 |:-----|:-----|
-|Health Check|Checks if the device is powered-on and connectable.|
-|Send Custom Command|Executes a custom command on the device. <br>Command Inputs:</br><li>**Command**: The command to run. Note that commands that require a response are not supported.</br>|
-|Save|Creates a configuration file and saves it to the provided destination.<br>Command Inputs:</br><li>**Folder Path**: Path where the configuration file will be saved. It should be accessible from the execution server. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the Startup or Running config.<br>- Startup: Configuration that is loaded when the device boots or powers up. Startup configuration is not supported on all switches.<br>- Running: Current configuration in the device. It may have been modified since the last boot.|
-|Restore|Restores a configuration from the saved file.<br>Command Inputs:</br><li>**Path**: The full path from which the configuration file will be restored. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the Startup or Running config.<br>- Startup: Configuration that is loaded when the device boots or powers up. Startup configuration is not supported on all switches.<br>- Running: Current configuration in the device. It may have been modified since the last boot.<br><li>**Restore Method**: Determines whether the restore should append or override the current configuration.|
-|Load Firmware|Uploads and updates the firmware on the resource. <br>Command Inputs:</br><li>**Path**: Path to tftp://server where the firmware file is stored.|
+|||
+|||
+|||
 	
 # Downloading the Shell
-The **Palo Alto Firewall Static 2G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -76,11 +89,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|PaloAltoStaticFirewallShell.zip|Palo Alto Firewall Static shell package|
-|cloudshell-firewall-paloalto-dependencies-package-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
+|[Shell .zip File Name]|[Device Name] shell package|
+|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Palo Alto Firewall Static 2G Shell** and configure and modify the shell’s devices.
+This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -96,7 +109,11 @@ The shell is displayed in the **Shells** page and can be used by domain administ
 
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
 
-In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder. 
+In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder. The dependencies folder may differ, depending on the CloudShell version you are using:
+
+* For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
+* For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
+* For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
@@ -114,6 +131,20 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 3. Place these zip files in the local PyPi Server repository.
  
+### Setting the python PythonOfflineRepositoryPath configuration key
+Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
+
+**To set the offline python repository:**
+1. Download the **[Shell Offline Requirements .zip File Name]** file, see [Downloading the Shell](#downloading-the-shell).
+2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
+3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
+	`<add key="PythonOfflineRepositoryPath" value="repository 
+full path"/>`
+4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the *~TestShell\Execution Server\customer.config* file, add the following key:  
+	`<add key="PythonOfflineRepositoryPath" value="repository 
+full path"/>`
+5. Restart the Execution Server.
+ 
 ### Configuring a new resource
 This section explains how to create a new resource from the shell.
 
@@ -124,10 +155,10 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select **Palo Alto Firewall Static** shell.
-  3. Enter the **Name** and **IP address** (if applicable).
+  2. From the list, select **[Shell Name]**.
+  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
   4. Click **Create**.
-  5. In the **Resource** dialog box, enter the device's settings, as required. See [Palo Alto Static Firewall Attributes](#palo-alto-static-firewall-attributes).
+  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes).
    6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -147,55 +178,14 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-### **Palo Alto Static Firewall Attributes**
-
-The attribute names and types are listed in the following table. 
-
-**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit) and the **Discover** resource dialog box (Inventory>Resource>Discover) except for those noted with an *, which appear only in the **Edit** resource dialog box. 
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Name*|String||CloudShell resource display name|
-|Address*|String||Resource address (address of the device)|
-|Folder*|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
-|Visibility*|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection*|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
-|vCenter Name|String||The vCenter resource name in CloudShell.|
-|Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. <br>Default value of 1 = no concurrent sessions.|
-|CLI Connection Type|Lookup|Auto|The CLI connection type that will be used by the driver. <br>Possible values: **Auto**, **Console**, **SSH**, **Telnet** and **TCP**. If **Auto** is selected the driver will choose the available connection type automatically.|
-|CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
-|Backup Location|String||Used by the save/restore orchestration to determine where backups should be saved.|
-|Backup Type|String|File System|Supported protocols for saving and restoring configuration and firmware files. <br>Possible values: **File System**, **FTP**, and **TFTP**.|
-|Backup User|String||User name for the storage server used for saving and restoring the configuration and firmware files.|
-|Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
-|User|String||User name for the Palo Alto Firewall CLI (should be a privileged user)|
-|Password|Password||Password for Palo Alto Firewall CLI|
-Public IP*|String|||
-
 # Typical Workflow and Scenarios 
+(if not applicable - remove section)
 
-**Scenario 1 - _Save configuration_** 
-1. In CloudShell Portal, add the device resource to an active sandbox.
-2. Run the **Save** command on the device with the following inputs:
-    * **Folder Path**: For example, *tftp://ipaddress/shared folder* 
-    * **Configuration Type**: **Running** or **Startup**
+**Scenario 1** - *[Name of Scenario 1]* 
 
-The configuration is saved to a file named *<ResourceName><startup/running-config>-<timestamp>*, which will reside in the folder path you entered.    
+**Scenario 2** - *[Name of Scenario 2]* 
 
-**Scenario 2 - _Restore Configuration_**
-1. In CloudShell Portal, reserve the device resource.
-2. Run the **Restore** resource command.
-3. Enter the following parameters:
-    * **Path** (mandatory): Enter the full path of the configuration file. 
-    * **Restore Method** (optional): **Append** or **Override**. If you do not enter any value in this field, the **Append** method will be used. 
-    * **Configuration Type** (mandatory): **Startup** or **Running**. 
-	
-**Scenario 3 - _Load firmware_**
-1. In CloudShell Portal, reserve the device resource.
-2. Run the **Load Firmware** resource command.
-3. Enter the following parameters:
-    * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/PanOS_200-5.0.5*.
+**Scenario 3** - *[Name of Scenario 3]* 
    
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -205,3 +195,16 @@ For instructional training and documentation resources, see the [Quali Universit
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
+
+# Release Notes 
+(if not applicable - remove section)
+### What's New
+
+* 
+* 
+* 
+
+### Known Issues
+* 
+* 
+* 
