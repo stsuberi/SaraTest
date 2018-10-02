@@ -57,7 +57,7 @@ The shell's data model includes all shell metadata, families, and attributes.
 
 **BreakingPoint Static VChassis Families and Models**
 
-The Chassis families and models are listed in the following table:
+The VChassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -78,7 +78,7 @@ The VChassis attribute names and types are listed in the following table:
 |vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -89,7 +89,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 ### Downloading the Shell
-The BreakingPoint Static VChassis 2G Shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The BreakingPoint Static VChassis 2G shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -101,7 +101,7 @@ The shell comprises:
 |breakingpoint-static-offline-dependencies.zip|Shell Python dependencies (for offline deployments only)|
 
 ## Importing and Configuring the Shell
-This section describes how to import the BreakingPoint Static VChassis 2G Shell and configure and modify the shell’s devices.
+This section describes how to import the BreakingPoint Static VChassis 2G shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -145,7 +145,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select **BP vChassis** Shell.
+  2. From the list, select **BP vChassis** shell.
   3. Enter the **Name** and **IP address** of the chassis.
   4. Click **Create**.
   5. In the **Resource** dialog box, edit the resource details as follows to discover the resource: 
@@ -184,12 +184,12 @@ In online mode, the execution server automatically downloads and extracts the ap
    * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
    * Give the blueprint a name.
 2. Add resources and services to the blueprint. 
-   * Click the **Resource** button and add the BreakingPoint Chassis resource and all needed ports into the diagram. 
+   * Click the **Resource** button and add the BreakingPoint VChassis resource and all needed ports into the diagram. 
    * Associate the port sub resources with the BreakingPoint Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
    * Click the **App/Services** tab and add the **BreakingPointController** service.
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
 3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
-   * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservarion.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
+   * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
    * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and choose **Cleanup Reservation** from the list. 
    * To save changes, click **Update**.
 
@@ -208,12 +208,12 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Go to **Test>Open Test**.
    * Find and select the **Test** from the list.
    * Press **Save As** and save it with a new name.
-3. Change the Network Neighborhood in the duplicated test.
+3. Change the **Network Neighborhood** in the duplicated test.
    * Find and select the duplicated test from the list and open it.
    * In the section **Network Neighborhood** click ‘…’, find and select the duplicated Network Neighborhood.
    * Click **Save**.
 4. Run the `GetTestFile BreakingPointController` command.
-   * Enter CloudShell Portal, newly created blueprint and reserve it.
+   * Enter CloudShell Portal, and reserve the newly created blueprint.
    * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
    * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
 
@@ -226,11 +226,11 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Click **Run**, to load the test and network configuration from this file and reserve necessary ports.
 3. Run the **Start Traffic** command.
    * Click BreakingPointController **Commands** and enter the service commands.
-   * Find the **Start Traffic** command and click enter to run the menu.
+   * Find the **Start Traffic** command and click **Enter** to run the menu.
    * Set **Blocking** to **True**, if you want subsequent commands to wait until the test finishes, or **False** to allow additional commands to run during the command's execution. 
    * Click **Run**.
 4. Run the **Stop Traffic** command.
-<br>If you ran the **Start Traffic** test with **Blocking** disabled, you can immediately stop the test.
+<br>If the **Start Traffic** test was run with **Blocking** disabled, you can immediately stop the test.
    * Run the **Stop Traffic** command.
 5. Get the test's result file.
    * Run the **Get Result** command.
