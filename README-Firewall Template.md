@@ -115,7 +115,9 @@ The shell is displayed in the **Shells** page and can be used by domain administ
 In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder. The dependencies folder may differ, depending on the CloudShell version you are using:
 
 * For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
+
 * For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
+
 * For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding shell and script packages to the local PyPi Server repository
@@ -139,13 +141,17 @@ Before PyPi Server was introduced as CloudShell’s python package management me
 
 **To set the offline python repository:**
 1. Download the **[Shell Offline Requirements .zip File Name]** file, see [Downloading the Shell](#downloading-the-shell).
+
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
+
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the *~TestShell\Execution Server\customer.config* file, add the following key:  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 5. Restart the Execution Server.
  
 ### Configuring a new resource
