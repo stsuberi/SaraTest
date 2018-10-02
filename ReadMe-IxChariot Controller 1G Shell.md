@@ -74,7 +74,7 @@ For Traffic Generator Shells, commands are configured and executed from the cont
 |Stop Test <br>(stop_test)|||
 |Get Statistics <br>(get_statistics)|Gets the statistics view|View Name (view_name) - The name of the view to retrieve. NA if output type is PDF - NA.<br>Output Type (output_type) - CSV or PDF. The requested statistics will be attached to the reservation CSV file.|If output types is CSV, returns the CSV file. If output type is PDF, returns the path to the PDF so that it can be downloaded.|
 
-### Downloading the Shell
+# Downloading the Shell
 The **IxChariot Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
