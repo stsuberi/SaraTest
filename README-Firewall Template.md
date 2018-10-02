@@ -164,11 +164,16 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+     
   2. From the list, select **[Shell Name]**.
+  
   3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  
   4. Click **Create**.
+  
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes).
-   6. Click **Continue**.
+  
+  6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
@@ -178,7 +183,9 @@ This section explains how to update your Python dependencies folder. This is req
 ### Updating offline Python dependencies
 **To update offline Python dependencies:**
 1. Download the latest Python dependencies package zip file locally.
-2. Extract the zip file to the suitable offline package folder(s). 
+
+2. Extract the zip file to the suitable offline package folder(s).
+
 3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
 
 ### Updating online Python dependencies
@@ -192,6 +199,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **Scenario 1 - _Save configuration_** 
 1. In CloudShell Portal, add the device resource to an active sandbox.
+
 2. Run the **Save** command on the device with the following inputs:
     * **Folder Path**: For example, *tftp://ipaddress/shared folder* 
     * **Configuration Type**: **Running** or **Startup**
@@ -200,7 +208,9 @@ The configuration is saved to a file named *<ResourceName><startup/running-confi
 
 **Scenario 2 - _Restore Configuration_**
 1. In CloudShell Portal, reserve the device resource.
+
 2. Run the **Restore** resource command.
+
 3. Enter the following parameters:
     * **Path** (mandatory): Enter the full path of the configuration file. 
     * **Restore Method** (optional): **Append** or **Override**. If you do not enter any value in this field, the **Append** method will be used. 
@@ -208,7 +218,9 @@ The configuration is saved to a file named *<ResourceName><startup/running-confi
 	
 **Scenario 3 - _Load firmware_**
 1. In CloudShell Portal, reserve the device resource.
+
 2. Run the **Load Firmware** resource command.
+
 3. Enter the following parameters:
     * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/PanOS_200-5.0.5*. 
    
