@@ -53,7 +53,7 @@ Release: BreakingPoint Static VChassis 2G Shell 1.0.0
 
 ### Data Model
 
-The shell's data model includes all shell metadata, famiies, and attributes.
+The shell's data model includes all shell metadata, families, and attributes.
 
 **BreakingPoint Static VChassis Families and Models**
 
