@@ -23,7 +23,7 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
-For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
+For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### Ixia Chassis 2G Shell
 The Ixia Chassis 2G Shell provides you with connectivity and management capabilities such as device structure discovery and power management for the Ixia chassis. 
@@ -167,7 +167,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   5. In the **Resource** dialog box, enter the device's settings, as follows: 
       * If Ixia Chassis is Windows-based and is accessible directly to the Execution Server then there is no need for additional settings.
       * If Ixia Chassis is Linux-based, please consult with our Customer Success team.
-      * If Ixia Chassis is not directly accessible to the Execution Server then there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
+      * If Ixia Chassis is not directly accessible to the Execution Server, there must be an IxTclServer serving as a proxy between the Execution Server and the chassis, enter the following settings:
           * **Controller Address**: address of the IxTclServer
           * **Controller TCP Port**: TCP port of IxTclServer (leave empty for default 4555 port) 
   6. Click **Continue**.
@@ -206,4 +206,4 @@ To connect with Quali users and experts from around the world, ask questions and
 * Displays only active ports instead of all ports.
 
 ### Known Issues
-* Resource groups are not modeled. Resource groups are modeled as ports with a speed that represents to total speed of the group. The index of the represented port is the index of the active port of the group.
+* Resource groups are not modeled. Resource groups are modeled as ports with a speed that represents the total speed of the group. The index of the represented port is the index of the active port of the group.
