@@ -2,21 +2,20 @@
 
 # IxChariot Server 1G Shell 
 
-Release date: **September 2018**
+Release date: September 2018
 
-Shell version: **1.1.1**
+Shell version: 1.1.1
 
-Document version: **1.0.0**
+Document version: 1.0.0
 
 # In This Guide
 
 * [Overview](#overview)
+* [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
 * [Release Notes](#release-notes)
-
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -26,30 +25,50 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
-For more information, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).
+For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **IxChariot Server 1G Shell**
-**IxChariot Server 1G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxChariot server**. 
+**IxChariot Server 1G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxChariot Server**. 
 
 For more information on the **IxChariot Server**, see the official **IxChariot** product documentation.
-
-### Standard version
-**IxChariot Server 1G Shell** 1.1.1 is based on the Traffic Shell standard version 3.0.0. 
-
-For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Supported OS
 ▪ Windows
 
 ### Requirements
 
-Release 1.1.1:
+Release IxChariot Server 1G Shell 1.1.1:
 
 	▪ CloudShell version: 8.1 and above
 
 	▪ IxChariot versions: 9.5, 9.6
 
 	▪ IxChariot Python API library: Can be downloaded from the IxChariot Server shell **Configuration>Help>Python API Library**
+	
+## Data Model
+
+The shell's data model includes all shell metadata, famiies, and attributes.
+
+**IxChariot Server Families and Models**
+
+The server families and models are listed in the following table:
+
+|Family|Model|Description|
+|:---|:---|:---|
+||||
+||||
+||||
+||||
+
+Server:
+ResourceFamily Name="Traffic Generator Server"
+ResourceModel Name="IxChariot Server"
+ResourceFamily Name="Traffic Generator Endpoint"
+     ResourceModel Name="IxChariot Endpoint"
+          ResourceFamily Name="IxChariot test IP"
+ResourceModel Name="Traffic Generator Test IP"
+
+## Automation
 
 ### Downloading the Shell
 The **IxChariot Server 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -155,30 +174,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
-
-## Data Model
-
-The shell's data model includes all shell metadata, famiies, and attributes.
-
-**IxChariot Server Families and Models**
-
-The server families and models are listed in the following table:
-
-|Family|Model|Description|
-|:---|:---|:---|
-||||
-||||
-||||
-||||
-
-Server:
-ResourceFamily Name="Traffic Generator Server"
-ResourceModel Name="IxChariot Server"
-ResourceFamily Name="Traffic Generator Endpoint"
-     ResourceModel Name="IxChariot Endpoint"
-          ResourceFamily Name="IxChariot test IP"
-ResourceModel Name="Traffic Generator Test IP"
-
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
