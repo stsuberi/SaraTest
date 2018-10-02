@@ -160,9 +160,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 The shell's data model includes all shell metadata, famiies, and attributes.
 
-**[Device Name]** **Families and Models**
+**IxChariot Server Families and Models**
 
-The chassis families and models are listed in the following table:
+The server families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -170,6 +170,15 @@ The chassis families and models are listed in the following table:
 ||||
 ||||
 ||||
+
+Server:
+ResourceFamily Name="Traffic Generator Server"
+ResourceModel Name="IxChariot Server"
+ResourceFamily Name="Traffic Generator Endpoint"
+     ResourceModel Name="IxChariot Endpoint"
+          ResourceFamily Name="IxChariot test IP"
+ResourceModel Name="Traffic Generator Test IP"
+
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
