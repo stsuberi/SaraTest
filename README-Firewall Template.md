@@ -99,8 +99,11 @@ This section describes how to import the **[Shell Name x.x.x]** and configure an
 
 **To import the shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  
   3. Click **Import**.
+  
   4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
