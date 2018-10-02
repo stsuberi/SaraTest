@@ -179,13 +179,29 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflow and Scenarios 
-(if not applicable - remove section)
+(edit as necessary depending on the shell)
 
-**Scenario 1** - *[Name of Scenario 1]* 
+**Scenario 1 - _Save configuration_** 
+1. In CloudShell Portal, add the device resource to an active sandbox.
+2. Run the **Save** command on the device with the following inputs:
+    * **Folder Path**: For example, *tftp://ipaddress/shared folder* 
+    * **Configuration Type**: **Running** or **Startup**
 
-**Scenario 2** - *[Name of Scenario 2]* 
+The configuration is saved to a file named *<ResourceName><startup/running-config>-<timestamp>*, which will reside in the folder path you entered.    
 
-**Scenario 3** - *[Name of Scenario 3]* 
+**Scenario 2 - _Restore Configuration_**
+1. In CloudShell Portal, reserve the device resource.
+2. Run the **Restore** resource command.
+3. Enter the following parameters:
+    * **Path** (mandatory): Enter the full path of the configuration file. 
+    * **Restore Method** (optional): **Append** or **Override**. If you do not enter any value in this field, the **Append** method will be used. 
+    * **Configuration Type** (mandatory): **Startup** or **Running**. 
+	
+**Scenario 3 - _Load firmware_**
+1. In CloudShell Portal, reserve the device resource.
+2. Run the **Load Firmware** resource command.
+3. Enter the following parameters:
+    * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/PanOS_200-5.0.5*. 
    
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
