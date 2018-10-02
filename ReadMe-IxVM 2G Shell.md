@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **IxVM 2G Shell**  
 
-Release date: [Month Year]
+Release date: May 2018
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0.0
 
 # In This Guide
 
@@ -22,63 +22,65 @@ Document version: [x.x.x]
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
-### Traffic Generator Shells
-CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
+### Networking Shells
+CloudShell's networking shells enable you to ????. In CloudShell, a network is typically modeled using a ????, which ???, and a ??? that ???? commands, such as ???. 
 
-For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
+### **IxVM Deployment App Shell 2G**
+**IxVM Deployment App Shell 2G** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Deployment App**. 
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
-
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
-
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+For more information on the **IxVM Deployment App**, see the official **IxVM** product documentation.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Traffic Shell Standard **[Name of Standard File]**.
+**IxVM Deployment App Shell 2G** is based on the ?????? **[Name of Standard File]**.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Supported OS
-▪ **[OS Name]**
+▪ **?????**
 
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **IxVM Deployment App Shell 2G 1.0.0**
 
-▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
+▪ IxVM versions: 8.40 and above
 
-▪ [Controller Name]: CloudShell version **[Version Number]**
+▪ CloudShell versions: 8.2 and above
+
+▪ Ixia Virtual Test Appliance versions: 8.2 and above
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **IxVM Deployed App Chassis Shell 2G Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|Virtual Traffic Generator Chassis|IxVM Virtual Traffic Chassis 2G|IxVM Deployed Test Appliance|
+|Module|Virtual Traffic Generator Module|IxVM Deployed Test Appliance Card|
+|Port|Virtual Traffic Generator Port|IxVM Deployed Test Appliance Port|
 
-#### **[Device Name] Attributes**
+#### **IxVM Deployed App Chassis Shell 2G Attributes**
 
 The attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
+|Attribute|Type|Description|
+|:---|:---|:---|
+|License Server|String|IP address or hostname of the License Server|
+|Password|Password|Password for the Deployed IxVM Test Appliance|
+|User|String|Username for the Deployed IxVM Test Appliance|
+
+#### **IxVM Virtual Traffic Generator Port Attributes**
+
+The attribute names and types are listed in the following table:
+
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Logical Name|String|The port's logical name in the test configuration|
+|Requested vNIC|String|VNic number from the vCenter|
+|MAC Address|String|Port's MAC Address|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
