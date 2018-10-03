@@ -98,24 +98,35 @@ This section describes the automation (drivers or scripts) associated with the d
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
+#### **TeraVM Chassis**
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Autoload|Discovers all switches, modules and leaf ports (free ports that can be used for connections) connected to the controller. It will add them as a child resources for the current resource.|
+
+#### **TeraVM Controller**
+|Command|Description|
+|:-----|:-----|
+|Load Configuration|Loads configuration file and reserves necessary ports.|
+|Start Traffic|Starts a test with the current configuration.|
+|Stop Traffic|Stops running the test.|
+|Get Results|Gets the test result file and attaches it to the reservation.|
 
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **TeraVM** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
-The shell comprises:
+The shells comprise:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|TeraVM_Chassis_Shell_Package.zip|TeraVM Chassis shell package|
+|TeraVM_Controller_Shell_Package.zip|TeraVM Controller shell package|
+|teravm-offline-dependencies-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
+|Cleanup Reservation.zip|Teardown script for cleaning a reservation.|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+This section describes how to import the **TeraVM** shells and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
