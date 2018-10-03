@@ -16,8 +16,6 @@ Document version: 1.0.0
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
-* [Release Notes](#release-notes)
-
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -125,12 +123,27 @@ The shells comprise:
 |teravm-offline-dependencies-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
 |Cleanup Reservation.zip|Teardown script for cleaning a reservation.|
 
-# Importing and Configuring the Shell
+# Importing and Configuring the Shells
 This section describes how to import the **TeraVM** shells and configure and modify the shell’s devices.
 
-### Importing the shell into CloudShell
+### Importing the shells into CloudShell
 
-**To import the shell into CloudShell:**
+**To import the TeraVM Controller 1G shell into CloudShell:**
+  1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  
+  2. Backup your database. 
+  
+  3. Log in to CloudShell Portal as administrator of the relevant domain.
+  
+  4. In the **Admin** menu, select **Import Package**.
+  
+  ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+  
+  5. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
+  
+The shell is displayed in the **Drivers/Resource** page. 
+  
+  **To import the TeraVM Chassis 2G shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
@@ -195,13 +208,13 @@ In CloudShell, the component that models the device is called a resource. It is 
 
 You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
-**To create a resource for the device:**
+**To create a resource for the TeraVM Chassis 2G shell device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **TeraVM Chassis** shell.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  3. Enter the **Name** and **IP address** of the **TeraVM Chassis**.
   
   4. Click **Create**.
   
@@ -231,11 +244,34 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflow and Scenarios 
 (if not applicable - remove section)
 
-**Scenario 1** - *[Name of Scenario 1]* 
+**Scenario 1 - Creating a new blueprint**
+1. Creating a new blueprint.
+   * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   * Give the blueprint a name.
+2. Add resources and services to the blueprint. 
+   * Click the **Resource** button and add the TeraVM Chassis resource and all needed ports into the diagram. 
+   * Associate the port sub resources with the TeraVM interfaces, by specifying the port attribute **Logical Name**.
+   * Click the **App/Services** tab and add the **TeraVMController** service.
+3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
+   * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. 
+   * Click **Edit** for the new added script and change **Script Type** to **Teardown**.
+   * Go back to the created blueprint and open properties, **Blueprint>Properties**. 
+   * In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min.
+   * Click **Add Script** and choose **Cleanup Reservation** from the list. 
+   * Click **Update** to save changes.
 
-**Scenario 2** - *[Name of Scenario 2]* 
-
-**Scenario 3** - *[Name of Scenario 3]* 
+**Scenario 2 - Running a test**
+1. Enter your blueprint.
+2. From the TeraVMController service, run the **Load Configuration** command.
+   * Hover over the TeraVMController service and click **Commands**.
+   * In the **Resource Commands** pane, click the **Load Configuration** command.
+   * Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the execution server running the command.
+   * Click **Run**, to load the test configuration to the TeraVM controller.
+3. Run the **Start Test** command.
+4. Run the **Stop Test** command.
+5. Get the test's result file.
+   * Run the **Get Result** command.
+   * The result file is attached to the sandbox.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -245,16 +281,3 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-# Release Notes 
-(if not applicable - remove section)
-### What's New
-
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
