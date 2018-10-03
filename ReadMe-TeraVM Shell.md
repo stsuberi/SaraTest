@@ -32,9 +32,9 @@ For more information on the **TeraVM**, see the official **TeraVM** product docu
 
 To model a **TeraVM** device in CloudShell, you must use the following shells: 
 
-▪ <a href="**[https://community.quali.com/repos/3286/teravm-chassis-2g-shell]**" target="_blank">**TeraVM Chassis 2G Shell**</a>, which provides data model and autoload functionality to model and load the TeraVM to resource management.
+▪ [TeraVM Chassis 2G Shell](https://community.quali.com/repos/3286/teravm-chassis-2g-shell), which provides data model and autoload functionality to model and load the TeraVM to resource management.
 
-▪ <a href="**[https://community.quali.com/repos/3287/teravm-controller-shell]**" target="_blank">**TeraVM Controller 1G Shell**</a> (service), which provides automation commands to run the VM Chassis, such as Load Configuration, Start Traffic, Get Results. 
+▪ [TeraVM Controller 1G Shell](https://community.quali.com/repos/3287/teravm-controller-shell) (service), which provides automation commands to run the VM Chassis, such as Load Configuration, Start Traffic, Get Results. 
 
 ### Standard version
 The **TeraVM** shells are based on the Traffic Shell Standard version 1.0.0.
