@@ -43,7 +43,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **TeraVM Shell** 1.0.0
+Release: **TeraVM Shells** 1.0.0
 
 ▪ TeraVM version: 13.4
 
@@ -70,11 +70,11 @@ The chassis attribute names and types are listed in the following table:
 |Attribute|Type|Description|
 |:---|:---|:---|
 |Controller Group|String|Name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) that the traffic controller is part of.|
-|Logical Name|String|Port's logical name in the test configuration. If left empty, automatic allocation will be applied.|
+|Logical Name|String|Port's logical name in the test configuration. <br>If left empty, automatic allocation will be applied.|
 |Media Type|String|Interface media type. <br> Possible values include: **Fiber** and/or **Copper** (comma-separated)|
-|Model|String|Device Model. This information is typically used for abstract resource filtering.|
+|Model|String|Device Model. <br>This information is typically used for abstract resource filtering.|
 |Supported Speeds|String|Speed supported by the interface (comma-separated).|
-|Server Description|String|Full description of the server. Usually includes the OS, exact firmware version and additional device characteristics.|
+|Server Description|String|Full description of the server. <br>Usually includes the OS, exact firmware version and additional device characteristics.|
 |Version|String|Firmware version of the resource.|
 |Vendor|String|Vendor name.|
 
@@ -86,9 +86,9 @@ The controller attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |Test Files Location|String||Location for test related files.|
 |User|String||Username for the TeraVM CLI.|
-|Password|Password|Password for the TeraVM CLI.|
+|Password|Password||Password for the TeraVM CLI.|
 |CLI Connection Type|Lookup|Auto|Protocol which the shell will use to connect to the device. <br> Available methods include: **Auto**, **Console**, **SSH**, **Telnet**, and **TCP**.|
-|CLI TCP Port|Numeric||TCP port to use for the CLI connection. If left empty, a default CLI port will be used based on the chosen protocol.<br> For example, Telnet will use port 23.|
+|CLI TCP Port|Numeric||TCP port to use for the CLI connection. <br>If left empty, a default CLI port will be used based on the chosen protocol.<br> For example, Telnet will use port 23.|
 |Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. Defines the number of commands that can run concurrently.|
 
 ### Automation
@@ -99,12 +99,12 @@ For Traffic Generator shells, commands are configured and executed from the cont
 #### **TeraVM Chassis**
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers all switches, modules and leaf ports (free ports that can be used for connections) connected to the controller. It will add them as a child resources for the current resource.|
+|Autoload|Discovers all switches, modules and leaf ports (free ports that can be used for connections) connected to the controller. It adds them as child resources for the current resource.|
 
 #### **TeraVM Controller**
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Loads configuration file and reserves necessary ports.|
+|Load Configuration|Loads the configuration file and reserves necessary ports.|
 |Start Traffic|Starts a test with the current configuration.|
 |Stop Traffic|Stops running the test.|
 |Get Results|Gets the test result file and attaches it to the reservation.|
@@ -187,7 +187,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the **[Shell Offline Requirements .zip File Name]** file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *teravm-offline-dependencies-1.0.0.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -245,7 +245,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 (if not applicable - remove section)
 
 **Scenario 1 - Creating a new blueprint**
-1. Creating a new blueprint.
+1. Create a new blueprint.
    * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
    * Give the blueprint a name.
 2. Add resources and services to the blueprint. 
@@ -254,8 +254,8 @@ In online mode, the execution server automatically downloads and extracts the ap
    * Click the **App/Services** tab and add the **TeraVMController** service.
 3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
    * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. 
-   * Click **Edit** for the new added script and change **Script Type** to **Teardown**.
-   * Go back to the created blueprint and open properties, **Blueprint>Properties**. 
+   * Click **Edit** for the newly added script and change **Script Type** to **Teardown**.
+   * Return to the blueprint and open properties, **Blueprint>Properties**. 
    * In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min.
    * Click **Add Script** and choose **Cleanup Reservation** from the list. 
    * Click **Update** to save changes.
@@ -266,12 +266,12 @@ In online mode, the execution server automatically downloads and extracts the ap
    * Hover over the TeraVMController service and click **Commands**.
    * In the **Resource Commands** pane, click the **Load Configuration** command.
    * Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the execution server running the command.
-   * Click **Run**, to load the test configuration to the TeraVM controller.
+   * Click **Run**, to load the test configuration to the TeraVM Controller.
 3. Run the **Start Test** command.
 4. Run the **Stop Test** command.
 5. Get the test's result file.
    * Run the **Get Result** command.
-   * The result file is attached to the sandbox.
+   * The test's result file is attached to the sandbox.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
