@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **TeraVM Shell**  
+# **TeraVM Shells**  
 
 Release date: December 2017
 
@@ -25,16 +25,16 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **Tera VM Shell**
+### **Tera VM Shells**
 **TeraVM** shells provides you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM**. 
 
 For more information on the **TeraVM**, see the official **TeraVM** product documentation.
 
 To model a **TeraVM** device in CloudShell, you must use the following shells: 
 
-▪ <a href="**[https://community.quali.com/repos/3286/teravm-chassis-2g-shell]**" target="_blank">**[TeraVM Chassis 2G Shell]**</a>, which provides data model and autoload functionality to model and load the TeraVM to resource management.
+▪ <a href="**[https://community.quali.com/repos/3286/teravm-chassis-2g-shell]**" target="_blank">**TeraVM Chassis 2G Shell**</a>, which provides data model and autoload functionality to model and load the TeraVM to resource management.
 
-▪ <a href="**[https://community.quali.com/repos/3287/teravm-controller-shell]**" target="_blank">**[TeraVM Controller 1G Shell]**</a>(service), which provides automation commands to run the VM Chassis such as Load Test Configuration, Run Tests, Get Test Results. 
+▪ <a href="**[https://community.quali.com/repos/3287/teravm-controller-shell]**" target="_blank">**TeraVM Controller 1G Shell**</a> (service), which provides automation commands to run the VM Chassis, such as Load Configuration, Start Traffic, Get Results. 
 
 ### Standard version
 The **TeraVM** shells are based on the Traffic Shell Standard version 1.0.0.
