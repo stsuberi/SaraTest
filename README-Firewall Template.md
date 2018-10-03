@@ -72,7 +72,7 @@ The attribute names and types are listed in the following table:
 |||||
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 |Command|Description|
 |:-----|:-----|
@@ -227,7 +227,7 @@ The configuration is saved to a file named *<ResourceName><startup/running-confi
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
-For instructional training and documentation resources, see the [Quali University](https://www.quali.com/university/).
+For instructional training and documentation, see [Quali University](https://www.quali.com/university/).
 
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
