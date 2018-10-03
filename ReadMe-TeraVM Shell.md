@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **TeraVM Shell**  
 
-Release date: [Month Year]
+Release date: December 2017
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0.0
 
 # In This Guide
 
@@ -27,58 +27,71 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **Tera VM Shell**
+**TeraVM** shells provides you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **TeraVM**, see the official **TeraVM** product documentation.
 
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+To model a **TeraVM** device in CloudShell, you must use the following shells: 
 
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+▪ <a href="**[https://community.quali.com/repos/3286/teravm-chassis-2g-shell]**" target="_blank">**[TeraVM Chassis 2G Shell]**</a>, which provides data model and autoload functionality to model and load the TeraVM to resource management.
 
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+▪ <a href="**[https://community.quali.com/repos/3287/teravm-controller-shell]**" target="_blank">**[TeraVM Controller 1G Shell]**</a>(service), which provides automation commands to run the VM Chassis such as Load Test Configuration, Run Tests, Get Test Results. 
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Traffic Shell Standard **[Name of Standard File]**.
+The **TeraVM** shells are based on the Traffic Shell Standard version 1.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
-### Supported OS
-▪ **[OS Name]**
-
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **TeraVM Shell** 1.0.0
 
-▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
+▪ TeraVM version: 13.4
 
-▪ [Controller Name]: CloudShell version **[Version Number]**
+▪ CloudShell version: 7.0 and above
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **TeraVM Chassis Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|Traffic Generator Chassis|TeraVM Chassis|TeraVM Chassis|
+|Module|Generic Traffic Generator Module|Modules located on the chassis|
+|Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
 
-#### **[Device Name] Attributes**
+#### **TeraVM Chassis Attributes**
 
-The attribute names and types are listed in the following table:
+The chassis attribute names and types are listed in the following table:
+
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Controller Group|String|Name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) that the traffic controller is part of.|
+|Logical Name|String|Port's logical name in the test configuration. If left empty, automatic allocation will be applied.|
+|Media Type|String|Interface media type. <br> Possible values include: **Fiber** and/or **Copper** (comma-separated)|
+|Model|String|Device Model. This information is typically used for abstract resource filtering.|
+|Supported Speeds|String|Speed supported by the interface (comma-separated).|
+|Server Description|String|Full description of the server. Usually includes the OS, exact firmware version and additional device characteristics.|
+|Version|String|Firmware version of the resource.|
+|Vendor|String|Vendor name.|
+
+#### **TeraVM Controller Attributes**
+
+The controller attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
+|Test Files Location|String||Location for test related files.|
+|User|String||Username for the TeraVM CLI.|
+|Password|Password|Password for the TeraVM CLI.|
+|CLI Connection Type|Lookup|Auto|Protocol which the shell will use to connect to the device. <br> Available methods include: **Auto**, **Console**, **SSH**, **Telnet**, and **TCP**.|
+|CLI TCP Port|Numeric||TCP port to use for the CLI connection. If left empty, a default CLI port will be used based on the chosen protocol.<br> For example, Telnet will use port 23.|
+|Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. Defines the number of commands that can run concurrently.|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
