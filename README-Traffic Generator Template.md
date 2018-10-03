@@ -108,8 +108,11 @@ This section describes how to import the **[Shell Name x.x.x]** and configure an
 
 **To import the shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  
   3. Click **Import**.
+  
   4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
@@ -131,6 +134,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 **To add Python packages to the local PyPi Server repository:**
   1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
+  
   2. For each shell or script you add into CloudShell, do one of the following (from an online computer):
       * Connect to the Internet and download each dependency specified in the *requirements.txt* file with the following command: 
 `pip download -r requirements.txt`. 
@@ -145,13 +149,17 @@ Before PyPi Server was introduced as CloudShell’s python package management me
 
 **To set the offline python repository:**
 1. Download the **[Shell Offline Requirements .zip File Name]** file, see [Downloading the Shell](#downloading-the-shell).
+
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
+
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the *~TestShell\Execution Server\customer.config* file, add the following key:  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 5. Restart the Execution Server.
 
 ### Configuring a new resource
@@ -164,10 +172,15 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+     
   2. From the list, select **[Shell Name]**.
+  
   3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  
   4. Click **Create**.
+  
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -178,7 +191,9 @@ This section explains how to update your Python dependencies folder. This is req
 ### Updating offline Python dependencies
 **To update offline Python dependencies:**
 1. Download the latest Python dependencies package zip file locally.
+
 2. Extract the zip file to the suitable offline package folder(s). 
+
 3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
 
 ### Updating online Python dependencies
