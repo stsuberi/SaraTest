@@ -44,7 +44,7 @@ For detailed information about the shell’s structure and attributes, see the [
 ▪ BreakingPoint VE
 
 ### Requirements
-Release: Ixia BreakingPoint 1G Shells 1.2.2
+Release: **Ixia BreakingPoint 1G shells 1.2.2**
 
 ▪ CloudShell version: 7.0 and above
 
