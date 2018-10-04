@@ -247,47 +247,47 @@ Scenario 1 - *Creating a new blueprint*
    * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. 
    * Click **Update** to save changes.
 
-**Scenario 2 - Getting test file with network configuration**
+**Scenario 2 - Getting a test file with network configuration**
 
 *You cannot change predefined Tests and Network Neighborhoods.  Predefined Network Neighborhoods will not be included in Test files.*
 
 This scenario helps you use predefined Tests and Network Neighborhoods.
 
-1. Duplicating Breaking Point Network Neighborhood configuration.
-   * Open the Breaking Point UI.
+1. Duplicate the BreakingPoint Network Neighborhood configuration.
+   * Open the BreakingPoint UI.
    * Go to **Control Center>Open Neighborhood**.
    * Find and select **Network Neighborhood** from the list.
    * Click **Save As** and enter **New Network Neighborhood Name**, click **Ok**.
-2. Duplicating the Breaking Point Test.
+2. Duplicate the BreakingPoint Test.
    * Go to **Test>Open Test**.
    * Find and select the **Test** from the list.
    * Press **Save As** and save it with a new name.
-3. Changing Network Neighborhood in the duplicated test.
+3. Change the Network Neighborhood in the duplicated test.
    * Find and select the duplicated test from the list and open it.
-   * In the section **Network Neighborhood** click ‘…’, find and select the duplicated Network Neighborhood.
+   * In the **Network Neighborhood** section, click ‘…’, find and select the duplicated Network Neighborhood.
    * Click **Save**.
-4. Running the `GetTestFile BreakingPointController` command.
-   * Enter CloudShell Portal, newly created blueprint and reserve it.
+4. Run the `GetTestFile BreakingPointController` command.
+   * Enter CloudShell Portal, and reserve the newly created blueprint.
    * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
    * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
 
 **Scenario 3 - Running a test**
 1. Enter your blueprint.
-2. Running BreakingPointController service Load Configuration command.
+2. Run the BreakingPointController service Load Configuration command.
    * Click BreakingPointController **Commands** and enter the service commands.
    * Find the Load Configuration command and enter the run menu.
    * Specify the **Breaking Point config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or only *test_name.bpt*, if it is a current sandbox.
    * Click **Run**, to load the test and network configuration from this file and reserve necessary ports.
-3. Running **Start Test**.
-   * Click BreakingPointController **Commands** and enter the service commands.
-   * Find the **Start Traffic** command and click enter to run the menu.
-   * Set **Blocking** to True, if you have to wait until the test finishes, or False. 
+3. Run **Start Test**.
+   * Click the BreakingPointController **Commands** and enter the service commands.
+   * Find the **Start Traffic** command and click **Enter** to run the menu.
+   * Set **Blocking** to **True**, if you want subsequent commands to wait until the test finishes, or **False** to allow additional commands to run during the command's execution. 
    * Click **Run**.
-4. Running **Stop Test**.
-<br>If you ran the test with “Blocking” equals False, you can immediately stop the test.
-   * Run command `Stop Traffic`.
-5. Getting result file.
-   * Run command `Get Result`.
+4. Run **Stop Test**.
+<br>If you ran the test with **Blocking** equals **False**, you can immediately stop the test.
+   * Run the `Stop Traffic` command.
+5. Get the test result file.
+   * Run the `Get Result` command.
    * The result file is attached to the sandbox.
 
 ## References
