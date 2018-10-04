@@ -202,7 +202,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select the **BreakingPoint Chassis**.
+  2. From the list, select the **Breaking Point Chassis**.
   
   3. Enter the BreakingPoint chassis **Name** and **IP address**.
   
