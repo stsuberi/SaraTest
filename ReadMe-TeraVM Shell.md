@@ -104,7 +104,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 #### **TeraVM Controller**
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Loads the configuration file and reserves necessary ports.|
+|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* TeraVM config file (String)(Mandatory): The configuration file name. Path should include the protocol type (for example tftp://10.10.10.10/asdf).<br>* Use ports from reservation (Enum): True or False. Update the configuration file with ports from the current reservation by their Logical Name attributes.
 |Start Traffic|Starts a test with the current configuration.|
 |Stop Traffic|Stops running the test.|
 |Get Results|Gets the test result file and attaches it to the reservation.|
