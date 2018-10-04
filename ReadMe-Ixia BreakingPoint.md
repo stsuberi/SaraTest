@@ -80,12 +80,12 @@ The chassis attribute names and types are listed in the following table:
 |Password|Password|||
 |Client Install Path||String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
 |Controller Group|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
-|Model|String|The device model.<br>This information is typically used for abstract resource filtering.|
+|Model|String||The device model.<br>This information is typically used for abstract resource filtering.|
 |Power Management|Boolean||Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
 |Serial Number|String|||
 |Supported Speeds|String||Speed supported by the interface, comma-separated.|
 |Server Description|String||The full description of the server. <br>Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
+|Supported Applications|String||Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
 |Vendor|String||The vendor name.|
 |Version|String||The firmware version of the resource.|
 
