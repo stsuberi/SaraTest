@@ -310,6 +310,6 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 ## Release Notes
-### What's new
+### What's New
 
 * Added support for the Virtual Traffic Generator.
