@@ -52,7 +52,7 @@ Release: **CloudShell Pluribus Netvisor VLE L1 version 1.0.1**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **Pluribus Netvisor VLE L1 Families and Models**
 
 The chassis families and models are listed in the following table:
 
@@ -62,25 +62,36 @@ The chassis families and models are listed in the following table:
 |L1 Switch Blade|Generic L1 Module|Pluribus Fabric Node|
 |L1 Swtich Port|Generic L1 Port|Pluribus Port|
 
-#### **[Device Name] Attributes**
+#### **Pluribus Netvisor VLE L1 Attributes**
 
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
+|User|String||CLI Username|
+|Password|Password||CLI Password|
+|Fabric Name|String|||
+|Serial Number|String|||
+|Model Name|String|||
+|Protocol|Lookup|Transparent|Port protocol|
+|Protocol Type|Lookup|Transparent|Port protocol type|
+|Protocol Value|String ||Port protocol type value|
+|Protocol Type Value|String |||
+|Rx Power (dBm)|String ||Optical Port RX signal strength|
+|Tx Power (dBm)|String ||Optical Port TX signal strength|
+|Wavelength|String ||Optical Port Wavelength|
+|Duplex|Lookup||Port Duplex|
+|Auto Negotiation|Boolean||Port auto negotiation|
+|Port Speed|String||Port speed|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
-
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|MapBidi|Creates a bidir connection between two ports.|
+|MapClear|Clears any connection ending in this port.|
+|MapClearTo|Clears a unidir connection between two ports.|
 
 # Downloading the Shell
 The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
