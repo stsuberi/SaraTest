@@ -220,7 +220,10 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, edit the following Resource Details:
+  
+  * Address
+  * Controller TCP Port: The TCP port of the traffic server. Relevant only in case an external server is confiugured. Default TCP port should be used if kep empty.
   
   6. Click **Continue**.
 
