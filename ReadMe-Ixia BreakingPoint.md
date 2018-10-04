@@ -212,7 +212,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
 |Attribute|Type|Description|
 |:---|:---|:---|
-|User|||
+|User|String|User with administraivtive privileges.|
 |Password|Password||
 |Client Install Path|String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
 |Controller Group|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
