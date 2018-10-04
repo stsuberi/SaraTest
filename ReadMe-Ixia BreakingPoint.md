@@ -82,8 +82,7 @@ The chassis attribute names and types are listed in the following table:
 |Controller Group|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
 |Model|String||The device model.<br>This information is typically used for abstract resource filtering.|
 |Power Management|Boolean|Enabled|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status.|
-|Serial Number|String|||
-|Supported Speeds|String||Speed supported by the interface, comma-separated.|
+|Serial Number|String||Serial number of the device.|
 |Server Description|String||The full description of the server. <br>Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |Supported Applications|String||Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
 |Vendor|String||The vendor name.|
