@@ -82,14 +82,16 @@ The chassis attribute names and types are listed in the following table:
 
 The controller attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Test Files Location|String||Location for test related files.|
-|User|String||Username for the TeraVM CLI.|
-|Password|Password||Password for the TeraVM CLI.|
-|CLI Connection Type|Lookup|Auto|Protocol which the shell will use to connect to the device. <br> Available methods include: **Auto**, **Console**, **SSH**, **Telnet**, and **TCP**.|
-|CLI TCP Port|Numeric||TCP port to use for the CLI connection. <br>If left empty, a default CLI port will be used based on the chosen protocol.<br> For example, Telnet will use port 23.|
-|Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened on the device. Defines the number of commands that can run concurrently.|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Alias|:---|:---|
+|Client Install Path||The path in which the traffic client is installed on the Execution Server.<br>For example C:/Program Files (86)/Ixia/Ixos/6.90EA.|
+|Controller TCP Port||The TCP port of the traffic server. Relevant only in case an external server is configured. Default TCP port should be used if kept empty.|
+|Password|Password||
+|Test Files Location||Location for test related files.|
+|Test User||TeraVM Test User for Open Automation Authorization.|
+|Test User Password||TeraVM Test User for Open Automation Authorization.|
+|User|||
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
