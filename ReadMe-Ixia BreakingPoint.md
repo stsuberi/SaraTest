@@ -44,7 +44,7 @@ For detailed information about the shell’s structure and attributes, see the [
 ▪ BreakingPoint VE
 
 ### Requirements
-Release: **Ixia BreakingPoint 1G shells 1.2.2**
+Release: **Ixia BreakingPoint 1G shells version 1.2.2**
 
 ▪ CloudShell version: 7.0 and above
 
@@ -69,20 +69,20 @@ The chassis families and models are listed in the following table:
 
 The chassis attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Client Install Path|String||The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
-|Controller Group|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
-|Logical Name|String||The port's logical name in the test configuration. If kept empty, automatic allocation will apply.|
-|Media Type|String||Interface media type. Possible values are **Fiber** and/or **Copper** (comma-separated).|
-|Model|String||The device model. This information is typically used for abstract resource filtering.|
-|Power Management|Boolean|False|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
-|Supported Applications|String||Comma-separated list of traffic applications supported by this traffic generator. For example *IxLoad,IxNetwork*.|
-|Supported Speeds|String||Speed supported by the interface, comma-separated.|
-|Server Description|String||The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Version|String||The firmware version of the resource.|
-|Vendor|String||The vendor name.|
-|Logical Name|String||The port's logical name in the test configuration. If kept empty, allocation will be applied in the blueprint.|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Client Install Path|String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
+|Controller Group|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
+|Logical Name|String|The port's logical name in the test configuration. If kept empty, automatic allocation will apply.|
+|Media Type|String|Interface media type. Possible values are **Fiber** and/or **Copper** (comma-separated).|
+|Model|String|The device model. This information is typically used for abstract resource filtering.|
+|Power Management|Boolean|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
+|Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. For example *IxLoad,IxNetwork*.|
+|Supported Speeds|String|Speed supported by the interface, comma-separated.|
+|Server Description|String|The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
+|Version|String|The firmware version of the resource.|
+|Vendor|String|The vendor name.|
+|Logical Name|String|The port's logical name in the test configuration. If kept empty, allocation will be applied in the blueprint.|
 
 **BreakingPoint Controller Attributes**
 
