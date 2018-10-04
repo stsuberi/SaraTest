@@ -179,13 +179,17 @@ Before PyPi Server was introduced as CloudShell’s python package management me
 
 **To set the offline python repository:**
 1. Download the *bp-offline-package-1.0.7.zip* file, see [Downloading the Shell](#downloading-the-shell).
+
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
+
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the `~TestShell\Execution Server\customer.config` file, add the following key:  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 5. Restart the Execution Server.
 
 ### Configuring a new resource
@@ -229,18 +233,19 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 ## Typical Workflow and Scenarios
 
-**Scenario 1 - Creating a new environment**
-1. Creating a new environment.
-   * Enter CloudShell portal and create a new **Blueprints>Create Blueprint**.
-   * Specify the blueprint name.
-2. Adding resources and services to the environment. 
-   * Click the **Resource** tab and add the Breaking Point Chassis resource and all needed Ports. 
-   * Associate the Port sub resources with the Breaking Point Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
+Scenario 1 - *Creating a new blueprint*
+1. Create a new blueprint.
+   * Log in to CloudShell Portal and create a new blueprint **Blueprint Catalog>Create Blueprint**.
+   * Give the blueprint a name.
+2. Add resources and services to the blueprint. 
+   * Click the **Resource** button and add the BreakingPoint Chassis resource and all needed Ports into the diagram. 
+   * Associate the port sub resources with the BreakingPoint Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
    * Click the **App/Services** tab and add the **BreakingPointController** service.
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
-3. Adding teardown script, which runs driver command `cleanup_reservation` when reservation ends. This command releases ports which were used by the reservation. 
-   * Go to the **Scripts** management page **Manage>Scripts>Environment**, click **Add New Script** and choose the **Cleanup Reservarion.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
-   * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. To save changes click **Update**.
+3. Add teardown script, which runs the driver command `cleanup_reservation` when the reservation ends. This command releases ports which were used by the reservation. 
+   * Go to the **Scripts** management page **Manage>Scripts>Environment**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
+   * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. 
+   * Click **Update** to save changes.
 
 **Scenario 2 - Getting test file with network configuration**
 
