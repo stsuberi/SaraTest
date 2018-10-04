@@ -71,14 +71,14 @@ The chassis attribute names and types are listed in the following table:
 
 |Attribute|Type|Default|Description|
 |:---|:---|:---|:---|
-|Name|String||CloudShell resource display name|
-|Address|String||Resource address (address of the device)|
+|Name|String||CloudShell resource display name.|
+|Address|String||Resource address (address of the device).|
 |Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
 |Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|User|String||User with adminsitrative privileges.|
+|User|String||User with administrative privileges.|
 |Password|Password|||
-|Client Install Path||String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
+|Client Install Path|String||The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
 |Controller Group|String||The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
 |Model|String||The device model.<br>This information is typically used for abstract resource filtering.|
 |Power Management|Boolean|Enabled|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status.|
@@ -113,11 +113,11 @@ The following commands are associated with a model inside the shell:
 
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Load configuration file prepared by your admin. The load configuration file includes the settings to run the traffic test. For example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports. <br>**Note**: The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).|
-|Start Traffic|Start the test to generate and send the traffic to the DUT according to the settings provided in the configuration file.|
+|Load Configuration|Load configuration file prepared by your admin. The load configuration file includes the settings to run the traffic test, for example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports. <br>**Note**: The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator).|
+|Start Traffic|Start the test to generate and send traffic to the DUT according to the settings provided in the configuration file.|
 |Stop Traffic|Stop running the test to stop sending traffic from the traffic generator.|
 |Get Result|Get the test result file and attach it to the sandbox.|
-|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: Type of statistics to return. For example, Port Statistics, Traffic Item Statistics, Flow Statistics, etc. The types available may differ depending on the traffic generator. <br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
+|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: Type of statistics to return. For example, Port Statistics, Traffic Item Statistics, Flow Statistics, etc. The types available may differ depending on the traffic generator. <br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
 |Get Test File|Download the test file to the location specified in the **Test Files Location** attribute defined when you added the service to your blueprint.|
 
 ### Downloading the Shell
@@ -180,7 +180,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 3. Place these zip files in the local PyPi Server repository.
  
 ### Setting the python PythonOfflineRepositoryPath configuration key
-Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
+Before PyPi Server was introduced as CloudShell’s python package management mechanism, the *PythonOfflineRepositoryPath* key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Eerver machines to set a different folder. 
 
 **To set the offline python repository:**
 1. Download the *bp-offline-package-1.0.7.zip* file, see [Downloading the Shell](#downloading-the-shell).
@@ -191,7 +191,7 @@ Before PyPi Server was introduced as CloudShell’s python package management me
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
 
-4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the `~TestShell\Execution Server\customer.config` file, add the following key:  
+4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the *~TestShell\Execution Server\customer.config* file, add the following key:  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
 
@@ -203,7 +203,7 @@ In CloudShell, the component that models the device is called a resource. It is 
 You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
 **To create a resource for the chassis device:**
-  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
+  1. In CloudShell Portal, **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
   2. From the list, select the **Breaking Point Chassis**.
@@ -216,7 +216,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
 |Attribute|Type|Description|
 |:---|:---|:---|
-|User|String|User with administraivtive privileges.|
+|User|String|User with administrative privileges.|
 |Password|Password||
 |Client Install Path|String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
 |Controller Group|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
@@ -241,7 +241,7 @@ This section explains how to update your Python dependencies folder. This is req
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
 
 **To update online Python dependencies:**
-* If there is a live instance of the Shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
+* If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 
 ## Typical Workflow and Scenarios
@@ -252,14 +252,14 @@ Scenario 1 - *Creating a new blueprint*
    * Give the blueprint a name.
    
 2. Add resources and services to the blueprint. 
-   * Click the **Resource** button and add the BreakingPoint Chassis resource and all needed Ports into the diagram. 
-   * Associate the port sub resources with the BreakingPoint Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
+   * Click the **Resource** button and add the BreakingPoint Chassis resource and all needed ports into the diagram. 
+   * Associate the port's sub resources with the BreakingPoint Network Neighborhood Interfaces, by specifying the port's attribute **Logical Name** with the BP interface ID.
    * Click the **App/Services** tab and add the **BreakingPointController** service.
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
    
-3. Add teardown script, which runs the driver command `cleanup_reservation` when the reservation ends. This command releases ports which were used by the reservation. 
+3. Add teardown script, which runs the driver command `cleanup_reservation` when the reservation ends. This command releases ports which were used by the sandbox. 
    * Go to the **Scripts** management page **Manage>Scripts>Environment**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
-   * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. 
+   * Return to the blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. 
    * Click **Update** to save changes.
 
 **Scenario 2 - Getting a test file with network configuration**
@@ -272,7 +272,8 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Open the BreakingPoint UI.
    * Go to **Control Center>Open Neighborhood**.
    * Find and select **Network Neighborhood** from the list.
-   * Click **Save As** and enter **New Network Neighborhood Name**, click **Ok**.
+   * Click **Save As** and enter **New Network Neighborhood Name**.
+   * Click **Ok**.
    
 2. Duplicate the BreakingPoint Test.
    * Go to **Test>Open Test**.
@@ -286,15 +287,15 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    
 4. Run the `GetTestFile BreakingPointController` command.
    * Enter CloudShell Portal, and reserve the newly created blueprint.
-   * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
+   * Run the `BreakingComandController service` command *GetTestFile* with the duplicated test name.
    * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
 
 **Scenario 3 - Running a test**
 1. Enter your blueprint.
 
-2. Run the BreakingPointController service Load Configuration command.
+2. Run the BreakingPointController service `Load Configuration` command.
    * Click BreakingPointController **Commands** and enter the service commands.
-   * Find the Load Configuration command and enter the run menu.
+   * Find the `Load Configuration` command and enter the run menu.
    * Specify the **Breaking Point config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or only *test_name.bpt*, if it is a current sandbox.
    * Click **Run**, to load the test and network configuration from this file and reserve necessary ports.
    
@@ -310,7 +311,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    
 5. Get the test result file.
    * Run the `Get Result` command.
-   * The result file is attached to the sandbox.
+   * The test result file is attached to the sandbox.
 
 ## References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
