@@ -70,9 +70,9 @@ The attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |User|String||CLI Username|
 |Password|Password||CLI Password|
-|Fabric Name|String|||
-|Serial Number|String|||
-|Model Name|String|||
+|Fabric Name|String||Fabric name|
+|Serial Number|String||Serial number|
+|Model Name|String||Model name|
 |Protocol|Lookup|Transparent|Port protocol|
 |Protocol Type|Lookup|Transparent|Port protocol type|
 |Protocol Value|String ||Port protocol value|
