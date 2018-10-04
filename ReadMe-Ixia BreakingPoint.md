@@ -76,11 +76,11 @@ The chassis attribute names and types are listed in the following table:
 |Model|String|The device model.<br>This information is typically used for abstract resource filtering.|
 |Media Type|String|Interface media type. <br>Possible values are **Fiber** and/or **Copper** (comma-separated).|
 |Power Management|Boolean|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
-|Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
 |Supported Speeds|String|Speed supported by the interface, comma-separated.|
 |Server Description|String|The full description of the server. <br>Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|Version|String|The firmware version of the resource.|
+|Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
 |Vendor|String|The vendor name.|
+|Version|String|The firmware version of the resource.|
 |Logical Name|String|The port's logical name in the test configuration. <br>If left empty, allocation will be applied in the blueprint.|
 
 **BreakingPoint Controller Attributes**
