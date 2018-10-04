@@ -171,7 +171,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 *pip download -r requirements.txt*. 
      The shell or script's requirements are downloaded as zip files.
 
-      * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the Shell and click the Shell's **Download** link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
+      * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the shell and click the shell's **Download** link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
 
 3. Place these zip files in the local PyPi Server repository.
  
