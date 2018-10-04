@@ -69,8 +69,8 @@ The chassis families and models are listed in the following table:
 
 The chassis attribute names and types are listed in the following table:
 
-|Attribute|Type|Description|
-|:---|:---|:---|
+|Attribute|Type|Default|Description|
+|:---|:---|:---|:---|
 |Name*|String||CloudShell resource display name|
 |Address*|String||Resource address (address of the device)|
 |Folder*|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
