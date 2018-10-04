@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# Ixia BreakingPoint 1G Shell 
+# Ixia BreakingPoint 1G Shells 
 
 **Release date:** October 2017
 
@@ -28,8 +28,8 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### Ixia BreakingPoint 1G Shell
-To model an Ixia BreakingPoint device in CloudShell, use the following: 
+### Ixia BreakingPoint 1G Shells
+To model an Ixia BreakingPoint device in CloudShell, use the following shells: 
 
 ▪ [BreakingPoint Chassis 1G Shell](https://community.quali.com/repos/1294/breaking-point-chassis-shell), which provides data model and autoload functionality to model and load the BreakingPoint Chassis to resource management.
 
