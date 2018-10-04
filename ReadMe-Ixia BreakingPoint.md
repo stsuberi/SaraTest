@@ -71,6 +71,11 @@ The chassis attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
+|Name*|String||CloudShell resource display name|
+|Address*|String||Resource address (address of the device)|
+|Folder*|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
+|Visibility*|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Remote Connection*|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
 |Client Install Path|String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
 |Controller Group|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
 |Model|String|The device model.<br>This information is typically used for abstract resource filtering.|
