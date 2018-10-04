@@ -1,13 +1,13 @@
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **Pluribus Netvisor VLE L1 Shell**  
 
-Release date: [Month Year]
+Release date: October 2018
 
-Shell version: [x.x.x]
+Shell version: 1.01
 
-Document version: [x.x.x]
+Document version: (Rev A.01)
 
 # In This Guide
 
@@ -23,37 +23,30 @@ Document version: [x.x.x]
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
-### Traffic Generator Shells
-CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
+### L1 Switch Shells
+L1 switch shells allow CloudShell to manage networking connectivity between physical resources and private cloud provider apps, such as vCenter.
 
-For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
+For additional information, see the [L1 Switches](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm?Highlight=L1%20switch) online help topic.
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **Pluribus Netvisor VLE L1 Shell**
+**Pluribus Netvisor VLE L1** shell provides you with the capability to communicate with network topology managed by the Pluribus Netvisor nvOS in VLE mode.
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+CloudShell users can create routes and read values from the switch, using **Resource Manager Client** or CloudShell API.
 
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-### Standard version
-**[Shell Name x.x.x]** is based on the Traffic Shell Standard **[Name of Standard File]**.
-
-For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
+For more information on the **Pluribus Netvisor VLE L1**, see the official **Pluribus Netvisor** product documentation.
 
 ### Supported OS
-▪ **[OS Name]**
+▪ **Pluribus Netvisor 3.0.0 and above**
 
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **CloudShell Pluribus Netvisor VLE L1 version 1.0.1**
 
-▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
+▪ CloudShell version: 8.3 GA and above
 
-▪ [Controller Name]: CloudShell version **[Version Number]**
+▪ Pluribus Netvisor VLE: all versions
+
+**Note**: For support on an earlier CloudShell version, contact your customer support representative.
 
 ### Data Model
 
@@ -65,10 +58,9 @@ The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|L1 Switch|Pluribus Netvisor VLE Fabric|Pluribus Netvisor Fabric|
+|L1 Switch Blade|Generic L1 Module|Pluribus Fabric Node|
+|L1 Swtich Port|Generic L1 Port|Pluribus Port|
 
 #### **[Device Name] Attributes**
 
