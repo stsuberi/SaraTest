@@ -210,6 +210,14 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   5. In the **Resource** dialog box, enter all the fields relevant for this device: 
   
+|Attribute|Type|Description|
+|:---|:---|:---|
+|User|||
+|Password|Password||
+|Client Install Path|String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
+|Controller Group|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
+|Power Management|Boolean|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
+|Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
   6. Click **Continue**.
 
 This command discovers the device, fills in its attribute values and creates the device’s structure in CloudShell (if the device has a structure).
