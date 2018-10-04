@@ -73,9 +73,8 @@ The chassis attribute names and types are listed in the following table:
 |:---|:---|:---|
 |Client Install Path|String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
 |Controller Group|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
-|Logical Name|String|The port's logical name in the test configuration. If kept empty, automatic allocation will apply.|
-|Media Type|String|Interface media type. <br>Possible values are **Fiber** and/or **Copper** (comma-separated).|
 |Model|String|The device model.<br>This information is typically used for abstract resource filtering.|
+|Media Type|String|Interface media type. <br>Possible values are **Fiber** and/or **Copper** (comma-separated).|
 |Power Management|Boolean|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
 |Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
 |Supported Speeds|String|Speed supported by the interface, comma-separated.|
