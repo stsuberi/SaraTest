@@ -93,17 +93,18 @@ This section describes the automation (drivers or scripts) associated with the d
 |MapClear|Clears any connection ending in this port.|
 |MapClearTo|Clears a unidir connection between two ports.|
 
-# Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+**Note:** You can only activate a TAP connection after activating a parent mapuni/mapbidi connection. MapTap - Adding monitoring port to an existing port mapping.
 
-Download the files into a temporary location on your local machine. 
+# Downloading the Shell
+The **Pluribus Netvisor VLE L1 Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|cloudshell-L1-pluribus_netvisor_vle\install_driver.bat|Pluribus Netvisor VLE L1 shell installation script|
+|cloudshell-L1-pluribus_netvisor_vle\pluribus_netvisor_vle_runtime_config.yml|Pluribus Netvisor VLE L1 shell Configuration file|
+|cloudshell-L1-pluribus_netvisor_vle\datamodel\Pluribus Netvisor VLE_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
 
 # Importing and Configuring the Shell
 This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
