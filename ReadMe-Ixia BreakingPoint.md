@@ -312,4 +312,4 @@ To connect with Quali users and experts from around the world, ask questions and
 ## Release Notes
 ### What's new
 
-* Added Virtual Traffic Generator support.
+* Added support for the Virtual Traffic Generator.
