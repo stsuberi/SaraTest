@@ -75,8 +75,8 @@ The attribute names and types are listed in the following table:
 |Model Name|String|||
 |Protocol|Lookup|Transparent|Port protocol|
 |Protocol Type|Lookup|Transparent|Port protocol type|
-|Protocol Value|String ||Port protocol type value|
-|Protocol Type Value|String |||
+|Protocol Value|String ||Port protocol value|
+|Protocol Type Value|String ||Port protocol type value|
 |Rx Power (dBm)|String ||Optical Port RX signal strength|
 |Tx Power (dBm)|String ||Optical Port TX signal strength|
 |Wavelength|String ||Optical Port Wavelength|
