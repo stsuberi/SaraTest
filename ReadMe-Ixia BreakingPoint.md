@@ -74,30 +74,30 @@ The chassis attribute names and types are listed in the following table:
 |Client Install Path|String|The path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxOS/6.90-EA*.|
 |Controller Group|String|The name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) the traffic controller is part of.|
 |Logical Name|String|The port's logical name in the test configuration. If kept empty, automatic allocation will apply.|
-|Media Type|String|Interface media type. Possible values are **Fiber** and/or **Copper** (comma-separated).|
-|Model|String|The device model. This information is typically used for abstract resource filtering.|
+|Media Type|String|Interface media type. <br>Possible values are **Fiber** and/or **Copper** (comma-separated).|
+|Model|String|The device model.<br>This information is typically used for abstract resource filtering.|
 |Power Management|Boolean|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
-|Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. For example *IxLoad,IxNetwork*.|
+|Supported Applications|String|Comma-separated list of traffic applications supported by this traffic generator. <br>For example *IxLoad,IxNetwork*.|
 |Supported Speeds|String|Speed supported by the interface, comma-separated.|
-|Server Description|String|The full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
+|Server Description|String|The full description of the server. <br>Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |Version|String|The firmware version of the resource.|
 |Vendor|String|The vendor name.|
-|Logical Name|String|The port's logical name in the test configuration. If kept empty, allocation will be applied in the blueprint.|
+|Logical Name|String|The port's logical name in the test configuration. <br>If left empty, allocation will be applied in the blueprint.|
 
 **BreakingPoint Controller Attributes**
 
 The controller attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Test Files Location|String||Location for test related files.|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Test Files Location|String|Location for test related files.|
 
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
-The following commands are associated with a model inside the Shell:
+The following commands are associated with a model inside the shell:
 
 **BreakingPoint Chassis 1G Shell**
 
@@ -130,23 +130,23 @@ The shells comprise:
 |bp-offline-package-1.0.6.zip|Shell Python dependecies (for offline deployments only)|
 |Ixia-B reakingPoint-Shell.pdf|Teardown script for cleaning reservation|
 
-## Importing and Configuring the Shell
+## Importing and Configuring the Shells
 This section describes how to import the BreakingPoint 1G shells and configure and modify the shell’s devices. 
 
 ### Importing the shells into CloudShell
 
 **To import the shells into CloudShell:**
-  1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   2. Backup your database.
   3. Log in to CloudShell Portal as administrator of the relevant domain.
   4. In the User menu select **Import Package**.
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
-  5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
-### Offline installation of a Shell
+### Offline installation of a shell
 
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
 
@@ -165,7 +165,8 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 **To add Python packages to the local PyPi Server repository:**
   1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
-  2. For each Shell or script you add into CloudShell, do one of the following (from an online computer):
+  
+  2. For each shell or script you add into CloudShell, do one of the following (from an online computer):
       * Connect to the Internet and download each dependency specified in the *requirements.txt* file with the following command: 
 *pip download -r requirements.txt*. 
      The shell or script's requirements are downloaded as zip files.
@@ -201,9 +202,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select the **BreakingPoint Chassis 1G Shell** or the **BreakingPoint Controller 1G Shell**.
+  2. From the list, select the **BreakingPoint Chassis**.
   
-  3. Enter the BreakingPoint chassis or controller **Name** and **IP address**.
+  3. Enter the BreakingPoint chassis **Name** and **IP address**.
   
   4. Click **Create**.
   
@@ -237,11 +238,13 @@ Scenario 1 - *Creating a new blueprint*
 1. Create a new blueprint.
    * Log in to CloudShell Portal and create a new blueprint **Blueprint Catalog>Create Blueprint**.
    * Give the blueprint a name.
+   
 2. Add resources and services to the blueprint. 
    * Click the **Resource** button and add the BreakingPoint Chassis resource and all needed Ports into the diagram. 
    * Associate the port sub resources with the BreakingPoint Network Neighborhood Interfaces, by specifying the port attribute **Logical Name** with the BP interface ID.
    * Click the **App/Services** tab and add the **BreakingPointController** service.
    * Specify the attribute **Test Files Location**, where test files will be downloaded.
+   
 3. Add teardown script, which runs the driver command `cleanup_reservation` when the reservation ends. This command releases ports which were used by the reservation. 
    * Go to the **Scripts** management page **Manage>Scripts>Environment**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. Click **Edit** for the new added script and change **Script Type** to **Teardown**.
    * Go back to the created blueprint and open properties, **Blueprint>Properties**. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min., then click **Add Script** and chose **Cleanup Reservation** from the list. 
@@ -258,14 +261,17 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Go to **Control Center>Open Neighborhood**.
    * Find and select **Network Neighborhood** from the list.
    * Click **Save As** and enter **New Network Neighborhood Name**, click **Ok**.
+   
 2. Duplicate the BreakingPoint Test.
    * Go to **Test>Open Test**.
    * Find and select the **Test** from the list.
    * Press **Save As** and save it with a new name.
+   
 3. Change the Network Neighborhood in the duplicated test.
    * Find and select the duplicated test from the list and open it.
    * In the **Network Neighborhood** section, click ‘…’, find and select the duplicated Network Neighborhood.
    * Click **Save**.
+   
 4. Run the `GetTestFile BreakingPointController` command.
    * Enter CloudShell Portal, and reserve the newly created blueprint.
    * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
@@ -273,19 +279,23 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
 
 **Scenario 3 - Running a test**
 1. Enter your blueprint.
+
 2. Run the BreakingPointController service Load Configuration command.
    * Click BreakingPointController **Commands** and enter the service commands.
    * Find the Load Configuration command and enter the run menu.
    * Specify the **Breaking Point config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or only *test_name.bpt*, if it is a current sandbox.
    * Click **Run**, to load the test and network configuration from this file and reserve necessary ports.
+   
 3. Run **Start Test**.
    * Click the BreakingPointController **Commands** and enter the service commands.
    * Find the **Start Traffic** command and click **Enter** to run the menu.
    * Set **Blocking** to **True**, if you want subsequent commands to wait until the test finishes, or **False** to allow additional commands to run during the command's execution. 
    * Click **Run**.
+   
 4. Run **Stop Test**.
 <br>If you ran the test with **Blocking** equals **False**, you can immediately stop the test.
    * Run the `Stop Traffic` command.
+   
 5. Get the test result file.
    * Run the `Get Result` command.
    * The result file is attached to the sandbox.
