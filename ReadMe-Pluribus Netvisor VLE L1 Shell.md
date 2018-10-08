@@ -17,7 +17,6 @@ Document version: (Rev A.01)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
-* [Release Notes](#release-notes)
 
 
 # Overview
@@ -107,18 +106,38 @@ The shell comprises:
 |cloudshell-L1-pluribus_netvisor_vle\datamodel\Pluribus Netvisor VLE_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and configure and modify the shell’s devices.
 
-### Importing the shell into CloudShell
+### Importing and configuring the shell in CloudShell
 
-**To import the shell into CloudShell:**
+**To import and configure the shell in CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
-  2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  2. Extract the *cloudshell-L1-pluribus_netvisor_vle-1.0.1.zip* package to the following location on the Quali Server machine: 
+  *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*
   
-  3. Click **Import**.
+  3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\install_driver.bat* file.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
+  4. Import the new data model.
+  	a. **In Resource Manager Client**, **Resource Families** explorer, right-click **Resource Families** and select **Import**.
+	b. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\datamodel\pluribus_netvisor_vle_ResourceConfiguration.xml* file.
+	c. Click **Open**.
+	
+  5. Create an L1 resource.
+  	a. In **Resource Explorer**, right click **Root** and select **New>Resource**.
+	b. Enter the **Name** and **Address**.
+	c. Select the **L1 Switch** family.
+	d. Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
+	e. Click **OK**.
+	
+  6. Auto Load the new resource.
+  	a. In **Resource Explorer**, right click the new resource and select **Configuration**.
+	b. In the **Internal Resources** pane, right click the switch and select **Exclude**. 
+	c. Click the **Auto Load** button at the bottom of the **Configuration** tab.
+	
+  7. Define the resource connections on the L1 switch.
+  	a. Right click the resource and select **Configuration>Connections**.
+	b. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
@@ -169,29 +188,6 @@ full path"/>`
 
 5. Restart the Execution Server.
 
-### Configuring a new resource
-This section explains how to create a new resource from the shell.
-
-In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
-
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
-
-**To create a resource for the device:**
-  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-     
-  2. From the list, select **[Shell Name]**.
-  
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
-  
-  4. Click **Create**.
-  
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
-  
-  6. Click **Continue**.
-
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
-
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
@@ -209,15 +205,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-# Typical Workflow and Scenarios 
-(if not applicable - remove section)
-
-**Scenario 1** - *[Name of Scenario 1]* 
-
-**Scenario 2** - *[Name of Scenario 2]* 
-
-**Scenario 3** - *[Name of Scenario 3]* 
-
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
@@ -226,16 +213,3 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-# Release Notes 
-(if not applicable - remove section)
-### What's New
-
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
