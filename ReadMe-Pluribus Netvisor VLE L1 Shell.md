@@ -123,20 +123,20 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
       * Click **Open**.
 	
   5. Create an L1 resource.
-  	* In **Resource Explorer**, right click **Root** and select **New>Resource**.
-	* Enter the **Name** and **Address**.
-	* Select the **L1 Switch** family.
-	* Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
-	* Click **OK**.
+      * In **Resource Explorer**, right click **Root** and select **New>Resource**.
+      * Enter the **Name** and **Address**.
+      * Select the **L1 Switch** family.
+      * Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
+      * Click **OK**.
 	
   6. Auto Load the new resource.
-  	* In **Resource Explorer**, right click the new resource and select **Configuration**.
-	* In the **Internal Resources** pane, right click the switch and select **Exclude**. 
-	* Click the **Auto Load** button at the bottom of the **Configuration** tab.
+      * In **Resource Explorer**, right click the new resource and select **Configuration**.
+      * In the **Internal Resources** pane, right click the switch and select **Exclude**. 
+      * Click the **Auto Load** button at the bottom of the **Configuration** tab.
 	
   7. Define the resource connections on the L1 switch.
-  	* Right click the resource and select **Configuration>Connections**.
-	* Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
+      * Right click the resource and select **Configuration>Connections**.
+      * Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
