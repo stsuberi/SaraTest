@@ -34,7 +34,7 @@ CloudShell users can create routes and read values from the switch, using **Reso
 For more information on the **Pluribus Netvisor VLE L1**, see the official **Pluribus Netvisor** product documentation.
 
 ### Supported OS
-▪ **Pluribus Netvisor 3.0.0 and above**
+▪ Pluribus Netvisor 3.0.0 and above
 
 ### Requirements
 
