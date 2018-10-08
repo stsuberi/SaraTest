@@ -173,7 +173,11 @@ CloudShell validates the device’s settings and updates the new resource with t
 See the Managing Apps topic from the OLH for more information.
 
 1. Choose a deployment option and specify **Cloud Provider** and **vCenter Template** attributes (there might be some other attributes depending on the selected option).
+![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+
 2. In the **App Resource** tab, select **IxVM Virtual Traffic Chassis 2G** shell.
+![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+
 3. Specify **User**, **Password**, and **License Server** attributes for the shell.
 
 ### Configuring the setup script
