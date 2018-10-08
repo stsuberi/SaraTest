@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **IxVM 2G Shell**  
+# **IxVM Deployment App 2G Shell**  
 
 Release date: May 2018
 
