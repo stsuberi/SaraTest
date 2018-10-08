@@ -52,7 +52,7 @@ The shell's data model includes all shell metadata, families, and attributes.
 
 #### **Pluribus Netvisor VLE L1 Families and Models**
 
-The chassis families and models are listed in the following table:
+The L1 switch families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -91,7 +91,7 @@ This section describes the automation (drivers or scripts) associated with the d
 |MapClear|Clears any connection ending in this port.|
 |MapClearTo|Clears a unidir connection between two ports.|
 
-**Note:** You can only activate a TAP connection after activating a parent mapuni/mapbidi connection. MapTap - Adding monitoring port to an existing port mapping.
+**Note:** You can only activate a TAP connection after activating a parent mapuni/mapbidi connection. 
 
 # Downloading the Shell
 The **Pluribus Netvisor VLE L1 Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -101,7 +101,7 @@ The shell comprises:
 |File name|Description|
 |:---|:---|
 |cloudshell-L1-pluribus_netvisor_vle\install_driver.bat|Pluribus Netvisor VLE L1 shell installation script|
-|cloudshell-L1-pluribus_netvisor_vle\pluribus_netvisor_vle_runtime_config.yml|Pluribus Netvisor VLE L1 shell Configuration file|
+|cloudshell-L1-pluribus_netvisor_vle\pluribus_netvisor_vle_runtime_config.yml|Pluribus Netvisor VLE L1 shell configuration file|
 |cloudshell-L1-pluribus_netvisor_vle\datamodel\Pluribus Netvisor VLE_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
 
 # Importing and Configuring the Shell
@@ -118,25 +118,25 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
   3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\install_driver.bat* file.
   
   4. Import the new data model.
-  	a. **In Resource Manager Client**, **Resource Families** explorer, right-click **Resource Families** and select **Import**.
-	b. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\datamodel\pluribus_netvisor_vle_ResourceConfiguration.xml* file.
-	c. Click **Open**.
+  	* **In Resource Manager Client**, **Resource Families** explorer, right-click **Resource Families** and select **Import**.
+	* Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\datamodel\pluribus_netvisor_vle_ResourceConfiguration.xml* file.
+	* Click **Open**.
 	
   5. Create an L1 resource.
-  	a. In **Resource Explorer**, right click **Root** and select **New>Resource**.
-	b. Enter the **Name** and **Address**.
-	c. Select the **L1 Switch** family.
-	d. Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
-	e. Click **OK**.
+  	* In **Resource Explorer**, right click **Root** and select **New>Resource**.
+	* Enter the **Name** and **Address**.
+	* Select the **L1 Switch** family.
+	* Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
+	* Click **OK**.
 	
   6. Auto Load the new resource.
-  	a. In **Resource Explorer**, right click the new resource and select **Configuration**.
-	b. In the **Internal Resources** pane, right click the switch and select **Exclude**. 
-	c. Click the **Auto Load** button at the bottom of the **Configuration** tab.
+  	* In **Resource Explorer**, right click the new resource and select **Configuration**.
+	* In the **Internal Resources** pane, right click the switch and select **Exclude**. 
+	* Click the **Auto Load** button at the bottom of the **Configuration** tab.
 	
   7. Define the resource connections on the L1 switch.
-  	a. Right click the resource and select **Configuration>Connections**.
-	b. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
+  	* Right click the resource and select **Configuration>Connections**.
+	* Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
