@@ -16,8 +16,6 @@ Document version: 1.0.0
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
-* [Release Notes](#release-notes)
-
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -31,12 +29,7 @@ CloudShell's networking shells enable you to ????. In CloudShell, a network is t
 For more information on the **IxVM Deployment App**, see the official **IxVM** product documentation.
 
 ### Standard version
-**IxVM Deployment App Shell 2G** is based on the ?????? **[Name of Standard File]**.
-
-For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
-
-### Supported OS
-▪ **?????**
+**IxVM Deployment App Shell 2G** is based on the CloudShell Virtual Traffic Generator Standard 1.0.0 **[Name of Standard File]**.
 
 ### Requirements
 
@@ -85,14 +78,15 @@ The attribute names and types are listed in the following table:
 ### Automation
 This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+For Networking shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.?????
 
+#### IxVM Deployment App Chassis Shell 2G ####
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **IxVM Deployment App Shell 2G** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -100,11 +94,12 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|IxVM Deployment App Chassis Shell2G.zip|IxVM Deployment App Chassis Shell 2nd Generation shell package|
+|ixvm-deployment-app-offlinepackages-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
+|IxVM.Sandbox.Setup.1.0.0zip|CloudShell Reservation Setup script |
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+This section describes how to import the **IxVM Deployment App Shell 2G** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -146,7 +141,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the **[Shell Offline Requirements .zip File Name]** file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *ixvm-deployment-app-offlinepackages-1.0.0.zip** file, see [Downloading the Shell](#downloading-the-shell).
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
@@ -174,6 +169,16 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
+### Configuring the setup script
+This section explains how to add the setup script so that the IxVM Deployment App Chasis Shell 2G works correctly.
+
+**To add the setup script:**
+1. Log in to CloudShell Portal as administrator of the relevant domain.
+2. Open Manage dashboard, section Scripts, subsection Blueprint.
+3. Drag-N-Drop downloaded setup script IxVM.Sandbox.Setup.1.0.0.zip on the canvas.
+4. Change Script type to "Setup".
+5. Save created script.
+
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
@@ -192,11 +197,20 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflow and Scenarios 
 (if not applicable - remove section)
 
-**Scenario 1** - *[Name of Scenario 1]* 
+**Scenario 1** - *Deploying IxVM Deployment App Chassis Shell 2G* 
+1. Enter your blueprint.
 
-**Scenario 2** - *[Name of Scenario 2]* 
+2. Add the IxVM Deployment App to the blueprint.
+* Open the **App/service** submenu.
+* Drag and drop the IxVM Deployment App Chassis 2G on the canvas.
 
-**Scenario 3** - *[Name of Scenario 3]* 
+3. Update the Bluepring Setup Script
+* Find Properties under the Blueprient submenu and open it.
+* Remove **Default Sandbox Setup 2.0** script by clicking on the trash icon nearby its name.
+* Click on **Add Scripts**.
+* Select the **IxVM.Sandbox.Setup.1.0.0**.
+* Click **Done**.
+4. Run **Reserve* command on the blueprint to deploy IxVM Test Appliance.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -206,16 +220,3 @@ For instructional training and documentation resources, see the [Quali Universit
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-# Release Notes 
-(if not applicable - remove section)
-### What's New
-
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
