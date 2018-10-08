@@ -169,6 +169,13 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
+### Configuring a new application
+See the Managing Apps topic from the OLH for more information.
+
+1. Choose a deployment option and specify **Cloud Provider** and **vCenter Template** attributes (there might be some other attributes depending on the selected option).
+2. In the **App Resource** tab, select **IxVM Virtual Traffic Chassis 2G** shell.
+3. Specify **User**, **Password**, and **License Server** attributes for the shell.
+
 ### Configuring the setup script
 This section explains how to add the setup script so that the IxVM Deployment App Chasis Shell 2G works correctly.
 
