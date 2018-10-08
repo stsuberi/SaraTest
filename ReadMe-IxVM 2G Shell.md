@@ -105,8 +105,11 @@ This section describes how to import the **IxVM Deployment App Shell 2G** and co
 
 **To import the shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  
   3. Click **Import**.
+  
   4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
@@ -118,7 +121,9 @@ The shell is displayed in the **Shells** page and can be used by domain administ
 In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder. The dependencies folder may differ, depending on the CloudShell version you are using:
 
 * For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
+
 * For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
+
 * For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding shell and script packages to the local PyPi Server repository
@@ -128,6 +133,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 **To add Python packages to the local PyPi Server repository:**
   1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
+  
   2. For each shell or script you add into CloudShell, do one of the following (from an online computer):
       * Connect to the Internet and download each dependency specified in the *requirements.txt* file with the following command: 
 `pip download -r requirements.txt`. 
@@ -142,13 +148,17 @@ Before PyPi Server was introduced as CloudShell’s python package management me
 
 **To set the offline python repository:**
 1. Download the *ixvm-deployment-app-offlinepackages-1.0.0.zip** file, see [Downloading the Shell](#downloading-the-shell).
+
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
+
 3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the *~TestShell\Execution Server\customer.config* file, add the following key:  
 	`<add key="PythonOfflineRepositoryPath" value="repository 
 full path"/>`
+
 5. Restart the Execution Server.
 
 ### Configuring a new resource
@@ -160,11 +170,16 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
+  
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select **[Shell Name]**.
+  
   3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  
   4. Click **Create**.
+  
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  
   6. Click **Continue**.
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
@@ -173,7 +188,7 @@ CloudShell validates the device’s settings and updates the new resource with t
 See the Managing Apps topic from the OLH for more information.
 
 1. Choose a deployment option and specify **Cloud Provider** and **vCenter Template** attributes (there might be some other attributes depending on the selected option).
-![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+![](https://github.com/stsuberi/SaraTest/blob/master/https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
 
 2. In the **App Resource** tab, select **IxVM Virtual Traffic Chassis 2G** shell.
 ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
@@ -185,9 +200,13 @@ This section explains how to add the setup script so that the IxVM Deployment Ap
 
 **To add the setup script:**
 1. Log in to CloudShell Portal as administrator of the relevant domain.
+
 2. Open Manage dashboard, section Scripts, subsection Blueprint.
+
 3. Drag-N-Drop downloaded setup script IxVM.Sandbox.Setup.1.0.0.zip on the canvas.
+
 4. Change Script type to "Setup".
+
 5. Save created script.
 
 # Updating Python Dependencies for Shells
@@ -196,7 +215,9 @@ This section explains how to update your Python dependencies folder. This is req
 ### Updating offline Python dependencies
 **To update offline Python dependencies:**
 1. Download the latest Python dependencies package zip file locally.
+
 2. Extract the zip file to the suitable offline package folder(s). 
+
 3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
 
 ### Updating online Python dependencies
@@ -221,6 +242,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 * Click on **Add Scripts**.
 * Select the **IxVM.Sandbox.Setup.1.0.0**.
 * Click **Done**.
+
 4. Run **Reserve* command on the blueprint to deploy IxVM Test Appliance.
 
 # References
