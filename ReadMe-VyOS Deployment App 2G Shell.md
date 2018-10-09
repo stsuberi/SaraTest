@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **IxVM Chassis Deployment App 2G Shell**  
+# **VyOS Deployment App 2G Shell**  
 
 Release date: May 2018
 
@@ -14,7 +14,7 @@ Document version: 1.0.0
 * [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
+* [Typical Workflows](#typical-workflows)
 * [References](#references)
 
 # Overview
@@ -23,39 +23,38 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells provide L2 connectivity between resources and/or private cloud Apps.
 
-### **IxVM Chassis Deployment App 2G Shell**
-**IxVM Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Chassis** traffic generator app. 
+### **VyOS Deployment App 2G Shell**
+**VyOS Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[IxVM Chassis]** traffic generator app. 
 
 For more information on the **IxVM Traffic Chassis**, see the official **IxVM** product documentation.
 
 ### Standard version
-**IxVM Chassis Deployment App 2G** shell is based on the CloudShell Virtual Traffic Generator Standard 1.0.0.
+**VyOS Deployment App 2G** shell is based on the CloudShell Deployed App Standard 1.0.3.
 
 ### Requirements
 
-Release: **IxVM Chassis Deployment App 2G Shell 1.0.0**
+Release: **VyOS Deployment App 2G Shell 1.0.0**
 
-▪ IxVM versions: 8.40 and above
+▪ VyOS versions: 1.1.8 and above
 
 ▪ CloudShell versions: 8.2 and above
 
-▪ Ixia Virtual Test Appliance versions: 8.2 and above
+▪ VyOS Image versions: 1.1.8 and above
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **IxVM Chassis Deployment App 2G Shell Families and Models**
+#### **VyOS Deployment App 2G Shell Families and Models**
 
-The chassis families and models are listed in the following table:
+The families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|Virtual Traffic Generator Chassis|IxVM Virtual Traffic Chassis 2G|IxVM deployed test appliance|
-|Module|Virtual Traffic Generator Module|IxVM deployed test appliance card|
-|Port|Virtual Traffic Generator Port|IxVM deployed test appliance port|
+|CS_GenericAppFamily|VyOS|VyOS Deployed Image|
+|CS_Port|Vyos.GenericVPort|VyOS Deployed Image Port|
 
-#### **IxVM Chassis Deployed App 2G Shell Attributes**
+#### **VyOS Deployment App 2G Shell Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -63,27 +62,12 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name|String||CloudShell resource display name|
-|Address|String||IP address of the deployed IxVM test appliance|
-|Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|Controller TCP Port|String||TCP port of the traffic server. Relevant only in case an external server is configured. Default  TCP port is used if emtpty.|
-|Controller Address|String||IP address of the traffic server. Relevant only in case an external server is configured.|
-|Client Install Path|String|||
-|Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine wether to automatically manage the device power status.|
-|Serial Number|String||The serial number of the resource.|
-|Server Description|String||Full dedscription of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|License Server|String|License server address.|
-|Model Name|String||Catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Vendor|String||Name of the device manufacturer.|
-|Version|String||Firmware version of the resource.|
-|User*|String||Username for the deployed IxVM test appliance (should be a privileged user)|
-|Password*|Password||Password for the deployed IxVM test appliance.|
-|License Server*|String||IP address or hostname of the License Server.|
+|Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
+|Password|Password||Password for the Deployed VyOS Test Appliance.|
+|Configuration File|String||Path to the configuration file, including the configuration file name. For example'tftp://10.10.10.10/asdf'|
+|User|Boolean|String|Username for the Deployed VyOS Test Appliance|
 
-
-#### **IxVM Virtual Traffic Generator Port Attributes**
+#### **VyOS Virtual Traffic Generator Port Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -96,13 +80,13 @@ The attribute names and types are listed in the following table:
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-#### IxVM Chassis Deployment App 2G shell
+#### VyOS Deployment App 2G shell
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Downloading the Shell
-The **IxVM Chassis Deployment App 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **VyOS Deployment App 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -110,9 +94,9 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|IxVM Deployment App Chassis Shell2G.zip|IxVM Deployment App Chassis shell 2nd Generation shell package|
-|ixvm-deployment-app-offlinepackages-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
-|IxVM.Sandbox.Setup.1.0.0zip|CloudShell reservation setup script |
+|VyOS Deployment App Shell 2G.zip|VyOS Deployment App 2nd Generation shell package|
+|vyos-deployment-app-offlinepackages-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
+|VyOS.Sandbox.Setup.1.0.0zip|CloudShell reservation setup script |
 
 # Importing and Configuring the Shell
 This section describes how to import the **IxVM Deployment App 2G Shell** and configure and modify the shell’s devices.
@@ -163,7 +147,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *ixvm-deployment-app-offlinepackages-1.0.0.zip** file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *vyos-deployment-app-offlinepackages-1.0.0.zip** file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
