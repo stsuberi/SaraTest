@@ -210,11 +210,11 @@ This section explains how to add the setup script for correct operation of the *
 
 2. Go to the **Manage** dashboard and click on **Scripts>Blueprint**.
 
-3. Drag and drop the downloaded setup script *IxVM.Sandbox.Setup.1.0.0.zip* to the canvas.
+3. Click **Add New Script**. From the list, select the downloaded setup script *IxVM.Sandbox.Setup.1.0.0.zip*.
 
-4. Change the **Script** type to **Setup**.
+4. Clcik **Edit** and change the **Script Type** type to **Setup**.
 
-5. Save the script.
+5. Click **Save**.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
