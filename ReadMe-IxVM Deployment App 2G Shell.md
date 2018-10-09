@@ -24,12 +24,12 @@ A shell integrates a device model, application or other technology with CloudShe
 CloudShell's networking shells enable you to ????. In CloudShell, a network is typically modeled using a ????, which ???, and a ??? that ???? commands, such as ???. 
 
 ### **IxVM Chassis Deployment App 2G Shell**
-**IxVM Deployment App 2G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Chassis** traffic generator app. 
+**IxVM Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Chassis** traffic generator app. 
 
-For more information on the **IxVM Chassis**, see the official **IxVM** product documentation.
+For more information on the **IxVM Traffic Chassis**, see the official **IxVM** product documentation.
 
 ### Standard version
-**IxVM Chassis Deployment App 2G Shell** is based on the CloudShell Virtual Traffic Generator Standard 1.0.0.
+**IxVM Chassis Deployment App 2G** shell is based on the CloudShell Virtual Traffic Generator Standard 1.0.0.
 
 ### Requirements
 
