@@ -14,7 +14,7 @@ Document version: [x.x.x]
 * [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
+* [Typical Workflows](#typical-workflows)
 * [References](#references)
 * [Release Notes](#release-notes)
 
@@ -81,7 +81,7 @@ The attribute names and types are listed in the following table:
 |||||
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -204,14 +204,14 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-# Typical Workflow and Scenarios 
+# Typical Workflows 
 (if not applicable - remove section)
 
-**Scenario 1** - *[Name of Scenario 1]* 
+**Workflow 1** - *[Name of Workflow 1]* 
 
-**Scenario 2** - *[Name of Scenario 2]* 
+**Workflow 2** - *[Name of Workflow 2]* 
 
-**Scenario 3** - *[Name of Scenario 3]* 
+**Workflow 3** - *[Name of Workflow 3]* 
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
