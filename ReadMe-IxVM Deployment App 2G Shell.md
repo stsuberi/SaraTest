@@ -67,20 +67,21 @@ The attribute names and types are listed in the following table:
 |Address|String||IP address of the deployed IxVM test appliance|
 |Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
 |Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection*|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|vFirewall VCenter Name|String||Virtual Firewall vCenter VM to use in VM creation. <br>Should include the full path and the VM name, for example: *QualiFolder/VM121*.|
-|vCenter Name|String||The vCenter resource name in CloudShell.|
-|Sessions Concurrency Limit|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. <br>Defines the number of commands that can run concurrently. <br>Default value of 1 = no concurrent sessions.|
-|CLI Connection Type|Lookup|Auto|The CLI connection type that will be used by the driver. <br>Possible values: **Auto**, **Console**, **SSH**, **Telnet** and **TCP**. If **Auto** is selected the driver will choose the available connection type automatically.|
-|CLI TCP Port|Numeric||TCP Port for CLI connection. <br>If empty, a default CLI port will be used based on the chosen protocol. <br>For example, Telnet will use port 23.|
-|Backup Location|String||Used by the save/restore orchestration to determine where backups should be saved.|
-|Backup Type|String|File System|Supported protocols for saving and restoring configuration and firmware files. <br>Possible values: **File System**, **FTP**, and **TFTP**.|
-|Backup User|String||User name for the storage server used for saving and restoring the configuration and firmware files.|
-|Backup Password|Password||Password for the storage server used for saving and restoring the configuration and firmware files.|
-|User|String||Username for the deployed IxVM test appliance (should be a privileged user)|
-|Password|Password||Password for the deployed IxVM test appliance|
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
+|Controller TCP Port|String||The TCP port of the traffic server. Relevant only in case an external server is configured. Default  TCP port is used if emtpty.|
+|Controller Address|String||The IP address of the traffic server. Relevant only in case an external server is configured.|
+|Client Install Path|String|||
+|Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine wether to automatically manage the device power status.|
+|Serial Number|String||The serial number of the resource.|
+|Server Description|String||The full dedscription of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
+|License Server|String|License server address.|
+|Model Name|String||The catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Vendor|String||The name of the device manufacturer.|
+|Version|String||The firmware version of the resource.|
+|User*|String||Username for the deployed IxVM test appliance (should be a privileged user)|
+|Password*|Password||Password for the deployed IxVM test appliance|
 Public IP*|String|||
-|License Server|String||String||IP address or hostname of the License Server|
+|License Server*|String||String||IP address or hostname of the License Server|
 
 
 #### **IxVM Virtual Traffic Generator Port Attributes**
