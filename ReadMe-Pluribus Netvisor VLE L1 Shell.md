@@ -62,25 +62,33 @@ The L1 switch families and models are listed in the following table:
 
 #### **Pluribus Netvisor VLE L1 Attributes**
 
-The attribute names and types are listed in the following table:
+The Pluribus Netvisor VLE Fabric attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|User|String||CLI Username|
 |Password|Password||CLI Password|
+|User|String||CLI Username|
 |Fabric Name|String||Fabric name|
 |Serial Number|String||Serial number|
+
+The Generic L1 Module attribute names and types are listed in the following table:
+
+|:---|:---|:---|:---|
 |Model Name|String||Model name|
-|Protocol|Lookup|Transparent|Port protocol|
-|Protocol Type|Lookup|Transparent|Port protocol type|
-|Protocol Value|String ||Port protocol value|
-|Protocol Type Value|String ||Port protocol type value|
-|Rx Power (dBm)|String ||Optical Port RX signal strength|
-|Tx Power (dBm)|String ||Optical Port TX signal strength|
-|Wavelength|String ||Optical Port Wavelength|
-|Duplex|Lookup||Port Duplex|
-|Auto Negotiation|Boolean||Port auto negotiation|
+|Serial Number|String||Serial number|
+
+The Generic L1 Port attribute names and types are listed in the following table:
+
+|:---|:---|:---|:---|
+|Auto Negotiation|Boolean|True|Port auto negotiation|
+|Duplex|Lookup|Full|Port Duplex|
 |Port Speed|String||Port speed|
+|Protocol|Lookup|Transparent|Port protocol|
+|Protocol Type Value|String ||Port protocol type value|
+|Protocol Value|String ||Port protocol value|
+|Rx Power (dBm)|String|0|Optical Port RX signal strength|
+|Tx Power (dBm)|String|0|Optical Port TX signal strength|
+|Wavelength|String|0|Optical Port Wavelength|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
