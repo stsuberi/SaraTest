@@ -62,10 +62,15 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
+|Name|String||CloudShell resource display name|
+|Address|String||IP address of the deployed IxVM test appliance|
+|Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
+|Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example tftp://10.10.10.10/asdf.|
 |Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
-|Password|Password||Password for the Deployed VyOS Test Appliance.|
-|Configuration File|String||Path to the configuration file, including the configuration file name. For example'tftp://10.10.10.10/asdf'|
-|User|Boolean|String|Username for the Deployed VyOS Test Appliance|
+|User|Boolean|String|Username for the Deployed VyOS.|
+|Password|Password||Password for the Deployed VyOS.|
 
 #### **VyOS Virtual Traffic Generator Port Attributes**
 
