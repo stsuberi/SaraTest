@@ -180,7 +180,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*ixvm-chassis-deployed-app-2g-shell-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](#ixvm-chassis-deployed-app-2g-shell-attributes). 
   
   6. Click **Continue**.
 
