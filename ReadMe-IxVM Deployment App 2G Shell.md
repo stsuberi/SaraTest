@@ -164,7 +164,7 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new resource
-This section explains how to create a new resource from the shell.
+This section explains how to create and configure a new resource from the shell.
 
 In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
@@ -187,13 +187,27 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
 ### Configuring a new application
-1. Choose a deployment option and specify **Cloud Provider** and **vCenter Template** attributes (there might be some other attributes depending on the selected option).
+This section explains how to create a cloud provider resource that will host the App’s VM, enabling network connectivity, if required, and create the App itself in CloudShell Portal.
+
+1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
+
+2. Click **Add**.
+
+3. Select **vCenter VM from Template**.
+
+4. Enter the **Name** of the App and click **Create**
+
+5. In the **Deployment Paths** tab, and select **Cloud Provider** and enter the **vCenter Template** to be used in the VM creation. It should include the full path and template name, for exmaple QualiFolder/Template1.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
 
-2. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell.
+6. Click **Done**.
+
+7. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
 
-3. Specify the **User**, **Password**, and **License Server** attributes for the shell.
+8. Specify the **User**, **Password**, and **License Server** of the shell.
+
+9. click **Done**.
 
 ### Configuring the setup script
 This section explains how to add the setup script for correct operation of the **IxVM Deployment App Chasis 2G** shell.
