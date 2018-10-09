@@ -61,9 +61,11 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|License Server|String|IP address or hostname of the License Server|
-|Password|Password|Password for the Deployed IxVM Test Appliance|
+|Address|String|IP address of the Deployed IxVM Test Appliance|
 |User|String|Username for the Deployed IxVM Test Appliance|
+|Password|Password|Password for the Deployed IxVM Test Appliance|
+|License Server|String|IP address or hostname of the License Server|
+
 
 #### **IxVM Virtual Traffic Generator Port Attributes**
 
@@ -174,11 +176,11 @@ You can also modify existing resources, see [Managing Resources in the Inventory
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
   2. From the list, select **IxVM Virtual Traffic Chassis**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  3. Enter the **Name** and **IP address** of the Deployed IxVM Test Appliance.
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*ixvm-chassis-deployed-app-2g-shell-attributes). 
   
   6. Click **Continue**.
 
