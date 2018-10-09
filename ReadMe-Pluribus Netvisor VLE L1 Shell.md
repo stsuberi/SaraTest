@@ -64,21 +64,23 @@ The L1 switch families and models are listed in the following table:
 
 The Pluribus Netvisor VLE Fabric attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Password|Password||CLI Password|
-|User|String||CLI Username|
-|Fabric Name|String||Fabric name|
-|Serial Number|String||Serial number|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Password|Password|CLI Password|
+|User|String|CLI Username|
+|Fabric Name|String|Fabric name|
+|Serial Number|String|Serial number|
 
 The Generic L1 Module attribute names and types are listed in the following table:
 
+|Attribute|Type|Default|Description|
 |:---|:---|:---|:---|
 |Model Name|String||Model name|
 |Serial Number|String||Serial number|
 
 The Generic L1 Port attribute names and types are listed in the following table:
 
+|Attribute|Type|Default|Description|
 |:---|:---|:---|:---|
 |Auto Negotiation|Boolean|True|Port auto negotiation|
 |Duplex|Lookup|Full|Port Duplex|
