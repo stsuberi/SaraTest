@@ -68,19 +68,19 @@ The attribute names and types are listed in the following table:
 |Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
 |Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
 |Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|Controller TCP Port|String||The TCP port of the traffic server. Relevant only in case an external server is configured. Default  TCP port is used if emtpty.|
-|Controller Address|String||The IP address of the traffic server. Relevant only in case an external server is configured.|
+|Controller TCP Port|String||TCP port of the traffic server. Relevant only in case an external server is configured. Default  TCP port is used if emtpty.|
+|Controller Address|String||IP address of the traffic server. Relevant only in case an external server is configured.|
 |Client Install Path|String|||
 |Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine wether to automatically manage the device power status.|
 |Serial Number|String||The serial number of the resource.|
-|Server Description|String||The full dedscription of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
+|Server Description|String||Full dedscription of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |License Server|String|License server address.|
-|Model Name|String||The catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Vendor|String||The name of the device manufacturer.|
-|Version|String||The firmware version of the resource.|
+|Model Name|String||Catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Vendor|String||Name of the device manufacturer.|
+|Version|String||Firmware version of the resource.|
 |User*|String||Username for the deployed IxVM test appliance (should be a privileged user)|
-|Password*|Password||Password for the deployed IxVM test appliance|
-|License Server*|String||IP address or hostname of the License Server|
+|Password*|Password||Password for the deployed IxVM test appliance.|
+|License Server*|String||IP address or hostname of the License Server.|
 
 
 #### **IxVM Virtual Traffic Generator Port Attributes**
