@@ -58,7 +58,7 @@ The L1 switch families and models are listed in the following table:
 |:---|:---|:---|
 |L1 Switch|Pluribus Netvisor VLE Fabric|Pluribus Netvisor Fabric|
 |L1 Switch Blade|Generic L1 Module|Pluribus Fabric Node|
-|L1 Swtich Port|Generic L1 Port|Pluribus Port|
+|L1 Switch Port|Generic L1 Port|Pluribus Port|
 
 #### **Pluribus Netvisor VLE L1 Attributes**
 
