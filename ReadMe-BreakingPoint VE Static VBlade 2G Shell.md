@@ -14,7 +14,7 @@ Document version: 1.0.0
 * [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
+* [Typical Workflows](#typical-workflows)
 * [References](#references)
 
 ## Overview
@@ -79,7 +79,7 @@ The VBlade attribute names and types are listed in the following table:
 |vChassis vCenter VM|String|Name of Virtual Chassis vCenter VM in vCenter. <br>Should include the full path and the name of the VM. <br>For example: *QualiFolder/VM121*.|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package). There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 For Traffic Generator Shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -172,10 +172,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-## Typical Workflow and Scenarios
-### Use cases and scenarios
+## Typical Workflows
 
-**Scenario 1 - Creating a new blueprint**
+**Workflow 1 - Creating a new blueprint**
 1. Create a new blueprint.
    * In CloudShell Portal, create a new blueprint **Blueprints>Create Blueprint**.
    * Give the blueprint a name.
@@ -193,7 +192,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    * Click **Add Scripts** and choose **Cleanup Reservation** from the list. 
    * Click **Update** to save changes.
 
-**Scenario 2 - Getting a test file with network configuration**
+**Workflow 2 - Getting a test file with network configuration**
 
 *You cannot change predefined Tests and Network Neighborhoods. Predefined Network Neighborhoods will not be included in Test files.*
 
@@ -218,7 +217,7 @@ This scenario helps you use predefined Tests and Network Neighborhoods.
    * Run the BreakingComandController service command `GetTestFile` with the duplicated test name.
    * Open the folder specified in the attribute **Test Files Location**+<reservation_id> to view the file with the name of your duplicated test (extension “bpt”).
 
-**Scenario 3 - Running a test**
+**Workflow 3 - Running a test**
 1. Enter your blueprint.
 2. From the BreakingPointController service, run the **Load Configuration** command.
    * Hover over the BreakingPointController service and click **Commands**.
