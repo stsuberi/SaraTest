@@ -203,7 +203,7 @@ This section explains how to create a cloud provider resource that will host the
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
 
 ### Configuring the setup script
-This section explains how to add the setup script for correct operation of the **IxVM Deployment App Chasis 2G** shell.
+This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
 
 **To add the setup script:**
 1. Log in to CloudShell Portal as administrator of the relevant domain.
