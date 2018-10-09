@@ -195,7 +195,7 @@ This section explains how to create a cloud provider resource that will host the
 
 3. Select **vCenter VM from Template**.
 
-4. Enter the **Name** of the App and click **Create**
+4. Enter the **Name** of the App and click **Create**.
 
 	* In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template1. Click **Done**.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
