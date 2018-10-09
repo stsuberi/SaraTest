@@ -197,17 +197,10 @@ This section explains how to create a cloud provider resource that will host the
 
 4. Enter the **Name** of the App and click **Create**
 
-	* In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template1.
+	* In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template1. Click **Done**.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
-
-	* Click **Done**.
-
-	* In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell.
-
-	* Specify the **User**, **Password**, and **License Server** of the shell.
+	* In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell. Click **Done**.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
-
-	* click **Done**.
 
 ### Configuring the setup script
 This section explains how to add the setup script for correct operation of the **IxVM Deployment App Chasis 2G** shell.
