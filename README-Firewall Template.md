@@ -72,7 +72,7 @@ The attribute names and types are listed in the following table:
 |||||
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 |Command|Description|
 |:-----|:-----|
@@ -194,10 +194,10 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-# Typical Workflow and Scenarios 
+# Typical Workflows 
 (edit as necessary depending on the shell)
 
-**Scenario 1 - _Save configuration_** 
+**Workflow 1 - _Save configuration_** 
 1. In CloudShell Portal, add the device resource to an active sandbox.
 
 2. Run the **Save** command on the device with the following inputs:
@@ -206,7 +206,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 The configuration is saved to a file named *<ResourceName><startup/running-config>-<timestamp>*, which will reside in the folder path you entered.    
 
-**Scenario 2 - _Restore Configuration_**
+**Workflow 2 - _Restore Configuration_**
 1. In CloudShell Portal, reserve the device resource.
 
 2. Run the **Restore** resource command.
@@ -216,7 +216,7 @@ The configuration is saved to a file named *<ResourceName><startup/running-confi
     * **Restore Method** (optional): **Append** or **Override**. If you do not enter any value in this field, the **Append** method will be used. 
     * **Configuration Type** (mandatory): **Startup** or **Running**. 
 	
-**Scenario 3 - _Load firmware_**
+**Workflow 3 - _Load firmware_**
 1. In CloudShell Portal, reserve the device resource.
 
 2. Run the **Load Firmware** resource command.
