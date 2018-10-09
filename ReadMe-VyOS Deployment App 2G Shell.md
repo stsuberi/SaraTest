@@ -191,27 +191,27 @@ This section explains how to create an App template for the IxVM Chassis to enab
 
 2. Click **Add**.
 
-3. Select **vCenter VM from Template**.
+3. Select **vCenter Clone VM From VM**.
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
-![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
+![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_deployment_paths.PNG)
 
-6. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell. 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
+6. In the **App Resource** tab, select the **VyOS** shell. Specify the **User** and **Password** of the shell. 
+![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
 
 ### Configuring the setup script
-This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
+This section explains how to add the setup script for the **VyOS Deployment App 2G** shell.
 
 **To add the setup script:**
 1. Log in to CloudShell Portal as administrator of the relevant domain.
 
 2. Go to the **Manage** dashboard and click **Scripts>Blueprint**.
 
-3. Click **Add New Script**. From the list, select the downloaded setup script *IxVM.Sandbox.Setup.1.0.0.zip*.
+3. Click **Add New Script**. From the list, select the downloaded setup script *VyOS.Sandbox.Setup.1.0.0.zip*.
 
 4. Click **Edit** and change the **Script Type** to **Setup**.
 
@@ -236,18 +236,18 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflows 
 
-### *Deploying the IxVM Deployment App Chassis 2G shell* 
+### *Deploying the VyOS Deployment App 2G shell* 
 1. Enter your blueprint.
 
-2. Add the **VM Deployment App** to the blueprint.
+2. Add the **VyOS Deployment App** to the blueprint.
 	* Open the **App/Service** menu.
-	* Drag and drop the **IxVM Deployment App 2G Chassis** resource to the canvas.
+	* Drag and drop the **VyOS Deployment App 2G** resource to the canvas.
 
 3. Update the blueprint setup script.
 	* In the **Blueprint** sub menu, open **Properties**.
 	* In the **Scripts** section, select the **Default Sandbox Setup 2.0** script and click the trash icon to the right of the script.
 	* Click **Add Scripts**.
-	* Select the **IxVM.Sandbox.Setup.1.0.0**.
+	* Select the **VyOS.Sandbox.Setup.1.0.0**.
 	* Click **Done**.
 
 4. Reserve the Blueprint.
