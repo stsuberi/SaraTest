@@ -21,7 +21,7 @@ Document version: 1.0.0
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Networking Shells
-CloudShell's networking shells enable you to ????. In CloudShell, a network is typically modeled using a ????, which ???, and a ??? that ???? commands, such as ???. 
+CloudShell's networking shells provide L2 connectivity between resources and/or private cloud Apps.
 
 ### **IxVM Chassis Deployment App 2G Shell**
 **IxVM Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Chassis** traffic generator app. 
@@ -51,9 +51,9 @@ The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|Virtual Traffic Generator Chassis|IxVM Virtual Traffic Chassis 2G|IxVM Deployed Test Appliance|
-|Module|Virtual Traffic Generator Module|IxVM Deployed Test Appliance Card|
-|Port|Virtual Traffic Generator Port|IxVM Deployed Test Appliance Port|
+|Virtual Traffic Generator Chassis|IxVM Virtual Traffic Chassis 2G|IxVM deployed test appliance|
+|Module|Virtual Traffic Generator Module|IxVM deployed test appliance card|
+|Port|Virtual Traffic Generator Port|IxVM deployed test appliance port|
 
 #### **IxVM Chassis Deployed App 2G Shell Attributes**
 
@@ -61,9 +61,9 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|Address|String|IP address of the Deployed IxVM Test Appliance|
-|User|String|Username for the Deployed IxVM Test Appliance|
-|Password|Password|Password for the Deployed IxVM Test Appliance|
+|Address|String|IP address of the deployed IxVM test appliance|
+|User|String|Username for the deployed IxVM test appliance|
+|Password|Password|Password for the deployed IxVM test appliance|
 |License Server|String|IP address or hostname of the License Server|
 
 
@@ -73,14 +73,12 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|Logical Name|String|The port's logical name in the test configuration|
+|Logical Name|String|Port's logical name in the test configuration|
 |Requested vNIC|String|VNic number from vCenter|
-|MAC Address|String|Port's MAC Address|
+|MAC Address|String|Port's MAC address|
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is associated with the model and provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
-
-For Networking shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.?????
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 #### IxVM Chassis Deployment App 2G shell
 |Command|Description|
@@ -186,8 +184,8 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
-### Configuring a new application
-This section explains how to create a cloud provider resource that will host the App’s VM, enabling network connectivity, if required, and create the App itself in CloudShell Portal.
+### Configuring a new App
+This section explains how to create an App template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -197,10 +195,13 @@ This section explains how to create a cloud provider resource that will host the
 
 4. Enter the **Name** of the App and click **Create**.
 
-	* In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template1. Click **Done**.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
-	* In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell. Click **Done**.
+
+6. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell. 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
+
+7. Click **Done**.
 
 ### Configuring the setup script
 This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
@@ -208,11 +209,11 @@ This section explains how to add the setup script for the **IxVM Deployment App 
 **To add the setup script:**
 1. Log in to CloudShell Portal as administrator of the relevant domain.
 
-2. Go to the **Manage** dashboard and click on **Scripts>Blueprint**.
+2. Go to the **Manage** dashboard and click **Scripts>Blueprint**.
 
 3. Click **Add New Script**. From the list, select the downloaded setup script *IxVM.Sandbox.Setup.1.0.0.zip*.
 
-4. Clcik **Edit** and change the **Script Type** to **Setup**.
+4. Click **Edit** and change the **Script Type** to **Setup**.
 
 5. Click **Save**.
 
@@ -233,23 +234,23 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-# Typical Workflow and Scenarios 
+# Typical Workflows 
 
-**Scenario 1** - *Deploying the IxVM Deployment App Chassis 2G shell* 
+### *Deploying the IxVM Deployment App Chassis 2G shell* 
 1. Enter your blueprint.
 
 2. Add the **VM Deployment App** to the blueprint.
-	* Open the **App/service** sub menu.
+	* Open the **App/Service** menu.
 	* Drag and drop the **IxVM Deployment App 2G Chassis** resource to the canvas.
 
 3. Update the blueprint setup script.
 	* In the **Blueprint** sub menu, open **Properties**.
-	* In the **Scripts** section, remove the **Default Sandbox Setup 2.0** script by clicking on the trash icon to the right of the script.
+	* In the **Scripts** section, select the **Default Sandbox Setup 2.0** script and click the trash icon to the right of the script.
 	* Click **Add Scripts**.
 	* Select the **IxVM.Sandbox.Setup.1.0.0**.
 	* Click **Done**.
 
-4. Run the `Reserve` command on the Blueprint to deploy the **IxVM Test Appliance**.
+4. Reserve the Blueprint.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
