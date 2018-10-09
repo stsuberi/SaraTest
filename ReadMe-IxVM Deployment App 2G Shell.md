@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **IxVM Deployment App 2G Shell**  
+# **IxVM Chassis Deployment App 2G Shell**  
 
 Release date: May 2018
 
@@ -23,17 +23,17 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells enable you to ????. In CloudShell, a network is typically modeled using a ????, which ???, and a ??? that ???? commands, such as ???. 
 
-### **IxVM Deployment App 2G Shell**
-**IxVM Deployment App 2G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Deployment App**. 
+### **IxVM Chassis Deployment App 2G Shell**
+**IxVM Deployment App 2G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Chassis** traffic generator app. 
 
 For more information on the **IxVM Chassis**, see the official **IxVM** product documentation.
 
 ### Standard version
-**IxVM Deployment App 2G Shell** is based on the CloudShell Virtual Traffic Generator Standard 1.0.0.
+**IxVM Chassis Deployment App 2G Shell** is based on the CloudShell Virtual Traffic Generator Standard 1.0.0.
 
 ### Requirements
 
-Release: **IxVM Deployment App 2G Shell 1.0.0**
+Release: **IxVM Chassis Deployment App 2G Shell 1.0.0**
 
 ▪ IxVM versions: 8.40 and above
 
@@ -45,7 +45,7 @@ Release: **IxVM Deployment App 2G Shell 1.0.0**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **IxVM Deployed App Chassis 2G Shell Families and Models**
+#### **IxVM Chassis Deployment App 2G Shell Families and Models**
 
 The chassis families and models are listed in the following table:
 
@@ -55,7 +55,7 @@ The chassis families and models are listed in the following table:
 |Module|Virtual Traffic Generator Module|IxVM Deployed Test Appliance Card|
 |Port|Virtual Traffic Generator Port|IxVM Deployed Test Appliance Port|
 
-#### **IxVM Deployed App Chassis 2G Shell Attributes**
+#### **IxVM Chassis Deployed App 2G Shell Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -80,13 +80,13 @@ This section describes the automation (drivers or scripts) associated with the d
 
 For Networking shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.?????
 
-#### IxVM Deployment App Chassis 2G Shell
+#### IxVM Chassis Deployment App 2G shell
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Downloading the Shell
-The **IxVM Deployment App 2G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **IxVM Chassis Deployment App 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
