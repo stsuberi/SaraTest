@@ -73,10 +73,10 @@ The Pluribus Netvisor VLE Fabric attribute names and types are listed in the fol
 
 The Generic L1 Module attribute names and types are listed in the following table:
 
-|Attribute|Type|Default|Description|
-|:---|:---|:---|:---|
-|Model Name|String||Model name|
-|Serial Number|String||Serial number|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Model Name|String|Model name|
+|Serial Number|String|Serial number|
 
 The Generic L1 Port attribute names and types are listed in the following table:
 
@@ -148,19 +148,12 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
       * Right click the resource and select **Configuration>Connections**.
       * Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
 
-The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a shell
 
 **Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
 
-In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder. The dependencies folder may differ, depending on the CloudShell version you are using:
-
-* For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
-
-* For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
-
-* For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
+In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
 
 ### Adding shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
@@ -179,8 +172,6 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 
 3. Place these zip files in the local PyPi Server repository.
  
-### Setting the python PythonOfflineRepositoryPath configuration key
-Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
 1. Download the **[Shell Offline Requirements .zip File Name]** file, see [Downloading the Shell](#downloading-the-shell).
