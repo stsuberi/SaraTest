@@ -212,7 +212,7 @@ This section explains how to add the setup script for the **IxVM Deployment App 
 
 3. Click **Add New Script**. From the list, select the downloaded setup script *IxVM.Sandbox.Setup.1.0.0.zip*.
 
-4. Clcik **Edit** and change the **Script Type** type to **Setup**.
+4. Clcik **Edit** and change the **Script Type** to **Setup**.
 
 5. Click **Save**.
 
