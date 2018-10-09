@@ -94,7 +94,7 @@ This section describes the automation (drivers) associated with the data model. 
 **Note:** You can only activate a TAP connection after activating a parent mapuni/mapbidi connection. 
 
 # Downloading the Shell
-The **Pluribus Netvisor VLE L1 Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Pluribus Netvisor VLE L1** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 The shell comprises:
 
