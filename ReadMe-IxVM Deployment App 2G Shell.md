@@ -80,7 +80,7 @@ The attribute names and types are listed in the following table:
 |Version|String||The firmware version of the resource.|
 |User*|String||Username for the deployed IxVM test appliance (should be a privileged user)|
 |Password*|Password||Password for the deployed IxVM test appliance|
-|License Server*|String||String||IP address or hostname of the License Server|
+|License Server*|String||IP address or hostname of the License Server|
 
 
 #### **IxVM Virtual Traffic Generator Port Attributes**
