@@ -188,7 +188,7 @@ CloudShell validates the device’s settings and updates the new resource with t
 
 ### Configuring a new application
 1. Choose a deployment option and specify **Cloud Provider** and **vCenter Template** attributes (there might be some other attributes depending on the selected option).
-![](https://github.com/stsuberi/SaraTest/blob/master/https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deploymentpaths.PNG)
+![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
 
 2. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
