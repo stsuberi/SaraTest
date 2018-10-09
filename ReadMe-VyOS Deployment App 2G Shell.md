@@ -96,7 +96,7 @@ The shell comprises:
 |:---|:---|
 |VyOS Deployment App Shell 2G.zip|VyOS Deployment App 2nd Generation shell package|
 |vyos-deployment-app-offlinepackages-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
-|VyOS.Sandbox.Setup.1.0.0zip|CloudShell reservation setup script |
+|VyOS.Sandbox.Setup.1.0.1zip|CloudShell reservation setup script |
 
 # Importing and Configuring the Shell
 This section describes how to import the **IxVM Deployment App 2G Shell** and configure and modify the shell’s devices.
@@ -172,9 +172,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select **IxVM Virtual Traffic Chassis**.
+  2. From the list, select **Vyos**.
   
-  3. Enter the **Name** and **IP address** of the Deployed IxVM Test Appliance.
+  3. Enter the **Name** and **Address** of the Deployed VyOS Test Appliance.
   
   4. Click **Create**.
   
@@ -195,10 +195,10 @@ This section explains how to create an App template for the IxVM Chassis to enab
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path and template name, for example QualiFolder/VM121.
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_deployment_paths.PNG)
 
-6. In the **App Resource** tab, select the **VyOS** shell. Specify the **User** and **Password** of the shell. 
+6. In the **App Resource** tab, select the **Vyos** shell. Specify the **User** and **Password** of the shell. 
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
@@ -211,7 +211,7 @@ This section explains how to add the setup script for the **VyOS Deployment App 
 
 2. Go to the **Manage** dashboard and click **Scripts>Blueprint**.
 
-3. Click **Add New Script**. From the list, select the downloaded setup script *VyOS.Sandbox.Setup.1.0.0.zip*.
+3. Click **Add New Script**. From the list, select the downloaded setup script *VyOS.Sandbox.Setup.1.0.1.zip* and click **Open**.
 
 4. Click **Edit** and change the **Script Type** to **Setup**.
 
@@ -247,7 +247,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	* In the **Blueprint** sub menu, open **Properties**.
 	* In the **Scripts** section, select the **Default Sandbox Setup 2.0** script and click the trash icon to the right of the script.
 	* Click **Add Scripts**.
-	* Select the **VyOS.Sandbox.Setup.1.0.0**.
+	* Select the **VyOS.Sandbox.Setup.1.0.1**.
 	* Click **Done**.
 
 4. Reserve the Blueprint.
