@@ -150,42 +150,9 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
 
 
 ### Offline installation of a shell
+Shell installation installs the required dependencies from the shell's zip package.
 
-**Note:** Offline installation instructions are relevant only if CloudShell Execution Server has no access to PyPi. You can skip this section if your execution server has access to PyPi. For additional information, see the online help topic on offline dependencies.
-
-In offline mode, import the shell into CloudShell and place any dependencies in the appropriate dependencies folder.
-
-If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
-
-For more information, see [Configuring CloudShell to Execute Python Commands in Offline Mode](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=Configuring%20CloudShell%20to%20Execute%20Python%20Commands%20in%20Offline%20Mode).
-
-**To add Python packages to the local PyPi Server repository:**
-  1. If you haven't created and configured the local PyPi Server repository to work with the execution server, perform the steps in [Add Python packages to the local PyPi Server repository (offlinemode)](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnfgr-Pyth-Env-Wrk-Offln.htm?Highlight=offline%20dependencies#Add). 
-  
-  2. For each shell or script you add into CloudShell, do one of the following (from an online computer):
-      * Connect to the Internet and download each dependency specified in the *requirements.txt* file with the following command: 
-`pip download -r requirements.txt`. 
-     The shell or script's requirements are downloaded as zip files.
-
-      * In the [Quali Community's Integrations](https://community.quali.com/integrations) page, locate the shell and click the shell's **Download** link. In the page that is displayed, from the Downloads area, extract the dependencies package zip file.
-
-3. Place these zip files in the local PyPi Server repository.
- 
-
-**To set the offline python repository:**
-1. Download the shell offline requirements .zip file, see [Downloading the Shell](#downloading-the-shell).
-
-2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
-
-3.  On the Quali Server machine, in the *~\CloudShell\Server\customer.config* file, add the following key to specify the path to the default python package folder (for all Execution Servers):  
-	`<add key="PythonOfflineRepositoryPath" value="repository 
-full path"/>`
-
-4. If you want to override the default folder for a specific Execution Server, on the Execution Server machine, in the *~TestShell\Execution Server\customer.config* file, add the following key:  
-	`<add key="PythonOfflineRepositoryPath" value="repository 
-full path"/>`
-
-5. Restart the Execution Server.
+The *install_driver.bat* script creates a virtual environment on the Quali Server machine under *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-l1-<drivername>* and installs the required dependencies in this virtual environment from the extracted L1 shell folder (under *~cloudshell-l1\packages*).
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
