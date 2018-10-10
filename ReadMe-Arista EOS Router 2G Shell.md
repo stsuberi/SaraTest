@@ -129,11 +129,12 @@ This section describes the automation (drivers) associated with the data model. 
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
-|Run Custom Command|Sends command to the device, and prints output. All commands will be executed in the enable mode, However it will not allow to enter configuration mode.|
+|Health Check|Check if the device is up and connectable.|
+|Send Custom Command (I don't see this on the command pane of the resourece in a blueprint)|Sends command (String) to the device, and prints output. All commands will be executed in the enable mode, However it will not allow to enter configuration mode.|
 |Run Custom Config Command|Sends command to the device in configuration mode, and prints output. All commands will be executed in the enable mode, accessible only via the API.|
-|Load Firmware|Uploads and updates firmware.|
-|Save|Backs up running or startup configuration of the device.|
-|Restore|Restores running or starup configurations from file.|
+|Save|Creates a configuration file and saves it to the provided destination.<br> Folder Path (String) need explanation, Configuration Type (Enum) - Startup or Running need explanation, VRF Management Name (String) need explanation |
+|Restore|Restores a configuration file.<br> Path (String) need explanation, Configuration Type (Enum) Startup or Running need explanation, Restore Method (Enum) Override or Append need explanation, VRF Management Name (String) need explanation|
+|Load Firmware|Uploads and updates firmware on the resource.<br> Path (String) need explanation, VRF Management Name (String) need explanation|
 
 # Downloading the Shell
 The **Arista EOS Router 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
