@@ -31,7 +31,7 @@ CloudShell's networking shells provide L2 connectivity between resources and/or 
 For more information on the **Arista EOS Router**, see the official **Arista** product documentation.
 
 ### Standard version
-**Arista EOS Router 2G Shell** is based on the Networking Shell Standard version 5.0.2 **[Name of Standard File]**.
+**Arista EOS Router 2G Shell** is based on the Networking Shell Standard version 5.0.2.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
