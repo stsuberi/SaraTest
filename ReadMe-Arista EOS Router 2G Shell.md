@@ -210,9 +210,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **Arista EOS Router**.
+  2. From the list, select **AristaEosRouterShell2G**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]**.
+  3. Enter the **Name** and **IP address** of the **Arista EOS Router**.
   
   4. Click **Create**.
   
