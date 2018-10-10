@@ -24,9 +24,9 @@ A shell integrates a device model, application or other technology with CloudShe
 CloudShell's networking shells provide L2 connectivity between resources and/or private cloud Apps.
 
 ### **VyOS Deployment App 2G Shell**
-**VyOS Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[IxVM Chassis]** traffic generator app. 
+**VyOS Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **VyOS** deployment App. 
 
-For more information on the **IxVM Traffic Chassis**, see the official **IxVM** product documentation.
+For more information on the **VyOS** operating system, see the official **VyOS** product documentation.
 
 ### Standard version
 **VyOS Deployment App 2G** shell is based on the CloudShell Deployed App Standard 1.0.3.
@@ -51,26 +51,27 @@ The families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|CS_GenericAppFamily|VyOS|VyOS Deployed Image|
-|CS_Port|Vyos.GenericVPort|VyOS Deployed Image Port|
+|CS_GenericAppFamily|VyOS|VyOS deployed image|
+|CS_Port|Vyos.GenericVPort|VyOS deployed image port|
 
 #### **VyOS Deployment App 2G Shell Attributes**
 
 The attribute names and types are listed in the following table:
 
-**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit) and the **Discover** resource dialog box (Inventory>Resource>Discover) except for those noted with an *, which appear only in the **Discover** resource dialog box. 
+**Note:** The following list of attributes appear in the **Edit** resource dialog box (Inventory>Resource>Edit). Those noted with an asterisk, appear in the **Discover** resource dialog box as well (Inventory>Resource>Discover).
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name|String||CloudShell resource display name|
-|Address|String||IP address of the deployed IxVM test appliance|
+|Name*|String||CloudShell resource display name.|
+|Address*|String||IP address of the deployed VyOS App.|
 |Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
 |Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
 |Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
 |Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example tftp://10.10.10.10/asdf.|
 |Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
-|User|Boolean|String|Username for the Deployed VyOS.|
-|Password|Password||Password for the Deployed VyOS.|
+|User|Boolean|String|Username for the deployed VyOS.|
+|Password|Password||Password for the deployed VyOS.|
+|PublicIP|String||Public IP address.|
 
 #### **VyOS Virtual Traffic Generator Port Attributes**
 
