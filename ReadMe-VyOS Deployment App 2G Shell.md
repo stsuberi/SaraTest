@@ -100,12 +100,12 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|VyOS Deployment App Shell 2G.zip|VyOS Deployment App 2nd Generation shell package|
+|VyOS Deployment App Shell 2G.zip|VyOS Deployment App 2G shell package|
 |vyos-deployment-app-offlinepackages-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
 |VyOS.Sandbox.Setup.1.0.1zip|CloudShell reservation setup script |
 
 # Importing and Configuring the Shell
-This section describes how to import the **IxVM Deployment App 2G Shell** and configure and modify the shell’s devices.
+This section describes how to import the **VyOS Deployment App 2G** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -130,8 +130,6 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 
 * For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
-* For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
-
 ### Adding shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
 
@@ -153,7 +151,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *vyos-deployment-app-offlinepackages-1.0.0.zip** file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *vyos-deployment-app-offlinepackages-1.0.0.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -191,7 +189,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
 ### Configuring a new App
-This section explains how to create an App template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
+This section explains how to create an App template for the VyOS Deployment App to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -242,7 +240,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflows 
 
-### *Deploying the VyOS Deployment App 2G shell* 
+#### *Deploying the VyOS Deployment App 2G shell* 
 1. Enter your blueprint.
 
 2. Add the **VyOS Deployment App** to the blueprint.
@@ -250,7 +248,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	* Drag and drop the **VyOS Deployment App 2G** resource to the canvas.
 
 3. Update the blueprint setup script.
-	* In the **Blueprint** sub menu, open **Properties**.
+	* In the **Blueprint** menu, open **Properties**.
 	* In the **Scripts** section, select the **Default Sandbox Setup 2.0** script and click the trash icon to the right of the script.
 	* Click **Add Scripts**.
 	* Select the **VyOS.Sandbox.Setup.1.0.1**.
