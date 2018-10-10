@@ -93,7 +93,23 @@ The attribute names and types are listed in the following table:
 |Backup Type|String|File System|Supported protocols for saving and restoring of configuration and firmware files. Possible values are "File System", "FTP" and "TFTP".| 
 |Backup Location|String||Default Location, where files will be saved by Save method|
 |Backup User|String||Username for the storage server used for saving and restoring of configuration and firmware files.|
-
+|Backup Password|Password||Password for the storage server used for saving and restoring of configuration and firmware files.| 
+|VRF Management Name|String||The default VRF Management to use if configured in the network and no such input was passed to the Save, Restore or Load Firmware commands.|
+|Model|String||Element model (Module or Chassis, etc.)|
+|Serial Number|String||Element serial number (Module or Chassis, etc.)
+|Version|String||Element version (Module or Chassis, etc.)|
+|Mac Address|String||Interface mac address|
+|L2 Protocol Type|String||Interface protocol type|
+|IPv4 Address|String||Interface IPv4 address|
+|IPv6 Address|String||Interface IPv6 address|
+|Port Description|String||Interface description|
+|Bandwidth|Numeric|0|Interface speed|
+|MTU|Numeric|0|Interface mtu|
+|Duplex|Lookup|Half|Interface duplex (half or full)|
+|Adjacent|String||If lldp is enabled on port, Adjacent shows connected device name and interface|
+|Protocol Type|Lookup|Transparent|Attribute for internal usage|
+|Auto Negotiation|Boolean|False|Shows if Auto negotiation is enabled on the interface|
+|Association|String||Interfaces added to certain port-channel|
 
 
 ### Automation
