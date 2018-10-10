@@ -115,14 +115,17 @@ The attribute names and types are listed in the following table:
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
-
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Run Custom Command|Sends command to the device, and prints output. All commands will be executed in the enable mode, However it will not allow to enter configuration mode.|
+|Run Custom Config Command|Sends command to the device in configuration mode, and prints output. All commands will be executed in the enable mode, accessible only via the API.|
+|Load Firmware|Uploads and updates firmware.|
+|Save|Backs up running or startup configuration of the device.|
+|Restore|Restores running or starup configurations from file.|
 
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Arista EOS Router 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -130,11 +133,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|AristaEosRouterShell2G.zip|Arista EOS Router 2G shell package|
+|cloudshell-networking-arista-eos-router-shell-2g-dependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+This section describes how to import the **Arista EOS Router 2G version 1.0.0** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -182,7 +185,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-networking-arista-eos-router-shell-2g-dependencies-package-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -207,9 +210,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **Arista EOS Router**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  3. Enter the **Name** and **IP address** of the **[Device Name]**.
   
   4. Click **Create**.
   
@@ -237,13 +240,33 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
-(if not applicable - remove section)
 
-**Workflow 1** - *[Name of Workflow 1]* 
+#### **Workflow 1** - *Save configuration* 
+1. In CloudShell Portal, reserve the Arista EOS resource and run the `Save` command.
 
-**Workflow 2** - *[Name of Workflow 2]* 
+2. In the command input field, enter the following information:
+	* **Folder Path**: For example, *tftp://ipaddress/shared folder*
+	* **Configuration Type**: either **Running** or **Startup**
+	* **VRF Management Name**: provide the management VRF name if exists.
 
-**Workflow 3** - *[Name of Workflow 3]* 
+The startup or running configuration will be saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered.
+
+#### **Workflow 2** - *Restore configuration* 
+1. In CloudShell Portal, reserve the Arista EOS resource.
+
+2. Run the resource command `Restore`.
+
+3. Enter the following input parameters:
+	* **Path**: This is a mandatory input field. Enter the full path of the configuration file. 
+	* **Restore Method**: This is an optional input field. Can be **Override**. If nothing is entered in this input field, the Override method will be used. 
+	* **Configuration Type**: This is a mandatory input field. Possible values **Startup** or **Running**.
+	* **VRF Management Name**: This is an optional input field. Provide the management VRF name if exists.
+
+#### **Workflow 3** - *Load firmware* 
+1. Login to CloudShell portal and reserve the Arista EOS resource.
+2. Run the resource command `Load Firmware`. 
+3. Enter the following input parameters:
+	* **Path** (mandatory input field). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -255,15 +278,12 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes 
-(if not applicable - remove section)
+**Arista EOS Router 2G version 1.0.0**
+
 ### What's New
 
-* 
-* 
-* 
+* Shell based on TOSCA Standards
+* Separate namespace for each shell
 
 ### Known Issues
-* 
-* 
-* 
-
+* Doesn’t support configuring SNMP v3
