@@ -65,6 +65,21 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
+|User|String||Username for Arista CLI (should be privileged user)|
+|Password|Password||Password for Arista CLI|
+|Enable Password|Password||Enable Password for Arista CLI|
+|Sessions Concurrency Limit|Numeric|1|Number of sessions that can be opened to the device. Defines the number of commands that can run concurrently.|
+System Name String Device hostname
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
 |||||
 |||||
 |||||
