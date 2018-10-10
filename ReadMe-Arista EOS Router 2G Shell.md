@@ -62,42 +62,50 @@ The router families and models are listed in the following table:
 #### **Arista EOS Router 2G Shell Attributes**
 
 * - discovery attribute
+^ - edit attribute
 
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Address*|String||IP address of the Arista EOS Router|
-|User*|String||Username for Arista CLI (should be privileged user)|
-|Password*|Password||Password for Arista CLI|
-|Enable Password*|Password||Enable Password for Arista CLI|
-|Sessions Concurrency Limit*|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. Defines the number of commands that can run concurrently. Default of 1 is no concurrency.|
-|System Name|String||Device hostname|
-|Contact Name|String||Device contact name|
-|OS Version|String||Operating system version|
-|Vendor |String ||Device manufacturer|
-|Location|String||Device location|
-|Model |String||The device model. This information is typically used for abstract resource filtering.|
+|Name^|String||Name of the Arista EOS Router in CloudShell|
+|Address*^|String||IP address of the Arista EOS Router|
+|Folder^||||
+|Visibility^||||
+|Remote Connection^||||
+|User*^|String||Username for Arista CLI (should be privileged user)|
+|Password*^|Password||Password for Arista CLI|
+|Enable Password*^|Password||Enable Password for Arista CLI|
+|Sessions Concurrency Limit*^|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. Defines the number of commands that can run concurrently. Default of 1 is no concurrency.|
+|System Name^|String||A unique identifier for the device, if exists in the device terminal/OS.|
+|Contact Name^|String||Name of contact registered in the device.|
+|OS Version^|String||Operating system version|
+|Vendor^|String ||Name of device manufacturer|
+|Location^|String||Device physical location identifier. For example, Lab1/Floor2/Row5/Slot4.|
+|Model^|String||The device model. This information is typically used for abstract resource filtering.|
+|Model Name^(not listed by developer)|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Enable SNMP*|Boolean|True|If set to True and SNMP isn’t enabled yet in the device, the shell will automatically enable SNMP in the device when Autoload command is called, using the SNMP Write or Read Community value. If Value is empty, relevant error will be raised. SNMP must be enabled on the device for the Autoload command to run successfully.| 
-|Disable SNMP*|Boolean|False|If set to True, SNMP will be disabled automatically by the shell after the Autoload command execution is completed.| 
-|SNMP Read Community*|Password||Read Only SNMP community string is like a password. It is sent along with each SNMP Get-Request that allows (or denies) access to the device for the Autoload functionality to run successfully.|
-|SNMP Write Community*|Password||SNMP write community is like a password. It is sent along with each SNMP Set-Request and allows (or denies) changing MIB values.|
-|SNMP V3 User|String||Snmp version 3 user name|
-|SNMP V3 Password|Password||SNMP version 3 password|
-|SNMP V3 Private Key|String||SNMP version 3 private key|
-|SNMP Version*|String|v2c|Specifies version of SNMP, Autoload will use to load attributes. Possible values are: v1, v2c, and v3.|
-|Console Server IP Address*|String||Shell allows to connect to the device through Console server. IP Address of Console server in IPv4 format.|
-|Console User*|String||User name for the Console server|
-|Console Password*|Password||Password for Console server|
-|Console Port*|Numeric||Port for the Console server, usually the TCP port, which the device is associated with.|
-|CLI Connection Type*|Lookup|Auto|The protocol which the Shell will use to connect to the Device. Available methods: Auto, Console, SSH, Telnet, TCP. If Auto is selected, the driver will choose the available connection type automatically. |
-|CLI TCP Port*|Numeric||TCP Port to user for CLI connection. If kept empty a default CLI port will be used based on the chosen protocol, for example Telnet will use port 23.|
-|Power Management*|Boolean|False|Used by the power management service, if enabled to determine wether to automatically manage the device power status.|
-|Backup Type*|String|File System|Supported protocols for saving and restoring of configuration and firmware files. Possible values are "File System", "FTP" and "TFTP".| 
-|Backup Location*|String||Used by the Save/Restore orchestration to determine where backups should be saved.|
-|Backup User*|String||Username for the storage server used for saving and restoring of configuration and firmware files.|
-|Backup Password*|Password||Password for the storage server used for saving and restoring of configuration and firmware files.| 
-|VRF Management Name*|String||The default VRF Management to use if configured in the network and no such input was passed to the `Save`, `Restore` or `Load Firmware` commands.|
+|Disable SNMP*^|Boolean|False|If set to True, SNMP will be disabled automatically by the shell after the Autoload command execution is completed.| 
+|SNMP Read Community*^|Password||Read Only SNMP community string is like a password. It is sent along with each SNMP Get-Request that allows (or denies) access to the device for the Autoload functionality to run successfully.|
+|SNMP Write Community*^|Password||SNMP write community is like a password. It is sent along with each SNMP Set-Request and allows (or denies) changing MIB values.|
+|SNMP V3 User^|String||Snmp version 3 user name, relevant only if SNMP v3 is in use.|
+|SNMP V3 Password^|Password||SNMP version 3 password, relevant only if SNMP v3 is in use|
+|SNMP V3 Private Key^|String||SNMP version 3 private key, relevant only if SNMP v3 is in use.|
+|SNMP V3 Authentication Protocol^(not listed by developer)|Lookup|No Authentication Protocol|Relevant only if SNMP v3 is in use. Possible values are: No Authentication Protocol, MD5, and SHA.|
+|SNMP V3 Privacy Protocol^(not listed by developer)|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. Possible values are: No Privacy Protocol, DES, 3DES-EDE, AES-128, AES-192, AES-256.|
+|SNMP Version*^|String|v2c|Specifies version of SNMP, Autoload will use to load attributes. Possible values are: v1, v2c, and v3.|
+|Console Server IP Address*^|String||Shell allows to connect to the device through Console server. IP Address of Console server in IPv4 format.|
+|Console User*^|String||User name for the Console server|
+|Console Password*^|Password||Password for Console server|
+|Console Port*^|Numeric||Port for the Console server, usually the TCP port, which the device is associated with.|
+|CLI Connection Type*^|Lookup|Auto|The protocol which the Shell will use to connect to the Device. Available methods: Auto, Console, SSH, Telnet, TCP. If Auto is selected, the driver will choose the available connection type automatically. |
+|CLI TCP Port*^|Numeric||TCP Port to user for CLI connection. If kept empty a default CLI port will be used based on the chosen protocol, for example Telnet will use port 23.|
+|Power Management*^|Boolean|False|Used by the power management service, if enabled to determine wether to automatically manage the device power status.|
+|Backup Type*^|String|File System|Supported protocols for saving and restoring of configuration and firmware files. Possible values are "File System", "FTP" and "TFTP".| 
+|Backup Location*^|String||Used by the Save/Restore orchestration to determine where backups should be saved.|
+|Backup User*^|String||Username for the storage server used for saving and restoring of configuration and firmware files.|
+|Backup Password*^|Password||Password for the storage server used for saving and restoring of configuration and firmware files.| 
+|VRF Management Name*^|String||The default VRF Management to use if configured in the network and no such input was passed to the `Save`, `Restore` or `Load Firmware` commands.|
 |Model|String||Element model (Module or Chassis, etc.)|
 |Serial Number|String||Element serial number (Module or Chassis, etc.)
 |Version|String||Element version (Module or Chassis, etc.)|
