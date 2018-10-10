@@ -134,7 +134,7 @@ The shells comprise:
 |bp-offline-package-1.0.6.zip|Shell Python dependecies (for offline deployments only)|
 |Ixia-B reakingPoint-Shell.pdf|Teardown script for cleaning reservation|
 
-## Importing and Configuring the Shells
+## Importing and Configuring the Shell
 This section describes how to import the BreakingPoint 1G shells and configure and modify the shell’s devices. 
 
 ### Importing the shells into CloudShell
