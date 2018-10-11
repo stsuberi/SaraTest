@@ -94,7 +94,7 @@ The attribute names and types are listed in the following table:
 |SNMP V3 Password^|Password||SNMP version 3 password, relevant only if SNMP v3 is in use|
 |SNMP V3 Private Key^|String||SNMP version 3 private key, relevant only if SNMP v3 is in use.|
 |SNMP V3 Authentication Protocol^|Lookup|No Authentication Protocol|Relevant only if SNMP v3 is in use. Possible values are: No Authentication Protocol, MD5, and SHA.|
-|SNMP V3 Privacy Protocol^(not listed by developer)|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. Possible values are: No Privacy Protocol, DES, 3DES-EDE, AES-128, AES-192, AES-256.|
+|SNMP V3 Privacy Protocol^|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. Possible values are: No Privacy Protocol, DES, 3DES-EDE, AES-128, AES-192, AES-256.|
 |SNMP Version*^|String|v2c|Specifies version of SNMP, Autoload will use to load attributes. Possible values are: v1, v2c, and v3.|
 |Console Server IP Address*^|String||Shell allows to connect to the device through Console server. IP Address of Console server in IPv4 format.|
 |Console User*^|String||User name for the Console server|
