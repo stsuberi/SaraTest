@@ -137,7 +137,7 @@ This section describes the automation (drivers) associated with the data model. 
 |Load Firmware|Uploads and updates the firmware on the resource.<br>Set the command inputs as follows:<br>▪ **Path** (String): Path to tftp://server where the firmware file is stored.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
 
 # Downloading the Shell
-The **Arista EOS Router 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Arista EOS Switch 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -145,11 +145,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|AristaEosRouterShell2G.zip|Arista EOS Router 2G shell package|
-|cloudshell-networking-arista-eos-router-shell-2g-dependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
+|AristaEosSwitchShell2G.zip |Arista EOS Switch 2G shell package|
+|cloudshell-networking-arista-eosswitch-shell-2g-dependenciespackage-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Arista EOS Router 2G version 1.0.0** shell and configure and modify the shell’s devices.
+This section describes how to import the **Arista EOS Switch 2G version 1.0.0** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -197,7 +197,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *cloudshell-networking-arista-eos-router-shell-2g-dependencies-package-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-networking-arista-eosswitch-shell-2g-dependenciespackage-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -222,9 +222,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **AristaEosRouterShell2G**.
+  2. From the list, select **AristaEosSwitchShell2G**.
   
-  3. Enter the **Name** and **IP address** of the **Arista EOS Router**.
+  3. Enter the **Name** and **IP address** of the **Arista EOS Switch**.
   
   4. Click **Create**.
   
@@ -280,7 +280,7 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 1. In CloudShell portal, reserve the Arista EOS resource.
 2. Run the resource command `Load Firmware`. 
 3. In the command inputs field, enter the following information:
-	* **Path** (mandatory input field). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim.
+	* **Path** (Mandatory). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -292,7 +292,7 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes 
-**Arista EOS Router 2G version 1.0.0**
+**Arista EOS Switch 2G version 1.0.0**
 
 ### What's New
 
