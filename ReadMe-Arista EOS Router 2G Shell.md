@@ -23,7 +23,7 @@ Document version: 1.0
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Networking Shells
-CloudShell's networking shells provide L2 connectivity between resources and/or private cloud Apps.
+CloudShell's networking shells provide L2 or L3 connectivity between resources and/or private cloud Apps.
 
 ### **Arista EOS Router 2G Shell**
 **Arista EOS Router 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Arista EOS Router**. 
@@ -70,59 +70,59 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name^|String||Name of the Arista EOS Router in CloudShell|
-|Address*^|String||IP address of the Arista EOS Router|
-|Folder^|String|Root|CloudShell folder in which to place the resource.|
-|Visibility^|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default the visibility is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection^|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|User*^|String||Username for Arista CLI (should be privileged user)|
-|Password*^|Password||Password for Arista CLI|
-|Enable Password*^|Password||Enable Password for Arista CLI|
-|Sessions Concurrency Limit*^|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. Defines the number of commands that can run concurrently. Default of 1 is no concurrency.|
-|System Name^|String||A unique identifier for the device, if exists in the device terminal/OS.|
-|Contact Name^|String||Name of contact registered in the device.|
-|OS Version^|String||Operating system version|
-|Vendor^|String ||Name of device manufacturer|
-|Location^|String||Device physical location identifier. For example, Lab1/Floor2/Row5/Slot4.|
-|Model^|String||The device model. This information is typically used for abstract resource filtering.|
-|Model Name^(not listed by developer)|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Enable SNMP*|Boolean|True|If set to True and SNMP isn’t enabled yet in the device, the shell will automatically enable SNMP in the device when Autoload command is called, using the SNMP Write or Read Community value. If Value is empty, relevant error will be raised. SNMP must be enabled on the device for the Autoload command to run successfully.| 
-|Disable SNMP*^|Boolean|False|If set to True, SNMP will be disabled automatically by the shell after the Autoload command execution is completed.| 
-|SNMP Read Community*^|Password||Read Only SNMP community string is like a password. It is sent along with each SNMP Get-Request that allows (or denies) access to the device for the Autoload functionality to run successfully.|
-|SNMP Write Community*^|Password||SNMP write community is like a password. It is sent along with each SNMP Set-Request and allows (or denies) changing MIB values.|
-|SNMP V3 User^|String||Snmp version 3 user name, relevant only if SNMP v3 is in use.|
-|SNMP V3 Password^|Password||SNMP version 3 password, relevant only if SNMP v3 is in use|
-|SNMP V3 Private Key^|String||SNMP version 3 private key, relevant only if SNMP v3 is in use.|
-|SNMP V3 Authentication Protocol^|Lookup|No Authentication Protocol|Relevant only if SNMP v3 is in use. Possible values are: No Authentication Protocol, MD5, and SHA.|
-|SNMP V3 Privacy Protocol^|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. Possible values are: No Privacy Protocol, DES, 3DES-EDE, AES-128, AES-192, AES-256.|
-|SNMP Version*^|String|v2c|Specifies version of SNMP, Autoload will use to load attributes. Possible values are: v1, v2c, and v3.|
-|Console Server IP Address*^|String||Shell allows to connect to the device through Console server. IP Address of Console server in IPv4 format.|
-|Console User*^|String||User name for the Console server|
-|Console Password*^|Password||Password for Console server|
-|Console Port*^|Numeric||Port for the Console server, usually the TCP port, which the device is associated with.|
-|CLI Connection Type*^|Lookup|Auto|The protocol which the Shell will use to connect to the Device. Available methods: Auto, Console, SSH, Telnet, TCP. If Auto is selected, the driver will choose the available connection type automatically. |
-|CLI TCP Port*^|Numeric||TCP Port to user for CLI connection. If kept empty a default CLI port will be used based on the chosen protocol, for example Telnet will use port 23.|
-|Power Management*^|Boolean|False|Used by the power management service, if enabled to determine wether to automatically manage the device power status.|
-|Backup Type*^|String|File System|Supported protocols for saving and restoring of configuration and firmware files. Possible values are "File System", "FTP" and "TFTP".| 
-|Backup Location*^|String||Used by the Save/Restore orchestration to determine where backups should be saved.|
-|Backup User*^|String||Username for the storage server used for saving and restoring of configuration and firmware files.|
-|Backup Password*^|Password||Password for the storage server used for saving and restoring of configuration and firmware files.| 
-|VRF Management Name*^|String||The default VRF Management to use if configured in the network and no such input was passed to the `Save`, `Restore` or `Load Firmware` commands.|
-|Model(1)|String||Element model (Module or Chassis, etc.)|
-|Serial Number(1)|String||Element serial number (Module or Chassis, etc.)
-|Model Name(1)(2)|String|||
+|Name|String||Name of the Arista EOS Router in CloudShell|
+|Address|String||IP address of the Arista EOS Router|
+|Folder|String|Root|CloudShell folder in which to place the resource.|
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default the visibility is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default the remote connection is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
+|User|String||Username for Arista CLI (should be privileged user)|
+|Password|Password||Password for Arista CLI|
+|Enable Password|Password||Enable Password for Arista CLI|
+|Sessions Concurrency Limit*^|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. Defines the number of commands that can run concurrently. Default (1) means no concurrency.|
+|System Name|String||A unique identifier for the device, if it exists in the device terminal/OS.|
+|Contact Name|String||Name of contact registered in the device|
+|OS Version|String||Operating system version|
+|Vendor|String ||Name of device manufacturer|
+|Location|String||Identifier of the device's physical location, for example, Lab1/Floor2/Row5/Slot4.|
+|Model|String||The device model. This information is typically used for abstract resource filtering.|
+|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Enable SNMP|Boolean|True|If set to **True**, and SNMP isn’t enabled on the device, the shell will automatically enable SNMP on the device when the Autoload command is called, using the **SNMP Write** or **Read Community** value. If the value is empty, this will result in an error. SNMP must be enabled on the device for the Autoload command to run successfully.| 
+|Disable SNMP|Boolean|False|If set to **True**, the shell will automatically disable SNMP after the Autoload command execution is completed.| 
+|SNMP Read Community|Password||SNMP Read Community string is like a password. Sent along with each SNMP Get Request and allows (or denies) access to the device for the Autoload functionality to run successfully.|
+|SNMP Write Community|Password||SNMP Write Community is like a password. Sent along with each SNMP Set Request and allows (or denies) changing MIB values.|
+|SNMP V3 User|String||SNMP version 3 user name, relevant only if SNMP v3 is in use.|
+|SNMP V3 Password|Password||SNMP version 3 password, relevant only if SNMP v3 is in use.|
+|SNMP V3 Private Key|String||SNMP version 3 private key, relevant only if SNMP v3 is in use.|
+|SNMP V3 Authentication Protocol|Lookup|No Authentication Protocol|Relevant only if SNMP v3 is in use. <br>Possible values: **No Authentication Protocol**, **MD5**, and **SHA**.|
+|SNMP V3 Privacy Protocol|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. Possible values: **No Privacy Protocol**, **DES**, **3DES-EDE**, **AES-128**, **AES-192**, and **AES-256**.|
+|SNMP Version|String|v2c|Specifies the SNMP version Autoload will use to load attributes. <br>Possible values: **v1**, **v2c**, and **v3**.|
+|Console Server IP Address|String||Shell allows you to connect to the device through the console server. IP Address of console server in IPv4 format.|
+|Console User|String||User name for the console server|
+|Console Password|Password||Password for the console server|
+|Console Port|Numeric||Port for the console server, usually the TCP port, which the device is associated with.|
+|CLI Connection Type|Lookup|Auto|Protocol which the shell will use to connect to the device. <br>Possible values: **Auto**, **Console**, **SSH**, **Telnet**, and **TCP**. <br>If **Auto** is selected, the driver will choose the available connection type automatically. |
+|CLI TCP Port|Numeric||TCP Port to user for CLI connection. If empty, a default CLI port will be used based on the chosen protocol, for example Telnet will use port 23.|
+|Power Management|Boolean|False|Used by the power management service, if enabled to determine whether to automatically manage the device power status.|
+|Backup Type|String|File System|Supported protocols for saving and restoring configuration and firmware files. <br>Possible values: **File System**, **FTP** and **TFTP**.| 
+|Backup Location|String||Used by the save and restore orchestration to determine where backups should be saved.|
+|Backup User|String||Username for the storage server used for saving and restoring configuration and firmware files.|
+|Backup Password|Password||Password for the storage server used for saving and restoring configuration and firmware files.| 
+|VRF Management Name|String||Default VRF Management if configured in the network and no input was passed in the **Save**, **Restore** or **Load Firmware** commands.|
+|Model|String||Element model (Module or Chassis, etc.)|
+|Serial Number|String||Element serial number (Module or Chassis, etc.)
+|Model Name|String|||
 |Version|String||Element version (Module or Chassis, etc.)|
-|Mac Address|String||Interface mac address|
+|Mac Address|String||Interface Mac address|
 |L2 Protocol Type|String||Interface protocol type|
-|IPv4 Address(2)|String||Interface IPv4 address|
-|IPv6 Address(2)|String||Interface IPv6 address|
-|Port Description(2)|String||Interface description|
+|IPv4 Address|String||Interface IPv4 address|
+|IPv6 Address|String||Interface IPv6 address|
+|Port Description|String||Interface description|
 |Bandwidth|Numeric|0|Interface speed|
-|MTU|Numeric|0|Interface mtu|
-|Duplex|Lookup|Half|Interface duplex (half or full)|
-|Adjacent|String||If lldp is enabled on port, Adjacent shows connected device name and interface|
+|MTU|Numeric|0|Interface MTU|
+|Duplex|Lookup|Half|Interface duplex.<br> Possible values: **Half**, or **Full**.|
+|Adjacent|String||If Lldp is enabled on port, **Adjacent** shows connected device name and interface.|
 |Protocol Type|Lookup|Transparent|Attribute for internal usage|
-|Auto Negotiation|Boolean|False|Shows if Auto negotiation is enabled on the interface|
+|Auto Negotiation|Boolean|False|Shows if Auto negotiation is enabled on the interface.|
 |Association|String||Interfaces added to certain port-channel|
 
 
