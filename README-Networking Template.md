@@ -214,7 +214,7 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 #### **Workflow 3** - *Load firmware* 
 1. In CloudShell portal, reserve the **[Device Name]** resource.
 
-2. Run the resource command `Load Firmware`. 
+2. Run the `Load Firmware` resource command. 
 
 3. In the command inputs field, enter the following information:
 	* **Path** (Mandatory). Enter the full path to the firmware file on remote host, for example: tftp://10.1.1.1/both.tim.
