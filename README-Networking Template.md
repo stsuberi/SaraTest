@@ -40,7 +40,7 @@ For detailed information about the shell’s structure and attributes, see the [
 Release: **[Shell Name x.x.x]**
 
 ▪ CloudShell [version x.x]
-* Other
+▪ Other
 
 ### Data Model
 
