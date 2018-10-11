@@ -254,31 +254,33 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the Arista EOS resource and run the `Save` command.
+1. In CloudShell Portal, reserve the Arista EOS resource.
 
-2. In the command input field, enter the following information:
+2. Run the `Save` resource command.
+
+3. In the command inputs field, enter the following information:
 	* **Folder Path**: For example, *tftp://ipaddress/shared folder*
-	* **Configuration Type**: either **Running** or **Startup**
-	* **VRF Management Name**: provide the management VRF name if exists.
+	* **Configuration Type**: **Startup** or **Running**.
+	* **VRF Management Name**: Provide the VRF Management VRF name, if it exists.
 
-The startup or running configuration will be saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered.
+The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the Arista EOS resource.
 
-2. Run the resource command `Restore`.
+2. Run the `Restore` resource command.
 
-3. Enter the following input parameters:
-	* **Path**: This is a mandatory input field. Enter the full path of the configuration file. 
-	* **Restore Method**: This is an optional input field. Can be **Override**. If nothing is entered in this input field, the Override method will be used. 
-	* **Configuration Type**: This is a mandatory input field. Possible values **Startup** or **Running**.
-	* **VRF Management Name**: This is an optional input field. Provide the management VRF name if exists.
+3. In the command inputs field, enter the following information:
+	* **Path**: (Mandatory) Enter the full path of the configuration file. 
+	* **Restore Method**: (Optional) Can be **Override** or **Append**. If nothing is entered, the Override method will be used. 
+	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
+	* **VRF Management Name**: (Optional) Provide the VRF Management name, if it exists.
 
 #### **Workflow 3** - *Load firmware* 
-1. Login to CloudShell portal and reserve the Arista EOS resource.
+1. In CloudShell portal, reserve the Arista EOS resource.
 2. Run the resource command `Load Firmware`. 
-3. Enter the following input parameters:
-	* **Path** (mandatory input field). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim
+3. In the command inputs field, enter the following information:
+	* **Path** (mandatory input field). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -294,8 +296,8 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-* Shell based on TOSCA Standards
+* Shell is based on TOSCA standards
 * Separate namespace for each shell
 
 ### Known Issues
-* Doesn’t support configuring SNMP v3
+* Shell does not support configuring SNMP v3
