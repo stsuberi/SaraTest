@@ -259,9 +259,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. Run the `Save` resource command.
 
 3. In the command inputs field, enter the following information:
-	* **Folder Path**: For example, *tftp://ipaddress/shared folder*
-	* **Configuration Type**: **Startup** or **Running**.
-	* **VRF Management Name**: Provide the VRF Management VRF name, if it exists.
+	* **Folder Path**: For example, *tftp://ipaddress/shared folder*.
+	* **Configuration Type**: Possible values are **Startup** or **Running**.
+	* **VRF Management Name**: Provide the VRF Management name, if relevant.
 
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
@@ -272,15 +272,17 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 
 3. In the command inputs field, enter the following information:
 	* **Path**: (Mandatory) Enter the full path of the configuration file. 
-	* **Restore Method**: (Optional) Can be **Override** or **Append**. If nothing is entered, the Override method will be used. 
+	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method will be used. 
 	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
-	* **VRF Management Name**: (Optional) Provide the VRF Management name, if it exists.
+	* **VRF Management Name**: (Optional) Provide the VRF Management name, if relevant.
 
 #### **Workflow 3** - *Load firmware* 
 1. In CloudShell portal, reserve the Arista EOS resource.
-2. Run the resource command `Load Firmware`. 
+
+2. Run the `Load Firmware` resource command. 
+
 3. In the command inputs field, enter the following information:
-	* **Path** (mandatory input field). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim.
+	* **Path** (mandatory input field). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
