@@ -91,7 +91,7 @@ The attribute names and types are listed in the following table:
 |SNMP V3 Password|Password||SNMP version 3 password, relevant only if SNMP v3 is in use.|
 |SNMP V3 Private Key|String||SNMP version 3 private key, relevant only if SNMP v3 is in use.|
 |SNMP V3 Authentication Protocol|Lookup|No Authentication Protocol|Relevant only if SNMP v3 is in use. <br>Possible values: **No Authentication Protocol**, **MD5**, and **SHA**.|
-|SNMP V3 Privacy Protocol|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. Possible values: **No Privacy Protocol**, **DES**, **3DES-EDE**, **AES-128**, **AES-192**, and **AES-256**.|
+|SNMP V3 Privacy Protocol|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. <br>Possible values: **No Privacy Protocol**, **DES**, **3DES-EDE**, **AES-128**, **AES-192**, and **AES-256**.|
 |SNMP Version*|String|v2c|Specifies the SNMP version Autoload will use to load attributes. <br>Possible values: **v1**, **v2c**, and **v3**.|
 |Console Server IP Address*|String||Shell allows you to connect to the device through the console server. IP Address of console server in IPv4 format.|
 |Console User*|String||User name for the console server|
@@ -128,13 +128,13 @@ This section describes the automation (drivers) associated with the data model. 
 
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
-|Health Check|Check if the device is up and connectable.|
-|Send Custom Command (I don't see this on the command pane of the resourece in a blueprint)|Sends command (String) to the device, and prints output. All commands will be executed in the enable mode, However it will not allow to enter configuration mode.|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.|
+|Health Check|Checks if the device is up and connectable.|
+|Send Custom Command (I don't see this on the command pane of the resource in a blueprint)|Sends command (String) to the device, and prints the output. All commands will be executed in the **Enable** mode, however it will not allow to enter configuration mode.|
 |Run Custom Config Command|Sends command to the device in configuration mode, and prints output. All commands will be executed in the enable mode, accessible only via the API.|
-|Save|Creates a configuration file and saves it to the provided destination.<br> Folder Path (String) need explanation, Configuration Type (Enum) - Startup or Running need explanation, VRF Management Name (String) need explanation |
-|Restore|Restores a configuration file.<br> Path (String) need explanation, Configuration Type (Enum) Startup or Running need explanation, Restore Method (Enum) Override or Append need explanation, VRF Management Name (String) need explanation|
-|Load Firmware|Uploads and updates firmware on the resource.<br> Path (String) need explanation, VRF Management Name (String) need explanation|
+|Save|Creates a configuration file and saves it in the provided destination.<br>Set the command inputs as follows:<br>* **Folder Path** (String): ?????<br>* **Configuration Type** (Enum): **Startup** or **Running**<br>* **VRF Management Name**: ????|
+|Restore|Restores a configuration file.<br>* **Path** (String):????<br>* **Configuration Type** (Enum): **Startup** or **Running** ????<br>* **Restore Method** (Enum): **Override** or **Append** ????<br>* **VRF Management Name** (String):????|
+|Load Firmware|Uploads and updates firmware on the resource.<br>Set the command inputs as follows:<br>* **Path** (String): ?????<br>* **VRF Management Name** (String): ????|
 
 # Downloading the Shell
 The **Arista EOS Router 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
