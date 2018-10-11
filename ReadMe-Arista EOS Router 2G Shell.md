@@ -63,6 +63,8 @@ The router families and models are listed in the following table:
 
 * - discovery attribute
 ^ - edit attribute
+(1) - Chassis
+(2) - Port
 
 The attribute names and types are listed in the following table:
 
@@ -106,14 +108,15 @@ The attribute names and types are listed in the following table:
 |Backup User*^|String||Username for the storage server used for saving and restoring of configuration and firmware files.|
 |Backup Password*^|Password||Password for the storage server used for saving and restoring of configuration and firmware files.| 
 |VRF Management Name*^|String||The default VRF Management to use if configured in the network and no such input was passed to the `Save`, `Restore` or `Load Firmware` commands.|
-|Model|String||Element model (Module or Chassis, etc.)|
-|Serial Number|String||Element serial number (Module or Chassis, etc.)
+|Model(1)|String||Element model (Module or Chassis, etc.)|
+|Serial Number(1)|String||Element serial number (Module or Chassis, etc.)
+|Model Name(1)(2)|String|||
 |Version|String||Element version (Module or Chassis, etc.)|
 |Mac Address|String||Interface mac address|
 |L2 Protocol Type|String||Interface protocol type|
-|IPv4 Address|String||Interface IPv4 address|
-|IPv6 Address|String||Interface IPv6 address|
-|Port Description|String||Interface description|
+|IPv4 Address(2)|String||Interface IPv4 address|
+|IPv6 Address(2)|String||Interface IPv6 address|
+|Port Description(2)|String||Interface description|
 |Bandwidth|Numeric|0|Interface speed|
 |MTU|Numeric|0|Interface mtu|
 |Duplex|Lookup|Half|Interface duplex (half or full)|
