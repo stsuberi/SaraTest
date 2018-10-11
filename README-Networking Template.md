@@ -216,7 +216,7 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 2. Run the resource command `Load Firmware`. 
 
 3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim.
+	* **Path** (Mandatory). Enter the full path to the firmware file on remote host, for example: tftp://10.1.1.1/both.tim.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -228,14 +228,14 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes 
-**Arista EOS Switch 2G version 1.0.0**
 
 ### What's New
 
-* Shell is based on TOSCA standards
-* Separate namespace for each shell
+* 
+* 
+* 
 
 ### Known Issues
-* Shell does not support configuring SNMP v3
-
-
+* 
+* 
+* 
