@@ -70,9 +70,9 @@ The attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |Name^|String||Name of the Arista EOS Router in CloudShell|
 |Address*^|String||IP address of the Arista EOS Router|
-|Folder^||||
-|Visibility^||||
-|Remote Connection^||||
+|Folder^|String|Root|CloudShell folder in which to place the resource.|
+|Visibility^|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default the visibility is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Remote Connection^|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
 |User*^|String||Username for Arista CLI (should be privileged user)|
 |Password*^|Password||Password for Arista CLI|
 |Enable Password*^|Password||Enable Password for Arista CLI|
