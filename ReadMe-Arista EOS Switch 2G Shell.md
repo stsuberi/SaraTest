@@ -61,80 +61,12 @@ The switch families and models are listed in the following table:
 
 #### **Arista EOS Switch 2G Shell Attributes**
 
-**Note:** Attributes noted with an * also appear in the **Discover** resource dialog box (**Inventory**>**Resource**>**Discover**).
-
-The attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|Name|String||Name of the Arista EOS Router in CloudShell|
-|Address*|String||IP address of the Arista EOS Router|
-|Folder|String|Root|CloudShell folder in which to place the resource.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default the visibility is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default the remote connection is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|User*|String||Username for Arista CLI (should be privileged user)|
-|Password*|Password||Password for Arista CLI|
-|Enable Password*|Password||Enable Password for Arista CLI|
-|Sessions Concurrency Limit*|Numeric|1|Maximum number of concurrent sessions that the driver can open to the device. Defines the number of commands that can run concurrently. Default (1) means no concurrency.|
-|System Name|String||A unique identifier for the device, if it exists in the device terminal/OS.|
-|Contact Name|String||Name of contact registered in the device|
-|OS Version|String||Operating system version|
-|Vendor|String ||Name of device manufacturer|
-|Location|String||Identifier of the device's physical location, for example, Lab1/Floor2/Row5/Slot4.|
-|Model|String||The device model. This information is typically used for abstract resource filtering.|
-|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Enable SNMP*|Boolean|True|If set to **True**, and SNMP isn’t enabled on the device, the shell will automatically enable SNMP on the device when the Autoload command is called, using the **SNMP Write** or **Read Community** value. If the value is empty, this will result in an error. SNMP must be enabled on the device for the Autoload command to run successfully.| 
-|Disable SNMP*|Boolean|False|If set to **True**, the shell will automatically disable SNMP after the Autoload command execution is completed.| 
-|SNMP Read Community*|Password||SNMP Read Community string is like a password. Sent along with each SNMP Get Request and allows (or denies) access to the device for the Autoload functionality to run successfully.|
-|SNMP Write Community*|Password||SNMP Write Community is like a password. Sent along with each SNMP Set Request and allows (or denies) changing MIB values.|
-|SNMP V3 User|String||SNMP version 3 user name, relevant only if SNMP v3 is in use.|
-|SNMP V3 Password|Password||SNMP version 3 password, relevant only if SNMP v3 is in use.|
-|SNMP V3 Private Key|String||SNMP version 3 private key, relevant only if SNMP v3 is in use.|
-|SNMP V3 Authentication Protocol|Lookup|No Authentication Protocol|Relevant only if SNMP v3 is in use. <br>Possible values: **No Authentication Protocol**, **MD5**, and **SHA**.|
-|SNMP V3 Privacy Protocol|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. <br>Possible values: **No Privacy Protocol**, **DES**, **3DES-EDE**, **AES-128**, **AES-192**, and **AES-256**.|
-|SNMP Version*|String|v2c|Specifies the SNMP version Autoload will use to load attributes. <br>Possible values: **v1**, **v2c**, and **v3**.|
-|Console Server IP Address*|String||Shell allows you to connect to the device through the console server. IP Address of console server in IPv4 format.|
-|Console User*|String||User name for the console server|
-|Console Password*|Password||Password for the console server|
-|Console Port*|Numeric||Port for the console server, usually the TCP port, which the device is associated with.|
-|CLI Connection Type*|Lookup|Auto|Protocol which the shell will use to connect to the device. <br>Possible values: **Auto**, **Console**, **SSH**, **Telnet**, and **TCP**. <br>If **Auto** is selected, the driver will choose the available connection type automatically. |
-|CLI TCP Port*|Numeric||TCP Port to user for CLI connection. If empty, a default CLI port will be used based on the chosen protocol, for example Telnet will use port 23.|
-|Power Management*|Boolean|False|Used by the power management service, if enabled to determine whether to automatically manage the device power status.|
-|Backup Type*|String|File System|Supported protocols for saving and restoring configuration and firmware files. <br>Possible values: **File System**, **FTP** and **TFTP**.| 
-|Backup Location*|String||Used by the save and restore orchestration to determine where backups should be saved.|
-|Backup User*|String||Username for the storage server used for saving and restoring configuration and firmware files.|
-|Backup Password*|Password||Password for the storage server used for saving and restoring configuration and firmware files.| 
-|VRF Management Name*|String||Default VRF Management if configured in the network and no input was passed in the **Save**, **Restore** or **Load Firmware** commands.|
-|Model|String||Element model (Module or Chassis, etc.)|
-|Serial Number|String||Element serial number (Module or Chassis, etc.)
-|Model Name|String|||
-|Version|String||Element version (Module or Chassis, etc.)|
-|Mac Address|String||Interface Mac address|
-|L2 Protocol Type|String||Interface protocol type|
-|IPv4 Address|String||Interface IPv4 address|
-|IPv6 Address|String||Interface IPv6 address|
-|Port Description|String||Interface description|
-|Bandwidth|Numeric|0|Interface speed|
-|MTU|Numeric|0|Interface MTU|
-|Duplex|Lookup|Half|Interface duplex.<br> Possible values: **Half**, or **Full**.|
-|Adjacent|String||If Lldp is enabled on port, **Adjacent** shows connected device name and interface.|
-|Protocol Type|Lookup|Transparent|Attribute for internal usage|
-|Auto Negotiation|Boolean|False|Shows if Auto negotiation is enabled on the interface.|
-|Association|String||Interfaces added to certain port-channel|
-
+https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#attributes
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-|Command|Description|
-|:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.|
-|Health Check|Checks if the device is powered-up and connectable.|
-|Send Custom Command|Executes a custom command on the device. All commands will be executed in the **Enable** mode, however it will not allow to enter configuration mode.<br>Set the command input as follows:<br>▪ **Command**: The command to run. Note that commands that require a response are not supported.|
-|Run Custom Config Command|Sends command to the device in **Configuration** mode and prints the output. All commands will be executed in the **Enable** mode and are accessible only via the API.|
-|Save|Creates a configuration file and saves it to the provided destination.<br>Set the command inputs as follows:<br>▪ **Folder Path** (String): Path where the configuration file will be saved. It should be accessible from the execution server. The path should include the protocol type, for example: tftp://asdf.<br>▪ **Configuration Type** (Enum): Specify whether the file should update the Startup or Running config.<br>- **Startup**: Configuration that is loaded when the device boots or powers up.<br>- **Running**: Current configuration in the device. It may have been modified since the last boot.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
-|Restore|Restores a configuration file from the saved file.<br>Set the command inputs as follows:<br>▪ **Path** (String): The full path from which the configuration file will be restored. The path should include the protocol type, for example: tftp://asdf.<br>▪ **Configuration Type** (Enum): Specify whether the file should update the Startup or Running config.<br>- **Startup**: Configuration that is loaded when the device boots or powers up.<br>- **Running**: Current configuration in the device. It may have been modified since the last boot.<br>▪ **Restore Method** (Enum): Determines whether the restore should append or override the current configuration.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
-|Load Firmware|Uploads and updates the firmware on the resource.<br>Set the command inputs as follows:<br>▪ **Path** (String): Path to tftp://server where the firmware file is stored.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
+https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#commands
 
 # Downloading the Shell
 The **Arista EOS Switch 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
