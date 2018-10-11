@@ -132,9 +132,9 @@ This section describes the automation (drivers) associated with the data model. 
 |Health Check|Checks if the device is up and connectable.|
 |Send Custom Command|Sends command (String) to the device and prints the output. All commands will be executed in the **Enable** mode, however it will not allow to enter configuration mode.|
 |Run Custom Config Command|Sends command to the device in **Configuration** mode and prints the output. All commands will be executed in the **Enable** mode and are accessible only via the API.|
-|Save|Creates a configuration file and saves it in the provided destination.<br>Set the command inputs as follows:<br>	* **Folder Path** (String): ?????<br>	* **Configuration Type** (Enum): **Startup** or **Running**<br>* **VRF Management Name**: ????|
-|Restore|Restores a configuration file.<br>	* **Path** (String):????<br>	* **Configuration Type** (Enum): **Startup** or **Running** ????<br>	* **Restore Method** (Enum): **Override** or **Append** ????<br>	* **VRF Management Name** (String):????|
-|Load Firmware|Uploads and updates firmware on the resource.<br>Set the command inputs as follows:<br>	* **Path** (String): ?????<br>	* **VRF Management Name** (String): ????|
+|Save|Creates a configuration file and saves it in the provided destination.<br>Set the command inputs as follows:<br>▪**Folder Path** (String): ?????<br>▪**Configuration Type** (Enum): **Startup** or **Running**<br>* **VRF Management Name**: ????|
+|Restore|Restores a configuration file.<br>▪**Path** (String):????<br>▪**Configuration Type** (Enum): **Startup** or **Running** ????<br>▪**Restore Method** (Enum): **Override** or **Append** ????<br>	* **VRF Management Name** (String):????|
+|Load Firmware|Uploads and updates firmware on the resource.<br>Set the command inputs as follows:<br>▪**Path** (String): ?????<br>	* **VRF Management Name** (String): ????|
 
 # Downloading the Shell
 The **Arista EOS Router 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
