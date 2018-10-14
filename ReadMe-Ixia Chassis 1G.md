@@ -76,16 +76,20 @@ This section describes how to import, configure and modify the Ixia Chassis 1G S
 
 ### Importing the Shell into CloudShell
 
-**To import the Shell into CloudShell:**
+**To import the shell into CloudShell:**
   1. Make sure you have the Shell’s .zip file. If not, download the Shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  
   2. Backup your database.
+  
   3. Log in to CloudShell Portal as administrator of the relevant domain.
+  
   4. In the User menu select **Import Package**.
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+     
   5. Browse to the location of the downloaded Shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The Shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a Shell
 ___
