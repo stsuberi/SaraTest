@@ -184,7 +184,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
      * Controller Address - IP address of the API Server/Connection Manager. Default is localhost.
      * Controller TCP Port - TCP port of the API Server/Connection Manager. Default is 11009.
-     * Password - Version of the API server.
+     * Password - 
      * User - 
           
   4. Click **Save**.
