@@ -234,19 +234,19 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 	
-* From the Actions menu, select Add sub resource. The Add Resource pane is displayed
-* Use the search and filtering options to find the sub resource(s) you want to use.
-* Select the sub resource from the pane and drag it into the workspace.
+* From the **More Options** menu, select **Add sub resource**. 
+* Use the search and filtering options to find the port sub resources you want to use.
+* Select the port sub resource from the pane and drag it into the workspace. The port sub resources will appear in the **Structure** tab of the Chassis resource.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
 
 5. Reserve the Blueprint.
 
-6. Edit the IxNetwork Controller Service parameters if required, see Configuring a new service above.
+6. Edit the IxNetwork Controller Service parameters if required, see [Configuring a new service](#configuring_a_new_service).
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_configuration_parameters.png)
 
-7. Map configuration ports to Sandbox ports. For each port in the IxNetwork configuration assign physical port from the ports in the sandbox. Open the attributes tab and set the Logical Name to the port name in the configuration.
+7. Map the configuration ports to Sandbox ports. For each port in the IxNetwork configuration assign a physical port from the ports in the sandbox. Open the Attributes tab of the Chassis resource and and open the Attributes section of each port to set the **Logical Name** to the port name in the configuration.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_mapping_ports.png)
 
