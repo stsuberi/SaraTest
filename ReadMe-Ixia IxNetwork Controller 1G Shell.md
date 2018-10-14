@@ -222,13 +222,16 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **Workflow 1** - *Using the IxNetwork controller to run IxNetwork traffic* 
 
-1. In CloudShell Portal, create a new Blueprint (**Create Blueprint**).
-	1. Create a Blueprint with IxNetwork controller service and Ixia chassis resource ports. The number of Ixia ports in the blueprint should match the number of ports in the IxNetwork configuration. 
+1. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
+2. Create a Blueprint with IxNetwork controller service and Ixia chassis resource ports.
+
+	1. In **Diagram** view, in the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram. 
+	2. In the **App/Service** view, in the blueprint toolbar, click **Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
 	
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if we have a configuration with two ports:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 	
-	2. Create a Blueprint with two IxNetwork ports
+	3. Add two IxNetwork Chassis resource ports to the blueprint. The number of Ixia IxNetowrk Chassis ports in the blueprint should match the number of ports in the IxNetwork configuration. 
 	![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
 		* From the Actions menu, select Add sub resource. The Add Resource pane is displayed
 		* Use the search and filtering options to find the sub resource(s) you want to use.
