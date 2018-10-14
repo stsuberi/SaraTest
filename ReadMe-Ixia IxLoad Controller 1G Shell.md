@@ -220,7 +220,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 * Use the search and filtering options to find the port sub resources you want to use.
 * Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_blueprint_two_ports.png)
 
 5. Reserve the Blueprint.
 
