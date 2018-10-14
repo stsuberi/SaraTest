@@ -224,27 +224,29 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint** to create a blueprint with the IxNetwork controller service and Ixia chassis resource ports.
 
-	1. In **Diagram** view, in the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram. 
-	2. In the **App/Service** view, in the blueprint toolbar, click **Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
-	3. Add the required number of IxNetwork Chassis resource ports to the blueprint. The number of Ixia IxNetowrk Chassis ports in the blueprint should match the number of ports in the IxNetwork configuration. 
-	
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if we have a configuration with two ports:
+2. In **Diagram** view, in the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
+
+3. In the **App/Service** view, in the blueprint toolbar, click **Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
+
+4. Add the required number of IxNetwork Chassis resource ports to the blueprint. The number of Ixia IxNetowrk Chassis ports in the blueprint should match the number of ports in the IxNetwork configuration.
+
+For example: if we have a configuration with two ports:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 	
-		* From the Actions menu, select Add sub resource. The Add Resource pane is displayed
-		* Use the search and filtering options to find the sub resource(s) you want to use.
-		* Select the sub resource from the pane and drag it into the workspace.
-		* Click the down arrow of the sub-resource and make sure the Share option is listed. If you see the Unshare option, select it to prevent users of other sandboxes from using this sub-resource during the time slot of the sandbox.
+	* From the Actions menu, select Add sub resource. The Add Resource pane is displayed
+	* Use the search and filtering options to find the sub resource(s) you want to use.
+	* Select the sub resource from the pane and drag it into the workspace.
+	* Click the down arrow of the sub-resource and make sure the Share option is listed. If you see the Unshare option, select it to prevent users of other sandboxes from using this sub-resource during the time slot of the sandbox.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
 
-2. Reserve the Blueprint.
+5. Reserve the Blueprint.
 
-3. Edit the IxNetwork Controller Service parameters if required, see Configuring a new service above.
+6. Edit the IxNetwork Controller Service parameters if required, see Configuring a new service above.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_configuration_parameters.png)
 
-4. Map configuration ports to Sandbox ports. For each port in the IxNetwork configuration assign physical port from the ports in the sandbox. Open the attributes tab and set the Logical Name to the port name in the configuration.
+7. Map configuration ports to Sandbox ports. For each port in the IxNetwork configuration assign physical port from the ports in the sandbox. Open the attributes tab and set the Logical Name to the port name in the configuration.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_mapping_ports.png)
 
