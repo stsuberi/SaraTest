@@ -230,8 +230,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 4. Add the required number of ixia IxNetwork Chassis resource ports to the blueprint. The number of Ixia IxNetwork Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
-![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 	
 * From the Actions menu, select Add sub resource. The Add Resource pane is displayed
 * Use the search and filtering options to find the sub resource(s) you want to use.
