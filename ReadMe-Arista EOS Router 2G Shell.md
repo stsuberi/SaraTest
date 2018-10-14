@@ -23,10 +23,10 @@ Document version: 1.0
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Networking Shells
-CloudShell's networking shells provide L2 or L3 connectivity between resources and/or private cloud Apps.
+CloudShell's networking shells provide connectivity between resources and/or Apps.
 
 ### **Arista EOS Router 2G Shell**
-**Arista EOS Router 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Arista EOS Router**. 
+The **Arista EOS Router 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Arista EOS Router**. 
 
 For more information on the **Arista EOS Router**, see the official **Arista** product documentation.
 
@@ -124,7 +124,7 @@ The attribute names and types are listed in the following table:
 
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 |Command|Description|
 |:-----|:-----|
@@ -301,11 +301,6 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 **Arista EOS Router 2G version 1.0.0**
-
-### What's New
-
-* Shell is based on TOSCA standards
-* Separate namespace for each shell
 
 ### Known Issues
 * Shell does not support configuring SNMP v3
