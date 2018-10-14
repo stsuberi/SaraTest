@@ -23,7 +23,7 @@ Document version: [x.x.x]
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Networking Shells
-CloudShell's networking shells provide L2 or L3 connectivity between resources and/or private cloud Apps.
+CloudShell's networking shells provide **[L2 or L3]** connectivity between resources and/or private cloud Apps.
 
 ### **[Shell Name]**
 **[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
@@ -31,7 +31,7 @@ CloudShell's networking shells provide L2 or L3 connectivity between resources a
 For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Networking Shell Standard version 5.0.2.
+**[Shell Name x.x.x]** is based on the Networking Shell Standard version **[5.0.2]**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
@@ -64,12 +64,18 @@ The attribute names and types are listed in the following section of the Network
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
+**[Notes:]** 
+(Include notes as needed to explain differences between this shell's attributes and attributes documented in the Standard.)
+
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 The command names and types are listed in the following section of the Networking Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
+
+**[Notes:]** 
+(Include notes as needed to explain differences between this shell's commands and commands documented in the Standard.)
 
 # Downloading the Shell
 The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -157,7 +163,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]*.
+  2. From the list, select **[Shell Name]**.
   
   3. Enter the **Name** and **IP address** of the **[Device Name]**.
   
@@ -191,33 +197,39 @@ In online mode, the execution server automatically downloads and extracts the ap
 #### **Workflow 1** - *Save configuration* 
 1. In CloudShell Portal, reserve the **[Device Name]** resource.
 
-2. Run the `Save` resource command.
+2. Run the **Save** resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Folder Path**: For example, *tftp://ipaddress/shared folder*.
 	* **Configuration Type**: **Startup** or **Running**.
 	* **VRF Management Name**: Provide the VRF Management name, if relevant.
+	
+4. Click **Run**.
 
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the **[Device Name]** resource.
 
-2. Run the `Restore` resource command.
+2. Run the **Restore** resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Path**: (Mandatory) Enter the full path of the configuration file. 
 	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
 	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
 	* **VRF Management Name**: (Optional) Provide the VRF Management name, if relevant.
+	
+4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
 1. In CloudShell portal, reserve the **[Device Name]** resource.
 
-2. Run the `Load Firmware` resource command. 
+2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
 	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
+	
+4. Click **Run**.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
