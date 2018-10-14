@@ -1,13 +1,13 @@
 
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **IxNetwork Controller 1G Shell**  
 
-Release date: [Month Year]
+Release date: June 2018
 
-Shell version: [x.x.x]
+Shell version: 1.6.0
 
-Document version: [x.x.x]
+Document version: A
 
 # In This Guide
 
@@ -28,32 +28,30 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **IxNetwork Controller 1G Shell**
+The **IxNetwork Controller 1G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxNetwork Controller**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **IxNetwork Controller**, see the official **Ixia** product documentation.
 
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
-
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+The **IxNetwork Controller** provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics. 
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Traffic Shell Standard **[Name of Standard File]**.
+The **IxNetwork Controller 1G** shell is based on the Traffic Shell Standard version 3.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Supported OS
-▪ **[OS Name]**
+▪ Windows
 
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **IxNetwork Controller 1G version 1.6.0**
 
-▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
+▪ IxNetwork API Server: 8.0.1 GA and above
 
-▪ [Controller Name]: CloudShell version **[Version Number]**
+▪ IxNetwork Connection Manager: 8.40 EA and above 
+
+▪ CloudShell: 8.1 and above
 
 ### Data Model
 
@@ -91,7 +89,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **IxNetwork Controller 1G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -99,8 +97,8 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|ixia_ixnetwork_controller.zip|IxNetwork Controller 1G shell package|
+|ixia_ixnetwork_controller_offline_requirements.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
 This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
@@ -151,7 +149,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *ixia_ixnetwork_controller_offline_requirements.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
