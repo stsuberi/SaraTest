@@ -86,7 +86,15 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.|
+|Load Configuration|Loads configuration and reserves ports.<br>Set the command inputs as follows:<br>* **Ixia config file name**: Full path to Ixia configuration file name.|
+|Start ARP/ND|Send ARP/ND for all protocols.|
+|Start Protocols|Start all protocols.|
+|Stop Protocols|Stop all protocols.|
+|Start Traffic|Starts L2-3 traffic.<br>Possible values:<br>* **True**: Returns after traffic finishes to run<br>* **False**: Returns immedialtely|
+|Stop Traffic|Stops L2-L3 traffic.|
+|Get Statistics|Gets view statistics.<br>Possible values<br>* **View Name**, **Port statistics**, **Traffic item statistics**, **Flow statistics**, etc.<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the reservation csv file.|
+|Run Quick Test|Run Quick test.<br>Set the command inputs as follows:<br>* **Quick Test Name**: Name of quick test to run.|
 
 # Downloading the Shell
 The **IxNetwork Controller 1G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -260,13 +268,13 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 (if not applicable - remove section)
-### What's New
-
-* 
-* 
-* 
 
 ### Known Issues
-* 
-* 
-* 
+• Performance
+	* The REST API performance is very poor. Loading configuration and reserving ports can take up dozens of seconds depending on the specific setup. It is advised to start idle connections on the Connection Manager to reduce startup time.
+• No available connection on connection manager
+	* In case there is no available connection on the connection manager the user must login to the Connection Manager and close zombie connections or create new connections.
+• Licensing
+	* If license server on Connection Manager / API server is not configured Load Configuration might success but ports will be in Down state and any further operation will fail.
+• Reserved ports
+	* If ports are reserved by other users Load Configuration might success but ports will be in Down state and any further operation will fail. 
