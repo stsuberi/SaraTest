@@ -186,8 +186,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
-     ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller.png)
-     
+          
   2. In the **Traffic Generator Controller** folder, select **IxNetwork Controller**.
    ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller.png)
   
