@@ -225,7 +225,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 1. Create a Blueprint
 	1. Create a Blueprint with IxNetwork controller service and Ixia chassis resource ports. Number of Ixia ports in the blueprint should match the number of ports in the IxNetwork configuration. 
 	For example: if we have a configuration with two ports - 
+	
 	![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_configuration_two_ports.png)
+	
 	2. Create a Blueprint with two IxNetwork ports
 	![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
 
@@ -234,9 +236,11 @@ In online mode, the execution server automatically downloads and extracts the ap
 3. Create a Sandbox from the Blueprint.
 
 4. Edit the IxNetwork Controller Service parameters if required, see Configuring a new service above.
+
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_configuration_parameters.png)
 
 5. Map configuration ports to Sandbox ports. For each port in the IxNetwork configuration assign physical port from the ports in the sandbox. Open the attributes tab and set the Logical Name to the port name in the configuration.
+
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_mapping_ports.png)
 
 # References
