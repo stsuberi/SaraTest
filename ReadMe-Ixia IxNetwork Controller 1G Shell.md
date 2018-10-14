@@ -89,11 +89,11 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.|
-|Load Configuration|Loads configuration and reserves ports.<br>Set the command inputs as follows:<br>* **Ixia config file name**: Full path to the Ixia configuration file name.|
+|Load Configuration|Loads configuration and reserves ports.<br>Set the command input as follows:<br>* **Ixia config file name** (ixn_config_file_name (String)): Full path to the Ixia configuration file name.|
 |Start ARP/ND|Send ARP/ND for all protocols.|
 |Start Protocols|Starts all protocols.|
 |Stop Protocols|Stops all protocols.|
-|Start Traffic|Starts L2-3 traffic.<br>Possible values:<br>* **True**: Returns after traffic finishes to run<br>* **False**: Returns immediately|
+|Start Traffic|Starts L2-3 traffic.<br>Possible values:<br>Set the command inputs as follows:<br>* **Blocking**: **True**: Returns after traffic finishes to run<br>* **False**: Returns immediately|
 |Stop Traffic|Stops L2-L3 traffic.|
 |Get Statistics|Gets view statistics.<br>Possible values:<br>* **View Name**, **Port statistics**, **Traffic item statistics**, **Flow statistics**, etc.<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the reservation csv file.|
 |Run Quick Test|Runs Quick test.<br>Set the command inputs as follows:<br>* **Quick Test Name**: Name of quick test to run.|
