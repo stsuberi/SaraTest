@@ -70,17 +70,6 @@ The controller's families and models are listed in the following table:
 ||||
 ||||
 
-#### **Ixia IxNetwork Controller 1G Shell Attributes**
-
-The attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
-
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
@@ -93,9 +82,9 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Start ARP/ND|Send ARP/ND for all protocols.|
 |Start Protocols|Starts all protocols.|
 |Stop Protocols|Stops all protocols.|
-|Start Traffic|Starts L2-3 traffic.<br>Possible values:<br>Set the command inputs as follows:<br>* **Blocking**: **True**: Returns after traffic finishes to run<br>* **False**: Returns immediately|
+|Start Traffic|Starts L2-3 traffic.<br>Possible values:<br>* **Blocking**: **True**: Returns after traffic finishes to run<br>* **False**: Returns immediately|
 |Stop Traffic|Stops L2-L3 traffic.|
-|Get Statistics|Gets view statistics.<br>Possible values:<br>* **View Name**, **Port statistics**, **Traffic item statistics**, **Flow statistics**, etc.<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the reservation csv file.|
+|Get Statistics|Gets view statistics.<br>Possible values:<br>* **View Name**: **Port statistics**, **Traffic item statistics**, **Flow statistics**, etc.<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the blueprint csv file.|
 |Run Quick Test|Runs Quick test.<br>Set the command inputs as follows:<br>* **Quick Test Name**: Name of quick test to run.|
 
 # Downloading the Shell
@@ -193,9 +182,10 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   3. In the **Attributes** tab, enter the **Default Values** for the IxNetwork Controller service as follows:
   
-     * Controller Address - IP address of the API server/Connection Manager. Default is localhost.
-     * Controller TCP Port - TCP port of the API server/Connection manager. Default is 11009.
-     * Controller Version - Version of the API server.
+     * Controller Address - IP address of the API Server/Connection Manager. Default is localhost.
+     * Controller TCP Port - TCP port of the API Server/Connection Manager. Default is 11009.
+     * Password - Version of the API server.
+     * User - 
           
   4. Click **Save**.
   
