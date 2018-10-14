@@ -1,7 +1,7 @@
 
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
-# **IxNetwork Controller 1G Shell**  
+# **Ixia IxNetwork Controller 1G Shell**  
 
 Release date: June 2018
 
@@ -23,20 +23,22 @@ Document version: A
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
+**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
+
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **IxNetwork Controller 1G Shell**
-The **IxNetwork Controller 1G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxNetwork Controller**. 
+### **Ixia IxNetwork Controller 1G Shell**
+The **Ixia IxNetwork Controller 1G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Ixia IxNetwork Controller**. 
 
-For more information on the **IxNetwork Controller**, see the official **Ixia** product documentation.
+For more information on the **Ixia IxNetwork Controller**, see the official **Ixia** product documentation.
 
-The **IxNetwork Controller** provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics. 
+The **Ixia IxNetwork Controller** provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, Get Statistics. 
 
 ### Standard version
-The **IxNetwork Controller 1G** shell is based on the Traffic Shell Standard version 3.0.0.
+The **Ixia IxNetwork Controller 1G** shell is based on the Traffic Shell Standard version 3.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -45,7 +47,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **IxNetwork Controller 1G version 1.6.0**
+Release: **Ixia IxNetwork Controller 1G version 1.6.0**
 
 ▪ IxNetwork API Server: 8.0.1 GA and above
 
@@ -57,9 +59,9 @@ Release: **IxNetwork Controller 1G version 1.6.0**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **Ixia IxNetwork Controller 1G Shell Families and Models**
 
-The chassis families and models are listed in the following table:
+The controller's families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -68,7 +70,7 @@ The chassis families and models are listed in the following table:
 ||||
 ||||
 
-#### **[Device Name] Attributes**
+#### **Ixia IxNetwork Controller 1G Shell Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -87,17 +89,17 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.|
-|Load Configuration|Loads configuration and reserves ports.<br>Set the command inputs as follows:<br>* **Ixia config file name**: Full path to Ixia configuration file name.|
+|Load Configuration|Loads configuration and reserves ports.<br>Set the command inputs as follows:<br>* **Ixia config file name**: Full path to the Ixia configuration file name.|
 |Start ARP/ND|Send ARP/ND for all protocols.|
-|Start Protocols|Start all protocols.|
-|Stop Protocols|Stop all protocols.|
-|Start Traffic|Starts L2-3 traffic.<br>Possible values:<br>* **True**: Returns after traffic finishes to run<br>* **False**: Returns immedialtely|
+|Start Protocols|Starts all protocols.|
+|Stop Protocols|Stops all protocols.|
+|Start Traffic|Starts L2-3 traffic.<br>Possible values:<br>* **True**: Returns after traffic finishes to run<br>* **False**: Returns immediately|
 |Stop Traffic|Stops L2-L3 traffic.|
-|Get Statistics|Gets view statistics.<br>Possible values<br>* **View Name**, **Port statistics**, **Traffic item statistics**, **Flow statistics**, etc.<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the reservation csv file.|
-|Run Quick Test|Run Quick test.<br>Set the command inputs as follows:<br>* **Quick Test Name**: Name of quick test to run.|
+|Get Statistics|Gets view statistics.<br>Possible values:<br>* **View Name**, **Port statistics**, **Traffic item statistics**, **Flow statistics**, etc.<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the reservation csv file.|
+|Run Quick Test|Runs Quick test.<br>Set the command inputs as follows:<br>* **Quick Test Name**: Name of quick test to run.|
 
 # Downloading the Shell
-The **IxNetwork Controller 1G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Ixia IxNetwork Controller 1G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -108,21 +110,27 @@ The shell comprises:
 |ixia_ixnetwork_controller.zip|IxNetwork Controller 1G shell package|
 |ixia_ixnetwork_controller_offline_requirements.zip|Shell Python dependencies (for offline deployments only)|
 
-# Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+## Importing and Configuring the Shell
+This section describes how to import the BreakingPoint 1G shells and configure and modify the shell’s devices. 
 
-### Importing the shell into CloudShell
+### Importing the shells into CloudShell
+
+**Note**: You will need to repeat these procedures, once for the controller shell and once for the chassis shell.
 
 **To import the shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
-  2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  2. Backup your database.
   
-  3. Click **Import**.
+  3. Log in to CloudShell Portal as administrator of the relevant domain.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
+  4. In the User menu select **Import Package**.
+  
+     ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+     
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources).  
 
 ### Offline installation of a shell
 
