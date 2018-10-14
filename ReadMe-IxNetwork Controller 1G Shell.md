@@ -186,6 +186,30 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
+### Configuring a new service
+This section explains how to create a new service from the shell.
+
+In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
+
+You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
+
+**To configure a service for the device:**
+  1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
+     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+     
+  2. In the **Traffic Generator Controller** folder, select **IxNetwork Controller**.
+   ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller.png)
+  
+  3. In the **Attributes** tab, enter the **Default Values** for the IxChariot Controller service as follows:
+  
+    * Client Install Path - Path where IxChariot Python API library was downloaded to.
+    * Controller Address - IP address of the IxChariot Server.
+    * User - User name for the IxChariot Server.
+    * Password - Password for the IxChariot Server.
+  4. Click **Save**.
+  
+CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
