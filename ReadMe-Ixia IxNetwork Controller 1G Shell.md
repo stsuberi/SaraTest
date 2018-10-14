@@ -185,7 +185,7 @@ In CloudShell, the component that models the device is called a resource. It is 
 You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
 
 **To configure a service for the device:**
-  1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
+  1. In CloudShell Resource Manager, in the **Admin** tab, click **Resource Families**. 
           
   2. In the **Traffic Generator Controller** folder, select **IxNetwork Controller**.
   
@@ -195,9 +195,8 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
      * Controller Address - IP address of the API server/Connection Manager. Default is localhost.
      * Controller TCP Port - TCP port of the API server/Connection manager. Default is 11009.
-     * User - User name for the IxChariot Server. (IGNORE – for future use.)
-     * Password - Password for the IxChariot Server.(IGNORE – for future use.)
-     
+     * Controller Version - Version of the API server.
+          
   4. Click **Save**.
   
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
