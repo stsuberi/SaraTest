@@ -188,31 +188,39 @@ In online mode, the execution server automatically downloads and extracts the ap
 #### **Workflow 1** - *Save configuration* 
 1. In CloudShell Portal, reserve the **Arista EOS resource**.
 
-2. Run the `Save` resource command.
+2. Run the **Save** resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Folder Path**: For example, *tftp://ipaddress/shared folder*
 	* **Configuration Type**: Possible values are **Startup** or **Running**.
 	* **VRF Management Name**: Provide the **VRF Management Name**, if it exists.
+	
+4. Click **Run**.
 
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which is stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the **Arista EOS resource**.
 
-2. Run the `Restore` resource command.
+2. Run the **Restore** resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Path**: (Mandatory) Enter the full path of the configuration file. 
 	* **Restore Method**: (Optional) Can be **Override** or **Append**. If left empty, the **Override** method will be used. 
 	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
 	* **VRF Management Name**: (Optional) Provide the **VRF Management Name**, if it exists.
+	
+4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
 1. In CloudShell portal, reserve the **Arista EOS resource**.
-2. Run the resource command `Load Firmware`. 
+
+2. Run the resource command **Load Firmware**. 
+
 3. In the command inputs field, enter the following information:
 	* **Path** (Mandatory). Enter the full path of the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
+	
+4. Click **Run**.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
