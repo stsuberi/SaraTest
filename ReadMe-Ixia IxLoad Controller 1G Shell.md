@@ -214,7 +214,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixloadtroller_configuration_two_ports.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_two_ports.png)
 	
 * From the **More Options** menu of the Ixia IxNetwork Chassis resource, select **Add sub resource**. 
 * Use the search and filtering options to find the port sub resources you want to use.
