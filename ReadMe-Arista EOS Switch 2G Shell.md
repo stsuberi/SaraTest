@@ -31,7 +31,7 @@ CloudShell's networking shells provide L2 or L3 connectivity between resources a
 For more information on the **Arista EOS Switch**, see the official **Arista** product documentation.
 
 ### Standard version
-**Arista EOS Switch 2G Shell** is based on the Networking Shell Standard version 5.0.2.
+**Arista EOS Switch 2G** shell is based on the Networking Shell Standard version 5.0.2.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
@@ -160,7 +160,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings, see [Arista EOS Switch 2G Shell Attributes](*arista-eos-switch-2g-shell-attributes). 
   
   6. Click **Continue**.
 
@@ -186,33 +186,33 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the Arista EOS resource.
+1. In CloudShell Portal, reserve the **Arista EOS resource**.
 
 2. Run the `Save` resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Folder Path**: For example, *tftp://ipaddress/shared folder*
-	* **Configuration Type**: **Startup** or **Running**.
-	* **VRF Management Name**: Provide the VRF Management VRF name, if it exists.
+	* **Configuration Type**: Possible values are **Startup** or **Running**.
+	* **VRF Management Name**: Provide the **VRF Management Name**, if it exists.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which is stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the Arista EOS resource.
+1. In CloudShell Portal, reserve the **Arista EOS resource**.
 
 2. Run the `Restore` resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Path**: (Mandatory) Enter the full path of the configuration file. 
-	* **Restore Method**: (Optional) Can be **Override** or **Append**. If nothing is entered, the Override method will be used. 
+	* **Restore Method**: (Optional) Can be **Override** or **Append**. If left empty, the **Override** method will be used. 
 	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
-	* **VRF Management Name**: (Optional) Provide the VRF Management name, if it exists.
+	* **VRF Management Name**: (Optional) Provide the **VRF Management Name**, if it exists.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the Arista EOS resource.
+1. In CloudShell portal, reserve the **Arista EOS resource**.
 2. Run the resource command `Load Firmware`. 
 3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on remote host. For example: tftp://10.1.1.1/both.tim.
+	* **Path** (Mandatory). Enter the full path of the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
