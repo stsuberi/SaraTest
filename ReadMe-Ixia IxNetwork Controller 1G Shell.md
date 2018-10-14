@@ -228,27 +228,30 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 3. In the **App/Service** view, in the blueprint toolbar, click **Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
 
-4. Add the required number of ixia IxNetwork Chassis resource ports to the blueprint. The number of Ixia IxNetwork Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration.
+4. Add the required number of Ixia IxNetwork Chassis resource ports to the blueprint. The number of Ixia IxNetwork Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 	
-* From the **More Options** menu, select **Add sub resource**. 
+* From the **More Options** menu of the Ixia IxNetwork Chassis resource, select **Add sub resource**. 
 * Use the search and filtering options to find the port sub resources you want to use.
-* Select the port sub resource from the pane and drag it into the workspace. The port sub resources will appear in the **Structure** tab of the Chassis resource.
+* Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
 
 5. Reserve the Blueprint.
 
 6. Edit the IxNetwork Controller Service parameters if required, see [Configuring a new service](#configuring_a_new_service).
 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_configuration_parameters.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_configuration_parameters.png)
 
-7. Map the configuration ports to Sandbox ports. For each port in the IxNetwork configuration assign a physical port from the ports in the sandbox. Open the Attributes tab of the Chassis resource and and open the Attributes section of each port to set the **Logical Name** to the port name in the configuration.
+7. Map the configuration ports to the blueprint ports. For each port in the IxNetwork configuration, assign a physical port from the ports in the blueprint. 
+	* Open the **Structure** tab of the Chassis resource.
+	* For each port, click the down arrow and select **Attributes**.
+	* Set the **Logical Name** to the port name in the IxNetwork configuration.
 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_mapping_ports.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_mapping_ports.png)
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
