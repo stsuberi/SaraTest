@@ -31,7 +31,7 @@ CloudShell's networking shells provide L2 or L3 connectivity between resources a
 For more information on the **Arista EOS Router**, see the official **Arista** product documentation.
 
 ### Standard version
-**Arista EOS Router 2G Shell** is based on the Networking Shell Standard version 5.0.2.
+**Arista EOS Router 2G** shell is based on the Networking Shell Standard version 5.0.2.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
@@ -70,8 +70,8 @@ The attribute names and types are listed in the following table:
 |Name|String||Name of the Arista EOS Router in CloudShell.|
 |Address*|String||IP address of the Arista EOS Router.|
 |Folder|String|Root|CloudShell folder in which to place the resource.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default the visibility is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default the remote connection is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default, visibility is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, remote connection is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
 |User*|String||Username for Arista CLI (should be privileged user).|
 |Password*|Password||Password for Arista CLI.|
 |Enable Password*|Password||Enable Password for Arista CLI.|
@@ -85,29 +85,29 @@ The attribute names and types are listed in the following table:
 |Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Enable SNMP*|Boolean|True|If set to **True**, and SNMP isn’t enabled on the device, the shell will automatically enable SNMP on the device when the Autoload command is called, using the **SNMP Write** or **Read Community** value. If the value is empty, this will result in an error. SNMP must be enabled on the device for the Autoload command to run successfully.| 
 |Disable SNMP*|Boolean|False|If set to **True**, the shell will automatically disable SNMP after the Autoload command execution is completed.| 
-|SNMP Read Community*|Password||SNMP Read Community string is like a password. It is sent along with each SNMP *Get Request* and allows (or denies) access to the device, for the Autoload functionality to run successfully.|
-|SNMP Write Community*|Password||SNMP Write Community is like a password. It is sent along with each SNMP *Set Request* and allows (or denies) changing MIB values.|
+|SNMP Read Community*|Password||SNMP Read Community string functions like a password. It is sent along with each SNMP *Get Request* and allows (or denies) access to the device, for the Autoload functionality to run successfully.|
+|SNMP Write Community*|Password||SNMP Write Community functions like a password. It is sent along with each SNMP *Set Request* and allows (or denies) changing MIB values.|
 |SNMP V3 User|String||SNMP version 3 user name, relevant only if SNMP v3 is in use.|
 |SNMP V3 Password|Password||SNMP version 3 password, relevant only if SNMP v3 is in use.|
 |SNMP V3 Private Key|String||SNMP version 3 private key, relevant only if SNMP v3 is in use.|
 |SNMP V3 Authentication Protocol|Lookup|No Authentication Protocol|Relevant only if SNMP v3 is in use. <br>Possible values: **No Authentication Protocol**, **MD5**, and **SHA**.|
 |SNMP V3 Privacy Protocol|Lookup|No Privacy Protocol|Relevant only if SNMP v3 is in use. <br>Possible values: **No Privacy Protocol**, **DES**, **3DES-EDE**, **AES-128**, **AES-192**, and **AES-256**.|
-|SNMP Version*|String|v2c|Specifies the SNMP version Autoload will use to load attributes. <br>Possible values: **v1**, **v2c**, and **v3**.|
+|SNMP Version*|String|v2c|Specifies the SNMP version, Autoload will use to load attributes. <br>Possible values: **v1**, **v2c**, and **v3**.|
 |Console Server IP Address*|String||IP Address of console server in IPv4 format. Shell allows you to connect to the device through the console server.|
 |Console User*|String||User name for the console server.|
 |Console Password*|Password||Password for the console server.|
 |Console Port*|Numeric||Port for the console server, usually the TCP port, which the device is associated with.|
 |CLI Connection Type*|Lookup|Auto|Protocol which the shell will use to connect to the device. <br>Possible values: **Auto**, **Console**, **SSH**, **Telnet**, and **TCP**. <br>If **Auto** is selected, the driver will automatically choose the available connection type. |
-|CLI TCP Port*|Numeric||TCP Port to user for CLI connection. If empty, a default CLI port will be used based on the chosen protocol, for example Telnet will use port 23.|
+|CLI TCP Port*|Numeric||TCP Port to use for CLI connection. If empty, a default CLI port will be used based on the chosen protocol, for example Telnet will use port 23.|
 |Power Management*|Boolean|False|Used by the power management service, if enabled to determine whether to automatically manage the device power status.|
 |Backup Type*|String|File System|Supported protocols for saving and restoring configuration and firmware files. <br>Possible values: **File System**, **FTP** and **TFTP**.| 
-|Backup Location*|String||Used by the save and restore orchestration to determine where backups should be saved.|
+|Backup Location*|String||Used by the Save and Restore orchestration scripts to determine where backups should be saved.|
 |Backup User*|String||Username for the storage server used for saving and restoring configuration and firmware files.|
 |Backup Password*|Password||Password for the storage server used for saving and restoring configuration and firmware files.| 
-|VRF Management Name*|String||Default VRF Management, if configured in the network and no input was passed in the **Save**, **Restore** or **Load Firmware** commands.|
+|VRF Management Name*|String||Default VRF Management name, if configured in the network and there was no input passed in the **Save**, **Restore** or **Load Firmware** commands.|
 |Model|String||Element model (Module or Chassis, etc.)|
 |Serial Number|String||Element serial number (Module or Chassis, etc.)
-|Model Name|String|||
+|Model Name|String||Element model name (Module or Chassis, etc.)|
 |Version|String||Element version (Module or Chassis, etc.)|
 |Mac Address|String||Interface Mac address|
 |L2 Protocol Type|String||Interface protocol type|
@@ -120,7 +120,7 @@ The attribute names and types are listed in the following table:
 |Adjacent|String||If LLDP is enabled on the port, **Adjacent** shows connected device name and interface.|
 |Protocol Type|Lookup|Transparent|Attribute for internal usage.|
 |Auto Negotiation|Boolean|False|Shows if Auto Negotiation is enabled on the interface.|
-|Association|String||Interfaces added to certain port-channel.|
+|Association|String||Interfaces added to certain port-channels.|
 
 
 ### Automation
@@ -130,7 +130,7 @@ This section describes the automation (drivers) associated with the data model. 
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.|
 |Health Check|Checks if the device is powered-up and connectable.|
-|Send Custom Command|Executes a custom command on the device. All commands can be executed in **Enable** mode, except for configuration.<br>Set the command input as follows:<br>▪ **Command**: The command to run. Note that commands that require a response are not supported.|
+|Send Custom Command|Executes a custom command on the device. All commands can be executed in **Enable** mode, except for configuration.<br>Set the command input as follows:<br>▪ **Command**: The command to run. Note that commands requiring a response are not supported.|
 |Run Custom Config Command|Sends command to the device in **Configuration** mode and prints the output. All commands will be executed in the **Enable** mode and are accessible only via the API.|
 |Save|Creates a configuration file and saves it to the provided destination.<br>Set the command inputs as follows:<br>▪ **Folder Path** (String): Path where the configuration file will be saved. It should be accessible from the execution server. The path should include the protocol type, for example: tftp://asdf.<br>▪ **Configuration Type** (Enum): Specify whether the file should update the Startup or Running config.<br>- **Startup**: Configuration that is loaded when the device boots or powers up.<br>- **Running**: Current configuration in the device. It may have been modified since the last boot.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
 |Restore|Restores a configuration file from the saved file.<br>Set the command inputs as follows:<br>▪ **Path** (String): The full path from which the configuration file will be restored. The path should include the protocol type, for example: tftp://asdf.<br>▪ **Configuration Type** (Enum): Specify whether the file should update the Startup or Running config.<br>- **Startup**: Configuration that is loaded when the device boots or powers up.<br>- **Running**: Current configuration in the device. It may have been modified since the last boot.<br>▪ **Restore Method** (Enum): Determines whether the restore should append or override the current configuration.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
@@ -256,33 +256,39 @@ In online mode, the execution server automatically downloads and extracts the ap
 #### **Workflow 1** - *Save configuration* 
 1. In CloudShell Portal, reserve the Arista EOS resource.
 
-2. Run the `Save` resource command.
+2. Run the **Save** resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Folder Path**: For example, *tftp://ipaddress/shared folder*.
 	* **Configuration Type**: Possible values are **Startup** or **Running**.
 	* **VRF Management Name**: Provide the VRF Management name, if relevant.
+	
+4. Click **Run**.	
 
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the Arista EOS resource.
 
-2. Run the `Restore` resource command.
+2. Run the **Restore** resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Path**: (Mandatory) Enter the full path of the configuration file. 
 	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method will be used. 
 	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
 	* **VRF Management Name**: (Optional) Provide the VRF Management name, if relevant.
+	
+4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
 1. In CloudShell portal, reserve the Arista EOS resource.
 
-2. Run the `Load Firmware` resource command. 
+2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
 	* **Path** (mandatory input field). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
+	
+4. Click **Run**.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
