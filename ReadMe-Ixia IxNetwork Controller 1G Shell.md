@@ -265,11 +265,10 @@ To connect with Quali users and experts from around the world, ask questions and
 # Release Notes 
 
 ### Known Issues
-• Performance
-	* The REST API performance is very poor. Loading configuration and reserving ports can take up dozens of seconds depending on the specific setup. It is advised to start idle connections on the Connection Manager to reduce startup time.
-• No available connection on connection manager
-	* In case there is no available connection on the connection manager the user must login to the Connection Manager and close zombie connections or create new connections.
-• Licensing
-	* If license server on Connection Manager / API server is not configured Load Configuration might success but ports will be in Down state and any further operation will fail.
-• Reserved ports
-	* If ports are reserved by other users Load Configuration might success but ports will be in Down state and any further operation will fail. 
+• **Performance**: The REST API performance is very poor. Loading configuration and reserving ports can take a number of seconds, depending on the specific setup. You are advised to start idle connections on the Connection Manager to reduce startup time.
+
+• **No available connection on connection manager**: If there is no available connection on the Connection Manager, you must login to the Connection Manager and close zombie connections or create new connections.
+
+• **Licensing**: If the license server on the Connection Manager/API server is not configured, **Load Configuration** might successfully run, but the ports will be in a Down state and any further operations will fail.
+
+• **Reserved ports**: If ports are reserved by other users, **Load Configuration** might successfully run, but ports will be in a Down state and any further operations will fail. 
