@@ -173,7 +173,8 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   4. Click **Create**.
   
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
-  **Note**: Ensure that you enter the device's SNMP version and credentials.
+  
+  	**Note**: Ensure that you enter the device's SNMP version and credentials.
   
   6. Click **Continue**.
 
