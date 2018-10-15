@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **Cisco IOS Router 2G Shell**  
+# **Cisco IOS Switch 2G Shell**  
 
 Release date: September 2018
 
@@ -25,19 +25,19 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
 
-### **Cisco IOS Router 2G Shell**
-The **Cisco IOS Router 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Cisco IOS Router**. 
+### **Cisco IOS Switch 2G Shell**
+The **Cisco IOS Switch 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Cisco IOS Switch**. 
 
-For more information on the **Cisco IOS Router**, see the official **Cisco** product documentation.
+For more information on the **Cisco IOS Switch**, see the official **Cisco** product documentation.
 
 ### Standard version
-**Cisco IOS Router 2G Shell 2.0.1** is based on the Networking Shell Standard version **5.0.2**.
+**Cisco IOS Switch 2G Shell 2.0.1** is based on the Networking Shell Standard version **5.0.2**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **Cisco IOS Router 2G Shell 2.0.1**
+Release: **Cisco IOS Switch 2G Shell 2.0.1**
 
 ▪ CloudShell version: 8.0 and above
 
@@ -55,8 +55,8 @@ The Cisco IOS Router families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|CS_Router|Cisco IOS Router 2G |Generic Cisco iOS Router 2 Generation |
-|CS_Chassis|Generic Chassis|Default Router chassis|
+|CS_Switch|Cisco IOS Switch 2G|Generic Cisco iOS Switch 2 Generation |
+|CS_Chassis|Generic Chassis|Default Switch chassis|
 |CS_Module|Generic Module|Modules located on the chassis|
 |CS_SubModule|Generic Sub Module|Sub modules|
 |CS_Port|Generic Port|Interface|
@@ -89,11 +89,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|CiscoIosRouterShell2G.zip|Cisco IOS Router shell package|
+|CiscoIosSwitchShell2G.zip |Cisco IOS Switch shell package|
 |cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Cisco IOS Router 2G Shell 2.0.1** shell and configure and modify the shell’s devices.
+This section describes how to import the **Cisco IOS Switch 2G Shell 2.0.1** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -166,9 +166,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **Cisco iOS Router 2G**.
+  2. From the list, select **Cisco iOS Switch 2G**.
   
-  3. Enter the **Name** and **IP address** of the **Cisco IOS Router**.
+  3. Enter the **Name** and **IP address** of the **Cisco IOS Switch**.
   
   4. Click **Create**.
   
@@ -246,7 +246,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**Cisco IOS Router 2G Shell 2.0.1**
+**Cisco IOS Switch 2G Shell 2.0.1**
 
 
 ### What's New
