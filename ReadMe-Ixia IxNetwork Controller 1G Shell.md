@@ -23,7 +23,7 @@ Document version: A
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
-**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
+**Note:** While we have an Ixia Chassis 1st gen shell, we recommend using the 2nd gen version since using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shells”](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
@@ -35,10 +35,10 @@ The **Ixia IxNetwork Controller 1G** shell provides you with connectivity and ma
 
 For more information on the **Ixia IxNetwork Controller**, see the official **Ixia** product documentation.
 
-The **Ixia IxNetwork Controller** provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, Get Statistics. For more information on the Ixia Chassis shells see the following:
+The **Ixia IxNetwork Controller** provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, Get Statistics. For more information on the Ixia Chassis shell, see the following:
 
-1. [Ixia Chassis 2G Shell](#https://community.quali.com/repos/3440/ixia-chassis-2-gen-shell)
-2. [Ixia Chassis 1G Shell](#https://community.quali.com/repos/1819/ixia-chasisis-shell)
+* [Ixia Chassis 2G Shell](#https://community.quali.com/repos/3440/ixia-chassis-2-gen-shell)
+
 
 ### Standard version
 The **Ixia IxNetwork Controller 1G** shell is based on the Traffic Shell Standard version 3.0.0.
@@ -74,7 +74,7 @@ The controller's families and models are listed in the following table:
 ||||
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -114,13 +114,13 @@ This section describes how to import the Ixia IxNetwork Controller 1G shell and 
   
   3. Log in to CloudShell Portal as administrator of the relevant domain.
   
-  4. In the User menu select **Import Package**.
+  4. In the user menu select **Import Package**.
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
      
-  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The shell is displayed in the **Drivers>Resource** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources).  
+The shell is displayed in the **Drivers>Resource** page.  
 
 ### Offline installation of a shell
 
@@ -172,9 +172,13 @@ full path"/>`
 ### Configuring a new service
 This section explains how to create a new service from the shell.
 
-In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
+In CloudShell, a service enables end users to run custom code and automation processes in the sandbox. Unlike resources, which represent actual devices in your data center, services do not represent physical devices. Thus, they are not managed as inventory items in CloudShell, which allows multiple instances of the same service to be used in the sandbox. 
 
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
+Services are based on a shell template, which provides the service's data model and automation script.
+
+You can specify service attributes to be used by sandbox orchestration processes or to prompt the sandbox end user for inputs that will be used by the service's driver or script. The service's attributes can be published to prompt the sandbox end-user to provide information. 
+
+For more information, see [Services Overview](#http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
 
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Admin** tab, click **Resource Families**. 
