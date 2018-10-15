@@ -59,7 +59,7 @@ Release: **Ixia IxLoad Controller 1G version 1.2.3**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **Ixia IxNetwork Controller 1G Shell Families and Models**
+#### **Ixia IxLoad Controller 1G Shell Families and Models**
 
 The controller's families and models are listed in the following table:
 
