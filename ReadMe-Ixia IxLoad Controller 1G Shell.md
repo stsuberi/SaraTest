@@ -1,4 +1,3 @@
-
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
 # **Ixia IxLoad Controller 1G Shell**  
@@ -31,11 +30,11 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **Ixia IxLoad Controller 1G Shell**
-The **Ixia IxNetwork Controller 1G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Ixia IxLoad Controller**. 
+The **Ixia IxLoad Controller 1G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Ixia IxLoad Controller**. 
 
 For more information on the **Ixia IxLoad Controller**, see the official **Ixia** product documentation.
 
-The **Ixia IxLoad Controller** provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, Get Statistics. 
+The **Ixia IxLoad Controller** provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Test, Get Statistics. 
 
 ### Standard version
 The **Ixia IxLoad Controller 1G** shell is based on the Traffic Shell Standard version 3.0.0.
@@ -77,9 +76,9 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the **Inventory** dashboard and not in the sandbox, as for other commands.|
 |Load Configuration|Loads configuration and reserves ports.<br>Set the command input as follows:<br>* **Ixia config file name** (ixn_config_file_name (String)): Full path to the Ixia configuration file name (rxf).|
-|Start Test|Starts traffic test.<br>Possible values:<br>* **Blocking**: **True**: Returns after traffic finishes to run<br>* **False**: Returns immediately|
+|Start Test|Starts traffic test.<br>Possible values:<br>* **Blocking**: **True**: Returns after traffic finishes to run; **False**: Returns immediately|
 |Stop Test|Stops traffic test.|
-|Get Statistics|Gets view statistics.<br>Possible values:<br>* **View Name**: Name of csv file from the IxLoad results directory (under the shell logs directory).<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the blueprint csv file.|
+|Get Statistics|Gets view statistics.<br>Possible values:<br>* **View Name**: Name of .csv file from the IxLoad results directory (under the shell logs directory).<br>* **Output type**: **CSV**, **JSON**. If **CSV**, the statistics will be attached to the blueprint .csv file.|
 
 # Downloading the Shell
 The **Ixia IxLoad Controller 1G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -94,7 +93,7 @@ The shell comprises:
 |ixia_IxLoad_controller_offline_requirements.zip|Shell Python dependencies (for offline deployments only)|
 
 ## Importing and Configuring the Shell
-This section describes how to import the BreakingPoint 1G shells and configure and modify the shell’s devices. 
+This section describes how to import the Ixia IxLoad Controller 1G shell and configure and modify the shell’s devices. 
 
 ### Importing the shell into CloudShell
 
@@ -170,11 +169,11 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Admin** tab, click **Resource Families**. 
           
-  2. In the **Traffic Generator Controller** folder, select **IxNetwork Controller**.
+  2. In the **Traffic Generator Controller** folder, select **IxLoad Controller**.
   
    ![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller.png)
   
-  3. In the **Attributes** tab, enter the **Default Values** for the IxNetwork Controller service as follows:
+  3. In the **Attributes** tab, enter the **Default Values** for the IxLoad Controller service as follows:
   
      * Client Install Path - The path in which the traffic client is installed on the Execution Server, for example *C:/Program Files (x86)/Ixia/IxOS/8.01-GA*.
      * Controller Address - The IP address of the API server. Default is localhost.
@@ -206,17 +205,17 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
 
-2. In **Diagram** view, in the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
+2. In the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
 
-3. In the **App/Service** view, in the blueprint toolbar, click **Traffic Generator Contollers** and drag the IxLoad Controller service into the diagram.
+3. In the blueprint toolbar, click **App/Service>Traffic Generator Contollers** and drag the IxLoad Controller service into the diagram.
 
-4. Add the required number of Ixia IxLoad Chassis resource ports to the blueprint. The number of IxChariot ports in the blueprint should match the number of ports in the IxLoad configuration.
+4. Add the required number of Ixia Chassis resource ports to the blueprint. The number of IxChassis ports in the blueprint should match the number of ports in the IxLoad configuration.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_two_ports.png)
 	
-* From the **More Options** menu of the Ixia IxNetwork Chassis resource, select **Add sub resource**. 
+* From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
 * Use the search and filtering options to find the port sub resources you want to use.
 * Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
 
@@ -224,14 +223,14 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 5. Reserve the Blueprint.
 
-6. Edit the IxNetwork Controller Service parameters if required, see [Configuring a new service](#configuring_a_new_service).
+6. Edit the IxLoad Controller Service parameters if required, see [Configuring a new service](#configuring_a_new_service).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_parameters.png)
 
-7. Map the configuration ports to the blueprint ports. For each port in the IxNetwork configuration, assign a physical port from the ports in the blueprint. 
+7. Map the configuration ports to the blueprint ports. For each port in the IxLoad configuration, assign a physical port from the ports in the blueprint. 
 	* Open the **Structure** tab of the Chassis resource.
 	* For each port, click the down arrow and select **Attributes**.
-	* Set the **Logical Name** to the port name in the IxNetwork configuration.
+	* Set the **Logical Name** to the port name in the IxLoad configuration.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_mapping_ports.png)
 
@@ -247,11 +246,6 @@ To connect with Quali users and experts from around the world, ask questions and
 # Release Notes 
 
 ### Known Issues
-• All Execution Servers that are used to run Sandboxes with the IxLoad controller should have the same Client Install Path. This means that all Execution Servers must be either Windows or Linux.
+• All Execution Servers that run Sandboxes with the IxLoad controller should have the same Client Install Path. Therefore, all Execution Servers must be either Windows or Linux.
 
-• IxLoad can run up to two instances per machine (Execution Server). If there are more than two instances running, **Load Configuration** of any additional reservationd will hang and eventually fail due to timeout.
-
-• When using Linux Execution Server (not officially supported), the shell assumes that there is a shared disk between the IxLoadGatewayService machine (Windows) and the Linux Execution sever and that disk is mounted and mapped on both machines to the following path:
-
-  * Windows – c:\IxLoadResults
-  * Linux – /IxLoadResults
+• IxLoad can run up to two instances per machine (Execution Server). If there are more than two instances running, **Load Configuration** of any additional reservations will eventually fail due to timeout.
