@@ -100,7 +100,7 @@ The shell comprises:
 |ixia_ixnetwork_controller_offline_requirements.zip|Shell Python dependencies (for offline deployments only)|
 
 ## Importing and Configuring the Shell
-This section describes how to import the BreakingPoint 1G shells and configure and modify the shell’s devices. 
+This section describes how to import the Ixia IxNetwork Controller 1G shell and configure and modify the shell’s devices. 
 
 ### Importing the shell into CloudShell
 
@@ -214,17 +214,17 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
 
-2. In **Diagram** view, in the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
+2. In the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
 
-3. In the **App/Service** view, in the blueprint toolbar, click **Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
+3. In the blueprint toolbar, click **App/Service>Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
 
-4. Add the required number of Ixia IxNetwork Chassis resource ports to the blueprint. The number of Ixia IxNetwork Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration.
+4. Add the required number of Ixia Chassis resource ports to the blueprint. The number of Ixia Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 	
-* From the **More Options** menu of the Ixia IxNetwork Chassis resource, select **Add sub resource**. 
+* From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
 * Use the search and filtering options to find the port sub resources you want to use.
 * Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
 
