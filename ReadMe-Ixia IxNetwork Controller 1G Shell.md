@@ -223,7 +223,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 2. In the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
 
-	1. Add the required number of Ixia Chassis resource ports to the blueprint. The number of Ixia Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration. For example: if you have a configuration with two ports:
+	1. Add the required number of Ixia Chassis resource ports to the blueprint. The number of Ixia Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration. 
+	For example: if you have a configuration with two ports:
+	
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 
 	2. From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
