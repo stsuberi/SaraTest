@@ -55,10 +55,13 @@ The Cisco IOS Router families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|CS_Router|Cisco IOS Router 2G ||
-|CS_Chassis|Generic Chassis||
-|CS_Module|Generic Module||
-|CS_SubModule|Generic Sub Module||
+|CS_Router|Cisco IOS Router 2G |Generic Cisco iOS Router 2 Generation |
+|CS_Chassis|Generic Chassis|Default Router chassis|
+|CS_Module|Generic Module|Modules located on the chassis|
+|CS_SubModule|Generic Sub Module|Sub modules|
+|CS_Port|Generic Port|Interface|
+|CS_PortChannel|Generic Port Channel|Group of interfaces|
+|CS_PowerPort|Generic Power Port|Power Supply module|
 
 #### **Cisco IOS Router 2G Shell Attributes**
 
@@ -90,7 +93,7 @@ The shell comprises:
 |cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Cisco IOS Router 2G Shell 2.0.1]** shell and configure and modify the shell’s devices.
+This section describes how to import the **Cisco IOS Router 2G Shell 2.0.1** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -196,7 +199,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **Cisco iOS** resource.
 
 2. Run the **Save** resource command.
 
@@ -210,7 +213,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **Cisco iOS** resource.
 
 2. Run the **Restore** resource command.
 
@@ -223,12 +226,13 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **[Device Name]** resource.
+1. In CloudShell portal, reserve the **Cisco iOS** resource.
 
 2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
+	* **Remote Host** (Mandatory). Enter the full path to the firmware file on the remote host, for example: *tftp://10.1.1.1/ios12.SE1-smp-k8.bin* 
+	* **File Path** (Mandatory). Enter the destination filename on the device itself, for example: *bootflash:/ios12.SE1-smp-k8.bin*.
 	
 4. Click **Run**.
 
@@ -243,13 +247,10 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
+**Cisco IOS Router 2G Shell 2.0.1**
+
+
 ### What's New
 
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
+* Added SNMP v3 attributes to **Inventory** screen on the portal.
+* Moved CLI definition to the driver class to simplify editing.
