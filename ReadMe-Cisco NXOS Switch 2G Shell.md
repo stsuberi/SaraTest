@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **Cisco IOS Switch 2G Shell**  
+# **Cisco NXOS Switch 2G Shell**  
 
-Release date: September 2018
+Release date: March 2017
 
-Shell version: 2.0.1
+Shell version: 1.0.0
 
-Document version: 1.0
+Document version: 1.0.0
 
 # In This Guide
 
@@ -25,37 +25,37 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
 
-### **Cisco IOS Switch 2G Shell**
-The **Cisco IOS Switch 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Cisco IOS Switch**. 
+### **Cisco NXOS Switch 2G Shell**
+The **Cisco NXOS Switch 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Cisco NXOS Switch**. 
 
-For more information on the **Cisco IOS Switch**, see the official **Cisco** product documentation.
+For more information on the **Cisco NXOS Switch**, see the official **Cisco** product documentation.
 
 ### Standard version
-**Cisco IOS Switch 2G Shell 2.0.1** is based on the Networking Shell Standard version **5.0.2**.
+**Cisco NXOS Switch 2G Shell 1.0.0** is based on the Networking Shell Standard version **5.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **Cisco IOS Switch 2G Shell 2.0.1**
+Release: **Cisco NXOS Switch 2G Shell 1.0.0**
 
 ▪ CloudShell version: 8.0 and above
 
-▪ Cisco OS: Cisco IOS, Cisco IOS-XE, Cisco CatOS
+▪ Cisco OS: Cisco NXOS
 
-▪ Certified models: Catalyst 2950
+▪ Certified models: Nexus 7k
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **Cisco IOS Switch 2G Shell Families and Models**
+#### **Cisco NXOS Switch 2G Shell Families and Models**
 
-The Cisco IOS Switch families and models are listed in the following table:
+The Cisco NXOS Switch families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|CS_Switch|Cisco IOS Switch 2G|Generic Cisco iOS Switch 2 Generation |
+|CS_Switch|Cisco NXOS Switch 2G|Generic Cisco NXOS Switch 2 Generation |
 |CS_Chassis|Generic Chassis|Default Switch chassis|
 |CS_Module|Generic Module|Modules located on the chassis|
 |CS_SubModule|Generic Sub Module|Sub modules|
@@ -63,7 +63,7 @@ The Cisco IOS Switch families and models are listed in the following table:
 |CS_PortChannel|Generic Port Channel|Group of interfaces|
 |CS_PowerPort|Generic Power Port|Power Supply module|
 
-#### **Cisco IOS Switch 2G Shell Attributes**
+#### **Cisco NXOS Switch 2G Shell Attributes**
 
 The attribute names and types are listed in the following section of the Networking Shell Standard:
 
@@ -81,7 +81,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 **[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
 
 # Downloading the Shell
-The **Cisco IOS Switch 2G Shell** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Cisco NXOS Switch 2G Shell** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -89,8 +89,8 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|CiscoIosSwitchShell2G.zip |Cisco IOS Switch shell package|
-|cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
+|CiscoNxosSwitchShell2G.zip|Cisco IOS Switch shell package|
+|cloudshell-networking-cisco-nxos-2-gen-dependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
 This section describes how to import the **Cisco IOS Switch 2G Shell 2.0.1** shell and configure and modify the shell’s devices.
@@ -141,7 +141,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-networking-cisco-nxos-2-gen-dependencies-package-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -198,7 +198,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **Cisco IOS** resource.
+1. In CloudShell Portal, reserve the **Cisco NXOS** resource.
 
 2. Run the **Save** resource command.
 
@@ -212,7 +212,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **Cisco IOS** resource.
+1. In CloudShell Portal, reserve the **Cisco NXOS** resource.
 
 2. Run the **Restore** resource command.
 
@@ -225,13 +225,13 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **Cisco IOS** resource.
+1. In CloudShell portal, reserve the **Cisco NXOS** resource.
 
 2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
-	* **Remote Host** (Mandatory). Enter the full path to the firmware file on the remote host, for example: *tftp://10.1.1.1/ios12.SE1-smp-k8.bin* 
-	* **File Path** (Mandatory). Enter the destination filename on the device itself, for example: *bootflash:/ios12.SE1-smp-k8.bin*.
+	* **Remote Host** (Mandatory). Enter the full path to the firmware file on the remote host, for example: *tftp://10.1.1.1/nxos12.SE1-smp-k8.bin* 
+	* **File Path** (Mandatory). Enter the destination filename on the device itself, for example: *bootflash:/nxos12.SE1-smp-k8.bin*.
 	
 4. Click **Run**.
 
@@ -246,10 +246,13 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**Cisco IOS Switch 2G Shell 2.0.1**
+**Cisco NXOS Switch 2G Shell 1.0.0**
 
 
 ### What's New
 
-* SNMP v3 attributes was added to the **Inventory** screen on the portal.
-* CLI definition was moved to the driver class to simplify editing.
+* Added Console Session support, it requires the following actions:
+	* Session Concurrency Limit attribute should be set to 1.
+	* Set Console Server IP Address, Console Port, User, Password Attributes
+	
+* New restore override flow was implemented, it requires Console Session to operate.
