@@ -166,9 +166,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **Cisco IOS Switch 2G**.
+  2. From the list, select **Cisco NXOS Switch 2G**.
   
-  3. Enter the **Name** and **IP address** of the **Cisco IOS Switch**.
+  3. Enter the **Name** and **IP address** of the **Cisco NXOS Switch**.
   
   4. Click **Create**.
   
