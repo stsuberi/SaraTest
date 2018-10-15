@@ -49,9 +49,9 @@ Release: **Cisco IOS Switch 2G Shell 2.0.1**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **Cisco IOS Router 2G Shell Families and Models**
+#### **Cisco IOS Switch 2G Shell Families and Models**
 
-The Cisco IOS Router families and models are listed in the following table:
+The Cisco IOS Switch families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -63,7 +63,7 @@ The Cisco IOS Router families and models are listed in the following table:
 |CS_PortChannel|Generic Port Channel|Group of interfaces|
 |CS_PowerPort|Generic Power Port|Power Supply module|
 
-#### **Cisco IOS Router 2G Shell Attributes**
+#### **Cisco IOS Switch 2G Shell Attributes**
 
 The attribute names and types are listed in the following section of the Networking Shell Standard:
 
