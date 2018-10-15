@@ -172,7 +172,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). Make sure that you enter the device's SNMP version and credentials.
+  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). Make sure you enter the device's SNMP version and credentials.
   
   6. Click **Continue**.
 
@@ -251,5 +251,5 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-* Added SNMP v3 attributes to **Inventory** screen on the portal.
-* Moved CLI definition to the driver class to simplify editing.
+* SNMP v3 attributes was added to the **Inventory** screen on the portal.
+* CLI definition was moved to the driver class to simplify editing.
