@@ -166,7 +166,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **Cisco iOS Switch 2G**.
+  2. From the list, select **Cisco IOS Switch 2G**.
   
   3. Enter the **Name** and **IP address** of the **Cisco IOS Switch**.
   
@@ -198,7 +198,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **Cisco iOS** resource.
+1. In CloudShell Portal, reserve the **Cisco IOS** resource.
 
 2. Run the **Save** resource command.
 
@@ -212,7 +212,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **Cisco iOS** resource.
+1. In CloudShell Portal, reserve the **Cisco IOS** resource.
 
 2. Run the **Restore** resource command.
 
@@ -225,7 +225,7 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **Cisco iOS** resource.
+1. In CloudShell portal, reserve the **Cisco IOS** resource.
 
 2. Run the **Load Firmware** resource command. 
 
