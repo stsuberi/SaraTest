@@ -81,7 +81,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 **[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
 
 # Downloading the Shell
-The **Cisco IOS Router 2G Shell** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Cisco IOS Switch 2G Shell** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
