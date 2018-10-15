@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **Cisco IOS Router 2G Shell**  
 
-Release date: [Month Year]
+Release date: September 2018
 
-Shell version: [x.x.x]
+Shell version: 2.0.1
 
-Document version: [x.x.x]
+Document version: 1.0
 
 # In This Guide
 
@@ -25,40 +25,42 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
 
-### **[Shell Name]**
-**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **Cisco IOS Router 2G Shell**
+The **Cisco IOS Router 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Cisco IOS Router**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **Cisco IOS Router**, see the official **Cisco** product documentation.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Networking Shell Standard version **[5.0.2]**.
+**Cisco IOS Router 2G Shell 2.0.1** is based on the Networking Shell Standard version **5.0.2**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **Cisco IOS Router 2G Shell 2.0.1**
 
-▪ CloudShell version **[Version Number]**
+▪ CloudShell version: 8.0 and above
 
-▪ Other
+▪ Cisco OS: Cisco IOS, Cisco IOS-XE, Cisco CatOS
+
+▪ Certified models: Catalyst 2950
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **Cisco IOS Router 2G Shell Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The Cisco IOS Router families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_Router|Cisco IOS Router 2G ||
+|CS_Chassis|Generic Chassis||
+|CS_Module|Generic Module||
+|CS_SubModule|Generic Sub Module||
 
-#### **[Device Name] Attributes**
+#### **Cisco IOS Router 2G Shell Attributes**
 
 The attribute names and types are listed in the following section of the Networking Shell Standard:
 
@@ -76,7 +78,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 **[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
 
 # Downloading the Shell
-The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Cisco IOS Router 2G Shell** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -84,11 +86,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|CiscoIosRouterShell2G.zip|Cisco IOS Router shell package|
+|cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** shell and configure and modify the shell’s devices.
+This section describes how to import the **Cisco IOS Router 2G Shell 2.0.1]** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -136,7 +138,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -161,13 +163,14 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **Cisco iOS Router 2G**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]**.
+  3. Enter the **Name** and **IP address** of the **Cisco IOS Router**.
   
   4. Click **Create**.
   
   5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  **Note**: Ensure that you enter the device's SNMP version and credentials.
   
   6. Click **Continue**.
 
