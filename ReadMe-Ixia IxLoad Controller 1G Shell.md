@@ -208,38 +208,38 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflow 
 
-**Workflow 1** - *Using the IxLoad controller to run Ixload traffic* 
+**Workflow 1** - *Using the IxLoad controller to run IxLoad traffic* 
 
 1. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
 
 2. In the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
 
-3. In the blueprint toolbar, click **App/Service>Traffic Generator Contollers** and drag the IxLoad Controller service into the diagram.
-
-4. Add the required number of Ixia Chassis resource ports to the blueprint. The number of IxChassis ports in the blueprint should match the number of ports in the IxLoad configuration.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_two_ports.png)
+	1. Add the required number of Ixia Chassis resource ports to the blueprint. The number of Ixia Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration. 
+	For example: if you have a configuration with two ports:
 	
-* From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
-* Use the search and filtering options to find the port sub resources you want to use.
-* Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_blueprint_two_ports.png)
+	2. From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
+	3. Use the search and filtering options to find the port sub resources you want to use.
+	4. Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_blueprint_two_ports.png)
 
-5. Reserve the Blueprint.
+3. In the blueprint toolbar, click **App/Service>Traffic Generator Contollers** and drag the **IxLoad Controller** service into the diagram.
 
-6. Edit the IxLoad Controller Service parameters if required, see [Configuring a new service](#configuring_a_new_service).
+4. Reserve the Blueprint.
+
+6. Edit the IxLoad Controller service parameters if required, see [Configuring a new service](#configuring_a_new_service).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_parameters.png)
 
 7. Map the configuration ports to the blueprint ports. For each port in the IxLoad configuration, assign a physical port from the ports in the blueprint. 
-	* Open the **Structure** tab of the Chassis resource.
-	* For each port, click the down arrow and select **Attributes**.
-	* Set the **Logical Name** to the port name in the IxLoad configuration.
+	1. Open the **Structure** tab of the Chassis resource.
+	2. For each port, click the down arrow and select **Attributes**.
+	3. Set the **Logical Name** to the port name in the IxLoad configuration.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_mapping_ports.png)
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_mapping_ports.png)
+
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
