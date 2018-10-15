@@ -185,7 +185,7 @@ For more information, see [Services Overview](#http://help.quali.com/Online%20He
           
   2. In the **Traffic Generator Controller** folder, select **IxNetwork Controller**.
   
-   ![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller.png)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller.png)
   
   3. In the **Attributes** tab, enter the **Default Values** for the IxNetwork Controller service as follows:
   
@@ -223,21 +223,21 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 2. In the blueprint toolbar, click **Resource** and drag the Ixia Chassis resource into the diagram.
 
-3. In the blueprint toolbar, click **App/Service>Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
-
-4. Add the required number of Ixia Chassis resource ports to the blueprint. The number of Ixia Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration.
+	1. Add the required number of Ixia Chassis resource ports to the blueprint. The number of Ixia Chassis resource ports in the blueprint should match the number of ports in the IxNetwork configuration.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example: if you have a configuration with two ports:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_configuration_two_ports.png)
 	
-* From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
-* Use the search and filtering options to find the port sub resources you want to use.
-* Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
+	2. From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
+	3. Use the search and filtering options to find the port sub resources you want to use.
+	4. Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_blueprint_two_ports.png)
 
-5. Reserve the Blueprint.
+3. In the blueprint toolbar, click **App/Service>Traffic Generator Contollers** and drag the IxNetwork Controller service into the diagram.
+
+4. Reserve the Blueprint.
 
 6. Edit the IxNetwork Controller Service parameters if required, see [Configuring a new service](#configuring_a_new_service).
 
