@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **A10 ACOS Firewall 2G Shell**  
 
-Release date: [Month Year]
+Release date: April 2018
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0.0
 
 # In This Guide
 
@@ -16,8 +16,6 @@ Document version: [x.x.x]
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflows](#typical-workflows)
 * [References](#references)
-* [Release Notes](#release-notes)
-
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -25,63 +23,59 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Firewall Shells
 CloudShell's Firewall shells enable you to manage your Firewall device similar to your networking equipment but without connectivity. In CloudShell, a Firewall shell runs commands, such as Autoload, Load, and Save Configuration. 
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **A10 ACOS Firewall 2G Shell**
+The **A10 ACOS Firewall 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **A10 ACOS Firewall**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **A10 ACOS Firewall**, see the official **A10 Networks** product documentation.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the **[Name of Standard File]**.
+**A10 ACOS Firewall 2G 1.0.0** is based on the **Firewall Shell Standard: 3.0.0**.
 
-For detailed information about the shell’s structure and attributes, see the **[Name of Standard File]**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/deployed_app_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the **Firewall Shell Standard**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md) in GitHub.
 
 ### Supported OS
-▪ [**OS Name**]
+▪ ACOS
 
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **A10 ACOS Firewall 2G 1.0.0**
 
-* CloudShell [version x.x]
-* Other
+* CloudShell version: 8.0 and above
+
+* Certified models: A10 vThunder 4.1.4
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **A10 ACOS Firewall 2G Shell Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The A10 ACOS Firewall 2G families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_Firewall|A10 ACOS Firewall 2G|Generic A10 ACOS Firewall 2 Generation|
+|CS_Chassis|Generic Chassis|Default Firewall chassis|
+|CS_Port|Generic Port|Interface|
+|CS_PortChannel|Generic Port Channel|Group of interfaces|
+|CS_PowerPort|Generic Power Port|Power Supply module|
 
-#### **[Device Name] Attributes**
+#### **A10 ACOS Firewall 2G Shell Attributes**
 
-The attribute names and types are listed in the following table:
+The attribute names and types are listed in the following section of the Firewall Shell Standard:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
+https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#attributes
+
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-|Command|Description|
-|:-----|:-----|
-|||
-|||
-|||
+The command names and types are listed in the following section of the Firewall Shell Standard:
+
+https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#commands
 	
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **A10 ACOS Firewall 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -89,11 +83,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|A10AcosFirewallShell2G.zip|A10 ACOS Firewall shell package|
+|cloudshell-firewall-a10-acos- shell-2g-dependencies- package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+This section describes how to import the **A10 ACOS Firewall 2G** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -140,7 +134,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-firewall-a10-acos- shell-2g-dependencies- package-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -165,9 +159,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **A10 ACOS Firewall 2G**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  3. Enter the **Name** and **IP address** of the **A10 ACOS Firewall**.
   
   4. Click **Create**.
   
@@ -195,34 +189,43 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
-(edit as necessary depending on the shell)
 
-**Workflow 1 - _Save configuration_** 
-1. In CloudShell Portal, add the device resource to an active sandbox.
+#### **Workflow 1** - *Save configuration* 
+1. In CloudShell Portal, reserve the **A10 ACOS Firewall** resource.
 
-2. Run the **Save** command on the device with the following inputs:
-    * **Folder Path**: For example, *tftp://ipaddress/shared folder* 
-    * **Configuration Type**: **Running** or **Startup**
+2. Run the **Save** resource command.
 
-The configuration is saved to a file named *<ResourceName><startup/running-config>-<timestamp>*, which will reside in the folder path you entered.    
+3. In the command inputs field, enter the following information:
+	* **Folder Path**: For example, *tftp://ipaddress/shared folder*.
+	* **Configuration Type**: **Startup** or **Running**.
+	* **VRF Management Name**: Provide the VRF Management name, if relevant.
+	
+4. Click **Run**.
 
-**Workflow 2 - _Restore Configuration_**
-1. In CloudShell Portal, reserve the device resource.
+The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+
+#### **Workflow 2** - *Restore configuration* 
+1. In CloudShell Portal, reserve the **A10 ACOS Firewall** resource.
 
 2. Run the **Restore** resource command.
 
-3. Enter the following parameters:
-    * **Path** (mandatory): Enter the full path of the configuration file. 
-    * **Restore Method** (optional): **Append** or **Override**. If you do not enter any value in this field, the **Append** method will be used. 
-    * **Configuration Type** (mandatory): **Startup** or **Running**. 
+3. In the command inputs field, enter the following information:
+	* **Path**: (Mandatory) Enter the full path of the configuration file. 
+	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
+	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
+	* **VRF Management Name**: (Optional) Provide the VRF Management name, if relevant.
 	
-**Workflow 3 - _Load firmware_**
-1. In CloudShell Portal, reserve the device resource.
+4. Click **Run**.
 
-2. Run the **Load Firmware** resource command.
+#### **Workflow 3** - *Load firmware* 
+1. In CloudShell portal, reserve the **A10 ACOS Firewall** resource.
 
-3. Enter the following parameters:
-    * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/PanOS_200-5.0.5*. 
+2. Run the **Load Firmware** resource command. 
+
+3. In the command inputs field, enter the following information:
+	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: *tftp://10.1.1.1/ACOS_non_FTA_4_1_0-P10_105.64.upg*.
+	
+4. Click **Run**. 
    
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -232,16 +235,3 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-# Release Notes 
-(if not applicable - remove section)
-### What's New
-
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
