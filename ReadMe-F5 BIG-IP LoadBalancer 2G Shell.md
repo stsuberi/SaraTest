@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **F5 BIG-IP LoadBalancer 2G Shell**  
 
-Release date: [Month Year]
+Release date: April 2018
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0
 
 # In This Guide
 
@@ -25,40 +25,46 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
 
-### **[Shell Name]**
-**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **F5 BIG-IP LoadBalancer 2G Shell**
+The **F5 BIG-IP LoadBalancer 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **F5 BIG-IP LoadBalancer**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **F5 BIG-IP LoadBalancer**, see the official **F5** product documentation.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Networking Shell Standard version **[5.0.2]**.
+**F5 BIG-IP LoadBalancer 1.0.0** is based on the Networking Shell Standard version **5.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
+### Supported OS
+
+▪ F5 BIG-IP
+
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **F5 BIG-IP LoadBalancer 1.0.0***
 
-▪ CloudShell version **[Version Number]**
-
-▪ Other
+▪ CloudShell version: 8.3 and above
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **F5 BIG-IP LoadBalancer 2G Shell Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The F5 BIG-IP LoadBalancer families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_LoadBalancer|F5 BIG-IP LoadBalancer 2G|Generic F5 Big-IP LoadBalancer 2 Generation|
+|CS_Chassis|Generic Chassis|Default LoadBalancer chassis|
+|CS_Module|Generic Module|Modules located on the chassis|
+|CS_SubModule|Generic Sub Module|Sub modules|
+|CS_Port|Generic Port|Interface|
+|CS_ServerFarm|Generic Server Farm|Server farm|
+|CS_RealServer|Generic Real|Server Actual Server with installed services|
+|CS_PowerPort|Generic Power Port|Power Supply module| 
 
-#### **[Device Name] Attributes**
+#### **F5 BIG-IP LoadBalancer Attributes**
 
 The attribute names and types are listed in the following section of the Networking Shell Standard:
 
@@ -76,7 +82,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 **[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
 
 # Downloading the Shell
-The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **F5 BIG-IP LoadBalancer 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -84,11 +90,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|F5BigIpLoadbalancerShell2G.zip|F5 BIG-IP LoadBalancer 2G shell package|
+|cloudshell-loadbalancer-f5-bigipdependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** shell and configure and modify the shell’s devices.
+This section describes how to import the **F5 BIG-IP LoadBalancer 2G 1.0.0** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -136,7 +142,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-loadbalancer-f5-bigipdependencies-package-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -161,9 +167,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **F5 BIG-IP LoadBalancer 2G** shell.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]**.
+  3. Enter the **Name** and **IP address** of the **F5 BIG-IP LoadBalancer**.
   
   4. Click **Create**.
   
@@ -193,7 +199,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **F5 BIG-IP LoadBalancer** resource.
 
 2. Run the **Save** resource command.
 
@@ -207,7 +213,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **F5 BIG-IP LoadBalancer** resource.
 
 2. Run the **Restore** resource command.
 
@@ -220,12 +226,13 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **[Device Name]** resource.
+1. In CloudShell portal, reserve the **F5 BIG-IP LoadBalancer** resource.
 
 2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
+	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: *tftp://10.1.1.1/BIGIP12.SE1-smp-k8.bin*.
+	* **VRF Management Name** (Optional): Destination filename on the device itself, for example: *bootflash:/BIGIP12.SE1-smp-k8.bin*.
 	
 4. Click **Run**.
 
@@ -240,13 +247,12 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
+**F5 BIG-IP LoadBalancer 2G Shell 1.0.0**
+
 ### What's New
 
-* 
-* 
-* 
+* First shell released based on the LoadBalancer TOSCA Standards.
 
-### Known Issues
-* 
-* 
-* 
+* **Monitors** attribute was added for Real Servers to list all monitors applied for a particular server.
+
+* **Load Firmware** command does not delete previous firmware boot volumes, so it is now possible to rollback.
