@@ -35,7 +35,10 @@ The **Ixia IxNetwork Controller 1G** shell provides you with connectivity and ma
 
 For more information on the **Ixia IxNetwork Controller**, see the official **Ixia** product documentation.
 
-The **Ixia IxNetwork Controller** provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, Get Statistics. 
+The **Ixia IxNetwork Controller** provides automation commands to run on the chassis, such as Load Configuration, Start/Stop Traffic, Get Statistics. For more information on the Ixia Chassis shells see the following:
+
+1. [Ixia Chassis 2G Shell](#https://community.quali.com/repos/3440/ixia-chassis-2-gen-shell)
+2. [Ixia Chassis 1G Shell](#https://community.quali.com/repos/1819/ixia-chasisis-shell)
 
 ### Standard version
 The **Ixia IxNetwork Controller 1G** shell is based on the Traffic Shell Standard version 3.0.0.
