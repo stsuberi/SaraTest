@@ -178,7 +178,7 @@ For more information, see [Services Overview](#http://help.quali.com/Online%20He
           
   2. In the **Traffic Generator Controller** folder, select **IxLoad Controller**.
   
-   ![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller.png)
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller.png)
   
   3. In the **Attributes** tab, enter the **Default Values** for the IxLoad Controller service as follows:
   
