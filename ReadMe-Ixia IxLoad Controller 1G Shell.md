@@ -217,7 +217,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 	2. From the **More Options** menu of the Ixia Chassis resource, select **Add sub resource**. 
 	3. Use the search and filtering options to find the port sub resources you want to use.
-	4. Select the port sub resources from the pane and drag them into the workspace. The port sub resources will appear in the **Structure** tab of the chassis resource.
+	4. Select the port sub resources from the pane and drag them into the workspace. The ports are displayed in the **Resource Structure** tab of the chassis resource.
 	
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_blueprint_two_ports.png)
 
@@ -230,7 +230,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_parameters.png)
 
 7. Map the configuration ports to the blueprint ports. For each port in the IxLoad configuration, assign a physical port from the ports in the blueprint. 
-	1. Open the **Structure** tab of the Chassis resource.
+	1. Hover over the chassis resource and select **Structure** from the context menu. The **Resource Structure** side pane is displayed, listing the resource ports. 
 	2. For each port, click the down arrow and select **Attributes**.
 	3. Set the **Logical Name** to the port name in the IxLoad configuration.
 
