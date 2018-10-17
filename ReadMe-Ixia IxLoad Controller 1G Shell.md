@@ -176,7 +176,7 @@ For more information, see [Services Overview](#http://help.quali.com/Online%20He
   
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller.png)
   
-  3. In the **Attributes** tab, enter the **Default Values** for the IxLoad Controller service as follows:
+  3. In the **Attributes** tab, enter the **Default Values** for the **IxLoad Controller** service as follows:
   
      * Client Install Path - The path in which the traffic client is installed on the Execution Server, for example *C:/Program Files (x86)/Ixia/IxOS/8.01-GA*.
      * Controller Address - The IP address of the API server. Default is localhost.
@@ -223,9 +223,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 3. In the blueprint toolbar, click **App/Service>Traffic Generator Controllers** and drag the **IxLoad Controller** service into the diagram.
 
-4. Reserve the Blueprint.
+4. Reserve the blueprint.
 
-6. Edit the IxLoad Controller service parameters if required, see [Configuring a new service](#configuring_a_new_service).
+6. Edit the **IxLoad Controller** service parameters if required, see [Configuring a new service](#configuring_a_new_service).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_parameters.png)
 
