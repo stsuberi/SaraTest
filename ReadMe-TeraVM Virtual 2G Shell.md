@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **TeraVM Virtual 2G Shells**  
 
-Release date: [Month Year]
+Release date: April 2018
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0
 
 # In This Guide
 
@@ -22,26 +22,34 @@ Document version: [x.x.x]
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
-### Networking Shells
-CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
+### Traffic Generator Shells
+CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
-### **[Shell Name]**
-**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+### **TeraVM Virtual 2G Shells**
+The **TeraVM Virtual 2G** shells provides you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM vChassis** and the **TeraVM vBlade**. 
+
+For more information on the **TeraVM Virtual vChassis** or **vBlade**, see the official **TeraVM** product documentation.
+
+To model an **TeraVM Virtual vChassis** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+
+▪ [TeraVM Controller Shell (Service)](https://community.quali.com/repos/3287/teravm-controller-shell), which provides automation commands to run on the VChassis, such as Load Test Configuration, Start Traffic, Get Statistics.
+
+▪ [CloudShell TeraVM vBlade 2G Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vBlade.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Networking Shell Standard version **[5.0.2]**.
+The **TeraVM Virtual 2G** shells are based on the Traffic Shell Standard 1.0.0.
 
-For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **TeraVM Virtual 2G shells 1.0.0**
 
-▪ CloudShell version **[Version Number]**
+▪ TeraVM versions: 13.4 and above
 
-▪ Other
+▪ CloudShell version: 8.2 and above
 
 ### Data Model
 
@@ -49,7 +57,7 @@ The shell's data model includes all shell metadata, families, and attributes.
 
 #### **[Device Name] Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -60,23 +68,26 @@ The [Device Name] families and models are listed in the following table:
 
 #### **[Device Name] Attributes**
 
-The attribute names and types are listed in the following section of the Networking Shell Standard:
+The attribute names and types are listed in the following table:
 
-https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
-
-**[Notes:]** <br>(Include as needed to explain differences between this shell's attributes and attributes documented in the Shell Standard.)
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|||||
+|||||
+|||||
+|||||
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-The command names and types are listed in the following section of the Networking Shell Standard:
+For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
-https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
-
-**[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
+|Command|Description|
+|:-----|:-----|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Downloading the Shell
-The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -88,7 +99,7 @@ The shell comprises:
 |[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** shell and configure and modify the shell’s devices.
+This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -163,7 +174,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
      
   2. From the list, select **[Shell Name]**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]**.
+  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
   
   4. Click **Create**.
   
@@ -191,43 +202,13 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
+(if not applicable - remove section)
 
-#### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+**Workflow 1** - *[Name of Workflow 1]* 
 
-2. Run the **Save** resource command.
+**Workflow 2** - *[Name of Workflow 2]* 
 
-3. In the command inputs field, enter the following information:
-	* **Folder Path**: For example, *tftp://ipaddress/shared folder*.
-	* **Configuration Type**: **Startup** or **Running**.
-	* **VRF Management Name**: Provide the VRF Management name, if relevant.
-	
-4. Click **Run**.
-
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
-
-#### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
-
-2. Run the **Restore** resource command.
-
-3. In the command inputs field, enter the following information:
-	* **Path**: (Mandatory) Enter the full path of the configuration file. 
-	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
-	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
-	* **VRF Management Name**: (Optional) Provide the VRF Management name, if relevant.
-	
-4. Click **Run**.
-
-#### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **[Device Name]** resource.
-
-2. Run the **Load Firmware** resource command. 
-
-3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
-	
-4. Click **Run**.
+**Workflow 3** - *[Name of Workflow 3]* 
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -239,7 +220,7 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes 
-
+(if not applicable - remove section)
 ### What's New
 
 * 
