@@ -183,7 +183,7 @@ For more information, see [Services Overview](#http://help.quali.com/Online%20He
   
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller.png)
   
-  3. In the **Attributes** tab, enter the **Default Values** for the IxNetwork Controller service as follows:
+  3. In the **Attributes** tab, enter the **Default Values** for the **IxNetwork Controller** service as follows:
   
      * Controller Address - IP address of the API Server/Connection Manager. Default is localhost.
      * Controller TCP Port - TCP port of the API Server/Connection Manager. Default is 11009.
@@ -232,9 +232,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 3. In the blueprint toolbar, click **App/Service>Traffic Generator Controllers** and drag the **IxNetwork Controller** service into the diagram.
 
-4. Reserve the Blueprint.
+4. Reserve the blueprint.
 
-6. Edit the IxNetwork Controller service parameters if required, see [Configuring a new service](#configuring_a_new_service).
+6. Edit the **IxNetwork Controller** service parameters if required, see [Configuring a new service](#configuring_a_new_service).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixnetwork_controller_configuration_parameters.png)
 
