@@ -14,7 +14,7 @@ Document version: A
 * [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Typical Workflows](#typical-workflows)
+* [Typical Workflow](#typical-workflow)
 * [References](#references)
 * [Release Notes](#release-notes)
 
@@ -113,7 +113,7 @@ This section describes how to import the Ixia IxLoad Controller 1G shell and con
      
   5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The shell is displayed in the **Drivers>Resource** page. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The service can now be added to a blueprint from the **Apps/Services** catalog, in the Networking category.  
 
 ### Offline installation of a shell
 
@@ -163,13 +163,9 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new service
-This section explains how to create a new service from the shell.
+This section explains how to set the controller's default values in the service. 
 
-In CloudShell, a service enables end users to run custom code and automation processes in the sandbox. Unlike resources, which represent actual devices in your data center, services do not represent physical devices. Thus, they are not managed as inventory items in CloudShell, which allows multiple instances of the same service to be used in the sandbox. 
-
-Services are based on a shell template, which provides the service's data model and automation script.
-
-You can specify service attributes to be used by sandbox orchestration processes or to prompt the sandbox end user for inputs that will be used by the service's driver or script. The service's attributes can be published to prompt the sandbox end-user to provide information. 
+The controller service enables end users to run load configuration, start and stop test traffic and get test statistics. 
 
 For more information, see [Services Overview](#http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
 
