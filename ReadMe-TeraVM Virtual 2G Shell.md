@@ -109,7 +109,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* TeraVM config file (String)(Mandatory): The configuration file name. Path should include the protocol type (for example tftp://10.10.10.10/asdf).<br>* Use ports from reservation (Enum): True or False. Update the configuration file with ports from the current reservation by their Logical Name attributes.
+|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* **TeraVM config file** (String)(Mandatory): The configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.<br>* **Use ports from reservation** (Enum): Possible values: **True** or **False**. Update the configuration file with ports from the current reservation by their **Logical Name** attributes.
 |Start Traffic|Starts a test with the current configuration.|
 |Stop Traffic|Stops running the test.|
 |Get Results|Gets the test result file and attaches it to the reservation.|
@@ -119,7 +119,7 @@ The **TeraVM Virtual 2G** shells are available from the [Quali Community Integra
 
 Download the files into a temporary location on your local machine. 
 
-The shell comprises:
+The shells comprise:
 
 |File name|Description|
 |:---|:---|
@@ -130,7 +130,7 @@ The shell comprises:
 |TeraVM.Sandbox.Setup.1.0.zip|CloudShell Reservation Setup script|
 
 # Importing and Configuring the Shell
-This section describes how to import the BreakingPoint 1G shells and configure and modify the shell’s devices. 
+This section describes how to import the TeraVM Virtual shells and configure and modify the shell’s devices. 
 
 ### Importing the shells into CloudShell
 
@@ -149,7 +149,9 @@ This section describes how to import the BreakingPoint 1G shells and configure a
      
   5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The TeraVM Controller shell is displayed in the **Services** page and can be used .... The vBlade and vChassis shells are now ready to be used to create new Applications, see "Configuring a new application" section. For more information on Apps, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
+The TeraVM Controller shell is displayed in the **Services** page and can be used run custom code and automation processes in the sandbox. For more information on Services, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
+
+The vBlade and vChassis shells are now ready to be used to create new Apps, see [Configuring a new App](#configuring-a-new-app). For more information on Apps, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 ### Offline installation of a shell
 
@@ -160,8 +162,6 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 * For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
 
 * For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
-
-* For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
@@ -199,7 +199,7 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new App
-This section explains how to create an App template for the TeraVM vChassis and the TeraVM vBlade to enable network connectivity between endpoints in the sandbox.
+This section explains how to create an App template for the TeraVM vChassis shell and the TeraVM vBlade shell to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -215,7 +215,7 @@ This section explains how to create an App template for the TeraVM vChassis and 
 6. In the **App Resource** tab, perform the following steps for the chassis and the blade:
 	1. Select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
 	
-	![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
+	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.PNG)
 	
 	2. Select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell. See attribute section.
 	![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
