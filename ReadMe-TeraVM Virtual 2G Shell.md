@@ -216,7 +216,7 @@ This section explains how to create an App template for the TeraVM vBlade shell 
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.PNG)
 
-6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all the required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes).
+6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes).
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_resource.png)
 
@@ -238,14 +238,10 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
-6. In the **App Resource** tab, perform the following steps for the blade:
-	1. Select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
+6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
 	
 	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.PNG)
 	
-	2. Select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell. See attribute section.
-	![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
-
 7. Click **Done**.
 
 ### Configuring the TeraVM Controller 
