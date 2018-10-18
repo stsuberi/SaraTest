@@ -240,7 +240,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
 	
-	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.PNG)
+![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_resource.png)
 	
 7. Click **Done**.
 
