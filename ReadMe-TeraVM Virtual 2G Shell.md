@@ -210,7 +210,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 4. Enter the **Name** of the App and click **Create**.
 
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
-![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
+![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.PNG)
 
 6. In the **App Resource** tab, perform the following steps for the chassis and the blade:
 	1. Select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
