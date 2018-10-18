@@ -90,7 +90,7 @@ The attribute names and types are listed in the following table:
 
 The attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
+|Attribute|Type|Description|
 |:---|:---|:---|
 |Logical Name|String||The port's logical name in the test configuration|
 |Requested vNIC|String||vNIS number from vCenter|
