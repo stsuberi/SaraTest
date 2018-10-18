@@ -199,7 +199,7 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new App
-This section explains how to create an App template for the TeraVM vChassis shell and the TeraVM vBlade shell to enable network connectivity between endpoints in the sandbox.
+This section explains how to create an App template for the TeraVM vBlade shell (Module) to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -210,6 +210,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 4. Enter the **Name** of the App and click **Create**.
 
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
+
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.PNG)
 
 6. In the **App Resource** tab, perform the following steps for the chassis and the blade:
