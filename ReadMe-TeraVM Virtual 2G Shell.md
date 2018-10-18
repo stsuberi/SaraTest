@@ -16,7 +16,6 @@ Document version: 1.0
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflows](#typical-workflows)
 * [References](#references)
-* [Release Notes](#release-notes)
 
 
 # Overview
@@ -55,27 +54,47 @@ Release: **TeraVM Virtual 2G shells 1.0.0**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **TeraVM Chassis Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|Virtual Traffic Generator Chassis|TeraVM Chassis|TeraVM Deployed Controller|
+|Module|TeraVM Virtual Traffic Generator Module|TeraVM Deployed Module|
+|Port|TeraVM Virtual Traffic Generator Port|Port on the Deployed TeraVM Module|
 
-#### **[Device Name] Attributes**
+#### **TeraVM Chassis Attributes**
 
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
+|License Server|String||IP address or hostname of the License Server|
+|Execution Server|String||IP address or hostname of the Execution Server|
+|TVM Comms Network|String||TeraVM Comms Network name on the vCenter|
+|TVM MGMT Network|String||TeraVM Management Network name on the vCenter|
+|Password|Password||Password for the Deployed TeraVM Controller|
+|User|String||Username for the Deployed TeraVM Controller|
+
+#### **TeraVM Module Attributes **
+
+The attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|TVM Comms Network|String||TeraVM Comms Network name on the vCenter|
+|TVM MGMT Network|String||TeraVM Management Network name on the vCenter|
+
+#### **TeraVM Port Attributes **
+
+The attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Logical Name|String||The port's logical name in the test configuration|
+|Requested vNIC|String||VNic number from the vCenter|
+|MAC Address|String||Port's MAC Address|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
@@ -86,8 +105,17 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
+#### TeraVM Controller Shell
+
+|Command|Description|
+|:-----|:-----|
+|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* TeraVM config file (String)(Mandatory): The configuration file name. Path should include the protocol type (for example tftp://10.10.10.10/asdf).<br>* Use ports from reservation (Enum): True or False. Update the configuration file with ports from the current reservation by their Logical Name attributes.
+|Start Traffic|Starts a test with the current configuration.|
+|Stop Traffic|Stops running the test.|
+|Get Results|Gets the test result file and attaches it to the reservation.|
+
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **TeraVM Virtual 2G** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -95,8 +123,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|TeraVM_Controller_Shell_Package.zip|TeraVM Controller shell package|
+|teravm-vchassis.zip|TeraVM vChassis shell package|
+|teravm-vblade.zip|TeraVM vBlade shell package|
+|teravm-offline-package-1.0.0.zip|Shell Python dependencies (for offline deployments only)|
+|TeraVM.Sandbox.Setup.1.0.zip|CloudShell Reservation Setup script|
 
 # Importing and Configuring the Shell
 This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
@@ -147,7 +178,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *teravm-offline-package-1.0.0* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -184,6 +215,40 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
+### Configuring a new App
+This section explains how to create an App template for the TeraVM vChassis and the TeraVM vBlade to enable network connectivity between endpoints in the sandbox.
+
+1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
+
+2. Click **Add**.
+
+3. Select **vCenter VM from Template**.
+
+4. Enter the **Name** of the App and click **Create**.
+
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
+![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
+
+6. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell. 
+![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
+
+7. Click **Done**.
+
+### Configuring the setup script
+This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
+
+**To add the setup script:**
+1. Log in to CloudShell Portal as administrator of the relevant domain.
+
+2. Go to the **Manage** dashboard and click **Scripts>Blueprint**.
+
+3. Click **Add New Script**. From the list, select the downloaded setup script *IxVM.Sandbox.Setup.1.0.0.zip*.
+
+4. Click **Edit** and change the **Script Type** to **Setup**.
+
+5. Click **Save**.
+
+
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
@@ -218,16 +283,3 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-# Release Notes 
-(if not applicable - remove section)
-### What's New
-
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
