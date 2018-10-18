@@ -267,13 +267,44 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
-(if not applicable - remove section)
 
-**Workflow 1** - *[Name of Workflow 1]* 
+**Workflow 1** - *Deploying the TeraVM Module and Controller* 
+1. Create a new blueprint.
+   * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   * Give the blueprint a name.
+   
+2. Add Apps and services to the blueprint. 
+   * Click the **App/Services** tab and add the following to the canvas:
+   	1. **TeraVMController** service
+	2. **TeraVM Chassis** App
+	3. **TeraVM Blade** App
+	
+3. Update the blueprint setup script, which .... 
+   * Open properties, **Blueprint>Properties**. 
+   * Remove Default Sandbox Setup 2.0 script by clicking on the trash icon nearby its name.
+   * Click **Add Script** and choose **TeraVM.Sandbox.Setup.1.0** from the list. 
+   * Click **Update** to save changes.
+   
+4. Run the **Reserve** command on the blueprint to deploy the TeraVM Controller and TeraVM Module.
 
-**Workflow 2** - *[Name of Workflow 2]* 
+**Workflow 2** - *Running a test* 
+1. Enter your blueprint.
 
-**Workflow 3** - *[Name of Workflow 3]* 
+2. From the TeraVMController service, run the **Load Configuration** command.
+   * Hover over the TeraVMController service and click **Commands**.
+   * In the **Resource Commands** pane, click the **Load Configuration** command.
+   * Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or
+only *test_name.bpt*, if it is current reservation. Make sure the path is accessible to the execution server running the command.
+   * Click **Run**, to load the test configuration to the TeraVM Controller and reserve necessary ports.
+   
+3. Run the **Start Test** command.
+
+4. Run the **Stop Test** command.
+
+5. Get the test's result file.
+   * Run the **Get Result** command.
+   * The test's result file is attached to the sandbox.
+
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
