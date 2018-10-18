@@ -245,7 +245,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 7. Click **Done**.
 
 ### Configuring the TeraVM Controller 
-This section explains how to configure the TeraVM Controller service to that.....
+This section explains how to configure the TeraVM Controller service to download test files to a particular location.
 
 1. In your blueprint, add the TeraVM Traffic Generator Controller service. 
 	1. Click **App/Service**.
@@ -260,14 +260,14 @@ This section explains how to configure the TeraVM Controller service to that....
 3. Click **Add**.
 
 ### Configuring the setup script
-This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
+This section explains how to add the setup script for the **TeraVM Virtual vChassis** shell.
 
 **To add the setup script:**
 1. Log in to CloudShell Portal as administrator of the relevant domain.
 
 2. Go to the **Manage** dashboard and click **Scripts>Blueprint**.
 
-3. Click **Add New Script**. From the list, select the downloaded setup script *IxVM.Sandbox.Setup.1.0.0.zip*.
+3. Click **Add New Script**. From the list, select the downloaded setup script *TeraVM.Sandbox.Setup.1.0.zip*.
 
 4. Click **Edit** and change the **Script Type** to **Setup**.
 
@@ -295,32 +295,34 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **Workflow 1** - *Deploying the TeraVM Module and Controller* 
 1. Create a new blueprint.
-   * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
-   * Give the blueprint a name.
+   1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   2. Give the blueprint a name.
    
 2. Add Apps and services to the blueprint. 
-   * Click the **App/Services** tab and add the following to the canvas:
-   	1. **TeraVMController** service - Make sure that you specify attribute Test Files Location (with value of location where test files will be downloaded). All other attributes aren't required and can be blank. See "Configuring Controller attributes".
-	2. **TeraVM Chassis** App
-	3. **TeraVM Blade** App
+   1. Click the **App/Services** tab.
+   
+   2. Add the following to the diagram:
+   	* **TeraVM Traffic Generator Controller** service - See [Configuring the TeraVM Controller](#configuring-the-teravm-controller) for more information.
+	* **TeraVM Chassis** App
+	* **TeraVM Blade** App
 	
-3. Update the blueprint setup script, which .... 
-   * Open properties, **Blueprint>Properties**. 
-   * Remove Default Sandbox Setup 2.0 script by clicking on the trash icon nearby its name.
-   * Click **Add Script** and choose **TeraVM.Sandbox.Setup.1.0** from the list. 
-   * Click **Update** to save changes.
+3. Update the blueprint setup script.
+   1. Open blueprint properties, **Blueprint>Properties**. 
+   2. In the **Scripts** section, remove the **Default Sandbox Setup 2.0** script by clicking on the trash icon.
+   3. Click **Add Script** and select **TeraVM.Sandbox.Setup.1.0** from the list. 
+   4. Click **Update** to save changes.
    
 4. Run the **Reserve** command on the blueprint to deploy the TeraVM Controller and TeraVM Module.
 
 **Workflow 2** - *Running a test* 
 1. Enter your blueprint.
 
-2. From the TeraVMController service, run the **Load Configuration** command.
-   * Hover over the TeraVMController service and click **Commands**.
-   * In the **Resource Commands** pane, click the **Load Configuration** command.
-   * Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or
+2. From the **TeraVM Traffic Generator Controller** service, run the **Load Configuration** command.
+   1. Hover over the TeraVM Traffic Generator Controller service and click **Commands**.
+   2. In the **Resource Commands** pane, click the **Load Configuration** command.
+   3. Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or
 only *test_name.bpt*, if it is current reservation. Make sure the path is accessible to the execution server running the command.
-   * Click **Run**, to load the test configuration to the TeraVM Controller and reserve necessary ports.
+   4. Click **Run**, to load the test configuration to the TeraVM Controller and reserve necessary ports.
    
 3. Run the **Start Test** command.
 
