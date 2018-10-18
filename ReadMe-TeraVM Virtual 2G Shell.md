@@ -92,9 +92,9 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|Logical Name|String||The port's logical name in the test configuration|
-|Requested vNIC|String||vNIS number from vCenter|
-|MAC Address|String||Port's MAC address|
+|Logical Name|String|The port's logical name in the test configuration|
+|Requested vNIC|String|vNIC number from vCenter|
+|MAC Address|String|Port's MAC address|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
