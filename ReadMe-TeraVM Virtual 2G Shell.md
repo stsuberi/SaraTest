@@ -77,7 +77,7 @@ The attribute names and types are listed in the following table:
 |Password|Password|Password for the Deployed TeraVM Controller|
 |User|String|Username for the Deployed TeraVM Controller|
 
-#### **TeraVM Module Attributes**
+#### **TeraVM Module Attributes (vBlade)**
 
 The attribute names and types are listed in the following table:
 
