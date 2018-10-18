@@ -29,13 +29,13 @@ For additional information on traffic generator shell architecture, and setting 
 ### **TeraVM Virtual 2G Shells**
 The **TeraVM Virtual 2G** shells provides you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM vChassis** and the **TeraVM vBlade**. 
 
-For more information on the **TeraVM Virtual vChassis** or **vBlade**, see the official **TeraVM** product documentation.
+For more information on the **TeraVM Virtual vChassis** or the **TeraVM Virtual vBlade**, see the official **TeraVM** product documentation.
 
-To model an **TeraVM Virtual vChassis** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+To model an **TeraVM Virtual vChassis** device in CloudShell, use the following controller and vBlade: 
 
 ▪ [TeraVM Controller Shell (Service)](https://community.quali.com/repos/3287/teravm-controller-shell), which provides automation commands to run on the VChassis, such as Load Test Configuration, Start Traffic, Get Statistics.
 
-▪ [CloudShell TeraVM vBlade 2G Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vBlade.
+▪ [CloudShell TeraVM vBlade 2G Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vChassis.
 
 ### Standard version
 The **TeraVM Virtual 2G** shells are based on the Traffic Shell Standard 1.0.0.
@@ -52,7 +52,7 @@ Release: **TeraVM Virtual 2G shells 1.0.0**
 
 ### Data Model
 
-The shell's data model includes all shell metadata, families, and attributes.
+The shell data models includes all shell metadata, families, and attributes.
 
 #### **TeraVM Chassis Families and Models**
 
@@ -68,33 +68,33 @@ The chassis families and models are listed in the following table:
 
 The attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|License Server|String||IP address or hostname of the License Server|
-|Execution Server|String||IP address or hostname of the Execution Server|
-|TVM Comms Network|String||TeraVM Comms Network name on the vCenter|
-|TVM MGMT Network|String||TeraVM Management Network name on the vCenter|
-|Password|Password||Password for the Deployed TeraVM Controller|
-|User|String||Username for the Deployed TeraVM Controller|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|License Server|String|IP address or hostname of the License Server|
+|Executive Server|String|IP address or hostname of the Executive Server|
+|TVM Comms Network|String|TeraVM Comms Network name on the vCenter|
+|TVM MGMT Network|String|TeraVM Management Network name on the vCenter|
+|Password|Password|Password for the Deployed TeraVM Controller|
+|User|String|Username for the Deployed TeraVM Controller|
 
-#### **TeraVM Module Attributes **
+#### **TeraVM Module Attributes**
+
+The attribute names and types are listed in the following table:
+
+|Attribute|Type|Description|
+|:---|:---|:---|
+|TVM Comms Network|String|TeraVM Comms Network name on the vCenter|
+|TVM MGMT Network|String|TeraVM Management Network name on the vCenter|
+
+#### **TeraVM Port Attributes**
 
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|TVM Comms Network|String||TeraVM Comms Network name on the vCenter|
-|TVM MGMT Network|String||TeraVM Management Network name on the vCenter|
-
-#### **TeraVM Port Attributes **
-
-The attribute names and types are listed in the following table:
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
+|:---|:---|:---|
 |Logical Name|String||The port's logical name in the test configuration|
-|Requested vNIC|String||VNic number from the vCenter|
-|MAC Address|String||Port's MAC Address|
+|Requested vNIC|String||vNIS number from vCenter|
+|MAC Address|String||Port's MAC address|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
