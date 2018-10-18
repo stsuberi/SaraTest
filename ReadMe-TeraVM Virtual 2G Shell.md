@@ -130,20 +130,26 @@ The shell comprises:
 |TeraVM.Sandbox.Setup.1.0.zip|CloudShell Reservation Setup script|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** and configure and modify the shell’s devices.
+This section describes how to import the BreakingPoint 1G shells and configure and modify the shell’s devices. 
 
-### Importing the shell into CloudShell
+### Importing the shells into CloudShell
+
+**Note**: You will need to repeat these procedures, for the controller shell, the vChassis shell, and the vBlade shell.
 
 **To import the shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
-  2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  2. Backup your database.
   
-  3. Click **Import**.
+  3. Log in to CloudShell Portal as administrator of the relevant domain.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
+  4. In the User menu select **Import Package**.
+  
+     ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+     
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+The TeraVM Controller shell is displayed in the **Services** page and can be used .... The vBlade and vChassis shells are now ready to be used to create new Applications, see "Configuring a new application" section. For more information on Apps, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 ### Offline installation of a shell
 
@@ -192,29 +198,6 @@ full path"/>`
 
 5. Restart the Execution Server.
 
-### Configuring a new resource
-This section explains how to create a new resource from the shell.
-
-In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
-
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
-
-**To create a resource for the device:**
-  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-     
-  2. From the list, select **[Shell Name]**.
-  
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
-  
-  4. Click **Create**.
-  
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
-  
-  6. Click **Continue**.
-
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
-
 ### Configuring a new App
 This section explains how to create an App template for the TeraVM vChassis and the TeraVM vBlade to enable network connectivity between endpoints in the sandbox.
 
@@ -229,10 +212,22 @@ This section explains how to create an App template for the TeraVM vChassis and 
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
 
-6. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell. 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
+6. In the **App Resource** tab, perform the following steps for the chassis and the blade:
+	1. Select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
+	
+	![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
+	
+	2. Select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell. See attribute section.
+	![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
+
+### Configuring the TeraVM Controller 
+This section explains how to configure the TeraVM Controller service to that.....
+
+1. In your blueprint, add the TeraVMController service there. 
+
+2. Specify the attribute Test Files Location (with value of location where test files will be downloaded). All other attributes aren't required and can be blank.
 
 ### Configuring the setup script
 This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
@@ -275,7 +270,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    
 2. Add Apps and services to the blueprint. 
    * Click the **App/Services** tab and add the following to the canvas:
-   	1. **TeraVMController** service
+   	1. **TeraVMController** service - Make sure that you specify attribute Test Files Location (with value of location where test files will be downloaded). All other attributes aren't required and can be blank. See "Configuring Controller attributes".
 	2. **TeraVM Chassis** App
 	3. **TeraVM Blade** App
 	
