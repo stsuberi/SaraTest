@@ -199,6 +199,9 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new App
+
+#### Configuring a new App based on the vBlade shell
+
 This section explains how to create an App template for the TeraVM vBlade shell (Module) to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
@@ -211,12 +214,34 @@ This section explains how to create an App template for the TeraVM vBlade shell 
 
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
 
-![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.PNG)
+![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.png)
 
-6. In the **App Resource** tab, perform the following steps for the chassis and the blade:
+6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all the required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes).
+
+![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_resource.png)
+
+7. Click **Done**.
+
+#### Configuring a new App based on the vChassis shell
+
+This section explains how to create an App template for the TeraVM vChassis shell to enable network connectivity between endpoints in the sandbox.
+
+1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
+
+2. Click **Add**.
+
+3. Select **vCenter VM from Template**.
+
+4. Enter the **Name** of the App and click **Create**.
+
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
+
+![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
+
+6. In the **App Resource** tab, perform the following steps for the blade:
 	1. Select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
 	
-	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.PNG)
+	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.PNG)
 	
 	2. Select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell. See attribute section.
 	![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
