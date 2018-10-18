@@ -247,13 +247,15 @@ This section explains how to create an App template for the TeraVM vChassis shel
 ### Configuring the TeraVM Controller 
 This section explains how to configure the TeraVM Controller service to that.....
 
-1. In your blueprint, add the TeraVM Traffic Generator Controller service. Click **App/Service**>Traffic Generator Controller.
+1. In your blueprint, add the TeraVM Traffic Generator Controller service. 
+	1. Click **App/Service**.
+	2. Select the **Traffic Generator Controller** category to view the list of controllers.
 
 2. Click the plus sign next to the **TeraVM Traffic Generator Controller** to add the service into your diagram.
 
-2. In the **Add Service** dialog box, specify the **Test Files Location** attribute with the location to download test files. All other attributes aren't required and can be left blank.
+3. In the **Add Service** dialog box, specify the **Test Files Location** attribute with the location where test files should be downloaded. All other attributes aren't required and can be left blank.
 
-![](https://github.com/stsuberi/SaraTest/blob/master/teravm_ccontroller_service.png)
+![](https://github.com/stsuberi/SaraTest/blob/master/teravm_controller_service.png)
 
 3. Click **Add**.
 
