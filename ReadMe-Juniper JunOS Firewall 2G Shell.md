@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **Juniper JunOS Firewall 2G Shell**  
 
-Release date: [Month Year]
+Release date: April 2017
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0.0
 
 # In This Guide
 
@@ -16,7 +16,6 @@ Document version: [x.x.x]
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflows](#typical-workflows)
 * [References](#references)
-* [Release Notes](#release-notes)
 
 
 # Overview
@@ -25,58 +24,73 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
 
-### **[Shell Name]**
-**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **Juniper JunOS Firewall 2G Shell**
+The **Juniper JunOS Firewall 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Juniper JunOS Firewall**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **Juniper JunOS Firewall**, see the official **Juniper** product documentation.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the Networking Shell Standard version **[5.0.2]**.
+**Juniper JunOS Firewall 2G Shell 1.0.0** is based on the Firewall Shell Standard version **3.0.0**.
 
-For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [Firewall Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md) in GitHub.
+
+### Supported OS
+
+▪ JunOS
+
 
 ### Requirements
 
-Release: **[Shell Name x.x.x]**
+Release: **Juniper JunOS Firewall 2G Shell 1.0.0**
 
-▪ CloudShell version **[Version Number]**
+▪ CloudShell version: 8.0 and above
 
-▪ Other
+▪ Certified models: Juniper SRX220
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **Juniper JunOS Firewall Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The Juniper JunOS Firewall families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_ Firewall|Juniper JunOS Firewall 2G|Generic Juniper JunOS Firewall 2 Generation|
+|CS_Chassis|Generic Chassis|Default Firewall chassis|
+|CS_Module|Generic Module|Modules located on the chassis|
+|CS_SubModule|Generic Sub Module|Sub modules|
+|CS_Port|Generic Port|Interface|
+|CS_PortChannel|Generic Port Channel|Group of interfaces|
+|CS_PowerPort|Generic Power Port|Power Supply module|
 
-#### **[Device Name] Attributes**
 
-The attribute names and types are listed in the following section of the Networking Shell Standard:
+#### **Juniper JunOS Firewall 2G Shell Attributes**
 
-https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
+The attribute names and types are listed in the following section of the Firewall Shell Standard:
+
+https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#attributes
 
 **[Notes:]** <br>(Include as needed to explain differences between this shell's attributes and attributes documented in the Shell Standard.)
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-The command names and types are listed in the following section of the Networking Shell Standard:
+The following commands are associated with the Juniper JunOS Firewall shell:
 
-https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
-
-**[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
+|Command|Description|
+|:-----|:-----|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Run Custom Command|Sends command to the device, and prints output. All commands will be executed in the enable mode, However it will not allow to enter configuration mode.|
+|Run Custom Config Command|Sends command to the device in configuration mode, and prints output. All commands will be executed in the
+enable mode, accessible only via the API.Executes a custom command on the device. <br>Command Inputs:</br><li>**Command**: The command to run. Note that commands that require a response are not supported.</br>|
+|Save|Creates a configuration file and saves it to the provided destination.<br>Command Inputs:</br><li>**Folder Path**: Path where the configuration file will be saved. It should be accessible from the execution server. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the Startup or Running config.<br>- Startup: Configuration that is loaded when the device boots or powers up. Startup configuration is not supported on all switches.<br>- Running: Current configuration in the device. It may have been modified since the last boot.|
+|Restore|Restores a configuration from the saved file.<br>Command Inputs:</br><li>**Path**: The full path from which the configuration file will be restored. The path should include the protocol type, for example: tftp://asdf.</br><li>**Configuration Type**: Specify whether the file should update the Startup or Running config.<br>- Startup: Configuration that is loaded when the device boots or powers up. Startup configuration is not supported on all switches.<br>- Running: Current configuration in the device. It may have been modified since the last boot.<br><li>**Restore Method**: Determines whether the restore should append or override the current configuration.|
+|Load Firmware|Uploads and updates the firmware on the resource. <br>Command Inputs:</br><li>**Path**: Path to tftp://server where the firmware file is stored.|
 
 # Downloading the Shell
-The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Juniper JunOS Firewall 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -84,11 +98,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|JuniperJunosFirewallShell2G.zip|Juniper JunOS Firewall 2G shell package|
+|cloudshell-firewall-juniper-junos-2-gen-dependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name x.x.x]** shell and configure and modify the shell’s devices.
+This section describes how to import the **Juniper JunOS Firewall 2G 1.0.0** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -136,7 +150,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-firewall-juniper-junos-2-gen-dependencies-package-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -161,13 +175,13 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **Juniper JunOS Firewall 2G**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]**.
+  3. Enter the **Name** and **IP address** of the **Juniper JunOS Firewall**.
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). Make sure to fill in the device's SNMP version and credentials.
   
   6. Click **Continue**.
 
@@ -193,7 +207,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **Juniper JunOS** resource.
 
 2. Run the **Save** resource command.
 
@@ -204,10 +218,10 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 4. Click **Run**.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **Juniper JunOS** resource.
 
 2. Run the **Restore** resource command.
 
@@ -220,12 +234,13 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **[Device Name]** resource.
+1. In CloudShell portal, reserve the **Juniper JunOS** resource.
 
 2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
+	* **Remote Host** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/ios12.SE1-smp-k8.bin.
+	* **File Path** (Mandatory). Enter the desitnation filename on the device itself, for example: *bootflash:/ios12.SE1-smp-k8.bin*.
 	
 4. Click **Run**.
 
@@ -237,16 +252,3 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
-
-# Release Notes 
-
-### What's New
-
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
