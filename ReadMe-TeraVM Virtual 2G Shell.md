@@ -306,7 +306,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    1. Click the **App/Services** tab.
    
    2. Add the following to the diagram:
-   		* **TeraVM Traffic Generator Controller** service - See [Configuring the TeraVM Controller](#configuring-the-teravm-controller) for more information.
+   		* **TeraVM Traffic Generator Controller** service - see [Configuring the TeraVM Controller](#configuring-the-teravm-controller) for more information.
 		* **TeraVM vChassis** App
 		* **TeraVM vBlade** App
 	
