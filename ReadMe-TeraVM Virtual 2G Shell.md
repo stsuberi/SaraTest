@@ -31,9 +31,9 @@ The **TeraVM Virtual 2G** shells provide you with connectivity and management ca
 
 For more information see the official **TeraVM** product documentation.
 
-To model an **TeraVM** device in CloudShell, use the following: 
+To model an **TeraVM** device in CloudShell, use the following shells: 
 
-▪ [TeraVM TeraVM Virtual vChassis](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM chassis.
+▪ [TeraVM TeraVM Virtual 2G vChassis](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM chassis.
 
 ▪ [TeraVM Controller Shell (Service)](https://community.quali.com/repos/3287/teravm-controller-shell), which provides automation commands to run on the vChassis, such as Load Test Configuration, Start Traffic, Get Statistics.
 
@@ -46,7 +46,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **TeraVM Virtual 2G shells 1.0.0**
+Release: **TeraVM Virtual 2G Shells 1.0.0**
 
 ▪ TeraVM versions: 13.4 and above
 
@@ -74,8 +74,8 @@ The attribute names and types are listed in the following table:
 |:---|:---|:---|
 |License Server|String|IP address or hostname of the License Server|
 |Executive Server|String|IP address or hostname of the Executive Server|
-|TVM Comms Network|String|TeraVM Comms Network name on the vCenter|
-|TVM MGMT Network|String|TeraVM Management Network name on the vCenter|
+|TVM Comms Network|String|TeraVM Comms Network name in vCenter|
+|TVM MGMT Network|String|TeraVM Management Network name in vCenter|
 |Password|Password|Password for the Deployed TeraVM Controller|
 |User|String|Username for the Deployed TeraVM Controller|
 
@@ -85,8 +85,8 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|TVM Comms Network|String|TeraVM Comms Network name on the vCenter|
-|TVM MGMT Network|String|TeraVM Management Network name on the vCenter|
+|TVM Comms Network|String|TeraVM Comms Network name in vCenter|
+|TVM MGMT Network|String|TeraVM Management Network name in vCenter|
 
 #### **TeraVM Port Attributes**
 
@@ -111,7 +111,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* **TeraVM config file** (String)(Mandatory): The configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.<br>* **Use ports from reservation** (Enum): Possible values: **True** or **False**. Update the configuration file with ports from the current reservation by their **Logical Name** attributes.
+|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* **TeraVM config file** (String)(Mandatory): The configuration file name. <br>Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.<br>* **Use ports from reservation** (Enum): Possible values: **True** or **False**. <br>Updates the configuration file with ports from the current reservation based on their **Logical Name** attributes.
 |Start Traffic|Starts a test with the current configuration.|
 |Stop Traffic|Stops running the test.|
 |Get Results|Gets the test result file and attaches it to the reservation.|
@@ -121,7 +121,7 @@ The **TeraVM Virtual 2G** shells are available from the [Quali Community Integra
 
 Download the files into a temporary location on your local machine. 
 
-The shells comprise:
+The shells include:
 
 |File name|Description|
 |:---|:---|
@@ -151,9 +151,9 @@ This section describes how to import the TeraVM Virtual shells and configure and
      
   5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
 
-The TeraVM Controller shell is displayed in the **Services** page and can be used run custom code and automation processes in the sandbox. For more information on Services, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
+The TeraVM Controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
 
-The vBlade and vChassis shells are now ready to be used to create new Apps, see [Configuring a new App](#configuring-a-new-app). For more information on Apps, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
+The vBlade and vChassis shells are now ready to be used to create new Apps, see [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 ### Offline installation of a shell
 
@@ -202,7 +202,7 @@ full path"/>`
 
 ### Configuring a new App
 
-#### Configuring a new App based on the vBlade shell
+#### Configuring a new App based on the TeraVM vBlade shell
 
 This section explains how to create an App template for the TeraVM vBlade shell (Module) to enable network connectivity between endpoints in the sandbox.
 
@@ -214,17 +214,17 @@ This section explains how to create an App template for the TeraVM vBlade shell 
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.png)
 
-6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes).
+6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes-blade).
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_resource.png)
 
 7. Click **Done**.
 
-#### Configuring a new App based on the vChassis shell
+#### Configuring a new App based on the TeraVM vChassis shell
 
 This section explains how to create an App template for the TeraVM vChassis shell to enable network connectivity between endpoints in the sandbox.
 
@@ -236,20 +236,20 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
-6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell:See attribute section.
+6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell, see [TeraVM Chassis Attributes](teravm-chassis-attributes).
 	
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_resource.png)
 	
 7. Click **Done**.
 
 ### Configuring the TeraVM Controller 
-This section explains how to configure the TeraVM Controller service to download test files to a particular location.
+This section explains how to configure the **TeraVM Controller** service to download test files to a particular location.
 
-1. In your blueprint, add the TeraVM Traffic Generator Controller service. 
+1. In your blueprint, add the **TeraVM Traffic Generator Controller** service. 
 	1. Click **App/Service**.
 	2. Select the **Traffic Generator Controller** category to view the list of controllers.
 
@@ -262,18 +262,20 @@ This section explains how to configure the TeraVM Controller service to download
 3. Click **Add**.
 
 ### Configuring the setup script
-This section explains how to add the setup script for the **TeraVM Virtual vChassis** shell.
+This section explains how to add the setup script for the **TeraVM Virtual** shells.
 
 **To add the setup script:**
 1. Log in to CloudShell Portal as administrator of the relevant domain.
 
 2. Go to the **Manage** dashboard and click **Scripts>Blueprint**.
 
-3. Click **Add New Script**. From the list, select the downloaded setup script *TeraVM.Sandbox.Setup.1.0.zip*.
+3. Click **Add New Script**. 
 
-4. Click **Edit** and change the **Script Type** to **Setup**.
+4. From the list, select the downloaded setup script *TeraVM.Sandbox.Setup.1.0.zip*.
 
-5. Click **Save**.
+5. Click **Edit** and change the **Script Type** to **Setup**.
+
+6. Click **Save**.
 
 
 # Updating Python Dependencies for Shells
