@@ -31,13 +31,13 @@ The **Cisco IOS Router 2G** shell provides you with connectivity and management 
 For more information on the **Cisco IOS Router**, see the official **Cisco** product documentation.
 
 ### Standard version
-**Cisco IOS Router 2G Shell 2.0.1** is based on the Networking Shell Standard version **5.0.2**.
+**Cisco IOS Router 2G Shell** is based on the Networking Shell Standard version **5.0.2**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **Cisco IOS Router 2G Shell 2.0.1**
+Release: **Cisco IOS Router 2G Shell**
 
 ▪ CloudShell version: 8.0 and above
 
@@ -97,7 +97,7 @@ The shell comprises:
 |cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Cisco IOS Router 2G Shell 2.0.1** shell and configure and modify the shell’s devices.
+This section describes how to import the **Cisco IOS Router 2G Shell** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
