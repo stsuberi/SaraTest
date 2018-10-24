@@ -62,6 +62,8 @@ The [Device Name] families and models are listed in the following table:
 
 #### **[Device Name] Attributes**
 
+[Note]: If relevant can link to the section of the standard.
+
 The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
@@ -73,6 +75,8 @@ The attribute names and types are listed in the following table:
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+
+[Note]: If relevant can link to the section of the standard.
 
 |Command|Description|
 |:-----|:-----|
