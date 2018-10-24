@@ -40,7 +40,7 @@ To model an **[Device Name]** device in CloudShell, use one of the following con
 
 ### Standard version
 
-For detailed information about the shell’s structure and attributes, see the shell-definition.yaml file in GitHub.
+For detailed information about the shell’s structure and attributes, see the .
 
 ### Supported OS
 ▪ **[OS Name]**
