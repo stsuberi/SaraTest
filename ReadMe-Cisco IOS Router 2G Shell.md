@@ -250,7 +250,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**Cisco IOS Router 2G Shell 2.0.1**
+**Cisco IOS Router 2G Shell**
 
 
 ### What's New
