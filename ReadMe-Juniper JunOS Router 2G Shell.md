@@ -76,11 +76,15 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-The command names and types are listed in the following section of the Networking Shell Standard:
+The command names and types are listed in the following table:
 
-https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
-
-**[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
+|Command|Description|
+|:-----|:-----|
+|Run Custom Command||
+|Health Check|Checks if the device is powered-up and connectable.|
+|Save|Creates a configuration file and saves it to the provided destination.<br>Set the command inputs as follows:<br>▪ **Folder Path** (String): Path where the configuration file will be saved. It should be accessible from the execution server. The path should include the protocol type, for example: tftp://asdf.<br>▪ **Configuration Type** (Enum): Specify whether the file should update the Startup or Running config.<br>- **Startup**: Configuration that is loaded when the device boots or powers up.<br>- **Running**: Current configuration in the device. It may have been modified since the last boot.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
+|Restore|Restores a configuration file from the saved file.<br>Set the command inputs as follows:<br>▪ **Path** (String): The full path from which the configuration file will be restored. The path should include the protocol type, for example: tftp://asdf.<br>▪ **Configuration Type** (Enum): Specify whether the file should update the Startup or Running config.<br>- **Startup**: Configuration that is loaded when the device boots or powers up.<br>- **Running**: Current configuration in the device. It may have been modified since the last boot.<br>▪ **Restore Method** (Enum): Determines whether the restore should append or override the current configuration.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
+|Load Firmware|Uploads and updates the firmware on the resource.<br>Set the command inputs as follows:<br>▪ **Path** (String): Path to tftp://server where the firmware file is stored.<br>▪ **VRF Management Name** (String): (Optional) Virtual routing and forwarding management name.|
 
 # Downloading the Shell
 The **Juniper JunOS Router 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
