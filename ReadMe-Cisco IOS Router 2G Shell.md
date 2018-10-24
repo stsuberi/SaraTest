@@ -255,5 +255,5 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-* SNMP v3 attributes was added to the **Inventory** screen on the portal.
+* SNMP v3 attributes were added to the **Inventory** screen on CloudShell Portal.
 * CLI definition was moved to the driver class to simplify editing.
