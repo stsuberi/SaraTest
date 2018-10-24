@@ -40,7 +40,7 @@ To model an **[Device Name]** device in CloudShell, use one of the following con
 
 ### Standard version
 
-For detailed information about the shell’s structure and attributes, see the .
+For detailed information about the shell’s structure and attributes, see the **Shells Standard: Traffic**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
 
 ### Supported OS
 ▪ **[OS Name]**
