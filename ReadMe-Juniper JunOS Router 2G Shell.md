@@ -31,7 +31,7 @@ The **Juniper JunOS Router 2G** shell provides you with connectivity and managem
 For more information on the **Juniper JunOS Router**, see the official **Juniper** product documentation.
 
 ### Standard version
-**Juniper JunOS Router 2G Shell 1.0.0** is based on the Networking Shell Standard version **5.0.0**.
+**Juniper JunOS Router 2G Shell** is based on the Networking Shell Standard version **5.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
@@ -41,7 +41,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **Juniper JunOS Router 2G Shell 1.0.0**
+Release: **Juniper JunOS Router 2G Shell**
 
 ▪ CloudShell version 8.0 and above
 
@@ -72,7 +72,7 @@ The attribute names and types are listed in the following section of the Network
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 The command names and types are listed in the following table:
 
@@ -176,7 +176,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](*device-name-attributes). 
   
   6. Click **Continue**.
 
