@@ -240,7 +240,7 @@ To connect with Quali users and experts from around the world, ask questions and
 # Release Notes 
 (if not applicable - remove section)
 ### What's New
-
+[Note]: Insert link to release section in GitHub (when previous releases exist) so that customer can learn what has changed in each release.]
 * 
 * 
 * 
