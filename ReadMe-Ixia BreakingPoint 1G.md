@@ -52,7 +52,7 @@ Release: **Ixia BreakingPoint 1G shells**
 
 ## Data Model
 
-The shell's data model includes all shell metadata, famiies, and attributes.
+The shell's data model includes all shell metadata, families, and attributes.
 
 **BreakingPoint Chassis Families and Models**
 
