@@ -176,7 +176,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Cisco NXOS Switch 2G Shell Attributes](*cisco-nxos-switch-2g-shell-attributes). Make sure you enter the device's SNMP version and credentials.
+  5. In the **Resource** dialog box, enter the device's settings, see [Cisco NXOS Switch 2G Shell Attributes](#cisco-nxos-switch-2g-shell-attributes). Make sure you enter the device's SNMP version and credentials.
   
   6. Click **Continue**.
 
