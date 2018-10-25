@@ -176,7 +176,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings. Make sure you enter the device's SNMP version and credentials. For details, see [Cisco IOS Router 2G Shell Attributes](*cisco-ios-router-2g-shell-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings. Make sure you enter the device's SNMP version and credentials. For details, see [Cisco IOS Router 2G Shell Attributes](#cisco-ios-router-2g-shell-attributes). 
   
   6. Click **Continue**.
 
