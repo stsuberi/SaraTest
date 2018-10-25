@@ -100,7 +100,7 @@ The shell comprises:
 |cloudshell-loadbalancer-f5-bigipdependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **F5 BIG-IP LoadBalancer 2G 1.0.0** shell and configure and modify the shell’s devices.
+This section describes how to import the **F5 BIG-IP LoadBalancer 2G** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
