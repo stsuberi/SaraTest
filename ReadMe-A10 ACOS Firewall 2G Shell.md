@@ -174,7 +174,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [A10 ACOS Firewall 2G Shell Attributes](*a10-acos-firewall-2g-shell-attributes).
+  5. In the **Resource** dialog box, enter the device's settings, see [A10 ACOS Firewall 2G Shell Attributes](#a10-acos-firewall-2g-shell-attributes).
   
   6. Click **Continue**.
 
