@@ -312,7 +312,6 @@ Workflow 3 - *Running a test*
    * Click **Run**.
    
 4. Run **Stop Test**.
-
 <br>If you ran the test with **Blocking** equals **False**, you can immediately stop the test.
    * Run the `Stop Traffic` command.
    
