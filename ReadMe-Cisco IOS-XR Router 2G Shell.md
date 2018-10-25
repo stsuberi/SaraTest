@@ -31,13 +31,13 @@ The **Cisco IOS-XR Router 2G** shell provides you with connectivity and manageme
 For more information on the **Cisco IOS-XR Router**, see the official **Cisco** product documentation.
 
 ### Standard version
-**Cisco IOS-XR Router 2G Shell 1.0.0** is based on the Networking Shell Standard version **5.0.0**.
+**Cisco IOS-XR Router 2G Shell** is based on the Networking Shell Standard version **5.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **Cisco IOS-XR Router 2G Shell 1.0.0**
+Release: **Cisco IOS-XR Router 2G Shell**
 
 ▪ CloudShell version: 8.0 and above
 
@@ -70,7 +70,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 **[Notes:]** <br>(Include as needed to explain differences between this shell's attributes and attributes documented in the Shell Standard.)
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 The command names and types are listed in the following section of the Networking Shell Standard:
 
@@ -91,7 +91,7 @@ The shell comprises:
 |cloudshell-networking-cisco-iosxr-2-gen-dependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Cisco IOS-XR Router 2G Shell 1.0.0** shell and configure and modify the shell’s devices.
+This section describes how to import the **Cisco IOS-XR Router 2G Shell** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -244,7 +244,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**Cisco IOS-XR Router 2G Shell 1.0.0*
+**Cisco IOS-XR Router 2G Shell*
 
 
 ### Known Issues
