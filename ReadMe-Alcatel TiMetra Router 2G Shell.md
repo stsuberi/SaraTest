@@ -26,12 +26,12 @@ A shell integrates a device model, application or other technology with CloudShe
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
 
 ### **Alcatel TiMetra Router 2G Shell**
-The **Alcatel TiMetra Router 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+The **Alcatel TiMetra Router 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Alcatel TiMetra Router**. 
 
 For more information on the **Alcatel TiMetra Router**, see the official **Alcatel TiMetra** product documentation.
 
 ### Standard version
-**Alcatel TiMetra Router 2G Shell 1.1.0** is based on the Networking Shell Standard version **5.0.2**.
+**Alcatel TiMetra Router 2G Shell** is based on the Networking Shell Standard version **5.0.2**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
@@ -40,7 +40,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **Alcatel TiMetra Router 2G Shell 1.1.0**
+Release: **Alcatel TiMetra Router 2G Shell**
 
 ▪ CloudShell version: 8.0 and above
 
@@ -70,16 +70,20 @@ The attribute names and types are listed in the following section of the Network
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
-**[Notes:]** <br>(Include as needed to explain differences between this shell's attributes and attributes documented in the Shell Standard.)
-
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-The command names and types are listed in the following section of the Networking Shell Standard:
+The following resource commands are available on the **[Device Name]**:
+
+* Health Check
+* Run Custom Command
+* Save
+* Restore
+* Load Firmware
+
+For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
-
-**[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
 
 # Downloading the Shell
 The **Alcatel TiMetra Router 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -169,7 +173,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
      
   2. From the list, select **Alcatel TiMetra Router**.
   
-  3. Enter the **Name** and **IP address** of the **Alcatel TiMetra Router**.
+  3. Enter the **Name** and **IP address** of the **AlcatelTiMetraRouterShell2G**.
   
   4. Click **Create**.
   
@@ -210,7 +214,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 4. Click **Run**.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the **Alcatel TiMetra** resource.
@@ -248,7 +252,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-* Updated requirements
+* Updated requirements section of the documentation to include certified models.
 
 ### Known Issues
-* Does not support configuring SNMP v3.
+* Shell does not support configuring SNMP v3.
