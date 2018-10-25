@@ -255,8 +255,8 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-* Console Session is now supported. You must perform the following steps:
+* Console Session is now supported. You must perform the following steps on the resource:
 	* Set the **Session Concurrency Limit** attribute to 1.
-	* Set the following attributes: **Console Server IP Address**, **Console Port**, **User**, **Password**.
+	* Set the following attributes: **Console Server IP Address**, **Console Port**, **User**, and **Password**.
 	
 * A new *Restore override flow* was implemented, requiring a Console Session.
