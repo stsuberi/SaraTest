@@ -29,7 +29,7 @@ The **A10 ACOS Firewall 2G** shell provides you with connectivity and management
 For more information on the **A10 ACOS Firewall**, see the official **A10 Networks** product documentation.
 
 ### Standard version
-**A10 ACOS Firewall 2G 1.0.0** is based on the **Firewall Shell Standard: 3.0.0**.
+**A10 ACOS Firewall 2G** is based on the **Firewall Shell Standard: 3.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the **Firewall Shell Standard**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md) in GitHub.
 
@@ -38,7 +38,7 @@ For detailed information about the shell’s structure and attributes, see the *
 
 ### Requirements
 
-Release: **A10 ACOS Firewall 2G 1.0.0**
+Release: **A10 ACOS Firewall 2G**
 
 * CloudShell version: 8.0 and above
 
@@ -70,9 +70,18 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/f
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
 
-The command names and types are listed in the following section of the Firewall Shell Standard:
+The following resource commands are available on the **A10 ACOS Firewall**:
+
+* Health Check
+* Send Custom Command
+* Save
+* Restore
+* Load Firmware
+
+For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#commands
+
 	
 # Downloading the Shell
 The **A10 ACOS Firewall 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -159,7 +168,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **A10 ACOS Firewall 2G**.
+  2. From the list, select **A10AcosFirewallShell2G**.
   
   3. Enter the **Name** and **IP address** of the **A10 ACOS Firewall**.
   
@@ -202,7 +211,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 4. Click **Run**.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the **A10 ACOS Firewall** resource.
