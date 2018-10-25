@@ -79,7 +79,7 @@ The chassis attribute names and types are listed in the following table:
 |Controller TCP Port|String|443|TCP port of the traffic server. Relevant only in case an external server is configured. If left empty, default TCP port should be used.|
 |Controller Address|String||IP address of the traffic server. Relevant only in case an external server is configured.|
 |Client Install Path|String||Path in which the traffic client is installed on the Execution Server.| 
-|Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status.| 
+|Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device's power status.| 
 |Serial Number|String||Serial number of the device.|
 |Server Description|String||Full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.| 
 |Model Name|String||Catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
@@ -97,7 +97,7 @@ The controller attribute names and types are listed in the following table:
 |Password|Password||
 |Test Files Location|String|Location for test related files.|
 |Test User|String|TeraVM Test User for Open Automation Authorization.|
-|Test User Password||TeraVM Test User password for Open Automation Authorization.|
+|Test User Password|Password|TeraVM Test User Password for Open Automation Authorization.|
 |User|String||
 
 ### Automation
@@ -268,7 +268,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    1. Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. 
    2. Click **Edit** for the newly added script and change **Script Type** to **Teardown**.
    3. Return to the blueprint and open properties, **Blueprint>Properties**. 
-   4. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min.
+   4. In the **Driver** section, select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min.
    5. Click **Add Script** and choose **Cleanup Reservation** from the list. 
    6. Click **Update** to save changes.
 
@@ -278,7 +278,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. From the TeraVMController service, run the **Load Configuration** command.
    1. Hover over the TeraVMController service and click **Commands**.
    2. In the **Resource Commands** pane, click the **Load Configuration** command.
-   3. Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the execution server running the command.
+   3. Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the Execution Server running the command.
    4. Click **Run**, to load the test configuration to the TeraVM Controller.
    
 3. Run the **Start Test** command.
