@@ -41,7 +41,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **F5 BIG-IP LoadBalancer 1.0.0***
+Release: **F5 BIG-IP LoadBalancer**
 
 ▪ CloudShell version: 8.3 and above
 
