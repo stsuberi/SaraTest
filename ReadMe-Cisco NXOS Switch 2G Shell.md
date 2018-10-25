@@ -31,13 +31,13 @@ The **Cisco NXOS Switch 2G** shell provides you with connectivity and management
 For more information on the **Cisco NXOS Switch**, see the official **Cisco** product documentation.
 
 ### Standard version
-**Cisco NXOS Switch 2G Shell 1.0.0** is based on the Networking Shell Standard version **5.0.0**.
+The **Cisco NXOS Switch 2G** shell is based on the Networking Shell Standard version **5.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **Cisco NXOS Switch 2G Shell 1.0.0**
+Release: **Cisco NXOS Switch 2G Shell**
 
 ▪ CloudShell version: 8.0 and above
 
@@ -69,16 +69,20 @@ The attribute names and types are listed in the following section of the Network
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
-**[Notes:]** <br>(Include as needed to explain differences between this shell's attributes and attributes documented in the Shell Standard.)
-
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
-The command names and types are listed in the following section of the Networking Shell Standard:
+The following resource commands are available on the **Cisco NXOS Switch**:
+
+* Health Check
+* Run Custom Command
+* Save
+* Restore
+* Load Firmware
+
+For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
-
-**[Notes:]**<br>(Include as needed to explain differences between this shell's commands and commands documented in the Shell Standard.)
 
 # Downloading the Shell
 The **Cisco NXOS Switch 2G Shell** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -166,7 +170,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **Cisco NXOS Switch 2G**.
+  2. From the list, select **CiscoNXOS Switch 2G**.
   
   3. Enter the **Name** and **IP address** of the **Cisco NXOS Switch**.
   
@@ -209,7 +213,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 4. Click **Run**.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the **Cisco NXOS** resource.
@@ -246,13 +250,13 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**Cisco NXOS Switch 2G Shell 1.0.0**
+**Cisco NXOS Switch 2G Shell**
 
 
 ### What's New
 
-* Console Session support was added. You must do the following:
+* Console Session is now supported. You must perform the following steps:
 	* Set the **Session Concurrency Limit** attribute to 1.
 	* Set the following attributes: **Console Server IP Address**, **Console Port**, **User**, **Password**.
 	
-* A new restore override flow was implemented, which requires a **Console Session**.
+* A new *Restore override flow* was implemented, requiring a Console Session.
