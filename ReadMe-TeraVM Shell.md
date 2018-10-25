@@ -14,7 +14,7 @@ Document version: 1.0.0
 * [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
+* [Typical Workflows](#typical-workflows)
 * [References](#references)
 
 # Overview
@@ -26,7 +26,7 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **Tera VM Shells**
-**TeraVM** shells provide you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM**. 
+**TeraVM** shells provide you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM** traffic generator. 
 
 For more information on the **TeraVM Chassis** and **Controller**, see the official **TeraVM** product documentation.
 
@@ -34,7 +34,7 @@ To model a **TeraVM** traffic generator in CloudShell, you must use the followin
 
 ▪ [TeraVM Chassis 2G Shell](https://community.quali.com/repos/3286/teravm-chassis-2g-shell), which provides data model and autoload functionality to model and load the TeraVM to resource management.
 
-▪ [TeraVM Controller 1G Shell](https://community.quali.com/repos/3287/teravm-controller-shell) (service), which provides automation commands to run the VM Chassis, such as Load Configuration, Start Traffic, Get Results. 
+▪ [TeraVM Controller 1G Shell](https://community.quali.com/repos/3287/teravm-controller-shell) (service), which provides automation commands to run on the TeraVM Chassis, such as Load Configuration, Start Traffic, Get Results. 
 
 ### Standard version
 The **TeraVM** shells are based on the Traffic Shell Standard version 1.0.0.
@@ -71,20 +71,18 @@ The chassis attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |Name|String||CloudShell resource display name.|
 |Address|String|Root|Resource address (address of the device).|
-|Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the resource.
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and Inventory dashboard. By default, visibility is defined in the resource family and can be changed for a specific resource.
-Possible values: Family Default (Everyone), Admin only, and Everyone.
-|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, the remote connection is defined in the resource family and can be changed for a specific resource.
-Possible values: Family Default (Enable), Enable, and Disable.|
+|Folder|String|Root|CloudShell folder to place the resource. Use the search bar to quickly find the resource.
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and **Inventory** dashboard. By default, visibility is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, the remote connection is defined in the resource family and can be changed for a specific resource. <br>Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
 |User|String||Admin user on the device.|
 |Password|Password||Password for Admin user on the device.|
 |Controller TCP Port|String|443|TCP port of the traffic server. Relevant only in case an external server is configured. If left empty, default TCP port should be used.|
 |Controller Address|String||IP address of the traffic server. Relevant only in case an external server is configured.|
 |Client Install Path|String||Path in which the traffic client is installed on the Execution Server.| 
-|Power Management|Boolean|True|Used by the power management orchestration. If enabled, to determine wether to automatically manage the device power status.| 
+|Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status.| 
 |Serial Number|String||Serial number of the device.|
 |Server Description|String||Full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.| 
-|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Model Name|String||Catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Vendor|String||Vendor name.|
 |Version|String||Firmware version of the resource.|
 
@@ -99,7 +97,7 @@ The controller attribute names and types are listed in the following table:
 |Password|Password||
 |Test Files Location|String|Location for test related files.|
 |Test User|String|TeraVM Test User for Open Automation Authorization.|
-|Test User Password||TeraVM Test User for Open Automation Authorization.|
+|Test User Password||TeraVM Test User password for Open Automation Authorization.|
 |User|String||
 
 ### Automation
@@ -115,7 +113,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 #### **TeraVM Controller**
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* TeraVM config file (String)(Mandatory): The configuration file name. Path should include the protocol type (for example tftp://10.10.10.10/asdf).<br>* Use ports from reservation (Enum): True or False. Update the configuration file with ports from the current reservation by their Logical Name attributes.
+|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* **TeraVM config file** (String) (Mandatory): The configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.<br>* **Use ports from reservation** (Enum): **True** or **False**. Updates the configuration file with ports from the current reservation based on their **Logical Name** attributes.
 |Start Traffic|Starts a test with the current configuration.|
 |Stop Traffic|Stops running the test.|
 |Get Results|Gets the test result file and attaches it to the reservation.|
@@ -152,7 +150,7 @@ This section describes how to import the **TeraVM** shells and configure and mod
   
   5. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
   
-The shell is displayed in the **Drivers/Resource** page. 
+The shell is displayed in the **App/Service** page. 
   
   **To import the TeraVM Chassis 2G shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
@@ -246,42 +244,42 @@ This section explains how to update your Python dependencies folder. This is req
 
 2. Extract the zip file to the suitable offline package folder(s). 
 
-3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
+3. Terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat).
 
 ### Updating online Python dependencies
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
 
 **To update online Python dependencies:**
-* If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
+* If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat).. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-# Typical Workflow and Scenarios 
+# Typical Workflows 
 
-**Scenario 1 - Creating a new blueprint**
+**Workflow 1 - Creating a new blueprint**
 1. Create a new blueprint.
-   * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
-   * Give the blueprint a name.
+   1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   2. Give the blueprint a name.
    
 2. Add resources and services to the blueprint. 
-   * Click the **Resource** button and add the TeraVM Chassis resource and all needed ports into the diagram. 
-   * Associate the port sub resources with the TeraVM interfaces, by specifying the port attribute **Logical Name**.
-   * Click the **App/Services** tab and add the **TeraVMController** service.
+   1. Click the **Resource** button and add the TeraVM Chassis resource and all needed ports into the diagram. 
+   2. Associate the port sub resources with the TeraVM interfaces, by specifying the port attribute **Logical Name**.
+   3. Click the **App/Services** tab and add the **TeraVMController** service.
    
 3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
-   * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. 
-   * Click **Edit** for the newly added script and change **Script Type** to **Teardown**.
-   * Return to the blueprint and open properties, **Blueprint>Properties**. 
-   * In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min.
-   * Click **Add Script** and choose **Cleanup Reservation** from the list. 
-   * Click **Update** to save changes.
+   1. Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. 
+   2. Click **Edit** for the newly added script and change **Script Type** to **Teardown**.
+   3. Return to the blueprint and open properties, **Blueprint>Properties**. 
+   4. In the **Driver** section select **Python Setup & Teardown**, add **Estimated teardown duration** 1 min.
+   5. Click **Add Script** and choose **Cleanup Reservation** from the list. 
+   6. Click **Update** to save changes.
 
-**Scenario 2 - Running a test**
+**Workflow 2 - Running a test**
 1. Enter your blueprint.
 
 2. From the TeraVMController service, run the **Load Configuration** command.
-   * Hover over the TeraVMController service and click **Commands**.
-   * In the **Resource Commands** pane, click the **Load Configuration** command.
-   * Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the execution server running the command.
-   * Click **Run**, to load the test configuration to the TeraVM Controller.
+   1. Hover over the TeraVMController service and click **Commands**.
+   2. In the **Resource Commands** pane, click the **Load Configuration** command.
+   3. Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the execution server running the command.
+   4. Click **Run**, to load the test configuration to the TeraVM Controller.
    
 3. Run the **Start Test** command.
 
