@@ -177,7 +177,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings, see [Alcatel TiMetra Router 2G Shell Attributes](*alcatel-timetra-router-2g-shell-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings, see [Alcatel TiMetra Router 2G Shell Attributes](#alcatel-timetra-router-2g-shell-attributes). 
   
   6. Click **Continue**.
 
