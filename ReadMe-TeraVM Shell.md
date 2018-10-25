@@ -26,11 +26,11 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **Tera VM Shells**
-**TeraVM** shells provides you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM**. 
+**TeraVM** shells provide you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM**. 
 
-For more information on the **TeraVM**, see the official **TeraVM** product documentation.
+For more information on the **TeraVM Chassis** and **Controller**, see the official **TeraVM** product documentation.
 
-To model a **TeraVM** device in CloudShell, you must use the following shells: 
+To model a **TeraVM** traffic generator in CloudShell, you must use the following shells: 
 
 ▪ [TeraVM Chassis 2G Shell](https://community.quali.com/repos/3286/teravm-chassis-2g-shell), which provides data model and autoload functionality to model and load the TeraVM to resource management.
 
@@ -43,7 +43,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **TeraVM Shells** 1.0.0
+Release: **TeraVM Shells**
 
 ▪ TeraVM version: 13.4
 
@@ -67,16 +67,26 @@ The chassis families and models are listed in the following table:
 
 The chassis attribute names and types are listed in the following table:
 
-|Attribute|Type|Description|
-|:---|:---|:---|
-|Controller Group|String|Name of the controller group that the traffic generator is associated with or the group(s) (comma-separated) that the traffic controller is part of.|
-|Logical Name|String|Port's logical name in the test configuration. <br>If left empty, automatic allocation will be applied.|
-|Media Type|String|Interface media type. <br> Possible values include: **Fiber** and/or **Copper** (comma-separated)|
-|Model|String|Device Model. <br>This information is typically used for abstract resource filtering.|
-|Supported Speeds|String|Speed supported by the interface (comma-separated).|
-|Server Description|String|Full description of the server. <br>Usually includes the OS, exact firmware version and additional device characteristics.|
-|Version|String|Firmware version of the resource.|
-|Vendor|String|Vendor name.|
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Name|String||CloudShell resource display name.|
+|Address|String|Root|Resource address (address of the device).|
+|Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the resource.
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and Inventory dashboard. By default, visibility is defined in the resource family and can be changed for a specific resource.
+Possible values: Family Default (Everyone), Admin only, and Everyone.
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, the remote connection is defined in the resource family and can be changed for a specific resource.
+Possible values: Family Default (Enable), Enable, and Disable.|
+|User|String||Admin user on the device.|
+|Password|Password||Password for Admin user on the device.|
+|Controller TCP Port|String|443|TCP port of the traffic server. Relevant only in case an external server is configured. If left empty, default TCP port should be used.|
+|Controller Address|String||IP address of the traffic server. Relevant only in case an external server is configured.|
+|Client Install Path|String||Path in which the traffic client is installed on the Execution Server.| 
+|Power Management|Boolean|True|Used by the power management orchestration. If enabled, to determine wether to automatically manage the device power status.| 
+|Serial Number|String||Serial number of the device.|
+|Server Description|String||Full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.| 
+|Model Name|String||The catalog name of the device model. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Vendor|String||Vendor name.|
+|Version|String||Firmware version of the resource.|
 
 #### **TeraVM Controller Attributes**
 
@@ -84,17 +94,16 @@ The controller attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|Alias|:---|:---|
-|Client Install Path||The path in which the traffic client is installed on the Execution Server.<br>For example C:/Program Files (86)/Ixia/Ixos/6.90EA.|
-|Controller TCP Port||The TCP port of the traffic server. Relevant only in case an external server is configured. Default TCP port should be used if kept empty.|
+|Client Install Path|String|Path in which the traffic client is installed on the Execution Server.<br>For example *C:/Program Files (86)/Ixia/Ixos/6.90EA*.|
+|Controller TCP Port|String|TCP port of the traffic server. Relevant only in case an external server is configured. If left empty, default TCP port is used.|
 |Password|Password||
-|Test Files Location||Location for test related files.|
-|Test User||TeraVM Test User for Open Automation Authorization.|
+|Test Files Location|String|Location for test related files.|
+|Test User|String|TeraVM Test User for Open Automation Authorization.|
 |Test User Password||TeraVM Test User for Open Automation Authorization.|
-|User|||
+|User|String||
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the sandbox.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -222,8 +231,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   5. In the **Resource** dialog box, edit the following Resource Details:
   
-  * Address
-  * Controller TCP Port: The TCP port of the traffic server. Relevant only in case an external server is confiugured. Default TCP port should be used if kep empty.
+   * Controller TCP Port: The TCP port of the traffic server. Relevant only in case an external server is confiugured. Default TCP port should be used if kep empty.
   
   6. Click **Continue**.
 
@@ -247,16 +255,17 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflow and Scenarios 
-(if not applicable - remove section)
 
 **Scenario 1 - Creating a new blueprint**
 1. Create a new blueprint.
    * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
    * Give the blueprint a name.
+   
 2. Add resources and services to the blueprint. 
    * Click the **Resource** button and add the TeraVM Chassis resource and all needed ports into the diagram. 
    * Associate the port sub resources with the TeraVM interfaces, by specifying the port attribute **Logical Name**.
    * Click the **App/Services** tab and add the **TeraVMController** service.
+   
 3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
    * Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. 
    * Click **Edit** for the newly added script and change **Script Type** to **Teardown**.
@@ -267,13 +276,17 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **Scenario 2 - Running a test**
 1. Enter your blueprint.
+
 2. From the TeraVMController service, run the **Load Configuration** command.
    * Hover over the TeraVMController service and click **Commands**.
    * In the **Resource Commands** pane, click the **Load Configuration** command.
    * Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the execution server running the command.
    * Click **Run**, to load the test configuration to the TeraVM Controller.
+   
 3. Run the **Start Test** command.
+
 4. Run the **Stop Test** command.
+
 5. Get the test's result file.
    * Run the **Get Result** command.
    * The test's result file is attached to the sandbox.
