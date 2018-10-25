@@ -96,7 +96,7 @@ The shell comprises:
 |cloudshell-networking-cisco-iosxr-2-gen-dependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Cisco IOS-XR Router 2G Shell** shell and configure and modify the shell’s devices.
+This section describes how to import the **Cisco IOS-XR Router 2G** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -212,7 +212,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 4. Click **Run**.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the **Cisco IOS-XR** resource.
@@ -249,7 +249,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**Cisco IOS-XR Router 2G Shell*
+**Cisco IOS-XR Router 2G Shell**
 
 
 ### Known Issues
