@@ -76,12 +76,11 @@ This section describes the automation (drivers) associated with the data model. 
 
 The following resource commands are available on the **Juniper JunOS Switch**:
 
-* Autoload
+* Health Check
 * Run Custom Command
-* Run Custom Config Command
-* Load Firmware
 * Save
 * Restore
+* Load Firmware
 
 For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
 
@@ -175,7 +174,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
      
   2. From the list, select **Juniper JunOS Switch 2G** shell.
   
-  3. Enter the **Name** and **IP address** of the **Juniper JunOS Switch**.
+  3. Enter the **Name** and **IP address** of the **Juniper JunOS Switch 2G**.
   
   4. Click **Create**.
   
