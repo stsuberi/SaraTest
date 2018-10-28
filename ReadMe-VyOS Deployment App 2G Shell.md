@@ -65,9 +65,9 @@ The attribute names and types are listed in the following table:
 |Name*|String||CloudShell resource display name.|
 |Address*|String||IP address of the deployed VyOS App.|
 |Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example tftp://10.10.10.10/asdf.|
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default, **Visibility** is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, **Remote Connection** is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
+|Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.|
 |Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
 |User|Boolean|String|Username for the deployed VyOS.|
 |Password|Password||Password for the deployed VyOS.|
@@ -84,7 +84,7 @@ The attribute names and types are listed in the following table:
 |MAC Address|String|Port's MAC address|
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 #### VyOS Deployment App 2G shell
 |Command|Description|
@@ -166,7 +166,7 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new App
-This section explains how to create an App template for the VyOS Deployment App to enable network connectivity between endpoints in the sandbox.
+This section explains how to create an App template for the **VyOS Deployment App** to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -174,11 +174,11 @@ This section explains how to create an App template for the VyOS Deployment App 
 
 3. Select **vCenter Clone VM From VM**.
 
-**Note:** This shell is hardcoded to support vCenter only. However, you can use any type of vCenter deployment option, such as vCenter VM from Template, vCenter VM from Image, etc.
+	**Note:** This shell is hardcoded to support vCenter only. However, you can use any type of vCenter deployment option, such as vCenter VM from Template, vCenter VM from Image, etc.
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path and template name, for example QualiFolder/VM121.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/VM121*.
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_deployment_paths.PNG)
 
 6. In the **App Resource** tab, select the **Vyos** shell. Specify the **User** and **Password** of the shell. 
@@ -186,7 +186,7 @@ This section explains how to create an App template for the VyOS Deployment App 
 
 7. Click **Done**.
 
-The App template will not be displayed on the **Inventory** dashboard. A dedicated VM will be created once the App template is added to the blueprint and **Deploy** command is called on this App. For example, you can drag'n'drop three VyOS Apps to a blueprint and when you **Reserve** the blueprint, it will be deployed on each VyOS App and you will get three deployed VMs.
+The App template will not be displayed on the **Inventory** dashboard. A dedicated VM will be created once the App template is added to the blueprint and the **Deploy** command is called on the App. For example, you can drag'n'drop three VyOS Apps to a blueprint and when you **Reserve** the blueprint, it will be deployed on each VyOS App and you will get three deployed VMs.
 
 
 ### Configuring the setup script
