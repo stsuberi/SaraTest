@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **Juniper JunOS Switch 2G Shell**  
 
-Release date: [Month Year]
+Release date: April 2017
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0
 
 # In This Guide
 
@@ -26,9 +26,9 @@ A shell integrates a device model, application or other technology with CloudShe
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps [remove "and/or Apps" if router].
 
 ### **[Shell Name]**
-**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Juniper JunOS Switch**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **Juniper JunOS Switch**, see the official **[Device Manufacturer]** product documentation.
 
 ### Standard version
 **[Shell Name]** is based on the Networking Shell Standard version **[5.0.2]**.
@@ -47,7 +47,7 @@ Release: **[Shell Name]**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **Juniper JunOS Switch Families and Models**
 
 The [Device Name] families and models are listed in the following table:
 
@@ -58,7 +58,7 @@ The [Device Name] families and models are listed in the following table:
 ||||
 ||||
 
-#### **[Device Name] Attributes**
+#### **Juniper JunOS Switch Attributes**
 
 The attribute names and types are listed in the following section of the Networking Shell Standard:
 
@@ -69,7 +69,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
-The following resource commands are available on the **[Device Name]**:
+The following resource commands are available on the **Juniper JunOS Switch**:
 
 * 
 * 
@@ -85,7 +85,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 (Include additional information, as needed, to explain differences between this shell's commands and the commands documented in the Shell Standard.)
 
 # Downloading the Shell
-The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Juniper JunOS Switch 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -97,7 +97,7 @@ The shell comprises:
 |[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name]** shell and configure and modify the shell’s devices.
+This section describes how to import the **Juniper JunOS Switch 2G ** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -170,9 +170,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **Juniper JunOS Switch 2G** shell.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]**.
+  3. Enter the **Name** and **IP address** of the **Juniper JunOS Switch**.
   
   4. Click **Create**.
   
@@ -202,7 +202,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **Juniper JunOS Switch** resource.
 
 2. Run the **Save** resource command.
 
@@ -229,7 +229,7 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **[Device Name]** resource.
+1. In CloudShell portal, reserve the **Juniper JunOS Switch** resource.
 
 2. Run the **Load Firmware** resource command. 
 
