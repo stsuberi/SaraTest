@@ -33,7 +33,7 @@ For more information on the **VyOS** operating system, see the official **VyOS**
 
 ### Requirements
 
-Release: **VyOS Deployment App 2G Shell 1.0.0**
+Release: **VyOS Deployment App 2G Shell**
 
 ▪ VyOS versions: 1.1.8 and above
 
