@@ -172,9 +172,7 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 
 2. Click **Add**.
 
-3. Select **vCenter Clone VM From VM**.
-
-	**Note:** This shell is hardcoded to support vCenter only. However, you can use any type of vCenter deployment option, such as vCenter VM from Template, vCenter VM from Image, etc.
+3. Select any type of vCenter deployment option, suc as **vCenter Clone VM From VM**, **vCenter VM from Template**, **vCenter VM from Image**, etc. This shell is hardcoded to support vCenter only.
 
 4. Enter the **Name** of the App and click **Create**.
 
