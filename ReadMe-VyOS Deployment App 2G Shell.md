@@ -165,29 +165,6 @@ full path"/>`
 
 5. Restart the Execution Server.
 
-### Configuring a new resource
-This section explains how to create and configure a new resource from the shell.
-
-In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
-
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
-
-**To create a resource for the device:**
-  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-  
-     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select **Vyos**.
-  
-  3. Enter the **Name** and **Address** of the Deployed VyOS Test Appliance.
-  
-  4. Click **Create**.
-  
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](#ixvm-chassis-deployed-app-2g-shell-attributes). 
-  
-  6. Click **Continue**.
-
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
-
 ### Configuring a new App
 This section explains how to create an App template for the VyOS Deployment App to enable network connectivity between endpoints in the sandbox.
 
@@ -196,6 +173,8 @@ This section explains how to create an App template for the VyOS Deployment App 
 2. Click **Add**.
 
 3. Select **vCenter Clone VM From VM**.
+
+**Note:** This shell is hardcoded to support vCenter only. However, you can use any type of vCenter deployment option, such as vCenter VM from Template, vCenter VM from Image, etc.
 
 4. Enter the **Name** of the App and click **Create**.
 
@@ -206,6 +185,9 @@ This section explains how to create an App template for the VyOS Deployment App 
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
+
+The App template will not be displayed on the **Inventory** dashboard. A dedicated VM will be created once the App template is added to the blueprint and **Deploy** command is called on this App. For example, you can drag'n'drop three VyOS Apps to a blueprint and when you **Reserve** the blueprint, it will be deployed on each VyOS App and you will get three deployed VMs.
+
 
 ### Configuring the setup script
 This section explains how to add the setup script for the **VyOS Deployment App 2G** shell.
