@@ -224,7 +224,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+1. In CloudShell Portal, reserve the **Juniper JunOS Switch** resource.
 
 2. Run the **Restore** resource command.
 
@@ -242,7 +242,8 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
+	* **Remote Host**: (Mandatory) Enter the full path to the firmware file on the remote host, for example, *tftp://10.1.1.1/ios12.SE1-smp-k8.bin*.
+	* **File Path**: (Mandatory) Destination file name on the device itself, for example, *bootflash:/ios12.SE1-smp-k8.bin* .
 	
 4. Click **Run**.
 
@@ -257,16 +258,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-### What's New
-
-[Note]: If previous releases exist, insert link to the release section of the shell GitHub repository to view changes made in each release. You should include a brief description of the fixes and enhancements made in this release.
-
-* 
-* 
-* 
-
 ### Known Issues
-* 
-* 
-* 
+
+* **Known Issue #15248**: Some Switches/routers don’t reflect port-channels members correctly in the IEEE 802.3ad Link Aggregation MIB.
 
