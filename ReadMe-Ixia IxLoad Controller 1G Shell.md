@@ -49,7 +49,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **Ixia IxLoad Controller 1G version 1.2.3**
+Release: **Ixia IxLoad Controller 1G**
 
 ▪ IxLoad client: Should be installed on the Execution Server machine.
 
@@ -58,17 +58,6 @@ Release: **Ixia IxLoad Controller 1G version 1.2.3**
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
-
-#### **Ixia IxLoad Controller 1G Shell Families and Models**
-
-The controller's families and models are listed in the following table:
-
-|Family|Model|Description|
-|:---|:---|:---|
-||||
-||||
-||||
-||||
 
 ### Automation
 This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
