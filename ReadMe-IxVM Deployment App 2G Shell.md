@@ -198,7 +198,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   6. Click **Continue**.
 
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 ### Configuring a new App
 This section explains how to create an App template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
