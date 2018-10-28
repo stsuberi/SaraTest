@@ -33,7 +33,7 @@ For more information on the **IxVM Traffic Chassis**, see the official **IxVM** 
 
 ### Requirements
 
-Release: **IxVM Chassis Deployment App 2G Shell 1.0.0**
+Release: **IxVM Chassis Deployment App 2G Shell**
 
 ▪ IxVM versions: 8.40 and above
 
@@ -59,26 +59,26 @@ The chassis families and models are listed in the following table:
 
 The attribute names and types are listed in the following table:
 
-**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit) and the **Discover** resource dialog box (Inventory>Resource>Discover) except for those noted with an *, which appear only in the **Discover** resource dialog box. 
+**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit). Those noted with an asterisk, appear in the **Discover** resource dialog box as well (Inventory>Resource>Discover). 
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name|String||CloudShell resource display name|
-|Address|String||IP address of the deployed IxVM test appliance|
+|Name|String||CloudShell resource display name.|
+|Address|String||IP address of the deployed IxVM test appliance.|
 |Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard.  By default the visibility is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if can remotely connect to the resource. By default the Remote Connection is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|Controller TCP Port|String||TCP port of the traffic server. Relevant only in case an external server is configured. Default  TCP port is used if emtpty.|
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default, **Visibility** is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, **Remote Connection** is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
+|Controller TCP Port|String||TCP port of the traffic server. Relevant only in case an external server is configured. If left empty, the Default  TCP port is used.|
 |Controller Address|String||IP address of the traffic server. Relevant only in case an external server is configured.|
 |Client Install Path|String|||
 |Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine wether to automatically manage the device power status.|
-|Serial Number|String||The serial number of the resource.|
+|Serial Number|String||Serial number of the resource.|
 |Server Description|String||Full dedscription of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |License Server|String|License server address.|
 |Model Name|String||Catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Vendor|String||Name of the device manufacturer.|
 |Version|String||Firmware version of the resource.|
-|User*|String||Username for the deployed IxVM test appliance (should be a privileged user)|
+|User*|String||Username for the deployed IxVM test appliance (should be a privileged user).|
 |Password*|Password||Password for the deployed IxVM test appliance.|
 |License Server*|String||IP address or hostname of the License Server.|
 
@@ -94,7 +94,7 @@ The attribute names and types are listed in the following table:
 |MAC Address|String|Port's MAC address|
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 #### IxVM Chassis Deployment App 2G shell
 |Command|Description|
@@ -139,8 +139,6 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 * For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
 
 * For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
-
-* For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
