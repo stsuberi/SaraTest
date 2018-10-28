@@ -184,7 +184,7 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 
 7. Click **Done**.
 
-The App template will not be displayed on the **Inventory** dashboard. A dedicated VM will be created once the App template is added to the blueprint and the **Deploy** command is called on the App. For example, you can drag'n'drop three VyOS Apps to a blueprint and when you **Reserve** the blueprint, it will be deployed on each VyOS App and you will get three deployed VMs.
+The App template will not be displayed in the **Inventory** dashboard. A dedicated VM will be created once the App template is added to the blueprint and the **Deploy** command is called on the App. For example, you can drag'n'drop three VyOS Apps to a blueprint and when the blueprint is reserved, it will be deployed on each VyOS App, resulting in three deployed VMs.
 
 
 ### Configuring the setup script
