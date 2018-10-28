@@ -71,8 +71,6 @@ The attribute names and types are listed in the following section of the Network
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
-**[Notes:]** <br>(Include additional information, as needed, to explain differences between this shell's attributes and the attributes documented in the Shell Standard.)
-
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
@@ -89,9 +87,6 @@ For detailed information on each of the above commands, see the following sectio
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
 
-[Notes:] 
-(Include additional information, as needed, to explain differences between this shell's commands and the commands documented in the Shell Standard.)
-
 # Downloading the Shell
 The **Juniper JunOS Switch 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
@@ -105,7 +100,7 @@ The shell comprises:
 |cloudshell-networking-juniper-junos2-gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Juniper JunOS Switch 2G ** shell and configure and modify the shell’s devices.
+This section describes how to import the **Juniper JunOS Switch 2G** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -221,7 +216,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 4. Click **Run**.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
 1. In CloudShell Portal, reserve the **Juniper JunOS Switch** resource.
@@ -260,5 +255,5 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### Known Issues
 
-* **Known Issue #15248**: Some Switches/routers don’t reflect port-channels members correctly in the IEEE 802.3ad Link Aggregation MIB.
+* **Known Issue #15248**: Some switches don’t reflect the port channels' members correctly in the IEEE 802.3ad Link Aggregation MIB.
 
