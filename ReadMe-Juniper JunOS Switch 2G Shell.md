@@ -23,25 +23,29 @@ Document version: 1.0
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Networking Shells
-CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps [remove "and/or Apps" if router].
+CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps.
 
-### **[Shell Name]**
-**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Juniper JunOS Switch**. 
+### **Juniper JunOS Switch 2G Shell**
+The **Juniper JunOS Switch** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Juniper JunOS Switch**. 
 
-For more information on the **Juniper JunOS Switch**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **Juniper JunOS Switch**, see the official **Juniper JunOS** product documentation.
 
 ### Standard version
-**[Shell Name]** is based on the Networking Shell Standard version **[5.0.2]**.
+The **Juniper JunOS Switch 2G** shell is based on the Networking Shell Standard version **5.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
+### Supported OS
+
+▪ JunOS
+
 ### Requirements
 
-Release: **[Shell Name]**
+Release: **Juniper JunOS Switch 2G Shell**
 
-▪ CloudShell version **[Version Number]**
+▪ CloudShell version: 8.0 and above
 
-▪ Other
+▪ Certified models: Juniper SRX220
 
 ### Data Model
 
@@ -49,14 +53,17 @@ The shell's data model includes all shell metadata, families, and attributes.
 
 #### **Juniper JunOS Switch Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The Juniper JunOS Switch 2G shell families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_Switch|Juniper JunOS Switch 2G|Generic Juniper JunOS Switch 2 Generation|
+|CS_Chassis|Generic Chassis|Default Switch chassis|
+|CS_Module|Generic Module|Modules located on the chassis|
+|CS_SubModule|Generic Sub Module|Sub modules|
+|CS_Port|Generic Port|Interface|
+|CS_PortChannel|Generic Port Channel|Group of interfaces|
+|CS_PowerPort|Generic Power Port|Power Supply module|
 
 #### **Juniper JunOS Switch Attributes**
 
@@ -71,11 +78,12 @@ This section describes the automation (drivers) associated with the data model. 
 
 The following resource commands are available on the **Juniper JunOS Switch**:
 
-* 
-* 
-* 
-* 
-* 
+* Autoload
+* Run Custom Command
+* Run Custom Config Command
+* Load Firmware
+* Save
+* Restore
 
 For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
 
@@ -93,8 +101,8 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|JuniperJunosSwitchShell2G.zip|Juniper JunOS Switch 2G shell package|
+|cloudshell-networking-juniper-junos2-gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
 This section describes how to import the **Juniper JunOS Switch 2G ** shell and configure and modify the shell’s devices.
@@ -145,7 +153,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-networking-juniper-junos2-gen-dependencies-package1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -176,11 +184,11 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings. For details, see [Juniper JunOS Switch Attributes](#juniper-junos-switch-attributes). 
   
   6. Click **Continue**.
 
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
