@@ -227,7 +227,7 @@ The **Startup** or **Running** configuration is saved to a file named *<Resource
 	* **Path**: (Mandatory) Enter the full path of the configuration file. 
 	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
 	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
-	* **VRF Management Name**: (Optional) Provide the VRF Management name, if relevant.
+	* **VRF Management Name**: (Optional) Provide the **VRF Management Name**, if relevant.
 	
 4. Click **Run**.
 
