@@ -50,28 +50,13 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **Ixia IxNetwork Controller 1G version 1.6.0**
+Release: **Ixia IxNetwork Controller 1G**
 
 ▪ IxNetwork API Server: 8.0.1 GA and above
 
 ▪ IxNetwork Connection Manager: 8.40 EA and above 
 
 ▪ CloudShell: 8.1 and above
-
-### Data Model
-
-The shell's data model includes all shell metadata, families, and attributes.
-
-#### **Ixia IxNetwork Controller 1G Shell Families and Models**
-
-The controller's families and models are listed in the following table:
-
-|Family|Model|Description|
-|:---|:---|:---|
-||||
-||||
-||||
-||||
 
 ### Automation
 This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
@@ -187,13 +172,11 @@ For more information, see [Services Overview](#http://help.quali.com/Online%20He
   
      * Controller Address - IP address of the API Server/Connection Manager. Default is localhost.
      * Controller TCP Port - TCP port of the API Server/Connection Manager. Default is 11009.
-     * Password - 
-     * User - 
+     * Password - Password used in deployment (optional).
+     * User - Username used in deployment (optional).
           
   4. Click **Save**.
   
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
-
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
 
