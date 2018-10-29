@@ -176,7 +176,7 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/VM121*.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path from the datacenter and template name, for example *QualiFolder/VM121*.
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_deployment_paths.PNG)
 
 6. In the **App Resource** tab, select the **Vyos** shell. Specify the **User** and **Password** of the shell. 
@@ -184,7 +184,7 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 
 7. Click **Done**.
 
-The App template will not be displayed in the **Inventory** dashboard. A dedicated VM will be created once the App template is added to the blueprint and the **Deploy** command is called on the App. For example, you can drag'n'drop three VyOS Apps to a blueprint and when the blueprint is reserved, it will be deployed on each VyOS App, resulting in three deployed VMs.
+The App is ready to be used in CloudShell sandboxes. A dedicated VM will be created once the App is deployed in a sandbox. Note that you can deploy multiple instances of the same App in the sandbox.
 
 
 ### Configuring the setup script
