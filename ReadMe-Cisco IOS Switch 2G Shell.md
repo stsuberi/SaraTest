@@ -31,13 +31,13 @@ The **Cisco IOS Switch 2G** shell provides you with connectivity and management 
 For more information on the **Cisco IOS Switch**, see the official **Cisco** product documentation.
 
 ### Standard version
-**Cisco IOS Switch 2G Shell 2.0.1** is based on the Networking Shell Standard version **5.0.2**.
+**Cisco IOS Switch 2G Shell** is based on the Networking Shell Standard version **5.0.2**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **Cisco IOS Switch 2G Shell 2.0.1**
+Release: **Cisco IOS Switch 2G Shell**
 
 ▪ CloudShell version: 8.0 and above
 
@@ -74,7 +74,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
-The following resource commands are available on the **Cisco IOS Router**:
+The following resource commands are available on the **Cisco IOS Switch**:
 
 * Health Check
 * Run Custom Command
@@ -100,7 +100,7 @@ The shell comprises:
 |cloudshell-networking-cisco-ios2gen-dependencies-package1.0.X.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Cisco IOS Switch 2G Shell 2.0.1** shell and configure and modify the shell’s devices.
+This section describes how to import the **Cisco IOS Switch 2G Shell** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -205,7 +205,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **Cisco IOS** resource.
+1. In CloudShell Portal, reserve the **Cisco IOS Switch** resource.
 
 2. Run the **Save** resource command.
 
@@ -219,7 +219,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **Cisco IOS** resource.
+1. In CloudShell Portal, reserve the **Cisco IOS Switch** resource.
 
 2. Run the **Restore** resource command.
 
@@ -232,7 +232,7 @@ The Startup or Running configuration is saved to a file named *<ResourceName>-<s
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **Cisco IOS** resource.
+1. In CloudShell portal, reserve the **Cisco IOS Switch** resource.
 
 2. Run the **Load Firmware** resource command. 
 
@@ -253,7 +253,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**Cisco IOS Switch 2G Shell 2.0.1**
+**Cisco IOS Switch 2G Shell**
 
 
 ### What's New
