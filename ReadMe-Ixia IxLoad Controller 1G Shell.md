@@ -156,7 +156,7 @@ This section explains how to set the controller's default values in the service.
 
 The controller service enables end users to use the traffic generator chassis to perform their testing activity, including starting and stopping traffic, getting statistics and loading configurations. 
 
-For more information, see [Services Overview](#http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
+For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
 
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Admin** tab, click **Resource Families**. 
@@ -235,7 +235,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Ixia-IxNetworkLoad-Shell/releases).
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Ixia-IxLoadController-Shell/releases).
 
 ### Known Issues
 • All Execution Servers that run sandboxes with the IxLoad controller should have the same Client Install Path. Therefore, all Execution Servers must be either Windows or Linux.
