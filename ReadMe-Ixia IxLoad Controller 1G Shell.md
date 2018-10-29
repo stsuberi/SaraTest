@@ -217,7 +217,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://github.com/stsuberi/SaraTest/blob/master/ixload_controller_configuration_parameters.png)
 
 7. Map the configuration ports to the blueprint ports. For each port in the IxLoad configuration, assign a physical port from the ports in the blueprint. 
-	1. Hover over the Ixia chassis resource and select **Structure** from the context menu. The **Resource Structure** side pane is displayed, listing the resource ports. 
+	1. Hover over the Ixia chassis resource and select **Structure** from the context menu. The **Resource Structure** side pane is displayed, listing the resource's ports. 
 	2. For each port, click the down arrow and select **Attributes**.
 	3. Set the **Logical Name** to the port name in the IxLoad configuration.
 
@@ -236,6 +236,6 @@ To connect with Quali users and experts from around the world, ask questions and
 # Release Notes 
 
 ### Known Issues
-• All Execution Servers that run Sandboxes with the IxLoad controller should have the same Client Install Path. Therefore, all Execution Servers must be either Windows or Linux.
+• All Execution Servers that run sandboxes with the IxLoad controller should have the same Client Install Path. Therefore, all Execution Servers must be either Windows or Linux.
 
 • IxLoad can run up to two instances per machine (Execution Server). If there are more than two instances running, **Load Configuration** of any additional reservations will eventually fail due to timeout.
