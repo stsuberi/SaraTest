@@ -239,7 +239,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-For release updates, see the shell's [GitHub releases page](#https://github.com/QualiSystems/Ixia-IxNetworkController-Shell/releases).
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Ixia-IxNetworkController-Shell/releases).
 
 ### Known Issues
 • **Performance**: The REST API performance is very poor. Loading configuration and reserving ports can take a number of seconds, depending on the specific setup. You are advised to start idle connections on the Connection Manager to reduce startup time.
