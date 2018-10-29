@@ -179,9 +179,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   5. In the **Resource** dialog box, enter the device's settings, see [Cisco IOS Switch 2G Shell Attributes](#cisco-ios-switch-2g-shell-attributes). Make sure you enter the device's SNMP version and credentials.
   
-  6. Click **Continue**.
-
-CloudShell validates the device’s settings and updates the new resource with the device’s structure.
+  6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
@@ -192,13 +190,13 @@ This section explains how to update your Python dependencies folder. This is req
 
 2. Extract the zip file to the suitable offline package folder(s). 
 
-3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
+3. Terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). 
 
 ### Updating online Python dependencies
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
 
 **To update online Python dependencies:**
-* If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
+* If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
 
@@ -253,6 +251,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 **Cisco IOS Switch 2G Shell**
 
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G/releases).
 
 ### What's New
 
