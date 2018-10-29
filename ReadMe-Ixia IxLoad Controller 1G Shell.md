@@ -235,7 +235,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-For release updates, see the shell's [GitHub releases page](#https://github.com/QualiSystems/Ixia-IxNetworkLoad-Shell/releases).
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Ixia-IxNetworkLoad-Shell/releases).
 
 ### Known Issues
 • All Execution Servers that run sandboxes with the IxLoad controller should have the same Client Install Path. Therefore, all Execution Servers must be either Windows or Linux.
