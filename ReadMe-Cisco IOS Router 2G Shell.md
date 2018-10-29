@@ -1,4 +1,4 @@
-![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
+![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
 # **Cisco IOS Router 2G Shell**  
 
@@ -168,7 +168,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+     ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
      
   2. From the list, select **Cisco iOS Router 2G**.
   
