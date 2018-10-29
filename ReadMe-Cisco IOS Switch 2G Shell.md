@@ -252,8 +252,3 @@ To connect with Quali users and experts from around the world, ask questions and
 **Cisco IOS Switch 2G Shell**
 
 For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Cisco-IOS-Switch-Shell-2G/releases).
-
-### What's New
-
-* SNMP v3 attributes were added to the **Inventory** screen on the portal.
-* CLI definition was moved to the driver class to simplify editing.
