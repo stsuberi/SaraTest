@@ -225,11 +225,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   5. In the **Resource** dialog box, edit the following Resource Details:
   
-   * Controller TCP Port: The TCP port of the traffic server. Relevant only in case an external server is confiugured. Default TCP port should be used if kep empty.
+  * **Controller TCP Port**: The TCP port of the traffic server. Relevant only in case an external server is confiugured. Default TCP port should be used if kept empty.
   
-  6. Click **Continue**.
-
-CloudShell validates the device’s settings and updates the new resource with the device’s structure.
+  6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
