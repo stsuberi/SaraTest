@@ -266,12 +266,12 @@ In online mode, the execution server automatically downloads and extracts the ap
    6. Click **Update** to save changes.
 
 **Workflow 2 - Running a test**
-1. Enter your blueprint.
+1. Reserve a blueprint that is configured to run traffic tests, like the one configured in Workflow 1.
 
 2. From the TeraVMController service, run the **Load Configuration** command.
    1. Hover over the TeraVMController service and click **Commands**.
    2. In the **Resource Commands** pane, click the **Load Configuration** command.
-   3. Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml*, or only *test_group.xml*, if it is a current sandbox. Make sure the path is accessible to the Execution Server running the command.
+   3. In the **TeraVM config file** input, specify the path to your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_group.xml* or only *test_group.xml*. Make sure the path is accessible to the Execution Server running the command.
    4. Click **Run**, to load the test configuration to the TeraVM Controller.
    
 3. Run the **Start Test** command.
