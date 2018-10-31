@@ -16,6 +16,7 @@ Document version: 1.0.0
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflows](#typical-workflows)
 * [References](#references)
+* [Release Notes](#release-notes)
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -290,3 +291,14 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
+
+# Release Notes 
+
+### What's New
+
+For release updates, see the shell's GitHub releases page as follows:
+
+▪ [TeraVM Chassis 2G Shell Releases](https://github.com/QualiSystems/TeraVM-Chassis-Shell-2G/releases)
+
+▪ [TeraVM Controller 1G Shell Releases](https://github.com/QualiSystems/TeraVM-Controller-Shell/releases)
+
