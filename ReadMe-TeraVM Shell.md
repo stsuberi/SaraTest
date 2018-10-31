@@ -257,7 +257,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    2. Associate the port sub resources with the TeraVM interfaces, by specifying the port attribute **Logical Name**.
    3. Click the **App/Services** tab and add the **TeraVMController** service.
    
-3. Add a teardown script, which runs the **cleanup_reservation** driver command when the reservation ends. This command releases ports which were used by the reservation. 
+3. Add the teardown script *Cleanup Reservation.zip*, provided with the shell, see [Downloading the Shell](#downloading-the-shell). This script runs the **cleanup_reservation** driver command when the reservation ends and releases ports which were used by the reservation. 
    1. Go to the **Scripts** management page **Manage>Scripts>Blueprint**, click **Add New Script** and choose the **Cleanup Reservation.zip** file. 
    2. Click **Edit** for the newly added script and change **Script Type** to **Teardown**.
    3. Return to the blueprint and open properties, **Blueprint>Properties**. 
