@@ -46,7 +46,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **TeraVM Virtual 2G Shells 1.0.0**
+Release: **TeraVM Virtual 2G Shells**
 
 ▪ TeraVM versions: 13.4 and above
 
@@ -99,7 +99,7 @@ The attribute names and types are listed in the following table:
 |MAC Address|String|Port's MAC address|
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -236,7 +236,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. Please note that CloudShell only supports vCenter as a Cloud Provider, however, you are free to use any of the available deployment options.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
