@@ -1,12 +1,12 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **SDN OpenDaylight 2G Shell**  
 
-Release date: [Month Year]
+Release date: October 2017
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0
 
 # In This Guide
 
@@ -25,23 +25,23 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Networking Shells
 CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps [remove "and/or Apps" if router].
 
-### **[Shell Name]**
-**[Shell Name]** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **SDN OpenDaylight 2G Shell**
+**SDN OpenDaylight 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **SDN OpenDaylight**. 
 
 For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
 
 ### Standard version
-**[Shell Name]** is based on the Networking Shell Standard version **[5.0.2]**.
+The **SDN OpenDaylight 2G** shell is based on the Networking Shell Standard version **1.0.0**.
 
 For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **[Shell Name]**
+Release: **SDN OpenDaylight 2G** shell
 
-▪ CloudShell version **[Version Number]**
+▪ CloudShell version: 8.0 and above
 
-▪ Other
+▪ OpenDaylight versions: Boron SR3
 
 ### Data Model
 
@@ -67,15 +67,14 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 **[Notes:]** <br>(Include additional information, as needed, to explain differences between this shell's attributes and the attributes documented in the Shell Standard.)
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
-The following resource commands are available on the **[Device Name]**:
+The following resource commands are available on the **SDN OpenDaylight 2G** Controller shell:
 
-* 
-* 
-* 
-* 
-* 
+|Command|Description|
+|:---|:---|
+|Autoload|Discovers connected to the controller vSwitches and their leaf ports|
+|Remove Openflow|Remove openflow entry from the controller.|
 
 For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
 
@@ -85,7 +84,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 (Include additional information, as needed, to explain differences between this shell's commands and the commands documented in the Shell Standard.)
 
 # Downloading the Shell
-The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **SDN OpenDaylight 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -93,11 +92,12 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|SDNOpenDaylightShell2G.zip|SDN OpenDaylight shell package|
+|cloudshell-sdn-odl-2-gendependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
+|ODL_CloudShell_plugin.zip|SDN OpenDaylight Controller plugin|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name]** shell and configure and modify the shell’s devices.
+This section describes how to import the **SDN OpenDaylight 2G** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -111,6 +111,28 @@ This section describes how to import the **[Shell Name]** shell and configure an
   4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
 
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+
+### Installing the CloudShell OpenDaylight plugin
+This section describes how to install the CloudShell SDN OpenDaylight plugin. 
+
+There are two available options:
+
+1. Install the controller and plugin from source
+
+	1. Download CloudShell ODL plugin repository.
+	2. Install Jana and Maven: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Se
+tup
+	3. Compile the controller: mvn clean install -DskipTests
+	4. Run the controller: ./karaf/target/assembly/bin/karaf
+	
+2. Add plugin feature to existing controller
+
+	1. Copy CloudShell plugin files to the “system” folder
+	2. Run controller: ./karaf/target/assembly/bin/karaf
+	3. Install VTN feature: feature:install odl-vtn-manager-rest
+	4. Add repository for CloudShell plugin: repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features
+	5. Install plugin: feature:install odl-cloudshell 
+
 
 ### Offline installation of a shell
 
@@ -145,7 +167,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-sdn-odl-2-gendependencies-package-1.0.X.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -170,9 +192,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **SDN OpenDaylight Controller 2G** shell.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]**.
+  3. Enter the **Name** and **IP address** of the **Switch**.
   
   4. Click **Create**.
   
