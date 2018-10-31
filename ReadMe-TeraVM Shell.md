@@ -144,7 +144,7 @@ This section describes how to import the **TeraVM** shells and configure and mod
   
   3. Log in to CloudShell Portal as administrator of the relevant domain.
   
-  4. In the **Admin** menu, select **Import Package**.
+  4. In the user menu, select **Import Package**.
   
   ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
   
