@@ -26,18 +26,18 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **Tera VM Shells**
-**TeraVM** shells provide you with connectivity and management capabilities such as device structure discovery and power management for the **TeraVM** traffic generator. 
+TeraVM shells provide you with connectivity and management capabilities such as device structure discovery and power management for the TeraVM traffic generator. 
 
-For more information on the **TeraVM Chassis** and **Controller**, see the official **TeraVM** product documentation.
+For more information on the TeraVM Chassis and Controller, see the official TeraVM product documentation.
 
-To model a **TeraVM** traffic generator in CloudShell, you must use the following shells: 
+To model a TeraVM traffic generator in CloudShell, you must use the following shells: 
 
 ▪ [TeraVM Chassis 2G Shell](https://community.quali.com/repos/3286/teravm-chassis-2g-shell), which provides data model and autoload functionality to model and load the TeraVM to resource management.
 
 ▪ [TeraVM Controller 1G Shell](https://community.quali.com/repos/3287/teravm-controller-shell) (service), which provides automation commands to run on the TeraVM Chassis, such as Load Configuration, Start Traffic, Get Results. 
 
 ### Standard version
-The **TeraVM** shells are based on the Traffic Shell Standard version 1.0.0.
+The TeraVM shells are based on the Traffic Shell Standard version 1.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -101,7 +101,7 @@ The controller attribute names and types are listed in the following table:
 |User|String||
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the sandbox.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -119,7 +119,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Get Results|Gets the test result file and attaches it to the reservation.|
 
 # Downloading the Shell
-The **TeraVM** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The TeraVM shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -148,9 +148,7 @@ This section describes how to import the **TeraVM** shells and configure and mod
   
   ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
   
-  5. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
-  
-The shell is displayed in the **App/Service** page. 
+  5. In the dialog box, navigate to the shell's zip package, select it and click **Open**.<br><br>The shell is displayed in the **App/Service** page. 
   
   **To import the TeraVM Chassis 2G shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
@@ -159,9 +157,7 @@ The shell is displayed in the **App/Service** page.
   
   3. Click **Import**.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
-
-The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.<br><br>The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a shell
 
