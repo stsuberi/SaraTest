@@ -180,7 +180,6 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_deployment_paths.PNG)
 
 6. In the **App Resource** tab, select the **Vyos** shell. You must specify the **User** and **Password** of the shell. All other attributes are optional.
-
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
