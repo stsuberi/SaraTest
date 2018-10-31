@@ -47,24 +47,35 @@ Release: **SDN OpenDaylight 2G** shell
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **SDN OpenDaylight 2G Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The SDN OpenDaylight families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_SDNController|SDN Controller|Generic SDN Controller|
+|CS_SDNSwitch|Generic SDN Switch|Generic SDN Switch|
+|CS_Port|Generic SDN Port|Interface|
 
-#### **[Device Name] Attributes**
+#### **SDN OpenDaylight Attributes**
 
 The attribute names and types are listed in the following section of the Networking Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
 **[Notes:]** <br>(Include additional information, as needed, to explain differences between this shell's attributes and the attributes documented in the Shell Standard.)
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|User|String||Username for ODL Controller|
+|Password|Password||Password for ODL Controller|
+|Controller TCP Port|Numeric|8181|Port for ODL Controller|
+|Scheme|String||Scheme for ODL Controller (http or https)|
+|Mac Address|String||Interface mac address|
+|IPv4 Address|String||Interface IPv4 address|
+|IPv6 Address|String||Interface IPv6 address|
+|Port Description|String||Interface description|
+|Adjacent|String||Adjacent shows connected device name and interface|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
@@ -223,42 +234,19 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflows 
 
-#### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+#### **Workflow 1** - *Autoload* - see [Installing CloudShell OpenDaylight plugin] 
 
-2. Run the **Save** resource command.
+#### **Workflow 2** - *Remove Openflow* 
 
-3. In the command inputs field, enter the following information:
-	* **Folder Path**: For example, *tftp://ipaddress/shared folder*.
-	* **Configuration Type**: **Startup** or **Running**.
-	* **VRF Management Name**: Provide the VRF Management name, if relevant.
-	
-4. Click **Run**.
+1. Login to CloudShell portal, reserve the SDN OpenDaylight resource.
 
-The Startup or Running configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+2. Run the resource command Remove Openflow
 
-#### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **[Device Name]** resource.
+3. In the command input field, enter the following information: 
 
-2. Run the **Restore** resource command.
-
-3. In the command inputs field, enter the following information:
-	* **Path**: (Mandatory) Enter the full path of the configuration file. 
-	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
-	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
-	* **VRF Management Name**: (Optional) Provide the VRF Management name, if relevant.
-	
-4. Click **Run**.
-
-#### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **[Device Name]** resource.
-
-2. Run the **Load Firmware** resource command. 
-
-3. In the command inputs field, enter the following information:
-	* **Path** (Mandatory). Enter the full path to the firmware file on the remote host, for example: tftp://10.1.1.1/both.tim.
-	
-4. Click **Run**.
+	* Node ID (mandatory input field): Enter the node ID. For example: openflow:1
+	* Table ID (mandatory input field): Enter the table ID where openflow is located 
+	* Flow ID (mandatory input field): Enter the openflow identifier
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
