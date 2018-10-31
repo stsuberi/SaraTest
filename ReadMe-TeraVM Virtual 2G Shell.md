@@ -27,7 +27,7 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **TeraVM Virtual 1G Shells**
-The **TeraVM Virtual 1G** shells provide you with connectivity and management capabilities such as device structure discovery and power management. 
+The TeraVM Virtual 1G shells provide you with connectivity and management capabilities such as device structure discovery and power management. 
 
 For more information see the official **TeraVM** product documentation.
 
@@ -40,7 +40,7 @@ To model a TeraVM device in CloudShell, use the following shells:
 ▪ [CloudShell TeraVM vBlade 1G Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vChassis.
 
 ### Standard version
-The **TeraVM Virtual 1G** shells are based on the Traffic Shell Standard 1.0.0.
+The TeraVM Virtual 1G shells are based on the Traffic Shell Standard 1.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
@@ -111,13 +111,13 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 |Command|Description|
 |:-----|:-----|
-|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* **TeraVM config file** (String)(Mandatory): The configuration file name. <br>Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.<br>* **Use ports from reservation** (Enum): Possible values: **True** or **False**. <br>Updates the configuration file with ports from the current reservation based on their **Logical Name** attributes.
+|Load Configuration|Loads the configuration file and reserves necessary ports.<br>* **TeraVM config file** (String) (Mandatory): The configuration file name. <br>Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.<br>* **Use ports from reservation** (Enum): Possible values: **True** or **False**. <br>Updates the configuration file with ports from the current reservation based on their **Logical Name** attributes.
 |Start Traffic|Starts a test with the current configuration.|
 |Stop Traffic|Stops running the test.|
-|Get Results|Gets the test result file and attaches it to the reservation.|
+|Get Results|Gets the test's result file and attaches it to the reservation.|
 
 # Downloading the Shell
-The **TeraVM Virtual 1G** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The TeraVM Virtual 1G shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -214,7 +214,7 @@ This section explains how to create an App template for the TeraVM vBlade shell 
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. Note that CloudShell only supports vCenter as a Cloud Provider, however, you may use any of the available deployment options.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.png)
 
@@ -236,7 +236,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. Please note that CloudShell only supports vCenter as a Cloud Provider, however, you are free to use any of the available deployment options.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. Note that CloudShell only supports vCenter as a Cloud Provider, however, you may use any of the available deployment options.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
@@ -287,13 +287,13 @@ This section explains how to update your Python dependencies folder. This is req
 
 2. Extract the zip file to the suitable offline package folder(s). 
 
-3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
+3. Terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). 
 
 ### Updating online Python dependencies
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
 
 **To update online Python dependencies:**
-* If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
+* Terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
 
@@ -324,8 +324,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. From the **TeraVM Traffic Generator Controller** service, run the **Load Configuration** command.
    1. Hover over the **TeraVM Traffic Generator Controller** service and click **Commands**.
    2. In the **Resource Commands** pane, click the **Load Configuration** command.
-   3. Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt*, or
-only *test_name.bpt*, if it is current reservation. Make sure the path is accessible to the execution server running the command.
+   3. Specify the **TeraVM config file** with the path of your test configuration file. <br>It can be a full path, or relative path under the location specified in the attribute **Test Files Location**, such as *<reservation_id>/test_name.bpt* or
+only *test_name.bpt*. Make sure the path is accessible to the execution server running the command.
    4. Click **Run**, to load the test configuration to the **TeraVM Controller** and reserve necessary ports.
    
 3. Run the **Start Test** command.
