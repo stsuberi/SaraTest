@@ -1,6 +1,6 @@
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **TeraVM Virtual 2G Shells**  
+# **TeraVM Virtual 1G Shells**  
 
 Release date: April 2018
 
@@ -26,27 +26,27 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **TeraVM Virtual 2G Shells**
-The **TeraVM Virtual 2G** shells provide you with connectivity and management capabilities such as device structure discovery and power management. 
+### **TeraVM Virtual 1G Shells**
+The **TeraVM Virtual 1G** shells provide you with connectivity and management capabilities such as device structure discovery and power management. 
 
 For more information see the official **TeraVM** product documentation.
 
-To model an **TeraVM** device in CloudShell, use the following shells: 
+To model a TeraVM device in CloudShell, use the following shells: 
 
-▪ [TeraVM TeraVM Virtual 2G vChassis](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM chassis.
+▪ [TeraVM TeraVM Virtual 1G vChassis](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM chassis.
 
 ▪ [TeraVM Controller Shell (Service)](https://community.quali.com/repos/3287/teravm-controller-shell), which provides automation commands to run on the vChassis, such as Load Test Configuration, Start Traffic, Get Statistics.
 
-▪ [CloudShell TeraVM vBlade 2G Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vChassis.
+▪ [CloudShell TeraVM vBlade 1G Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vChassis.
 
 ### Standard version
-The **TeraVM Virtual 2G** shells are based on the Traffic Shell Standard 1.0.0.
+The **TeraVM Virtual 1G** shells are based on the Traffic Shell Standard 1.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [Traffic Shell standard](https://github.com/QualiSystems/shell-traffic-standard/blob/master/spec/traffic_standard.md) in GitHub.
 
 ### Requirements
 
-Release: **TeraVM Virtual 2G Shells**
+Release: **TeraVM Virtual 1G Shells**
 
 ▪ TeraVM versions: 13.4 and above
 
@@ -117,7 +117,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Get Results|Gets the test result file and attaches it to the reservation.|
 
 # Downloading the Shell
-The **TeraVM Virtual 2G** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **TeraVM Virtual 1G** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -145,7 +145,7 @@ This section describes how to import the TeraVM Virtual shells and configure and
   
   3. Log in to CloudShell Portal as administrator of the relevant domain.
   
-  4. In the User menu select **Import Package**.
+  4. In the user menu select **Import Package**.
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
      
