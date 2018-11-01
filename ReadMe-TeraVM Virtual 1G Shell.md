@@ -246,7 +246,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 7. Click **Done**.
 
 ### Configuring the TeraVM Controller 
-This section explains how to configure the **TeraVM Controller** service to load the test configuration, start traffic, stop traffic, get statistics, and download test files to a particular location.
+This section explains how to configure the **TeraVM Controller** service, which enables end users to conduct traffic tests using the TeraVM traffic generator.
 
 1. In your blueprint, add the **TeraVM Traffic Generator Controller** service. 
 	1. Click **App/Service**.
