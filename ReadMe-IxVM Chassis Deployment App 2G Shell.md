@@ -71,7 +71,7 @@ The attribute names and types are listed in the following table:
 |Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, **Remote Connection** is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
 |Controller TCP Port|String||TCP port of the traffic server. Relevant only if an external server is configured. If left empty, the Default  TCP port is used.|
 |Controller Address|String||IP address of the traffic server. Relevant only if an external server is configured.|
-|Client Install Path|String|||
+|Client Install Path|String||Path in which the traffic client is installed on the Execution Server. For example *C:/Program Files (x86)/Ixia/IxLoad/5.10-GA*.|
 |Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status.|
 |Serial Number|String||Serial number of the resource.|
 |Server Description|String||Full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
