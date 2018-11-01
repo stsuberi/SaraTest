@@ -16,6 +16,7 @@ Document version: 1.0
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflows](#typical-workflows)
 * [References](#references)
+* [Release Notes](#release-notes)
 
 
 # Overview
@@ -210,15 +211,15 @@ This section explains how to create an App template for the TeraVM vBlade shell 
 
 2. Click **Add**.
 
-3. Select **vCenter VM from Template**.
+3. Select **vCenter VM from Template**. <br>Note that CloudShell only supports vCenter as a Cloud Provider, however, you may use any of the available deployment options.
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. Note that CloudShell only supports vCenter as a Cloud Provider, however, you may use any of the available deployment options.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. 
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_deployment.png)
 
-6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes-blade).
+6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes-vblade).
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_resource.png)
 
@@ -240,7 +241,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
-6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell, see [TeraVM Chassis Attributes](teravm-chassis-attributes).
+6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell, see [TeraVM Chassis Attributes](#teravm-chassis-attributes).
 	
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_resource.png)
 	
@@ -346,3 +347,15 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
+
+# Release Notes 
+
+### What's New
+
+For release updates, see the shell's GitHub releases pages as follows:
+
+▪ [CloudShell TeraVM Virtual vChassis Shell Releases page](https://github.com/QualiSystems/cloudshell-tg-teravm-vchassis/releases)
+
+▪ [TeraVM Controller Shell (Service) Releases page](https://github.com/QualiSystems/TeraVM-Controller-Shell/releases)
+
+▪ [CloudShell TeraVM vBlade Shell Releases page](https://github.com/QualiSystems/cloudshell-tg-teravm-vblade/releases)
