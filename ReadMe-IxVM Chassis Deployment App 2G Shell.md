@@ -231,7 +231,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflows 
 
-### *Deploying the IxVM Deployment App Chassis 2G shell* 
+**Deploying the IxVM Deployment App Chassis 2G shell** 
 1. Enter your blueprint.
 
 2. Add the **VM Deployment App** to the blueprint.
@@ -245,7 +245,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	* Select the **IxVM.Sandbox.Setup.1.0.0**.
 	* Click **Done**.
 
-4. Reserve the Blueprint.
+4. Reserve the blueprint.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
