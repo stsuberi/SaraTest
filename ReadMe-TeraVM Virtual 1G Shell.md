@@ -221,7 +221,7 @@ This section explains how to create an App template for the TeraVM vBlade shell 
 
 6. In the **App Resource** tab, select the **TeraVM Virtual Traffic Generator Module** shell and specify all required configuration attributes for this shell, see [TeraVM Module Attributes (vBlade)](#teravm-module-attributes-vblade).
 
-![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_resource.png)
+	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_module_app_resource.png)
 
 7. Click **Done**.
 
@@ -239,11 +239,11 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. 
 
-![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
+	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
 6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell, see [TeraVM vChassis Attributes](#teravm-vchassis-attributes).
 	
-![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_resource.png)
+	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_resource.png)
 	
 7. Click **Done**.
 
@@ -258,7 +258,7 @@ This section explains how to configure the **TeraVM Controller** service to down
 
 3. In the **Add Service** dialog box, specify the **Test Files Location** attribute with the location where test files should be downloaded. All other attributes aren't required and can be left blank.
 
-![](https://github.com/stsuberi/SaraTest/blob/master/teravm_controller_service.png)
+	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_controller_service.png)
 
 3. Click **Add**.
 
