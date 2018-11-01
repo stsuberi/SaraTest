@@ -352,10 +352,10 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-For release updates, see the shell's GitHub releases pages as follows:
+For release updates, see the shell's GitHub release pages as follows:
 
-▪ [CloudShell TeraVM Virtual vChassis Shell Releases page](https://github.com/QualiSystems/cloudshell-tg-teravm-vchassis/releases)
+▪ [CloudShell TeraVM Virtual vChassis Shell release page](https://github.com/QualiSystems/cloudshell-tg-teravm-vchassis/releases)
 
-▪ [TeraVM Controller Shell (Service) Releases page](https://github.com/QualiSystems/TeraVM-Controller-Shell/releases)
+▪ [TeraVM Controller Shell (Service) release page](https://github.com/QualiSystems/TeraVM-Controller-Shell/releases)
 
-▪ [CloudShell TeraVM vBlade Shell Releases page](https://github.com/QualiSystems/cloudshell-tg-teravm-vblade/releases)
+▪ [CloudShell TeraVM vBlade Shell release page](https://github.com/QualiSystems/cloudshell-tg-teravm-vblade/releases)
