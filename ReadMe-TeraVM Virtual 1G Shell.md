@@ -55,11 +55,11 @@ Release: **TeraVM Virtual Shells**
 
 ### Data Model
 
-The shell data models includes all shell metadata, families, and attributes.
+The shell's data models include all shell metadata, families, and attributes.
 
 #### **TeraVM Chassis Families and Models**
 
-The vChassis families and models are listed in the following table:
+The families and models of the vChassis are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -69,7 +69,7 @@ The vChassis families and models are listed in the following table:
 
 #### **TeraVM vChassis Attributes**
 
-The attribute names and types are listed in the following table:
+The attributes of the vChassis are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
@@ -82,7 +82,7 @@ The attribute names and types are listed in the following table:
 
 #### **TeraVM Module Attributes (vBlade)**
 
-The attribute names and types are listed in the following table:
+The attributes of the vBlade are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
@@ -91,7 +91,7 @@ The attribute names and types are listed in the following table:
 
 #### **TeraVM Port Attributes**
 
-The attribute names and types are listed in the following table:
+The attributes of the ports are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
@@ -144,7 +144,7 @@ This section describes how to import the TeraVM Virtual shells and configure and
   
   2. Backup your database.
   
-  3. Log in to CloudShell Portal as administrator of the relevant domain.
+  3. Log in to CloudShell Portal as administrator and access the relevant domain.
   
   4. In the user menu select **Import Package**.
   
@@ -304,7 +304,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    2. Give the blueprint a name.
    
 2. Add Apps and Services to the blueprint. 
-   1. Click the **App/Services** tab.
+   1. Click **App/Services** from the toolbar.
    
    2. Add the following to the diagram:
    		* **TeraVM Traffic Generator Controller** service - see [Configuring the TeraVM Controller](#configuring-the-teravm-controller) for more information.
@@ -333,9 +333,8 @@ only *test_name.bpt*. Make sure the path is accessible to the execution server r
 
 4. Run the **Stop Test** command.
 
-5. Get the test's result file.
-   * Run the **Get Result** command.
-   
+5. Run the **Get Result** command.
+    
    The test's result file is attached to the sandbox.
 
 
