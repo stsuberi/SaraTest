@@ -60,7 +60,7 @@ The chassis families and models are listed in the following table:
 
 The attribute names and types are listed in the following table:
 
-**Note:** All attributes appear both in the **Edit** resource dialog box (Inventory>Resource>Edit). Those noted with an asterisk, appear in the **Discover** resource dialog box as well (Inventory>Resource>Discover). 
+**Note:** All attributes appear both in the **Edit** resource dialog box (**Inventory>Resource>Edit**). Those noted with an asterisk, appear in the **Discover** resource dialog box as well (**Inventory>Resource>Discover**). 
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
