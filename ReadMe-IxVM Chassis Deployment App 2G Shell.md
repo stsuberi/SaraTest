@@ -233,15 +233,15 @@ In online mode, the execution server automatically downloads and extracts the ap
 1. Enter your blueprint.
 
 2. Add the **VM Deployment App** to the blueprint.
-	* Open the **App/Service** menu.
-	* Drag and drop the **IxVM Deployment App 2G Chassis** resource to the canvas.
+	1. Open the **App/Service** menu.
+	2. Drag and drop the **IxVM Deployment App 2G Chassis** resource to the canvas.
 
 3. Update the blueprint setup script.
-	* In the **Blueprint** sub menu, open **Properties**.
-	* In the **Scripts** section, select the **Default Sandbox Setup 2.0** script and click the trash icon to the right of the script.
-	* Click **Add Scripts**.
-	* Select the **IxVM.Sandbox.Setup.1.0.0**.
-	* Click **Done**.
+	1. In the **Blueprint** sub menu, open **Properties**.
+	2. In the **Scripts** section, select the **Default Sandbox Setup 2.0** script and click the trash icon to the right of the script.
+	3. Click **Add Scripts**.
+	4. Select the **IxVM.Sandbox.Setup.1.0.0**.
+	5. Click **Done**.
 
 4. Reserve the blueprint.
 
