@@ -67,14 +67,14 @@ The attribute names and types are listed in the following table:
 |Name|String||CloudShell resource display name.|
 |Address|String||IP address of the deployed IxVM test appliance.|
 |Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default, **Visibility** is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
+|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and **Inventory** dashboard. By default, **Visibility** is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
 |Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, **Remote Connection** is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
-|Controller TCP Port|String||TCP port of the traffic server. Relevant only in case an external server is configured. If left empty, the Default  TCP port is used.|
-|Controller Address|String||IP address of the traffic server. Relevant only in case an external server is configured.|
+|Controller TCP Port|String||TCP port of the traffic server. Relevant only if an external server is configured. If left empty, the Default  TCP port is used.|
+|Controller Address|String||IP address of the traffic server. Relevant only if an external server is configured.|
 |Client Install Path|String|||
-|Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine wether to automatically manage the device power status.|
+|Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status.|
 |Serial Number|String||Serial number of the resource.|
-|Server Description|String||Full dedscription of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
+|Server Description|String||Full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
 |License Server|String|License server address.|
 |Model Name|String||Catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Vendor|String||Name of the device manufacturer.|
