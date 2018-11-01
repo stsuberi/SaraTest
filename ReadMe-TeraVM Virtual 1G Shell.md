@@ -57,7 +57,7 @@ Release: **TeraVM Virtual Shells**
 
 The shell's data models include all shell metadata, families, and attributes.
 
-#### **TeraVM Chassis Families and Models**
+#### **TeraVM vChassis Families and Models**
 
 The families and models of the vChassis are listed in the following table:
 
@@ -106,7 +106,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox.|
+|Autoload|Creates the device structure, its hierarchy and attributes when deploying the App. The command can be rerun in the Inventory dashboard and not in the sandbox.|
 
 #### TeraVM Controller Shell
 
@@ -150,7 +150,9 @@ This section describes how to import the TeraVM Virtual shells and configure and
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
      
-  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.<br><br>The TeraVM Controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>The vBlade and vChassis shells are now ready to configure Apps, which will enable you to deploy, as part of your sandbox lifecycle, virtual applications (VMs) that are hosted on a cloud provider. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
+  
+  6. Import the rest of the shells by repeating steps 4 and 5.<br><br>The TeraVM Controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>You can now use the vBlade and vChassis shells to create Apps that, once deployed in a sandbox, will spin up VMs that model a TeraVM traffic generator. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 ### Offline installation of a shell
 
@@ -237,14 +239,14 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
-6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell, see [TeraVM vChassis Attributes](#teravm-vchassis-attributes).
+6. In the **App Resource** tab, select the **TeraVM vChassis** shell and specify all required configuration attributes for this shell, see [TeraVM vChassis Attributes](#teravm-vchassis-attributes).
 	
 	![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_resource.png)
 	
 7. Click **Done**.
 
 ### Configuring the TeraVM Controller 
-This section explains how to configure the **TeraVM Controller** service to download test files to a particular location.
+This section explains how to configure the **TeraVM Controller** service to load the test configuration, start traffic, stop traffic, get statistics, and download test files to a particular location.
 
 1. In your blueprint, add the **TeraVM Traffic Generator Controller** service. 
 	1. Click **App/Service**.
@@ -312,7 +314,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    3. Click **Add Script** and select **TeraVM.Sandbox.Setup.1.0** from the list. 
    4. Click **Update** to save changes.
    
-4. In the blueprint workspace, click the **Reserve** button to deploy the **TeraVM Controller** and **TeraVM Module**.
+4. In the blueprint workspace, click the **Reserve** button to deploy the **TeraVM Controller** and **TeraVM Module**. <br>You can now run your testing activity using the TeraVM traffic generator you spun up, as explained in the following workflow.
 
 **Workflow 2** - *Running a test* 
 1. Reserve a blueprint that is configured to run traffic tests, like the one configured in Workflow 1.
