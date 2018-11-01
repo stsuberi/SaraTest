@@ -34,7 +34,7 @@ For more information see the official **TeraVM** product documentation.
 
 To model a TeraVM device in CloudShell, use the following shells: 
 
-▪ [CloudShell TeraVM Virtual vChassis Shell](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM chassis.
+▪ [CloudShell TeraVM Virtual vChassis Shell](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM vChassis.
 
 ▪ [TeraVM Controller Shell (Service)](https://community.quali.com/repos/3287/teravm-controller-shell), which provides automation commands to run on the vChassis, such as Load Test Configuration, Start Traffic, Get Statistics.
 
@@ -59,7 +59,7 @@ The shell data models includes all shell metadata, families, and attributes.
 
 #### **TeraVM Chassis Families and Models**
 
-The chassis families and models are listed in the following table:
+The vChassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -67,7 +67,7 @@ The chassis families and models are listed in the following table:
 |Module|TeraVM Virtual Traffic Generator Module|TeraVM Deployed Module|
 |Port|TeraVM Virtual Traffic Generator Port|Port on the Deployed TeraVM Module|
 
-#### **TeraVM Chassis Attributes**
+#### **TeraVM vChassis Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -241,7 +241,7 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
-6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell, see [TeraVM Chassis Attributes](#teravm-chassis-attributes).
+6. In the **App Resource** tab, select the **TeraVM Chassis** shell and specify all required configuration attributes for this shell, see [TeraVM vChassis Attributes](#teravm-vchassis-attributes).
 	
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_resource.png)
 	
