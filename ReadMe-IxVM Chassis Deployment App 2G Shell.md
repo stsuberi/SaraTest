@@ -175,29 +175,6 @@ full path"/>`
 
 5. Restart the Execution Server.
 
-### Configuring a new resource
-This section explains how to create and configure a new resource from the shell.
-
-In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
-
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
-
-**To create a resource for the device:**
-  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-  
-     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
-  2. From the list, select **IxVM Virtual Traffic Chassis**.
-  
-  3. Enter the **Name** and **IP address** of the Deployed IxVM Test Appliance.
-  
-  4. Click **Create**.
-  
-  5. In the **Resource** dialog box, enter the device's settings, see [Device Name Attributes](#ixvm-chassis-deployed-app-2g-shell-attributes). 
-  
-  6. Click **Continue**.
-
-CloudShell validates the device’s settings and updates the new resource with the device’s structure.
-
 ### Configuring a new App
 This section explains how to create an App template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
 
@@ -216,6 +193,8 @@ This section explains how to create an App template for the IxVM Chassis to enab
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
+
+The App is ready to be used in CloudShell sandboxes. A dedicated VM will be created once the App is deployed in a sandbox. Note that you can deploy multiple instances of the same App in the sandbox.
 
 ### Configuring the setup script
 This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
