@@ -16,6 +16,7 @@ Document version: 1.0.0
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Typical Workflow and Scenarios](#typical-workflow-and-scenarios)
 * [References](#references)
+* [Release Notes](#release-notes)
 
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
@@ -253,3 +254,9 @@ For instructional training and documentation resources, see the [Quali Universit
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
+
+# Release Notes 
+
+### What's New
+
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/IxVM-Deployment-App-Chassis-Shell-2G/releases).
