@@ -313,7 +313,7 @@ In online mode, the execution server automatically downloads and extracts the ap
    3. Click **Add Script** and select **TeraVM.Sandbox.Setup.1.0** from the list. 
    4. Click **Update** to save changes.
    
-4. Run the **Reserve** command on the blueprint to deploy the **TeraVM Controller** and **TeraVM Module**.
+4. In the blueprint workspace, click the **Reserve** button to deploy the **TeraVM Controller** and **TeraVM Module**.
 
 **Workflow 2** - *Running a test* 
 1. Reserve a blueprint that is configured to run traffic tests, like the one configured in Workflow 1.
