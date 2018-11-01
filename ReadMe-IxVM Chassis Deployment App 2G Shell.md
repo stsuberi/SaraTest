@@ -50,7 +50,7 @@ The shell's data model includes all shell metadata, families, and attributes.
 
 #### **IxVM Chassis Deployment App 2G Shell Families and Models**
 
-The chassis families and models are listed in the following table:
+The families and models of the chassis are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -60,7 +60,7 @@ The chassis families and models are listed in the following table:
 
 #### **IxVM Chassis Deployed App 2G Shell Attributes**
 
-The attribute names and types are listed in the following table:
+The attributes of the chassis are listed in the following table:
 
 **Note:** All attributes appear both in the **Edit** resource dialog box (**Inventory>Resource>Edit**). Those noted with an asterisk, appear in the **Discover** resource dialog box as well (**Inventory>Resource>Discover**). 
 
@@ -88,7 +88,7 @@ The attribute names and types are listed in the following table:
 
 #### **IxVM Virtual Traffic Generator Port Attributes**
 
-The attribute names and types are listed in the following table:
+The attributes of the ports are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
@@ -97,12 +97,12 @@ The attribute names and types are listed in the following table:
 |MAC Address|String|Port's MAC address|
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
+This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 #### IxVM Chassis Deployment App 2G shell
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Autoload|Creates the device structure, its hierarchy and attributes when deploying the App. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Downloading the Shell
 The **IxVM Chassis Deployment App 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -129,9 +129,7 @@ This section describes how to import the **IxVM Deployment App 2G Shell** and co
   
   3. Click **Import**.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
-
-The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**. <br><br>The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a shell
 
@@ -178,8 +176,8 @@ full path"/>`
 
 5. Restart the Execution Server.
 
-### Configuring a new App
-This section explains how to create an App template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
+### Configuring a new app
+This section explains how to create an app template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -187,7 +185,7 @@ This section explains how to create an App template for the IxVM Chassis to enab
 
 3. Select **vCenter VM from Template**. You may use any deployment type and provider supported by Ixia. vCenter is used here as an example.
 
-4. Enter the **Name** of the App and click **Create**.
+4. Enter the **Name** of the app and click **Create**.
 
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
@@ -198,7 +196,7 @@ This section explains how to create an App template for the IxVM Chassis to enab
 
 7. Click **Done**.
 
-The App is ready to be used in CloudShell sandboxes. A dedicated VM will be created once the App is deployed in a sandbox. Note that you can deploy multiple instances of the same App in the sandbox.
+The app is ready to be used in CloudShell sandboxes. A dedicated VM will be created once the app is deployed in a sandbox. Note that you can deploy multiple instances of the same app in the sandbox.
 
 ### Configuring the setup script
 This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
