@@ -182,7 +182,7 @@ This section explains how to create an App template for the IxVM Chassis to enab
 
 2. Click **Add**.
 
-3. Select **vCenter VM from Template**.
+3. Select **vCenter VM from Template**. You may use any deployment type and provider supported by Ixia. vCenter is used here as an example.
 
 4. Enter the **Name** of the App and click **Create**.
 
