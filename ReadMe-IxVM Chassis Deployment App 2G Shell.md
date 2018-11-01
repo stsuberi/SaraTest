@@ -190,8 +190,7 @@ This section explains how to create an App template for the IxVM Chassis to enab
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
 
-6. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell. 
-
+6. In the **App Resource** tab, select the **IxVM Virtual Traffic Chassis 2G** shell. Specify the **User**, **Password**, and **License Server** of the shell.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
