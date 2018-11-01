@@ -27,7 +27,7 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **IxVM Chassis Deployment App 2G Shell**
-**IxVM Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **IxVM Chassis** traffic generator app. 
+The **IxVM Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management. 
 
 For more information on the **IxVM Traffic Chassis**, see the official **IxVM** product documentation.
 
@@ -62,8 +62,6 @@ The families and models of the chassis are listed in the following table:
 
 The attributes of the chassis are listed in the following table:
 
-**Note:** All attributes appear both in the **Edit** resource dialog box (**Inventory>Resource>Edit**). Those noted with an asterisk, appear in the **Discover** resource dialog box as well (**Inventory>Resource>Discover**). 
-
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
 |Name|String||CloudShell resource display name.|
@@ -81,9 +79,9 @@ The attributes of the chassis are listed in the following table:
 |Model Name|String||Catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Vendor|String||Name of the device manufacturer.|
 |Version|String||Firmware version of the resource.|
-|User*|String||Username for the deployed IxVM test appliance (should be a privileged user).|
-|Password*|Password||Password for the deployed IxVM test appliance.|
-|License Server*|String||IP address or hostname of the License Server.|
+|User|String||Username for the deployed IxVM test appliance (should be a privileged user).|
+|Password|Password||Password for the deployed IxVM test appliance.|
+|License Server|String||IP address or hostname of the License Server.|
 
 
 #### **IxVM Virtual Traffic Generator Port Attributes**
@@ -129,7 +127,7 @@ This section describes how to import the **IxVM Deployment App 2G Shell** and co
   
   3. Click **Import**.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**. <br><br>The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**. <br><br>You can now use the vBlade and vChassis shells to create Apps that, once deployed in a sandbox, will spin up VMs that model a TeraVM traffic generator. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 ### Offline installation of a shell
 
