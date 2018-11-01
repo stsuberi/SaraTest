@@ -150,11 +150,7 @@ This section describes how to import the TeraVM Virtual shells and configure and
   
      ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
      
-  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The TeraVM Controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The vBlade and vChassis shells are now ready to configure Apps, which will enable you to deploy, as part of your sandbox lifecycle, virtual applications (VMs) that are hosted on a cloud provider. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.<br><br>The TeraVM Controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>The vBlade and vChassis shells are now ready to configure Apps, which will enable you to deploy, as part of your sandbox lifecycle, virtual applications (VMs) that are hosted on a cloud provider. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 ### Offline installation of a shell
 
