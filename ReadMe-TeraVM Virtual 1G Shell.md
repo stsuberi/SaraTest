@@ -28,11 +28,11 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **TeraVM Virtual 1G Shells**
-The TeraVM Virtual 1G shells provide you with connectivity and management capabilities such as device structure discovery and power management. 
+TeraVM virtual devices are modeled using several shells in CloudShell, providing you with connectivity and management capabilities such as device structure discovery and power management. 
 
 For more information see the official **TeraVM** product documentation.
 
-To model a TeraVM device in CloudShell, use the following shells: 
+To model a TeraVM virtual device in CloudShell, use the following shells: 
 
 ▪ [CloudShell TeraVM Virtual vChassis Shell](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM vChassis.
 
@@ -100,13 +100,13 @@ The attributes of the ports are listed in the following table:
 |MAC Address|String|Port's MAC address|
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
 |Command|Description|
 |:-----|:-----|
-|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox.|
 
 #### TeraVM Controller Shell
 
@@ -201,7 +201,7 @@ full path"/>`
 
 #### Configuring a new App based on the TeraVM vBlade shell
 
-This section explains how to create an App template for the TeraVM vBlade shell (Module) to enable network connectivity between endpoints in the sandbox.
+This section explains how to create an App template for the TeraVM vBlade shell (Module).
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -223,7 +223,7 @@ This section explains how to create an App template for the TeraVM vBlade shell 
 
 #### Configuring a new App based on the TeraVM vChassis shell
 
-This section explains how to create an App template for the TeraVM vChassis shell to enable network connectivity between endpoints in the sandbox.
+This section explains how to create an App template for the TeraVM vChassis shell.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -301,7 +301,6 @@ In online mode, the execution server automatically downloads and extracts the ap
    
 2. Add Apps and Services to the blueprint. 
    1. Click **App/Services** from the toolbar.
-   
    2. Add the following to the diagram:
    		* **TeraVM Traffic Generator Controller** service - see [Configuring the TeraVM Controller](#configuring-the-teravm-controller) for more information.
 		* **TeraVM vChassis** App
@@ -309,7 +308,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 3. Update the blueprint setup script.
    1. Open the blueprint's properties, **Blueprint>Properties**. 
-   2. In the **Scripts** section, remove the **Default Sandbox Setup 2.0** script by clicking on the trash icon.
+   2. In the **Scripts** section, remove the **Default Sandbox Setup 2.0** script by clicking the trash icon.
    3. Click **Add Script** and select **TeraVM.Sandbox.Setup.1.0** from the list. 
    4. Click **Update** to save changes.
    
