@@ -33,11 +33,11 @@ For more information see the official **TeraVM** product documentation.
 
 To model a TeraVM device in CloudShell, use the following shells: 
 
-▪ [TeraVM TeraVM Virtual 1G vChassis](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM chassis.
+▪ [CloudShell TeraVM Virtual vChassis Shell](https://community.quali.com/repos/3401/cloudshell-teravm-vchassis-shell-1), which provides connectivity and management capabilities, such as device structure discovery and power management for the TeraVM chassis.
 
 ▪ [TeraVM Controller Shell (Service)](https://community.quali.com/repos/3287/teravm-controller-shell), which provides automation commands to run on the vChassis, such as Load Test Configuration, Start Traffic, Get Statistics.
 
-▪ [CloudShell TeraVM vBlade 1G Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vChassis.
+▪ [CloudShell TeraVM vBlade Shell](https://community.quali.com/repos/3403/cloudshell-teravm-vblade-shell), which provides connectivity and management capabilities such as device structure discovery and power management for the CloudShell TeraVM vBlade.
 
 ### Standard version
 The TeraVM Virtual 1G shells are based on the Traffic Shell Standard 1.0.0.
@@ -46,7 +46,7 @@ For detailed information about the shell’s structure and attributes, see the [
 
 ### Requirements
 
-Release: **TeraVM Virtual 1G Shells**
+Release: **TeraVM Virtual Shells**
 
 ▪ TeraVM versions: 13.4 and above
 
@@ -232,11 +232,11 @@ This section explains how to create an App template for the TeraVM vChassis shel
 
 2. Click **Add**.
 
-3. Select **vCenter VM from Template**.
+3. Select **vCenter VM from Template**. <br>Note that CloudShell only supports vCenter as a Cloud Provider, however, you may use any of the available deployment options.
 
 4. Enter the **Name** of the App and click **Create**.
 
-5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. Note that CloudShell only supports vCenter as a Cloud Provider, however, you may use any of the available deployment options.
+5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example *QualiFolder/Template*. 
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/teravm_chassis_app_deployment.png)
 
