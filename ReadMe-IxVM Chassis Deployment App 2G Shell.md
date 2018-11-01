@@ -75,7 +75,7 @@ The attribute names and types are listed in the following table:
 |Power Management|Boolean|True|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status.|
 |Serial Number|String||Serial number of the resource.|
 |Server Description|String||Full description of the server. Usually includes the OS, exact firmware version, and additional characteristics of the device.|
-|License Server|String|License server address.|
+|License Server|String||License server address.|
 |Model Name|String||Catalog name of the device model. The attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Vendor|String||Name of the device manufacturer.|
 |Version|String||Firmware version of the resource.|
