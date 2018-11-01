@@ -320,7 +320,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 4. Run the **Reserve** command on the blueprint to deploy the **TeraVM Controller** and **TeraVM Module**.
 
 **Workflow 2** - *Running a test* 
-1. Enter your blueprint.
+1. Reserve a blueprint that is configured to run traffic tests, like the one configured in Workflow 1.
 
 2. From the **TeraVM Traffic Generator Controller** service, run the **Load Configuration** command.
    1. Hover over the **TeraVM Traffic Generator Controller** service and click **Commands**.
