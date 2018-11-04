@@ -167,9 +167,7 @@ This section describes how to import the **Cisco TRex** shells and configure and
 
 ### Importing the shells into CloudShell
 
-**To import the Cisco TRex Controller and the CloudShell TRex Virtual Traffic Generator 1G shells into CloudShell:**
-
-**Note**: You will need to repeat these procedures, for the controller shell and the virtual traffic generator shell.
+**To import the CloudShell TRex Controller and the CloudShell TRex Virtual Traffic Generator 1G shells into CloudShell:**
 
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
@@ -183,10 +181,10 @@ This section describes how to import the **Cisco TRex** shells and configure and
      
   5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
   
-  6. Import the second shell by repeating steps 4 and 5.<br><br>The Cisco TRex controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>You can now use the TRex virtual traffic generator shell to create Apps that, once deployed in a sandbox, will spin up VMs that model a Cisco TRex traffic generator. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
+  6. Import the second shell by repeating steps 4 and 5.<br><br>The CloudShell TRex controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>You can now use the CloudShell TRex virtual traffic generator shell to create Apps that, once deployed in a sandbox, will spin up VMs that model a Cisco TRex traffic generator. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 
-**To import the Cisco TRex Chassis 2G shell into CloudShell:**
+**To import the CloudShell TRex Chassis 2G shell into CloudShell:**
 
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
@@ -230,7 +228,9 @@ Before PyPi Server was introduced as CloudShell’s python package management me
 1. Download the relevant *offline_dependencies.zip* file, see [Downloading the Shell](#downloading-the-shell):
 
 	• virtual-trex-offline-packages-1.0.0.zip
+	
 	• trex_controller-offline-dependencies-1.0.0.zip
+	
 	• trex_chassis_2g_offline_dependencies-1.0.0.zip
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
@@ -246,7 +246,7 @@ full path"/>`
 5. Restart the Execution Server.
 
 ### Configuring a new resource
-This section explains how to create a new resource from the shell.
+This section explains how to create a new resource from the CloudShell TRex Chassis 2G shell.
 
 In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
 
@@ -264,10 +264,10 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](#device-name-attributes). 
   
-  6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+  6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
   
 ### Configuring the setup script
-This section explains how to modify the setup script to work with the **Cisco TRex Virtual Traffic Generator** shell.
+This section explains how to modify the setup script to work with the **CloudShell TRex Virtual Traffic Generator** shell.
 
 **To modify the setup script:**
 1. Log in to CloudShell Portal as administrator of the relevant domain.
