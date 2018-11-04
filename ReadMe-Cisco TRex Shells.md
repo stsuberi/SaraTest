@@ -31,7 +31,7 @@ For additional information on traffic generator shell architecture, and setting 
 
 ### **Cisco TRex Shells**
 
-To model a **Cisco TRex** device in CloudShell, use one of the following options for either a standard or virtual configuration
+To model a **Cisco TRex** device in CloudShell, use one of the following options for either a standard or virtual configuration:
 
 **Standard Option**
 
