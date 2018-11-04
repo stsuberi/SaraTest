@@ -362,9 +362,12 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. Run **Start Test**.
 	1. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
 	2. Click the right arrow next to the **Start Traffic** command and enter the **Run** menu.
-	3. Specify the following parameters, as required:<br>
+	3. Specify the following parameters, as required:
+	
 		• **Block** - Determines if this method is blocked until the TRex state changes from **Starting** to either **Idle** or **Running**.
+		
 		• **Timeout** - Maximum time (in seconds) to wait in the **Block** state until the TRex state changes from **Starting** to either **Idle** or **Running**.
+		
 		• **Latency**
 	4. Run the **Start Traffic** command.
 
