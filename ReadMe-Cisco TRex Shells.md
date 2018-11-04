@@ -84,7 +84,9 @@ The virtual traffic generator families and models are listed in the following ta
 |Virtual Traffic Generator Chassis|Cisco TRex Chassis|Virtual TRex Chassis|
 |Port|TRex Virtual Port|Cisco TRex virtual port|
 
-#### **Trex Chassis Attributes**
+#### **Attributes**
+
+**TRex Chassis Attributes**
 
 The chassis attribute names and types are listed in the following table:
 
@@ -98,6 +100,26 @@ The chassis attribute names and types are listed in the following table:
 |Server Description|String|Full description of the server. Usually includes the OS, exact firmware version and additional characteristics of the device.
 |Version|String|Firmware version of the resource.|
 |Vendor|String|Name of the device manufacturer.|
+
+**Virtual TRex Attributes**
+
+The virtual TRex attribute names and types are listed in the following table:
+
+|Attribute|Type|Default value|Description|
+|:---|:---|:---|:---|
+|Logical Name|String||Virtual port's logical name in the test configuration. If left empty, automatic allocation will be applied.|
+|Requested vNIC Name|String||VNic to be associated with the vPort.|
+||Update TRex|Boolean|False|If set to **True**, the shell will automatically try to install/update TRex.|
+|TRex Package URL|String|http://trex-tgn.cisco.com/trex/release/latest |Path to the TRex package. The path should include the protocol type, for example 'http://trex-tgn.cisco.com/trex/release/latest'.|
+|TRex Server Config|String||Path to the TRex server configuration.|
+
+**TRex Controller Attributes**
+
+The TRex controller attribute names and types are listed in the following table:
+
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Test Files Location|String|Location for the test related files.|
 
 ### Automation
 This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
@@ -284,14 +306,59 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
-(if not applicable - remove section)
 
-**Workflow 1** - *[Name of Scenario 1]* 
+**Workflow 1** - *Creating a new blueprint* 
 
-**Workflow 2** - *[Name of Scenario 2]* 
+1. Create a new blueprint.
+   1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   2. Give the blueprint a name.
+   
+2. Add Resources and Services to the blueprint. 
+   1. Click the **Resources** tab from the toolbar and add the TRex Chassis resource and all required ports.
+   2. Click the **App/Services** tab from the toolbar and add the TRex Controller service.
+   3. Specify the attribute **Test Files Location**, where test files will be downloaded.
 
-**Workflow 3** - *[Name of Scenario 3]* 
+**Workflow 2** - *Getting the TRex server condiguration file* 
 
+* Run the **Upload Server Configuration** TRex Controller command.
+	1. Log in to CloudShell Portal and reserve the new blueprint.
+	2. Run the TRexController service command **Upload Server Configuration** with the full path on FTP/TFTP in which the current TRex Server configuration file will be saved.
+	3.Enter the FTP/TFTP server folder and verify that the TRex server configuration was copied successfully.
+
+**Workflow 3** - *Setting the TRex server configuration file* 
+
+* Run the **Download Server Configuration** TRex Controller command.
+	1. Log in to CloudShell Portal and reserve the new blueprint.
+	2. Run the TRexController service command **Download Server Configuration** with the full path to the TRex server configuration file, including the configuration file name.
+	
+**Workflow 4** - *Loading the TRex test configuration file* 
+
+* Run the **Load Test Configuration** TRexController command.
+	1. Log in to CloudShell Portal and reserve the new blueprint.
+	2. Run the TRexController service command **Load Test Configuration** with the path to the TRex test configuration file, including the configuration file name.	<br> The path can be accessed in two ways:<br>• Path to the configuration file on the FTP/TFTP server<br>• Relative path to the configuration file under **Test Files Location** 
+	
+**Workflow 5** - *Running a test* 
+
+1. Enter your sandbox.
+
+2. Run **Start Test**.
+	1. Click TRexController commands and enter the service commands.
+	2. Find the **Start Traffic** command and enter the **Run** menu.
+	3. Specify the following parameters, as required:<br>
+		• Block - Determines if this method is blocked until the TRex state changes from Starting to either Idle or Running.
+		• Timeout - Maximum time (in seconds) to wait in the Block state until the TRex state changes from Starting to either Idle or Running.
+		• Latency
+	4. Run the **Start Traffic** command.
+
+3. Run **Stop Test**.
+	1. Click TRexController commands and enter the service commands.
+	2. Find the **Stop Traffic** command and enter the **Run** menu.
+	3. Specify the following parameter, as required:<br>
+		• Force - Forces killing of running TRex process (if exists) on the server.
+	4. Run the **Stop Traffic** command.
+	
+4. Run **Get Result** command.
+	
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
@@ -302,14 +369,14 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes 
-(if not applicable - remove section)
+
 ### What's New
 
-[Note]: If previous releases exist, insert link to the release section of the shell GitHub repository to view changes made in each release. You should include a brief description of the fixes and enhancements made in this release.
+For release updates, see the shell's GitHub release pages as follows:
 
-For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Ixia-IxNetworkController-Shell/releases). 
+▪ [Cisco TRex Chassis 2 Gen Shell release page](https://github.com/QualiSystems/Ixia-Chassis-Shell-2G/releases)
 
-### Known Issues
-* 
-* 
-* 
+▪ [Cisco TRex Controller 1G Shell release page](https://github.com/QualiSystems/TRex-Controller-Shell/releases)
+
+▪ [CloudShell TRex Virtual Traffic Generator 1G Shell release page](https://github.com/QualiSystems/cloudshell-tg-virtual-trex/releases)
+
