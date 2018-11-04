@@ -320,29 +320,39 @@ In online mode, the execution server automatically downloads and extracts the ap
 **Workflow 2** - *Getting the TRex server configuration file* 
 
 1. Log in to CloudShell Portal and reserve the blueprint.
+
 2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+
 3. Click the arrow button next to the **Upload Server Configuration** command and specify the input values as follows: 
 
-* **URL Path (String)**: Enter the full path of the FTP/TFTP in which the current TRex server configuration file will be saved.
+	* **URL Path (String)**: Enter the full path of the FTP/TFTP in which the current TRex server configuration file will be saved.
+	
 4. Run the **Upload Server Configuration** command. 
+
 3. Enter the FTP/TFTP server folder and verify that the TRex server configuration was copied successfully.
 
 **Workflow 3** - *Setting the TRex server configuration file* 
 
 1. Log in to CloudShell Portal and reserve the blueprint.
+
 2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+
 4. Click the arrow button next to the **Download Server Configuration** command and specify the input values as follows: 
 
-* **URL Path (String)**: Enter the full path to the TRex server configuration file, including the configuration file name.
+	* **URL Path (String)**: Enter the full path to the TRex server configuration file, including the configuration file name.
+
 3. Run the **Download Server Configuration** command.
 	
 **Workflow 4** - *Loading the TRex test configuration file* 
 
 1. Log in to CloudShell Portal and reserve the blueprint.
+
 2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+
 3. Click the arrow button next to the **Load Test Configuration** command and specify the input values as follows: 
 
-* **URL Path (String)**: Enter the path to the TRex test configuration file, including the configuration file name.<br> The path can be accessed in two ways:<br>• Path to the configuration file on the FTP/TFTP server<br>• Relative path to the configuration file under **Test Files Location**.
+	* **URL Path (String)**: Enter the path to the TRex test configuration file, including the configuration file name.<br> The path can be accessed in two ways:<br>• Path to the configuration file on the FTP/TFTP server<br>• Relative path to the configuration file under **Test Files Location**.
+	
 4. Run the **Load Test Configuration** command.
 	
 **Workflow 5** - *Running a test* 
