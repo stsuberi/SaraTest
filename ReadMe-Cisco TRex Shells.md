@@ -59,7 +59,7 @@ Release: **Cisco TRex Shells**
 
 ▪ Cisco TRex versions: 2.35 and above
 
-▪ Cisco TRex Server versions: 2.35 and above
+▪ Cisco TRex server versions: 2.35 and above
 
 
 ### Data Model
