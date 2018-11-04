@@ -1,12 +1,12 @@
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **Cisco TRex Shells**  
 
-Release date: [Month Year]
+Release date: March 2018
 
-Shell version: [x.x.x]
+Shell version: 1.0.0
 
-Document version: [x.x.x]
+Document version: 1.0
 
 # In This Guide
 
@@ -22,40 +22,44 @@ Document version: [x.x.x]
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
+**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview). 
+
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **Cisco TRex Shells**
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+To model a **Cisco TRex** device in CloudShell, use one of the following options for either a standard or virtual configuration
 
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+**Standard Option**
 
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+▪ [Cisco TRex Chassis 2 Gen Shell](https://community.quali.com/repos/3412/cloudshell-trex-chassis-2-gen-shell), which provides data model and autoload functionality to model and load the Cisco TRec Chassis to resource management.
 
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+▪ [Cisco TRex Controller 1G Shell (service)](https://community.quali.com/repos/3410/cloudshell-trex-controller-shell), which provides functionality to load test configuration, run tests, get test results, etc.
+
+**Virtual Option**
+
+▪ [CloudShell TRex Virtual Traffic Generator 1G Shell](https://community.quali.com/repos/3409/cloudshell-trex-virtual-traffic-generator-shell), which creates a virtual TRex device in CloudShell and a TRex application in CloudShell and associates them. As well as for the Chassis shell, it provides data model and autoload functionality.
+
+• [Cisco TRex Controller 1G Shell (service)](https://community.quali.com/repos/3410/cloudshell-trex-controller-shell), which provides functionality to load test configuration, run tests, get tests results, etc.
+
+For more information on the **Cisco TRex** traffic generators, see the official **Cisco TRex** product documentation.
 
 ### Standard version
 
 For detailed information about the shell’s structure and attributes, see the **Shells Standard: Traffic**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
 
-### Supported OS
-▪ **[OS Name]**
-
 ### Requirements
 
-Release: **[Shell Name]**
+Release: **Cisco TRex Shells**
 
-▪ CloudShell version: **[Version Number]**
+▪ CloudShell version: 8.2 and above
 
-▪ [Device Name]: **[Version Number]**
+▪ Cisco TRex versions: 2.35 and above
 
-▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
-
-▪ [Controller Name]: CloudShell version **[Version Number]**
+▪ Cisco TRex Server versions: 2.35 and above
 
 
 ### Data Model
@@ -93,17 +97,22 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-# Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+# Downloading the Shells
+The **Cisco TRex** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
-The shell comprises:
+The shells comprise:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|cisco-virtual-trex.zip|Virtual TRex shell package|
+|virtual-trex-offline-packages-1.0.0.zip|Virtual TRex shell Python dependencies (for offline deployments only)|
+|trex_controller_shell.zip|TRex controller shell package|
+|trex_controller-offline-dependencies-1.0.0.zip|TRex controller shell Python dependencies (for offline deployments only)|
+|TRexChassisShell2G.zip|TRexChassis shell package}
+|trex_chassis_2g_offline_dependencies-1.0.0.zip|TRex chassis shell Python dependencies (for offline deployments only|
+|cloudshell-tg-trex-1.0.0.zip|Part of the offline deployments package|
 
 # Importing and Configuring the Shell
 This section describes how to import the **[Shell Name]** and configure and modify the shell’s devices.
