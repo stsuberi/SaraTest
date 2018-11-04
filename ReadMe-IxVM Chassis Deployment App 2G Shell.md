@@ -231,7 +231,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 1. Enter your blueprint.
 
 2. Add the **VM Deployment App** to the blueprint.
-	1. Open the **App/Service** menu.
+	1. Open the **App/Service** pane.
 	2. Drag and drop the **IxVM Deployment App 2G Chassis** resource to the canvas.
 
 3. Update the blueprint setup script.
