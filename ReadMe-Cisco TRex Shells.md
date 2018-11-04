@@ -64,29 +64,40 @@ Release: **Cisco TRex Shells**
 
 ### Data Model
 
-The shell's data model includes all shell metadata, families, and attributes.
+The shell data models include all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **CloudShell TRex Chassis 2G Families and Models**
 
 The chassis families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|Traffic Generator Chassis|TRex Chassis|TRex Chassis|
+|Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
 
-#### **[Device Name] Attributes**
+#### **CloudShell TRex Virtual Traffic Generator 1G Families and Models**
 
-The attribute names and types are listed in the following table:
+The virtual traffic generator families and models are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
+|Family|Model|Description|
+|:---|:---|:---|
+|Virtual Traffic Generator Chassis|Cisco TRex Chassis|Virtual TRex Chassis|
+|Port|TRex Virtual Port|Cisco TRex virtual port|
+
+#### **Trex Chassis Attributes**
+
+The chassis attribute names and types are listed in the following table:
+
+|Attribute|Type|Description|
+|:---|:---|:---|
+|Logical Name|String|Port's logical name in the test configuration. If left empty, automatic allocation will be applied.|
+|Media Type|String|Interface media type.<br> Possible values are:**Fiber** and/or **Copper** (comma-separated).|
+|Model Name|String|Device model. This information is typically used for abstract resource filtering.|
+|Power Management|Boolean|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
+|Supported Speeds|String|Speed supported by the interface (comma-separated).|
+|Server Description|String|Full description of the server. Usually includes the OS, exact firmware version and additional characteristics of the device.
+|Version|String|Firmware version of the resource.|
+|Vendor|String|Name of the device manufacturer.|
 
 ### Automation
 This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
@@ -223,15 +234,37 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **Cisco TRex Chassis**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  3. Enter the **Name** and **IP address** of the **Cisco TRex Chassis**.
   
   4. Click **Create**.
   
   5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](#device-name-attributes). 
   
   6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+  
+### Configuring the setup script
+This section explains how to modify the setup script to work with the **Cisco TRex Virtual Traffic Generator** shell.
+
+**To modify the setup script:**
+1. Log in to CloudShell Portal as administrator of the relevant domain.
+
+2. Go to the **Manage** dashboard and click **Scripts>Blueprint**.
+
+3. Download the current setup script.
+
+4. Browse to the location of the downloaded file. 
+
+5. Add *cloudshell-orch-trex>=1.0.0,<1.1.0* into the *requirements.txt* file.
+
+6. Add the following code in the *_main_.py* file:
+
+• ```from cloudshell.workflow.orchestration.setup.trex.configuration_commands import configure_virtual_chassis, execute_autoload_on_trexsandbox.workflow.add_to_configuration(function=configure_virtual_chassis, components=sandbox.components.apps)
+
+sandbox.workflow.on_configuration_ended(function=execute_autoload_on_trex, components=sandbox.components.apps))```
+
+7. Update the setup script in CloudShell.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
