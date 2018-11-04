@@ -113,9 +113,9 @@ The CloudShell TRex virtual traffic generator attribute names and types are list
 |TRex Package URL|String|http://trex-tgn.cisco.com/trex/release/latest |Path to the TRex package. The path should include the protocol type, for example 'http://trex-tgn.cisco.com/trex/release/latest'.|
 |TRex Server Config|String||Path to the TRex server configuration.|
 
-**TRex Controller Attributes**
+**CloudShell TRex Controller Attributes**
 
-The TRex controller attribute names and types are listed in the following table:
+The Cloudshell TRex controller attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
@@ -126,19 +126,19 @@ This section describes the automation (driver) associated with the data model. T
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
-**Cisco TRex Chassi 2G Shell**
+**CloudShell TRex Chassis 2G Shell**
 
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-**TRex Controller 1G Shell**
+**CloudShell TRex Controller 1G Shell**
 
 |Command|Description|
 |:-----|:-----|
 |Upload Server Configuration|Uploads the current TRex server configuration file to the remote FTP/TFTP server.|
 |Download Server Configuration|Downloads the configuration file from the remote FTP/TFTP server and sets it as the TRex server configuration file.|
-|Load Configuration|Loads the configuration file prepared by your admin.<br>The load configuration file includes the settings to run the traffic test. For example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports.<br>The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20Generators%20overview).|
+|Load Configuration|Loads the configuration file prepared by your admin.<br>The load configuration file includes the settings to run the traffic test, for example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports.<br>The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20Generators%20overview).|
 |Start Traffic|Starts a test to generate and send traffic from the traffic generator.|
 |Stop Traffic|Stops running a test to stop sending traffic from the traffic generator.|
 |Get Result|Gets the test result file and attaches it to the sandbox.|
@@ -154,12 +154,12 @@ The shells comprise:
 
 |File name|Description|
 |:---|:---|
-|cisco-virtual-trex.zip|Virtual TRex shell package|
-|virtual-trex-offline-packages-1.0.0.zip|Virtual TRex shell Python dependencies (for offline deployments only)|
-|trex_controller_shell.zip|TRex controller shell package|
-|trex_controller-offline-dependencies-1.0.0.zip|TRex controller shell Python dependencies (for offline deployments only)|
-|TRexChassisShell2G.zip|TRexChassis shell package}
-|trex_chassis_2g_offline_dependencies-1.0.0.zip|TRex chassis shell Python dependencies (for offline deployments only|
+|cisco-virtual-trex.zip|CloudShell TRex virtual traffic generator shell package|
+|virtual-trex-offline-packages-1.0.0.zip|CloudShell TRex virtual traffic generator shell Python dependencies (for offline deployments only)|
+|trex_controller_shell.zip|CloudShell TRex controller shell package|
+|trex_controller-offline-dependencies-1.0.0.zip|CloudShell TRex controller shell Python dependencies (for offline deployments only)|
+|TRexChassisShell2G.zip|CloudShell TRex chassis 2G shell package|
+|trex_chassis_2g_offline_dependencies-1.0.0.zip|CloudShell TRex chassis 2G shell Python dependencies (for offline deployments only|
 |cloudshell-tg-trex-1.0.0.zip|Part of the offline deployments package|
 
 # Importing and Configuring the Shells
