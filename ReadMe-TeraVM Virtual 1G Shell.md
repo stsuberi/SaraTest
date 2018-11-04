@@ -148,7 +148,7 @@ This section describes how to import the TeraVM Virtual shells and configure and
   
   4. In the user menu select **Import Package**.
   
-     ![](https://github.com/stsuberi/SaraTest/blob/master/import_package.png)
+     ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/import_package.png)
      
   5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
   
