@@ -282,9 +282,9 @@ This section explains how to modify the setup script to work with the **CloudShe
 
 6. Add the following code in the *_main_.py* file:
 
-• ```from cloudshell.workflow.orchestration.setup.trex.configuration_commands import configure_virtual_chassis, execute_autoload_on_trexsandbox.workflow.add_to_configuration(function=configure_virtual_chassis, components=sandbox.components.apps)
+	`from cloudshell.workflow.orchestration.setup.trex.configuration_commands import configure_virtual_chassis, execute_autoload_on_trexsandbox.workflow.add_to_configuration(function=configure_virtual_chassis, components=sandbox.components.apps)
 
-sandbox.workflow.on_configuration_ended(function=execute_autoload_on_trex, components=sandbox.components.apps))```
+sandbox.workflow.on_configuration_ended(function=execute_autoload_on_trex, components=sandbox.components.apps))`
 
 7. Update the setup script in CloudShell.
 
@@ -310,51 +310,60 @@ In online mode, the execution server automatically downloads and extracts the ap
 **Workflow 1** - *Creating a new blueprint* 
 
 1. Create a new blueprint.
-   1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
-   2. Give the blueprint a name.
+  	1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   	2. Give the blueprint a name.
    
 2. Add Resources and Services to the blueprint. 
-   1. Click the **Resources** tab from the toolbar and add the TRex Chassis resource and all required ports.
-   2. Click the **App/Services** tab from the toolbar and add the TRex Controller service.
-   3. Specify the attribute **Test Files Location**, where test files will be downloaded.
+  	1. Click the **Resources** tab from the toolbar and add the TRex Chassis resource and all required ports.
+   	2. Click the **App/Services** tab from the toolbar and add the Cisco TRex Controller service.
+   	3. Specify the **Test Files Location**, where test files will be downloaded.
 
-**Workflow 2** - *Getting the TRex server condiguration file* 
+**Workflow 2** - *Getting the TRex server configuration file* 
 
-* Run the **Upload Server Configuration** TRex Controller command.
-	1. Log in to CloudShell Portal and reserve the new blueprint.
-	2. Run the TRexController service command **Upload Server Configuration** with the full path on FTP/TFTP in which the current TRex Server configuration file will be saved.
-	3.Enter the FTP/TFTP server folder and verify that the TRex server configuration was copied successfully.
+1. Log in to CloudShell Portal and reserve the blueprint.
+2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+3. Click the arrow button next to the **Upload Server Configuration** command and specify the input values as follows: 
+
+* **URL Path (String)**: Enter the full path of the FTP/TFTP in which the current TRex server configuration file will be saved.
+4. Run the **Upload Server Configuration** command. 
+3. Enter the FTP/TFTP server folder and verify that the TRex server configuration was copied successfully.
 
 **Workflow 3** - *Setting the TRex server configuration file* 
 
-* Run the **Download Server Configuration** TRex Controller command.
-	1. Log in to CloudShell Portal and reserve the new blueprint.
-	2. Run the TRexController service command **Download Server Configuration** with the full path to the TRex server configuration file, including the configuration file name.
+1. Log in to CloudShell Portal and reserve the blueprint.
+2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+4. Click the arrow button next to the **Download Server Configuration** command and specify the input values as follows: 
+
+* **URL Path (String)**: Enter the full path to the TRex server configuration file, including the configuration file name.
+3. Run the **Download Server Configuration** command.
 	
 **Workflow 4** - *Loading the TRex test configuration file* 
 
-* Run the **Load Test Configuration** TRexController command.
-	1. Log in to CloudShell Portal and reserve the new blueprint.
-	2. Run the TRexController service command **Load Test Configuration** with the path to the TRex test configuration file, including the configuration file name.	<br> The path can be accessed in two ways:<br>• Path to the configuration file on the FTP/TFTP server<br>• Relative path to the configuration file under **Test Files Location** 
+1. Log in to CloudShell Portal and reserve the blueprint.
+2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+3. Click the arrow button next to the **Load Test Configuration** command and specify the input values as follows: 
+
+* **URL Path (String)**: Enter the path to the TRex test configuration file, including the configuration file name.<br> The path can be accessed in two ways:<br>• Path to the configuration file on the FTP/TFTP server<br>• Relative path to the configuration file under **Test Files Location**.
+4. Run the **Load Test Configuration** command.
 	
 **Workflow 5** - *Running a test* 
 
 1. Enter your sandbox.
 
 2. Run **Start Test**.
-	1. Click TRexController commands and enter the service commands.
-	2. Find the **Start Traffic** command and enter the **Run** menu.
+	1. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+	2. Click the right arrow next to the **Start Traffic** command and enter the **Run** menu.
 	3. Specify the following parameters, as required:<br>
-		• Block - Determines if this method is blocked until the TRex state changes from Starting to either Idle or Running.
-		• Timeout - Maximum time (in seconds) to wait in the Block state until the TRex state changes from Starting to either Idle or Running.
-		• Latency
+		• **Block** - Determines if this method is blocked until the TRex state changes from **Starting** to either **Idle** or **Running**.
+		• **Timeout** - Maximum time (in seconds) to wait in the **Block** state until the TRex state changes from **Starting** to either **Idle** or **Running**.
+		• **Latency**
 	4. Run the **Start Traffic** command.
 
 3. Run **Stop Test**.
-	1. Click TRexController commands and enter the service commands.
-	2. Find the **Stop Traffic** command and enter the **Run** menu.
+	1. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+	2. Click the right arrow next to the **Stop Traffic** command and enter the **Run** menu.
 	3. Specify the following parameter, as required:<br>
-		• Force - Forces killing of running TRex process (if exists) on the server.
+		• **Force** - Forces killing the run TRex process (if it exists) on the server.
 	4. Run the **Stop Traffic** command.
 	
 4. Run **Get Result** command.
