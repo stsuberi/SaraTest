@@ -93,9 +93,24 @@ This section describes the automation (driver) associated with the data model. T
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
+**Cisco TRex Chassi 2G Shell**
+
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+
+**TRex Controller 1G Shell**
+
+|Command|Description|
+|:-----|:-----|
+|Upload Server Configuration|Uploads the current TRex server configuration file to the remote FTP/TFTP server.|
+|Download Server Configuration|Downloads the configuration file from the remote FTP/TFTP server and sets it as the TRex server configuration file.|
+|Load Configuration|Loads the configuration file prepared by your admin.<br>The load configuration file includes the settings to run the traffic test. For example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports.<br>The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20Generators%20overview).|
+|Start Traffic|Starts a test to generate and send traffic from the traffic generator.|
+|Stop Traffic|Stops running a test to stop sending traffic from the traffic generator.|
+|Get Result|Gets the test result file and attaches it to the sandbox.|
+|Get Test File|Downloads the test file to the location specified in the **Test Files Location** attribute, defined when you added the service to your blueprint.
+
 
 # Downloading the Shells
 The **Cisco TRex** shells are available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -114,12 +129,32 @@ The shells comprise:
 |trex_chassis_2g_offline_dependencies-1.0.0.zip|TRex chassis shell Python dependencies (for offline deployments only|
 |cloudshell-tg-trex-1.0.0.zip|Part of the offline deployments package|
 
-# Importing and Configuring the Shell
-This section describes how to import the **[Shell Name]** and configure and modify the shell’s devices.
+# Importing and Configuring the Shells
+This section describes how to import the **Cisco TRex** shells and configure and modify the shell devices.
 
-### Importing the shell into CloudShell
+### Importing the shells into CloudShell
 
-**To import the shell into CloudShell:**
+**To import the Cisco TRex Controller and the CloudShell TRex Virtual Traffic Generator 1G shells into CloudShell:**
+
+**Note**: You will need to repeat these procedures, for the controller shell and the virtual traffic generator shell.
+
+  1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
+  
+  2. Backup your database.
+  
+  3. Log in to CloudShell Portal as administrator and access the relevant domain.
+  
+  4. In the user menu select **Import Package**.
+  
+     ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/import_package.png)
+     
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
+  
+  6. Import the second shell by repeating steps 4 and 5.<br><br>The Cisco TRex controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>You can now use the TRex virtual traffic generator shell to create Apps that, once deployed in a sandbox, will spin up VMs that model a Cisco TRex traffic generator. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
+
+
+**To import the Cisco TRex Chassis 2G shell into CloudShell:**
+
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
   2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
@@ -137,8 +172,6 @@ In offline mode, import the shell into CloudShell and place any dependencies in 
 * For CloudShell version 8.3 and above, see [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository).
 
 * For CloudShell version 8.2, perform the appropriate procedure: [Adding Shell and script packages to the local PyPi Server repository](#adding-shell-and-script-packages-to-the-local-pypi-server-repository) or [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
-
-* For CloudShell versions prior to 8.2, see [Setting the python pythonOfflineRepositoryPath configuration key](#setting-the-python-pythonofflinerepositorypath-configuration-key).
 
 ### Adding shell and script packages to the local PyPi Server repository
 If your Quali Server and/or execution servers work offline, you will need to copy all required Python packages, including the out-of-the-box ones, to the PyPi Server's repository on the Quali Server computer (by default *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Config\Pypi Server Repository*).
@@ -161,7 +194,11 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the relevant *offline_dependencies.zip* file, see [Downloading the Shell](#downloading-the-shell):
+
+	• virtual-trex-offline-packages-1.0.0.zip
+	• trex_controller-offline-dependencies-1.0.0.zip
+	• trex_chassis_2g_offline_dependencies-1.0.0.zip
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
