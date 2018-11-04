@@ -283,7 +283,6 @@ This section explains how to modify the setup script to work with the **CloudShe
 6. Add the following code in the *_main_.py* file:
 
 	`from cloudshell.workflow.orchestration.setup.trex.configuration_commands import configure_virtual_chassis, execute_autoload_on_trexsandbox.workflow.add_to_configuration(function=configure_virtual_chassis, components=sandbox.components.apps)
-
 sandbox.workflow.on_configuration_ended(function=execute_autoload_on_trex, components=sandbox.components.apps))`
 
 7. Update the setup script in CloudShell.
