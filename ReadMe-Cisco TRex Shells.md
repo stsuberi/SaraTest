@@ -86,14 +86,14 @@ The virtual traffic generator families and models are listed in the following ta
 
 #### **Attributes**
 
-**TRex Chassis Attributes**
+**Cloudshell TRex Chassis 2G Attributes**
 
 The chassis attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
 |Logical Name|String|Port's logical name in the test configuration. If left empty, automatic allocation will be applied.|
-|Media Type|String|Interface media type.<br> Possible values are:**Fiber** and/or **Copper** (comma-separated).|
+|Media Type|String|Interface media type.<br> Possible values are: **Fiber** and/or **Copper** (comma-separated).|
 |Model Name|String|Device model. This information is typically used for abstract resource filtering.|
 |Power Management|Boolean|Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.|
 |Supported Speeds|String|Speed supported by the interface (comma-separated).|
@@ -101,15 +101,15 @@ The chassis attribute names and types are listed in the following table:
 |Version|String|Firmware version of the resource.|
 |Vendor|String|Name of the device manufacturer.|
 
-**Virtual TRex Attributes**
+**CloudShell TRex Virtual Traffic Generator Attributes**
 
-The virtual TRex attribute names and types are listed in the following table:
+The CloudShell TRex virtual traffic generator attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
 |Logical Name|String||Virtual port's logical name in the test configuration. If left empty, automatic allocation will be applied.|
 |Requested vNIC Name|String||VNic to be associated with the vPort.|
-||Update TRex|Boolean|False|If set to **True**, the shell will automatically try to install/update TRex.|
+|Update TRex|Boolean|False|If set to **True**, the shell will automatically try to install/update TRex.|
 |TRex Package URL|String|http://trex-tgn.cisco.com/trex/release/latest |Path to the TRex package. The path should include the protocol type, for example 'http://trex-tgn.cisco.com/trex/release/latest'.|
 |TRex Server Config|String||Path to the TRex server configuration.|
 
