@@ -16,6 +16,7 @@ Document version: (Rev A.01)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [References](#references)
+* [Release Notes](#release-notes)
 
 
 # Overview
