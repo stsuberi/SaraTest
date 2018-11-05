@@ -38,7 +38,7 @@ For more information on the **Pluribus Netvisor VLE L1**, see the official **Plu
 
 ### Requirements
 
-Release: **CloudShell Pluribus Netvisor VLE L1 version 1.0.1**
+Release: **CloudShell Pluribus Netvisor VLE L1**
 
 ▪ CloudShell version: 8.3 GA and above
 
@@ -93,7 +93,7 @@ The Generic L1 Port attribute names and types are listed in the following table:
 |Wavelength|String|0|Optical Port Wavelength|
 
 ### Automation
-This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the Inventory dashboard, while resource commands are run in the Sandbox, providing that the resource has been discovered and is online.
+This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 |Command|Description|
 |:-----|:-----|
@@ -110,9 +110,9 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|cloudshell-L1-pluribus_netvisor_vle\install_driver.bat|Pluribus Netvisor VLE L1 shell installation script|
-|cloudshell-L1-pluribus_netvisor_vle\pluribus_netvisor_vle_runtime_config.yml|Pluribus Netvisor VLE L1 shell configuration file|
-|cloudshell-L1-pluribus_netvisor_vle\datamodel\Pluribus Netvisor VLE_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
+|cloudshell-L1-pluribus_netvisor_vle\install_driver.bat|Pluribus Netvisor VLE L1 shell installation script.|
+|cloudshell-L1-pluribus_netvisor_vle\pluribus_netvisor_vle_runtime_config.yml|Pluribus Netvisor VLE L1 shell configuration file.|
+|cloudshell-L1-pluribus_netvisor_vle\datamodel\Pluribus Netvisor VLE_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor.|
 
 # Importing and Configuring the Shell
 This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and configure and modify the shell’s devices.
@@ -128,25 +128,25 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
   3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\install_driver.bat* file.
   
   4. Import the new data model.
-      * **In Resource Manager Client>Admin**, right-click **Resource Families** and select **Import**.
-      * Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\datamodel\pluribus_netvisor_vle_ResourceConfiguration.xml* file.
-      * Click **Open**.
+      1. **In Resource Manager Client>Admin**, right-click **Resource Families** and select **Import**.
+      2. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\datamodel\pluribus_netvisor_vle_ResourceConfiguration.xml* file.
+      3. Click **Open**.
 	
   5. Create an L1 resource.
-      * In **Resource Explorer**, right click **Root** and select **New>Resource**.
-      * Enter the **Name** and **Address**.
-      * Select the **L1 Switch** family.
-      * Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
-      * Click **OK**.
+      1. In **Resource Explorer**, right click **Root** and select **New>Resource**.
+      2. Enter the **Name** and **Address**.
+      3. Select the **L1 Switch** family.
+      4. Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
+      5. Click **OK**.
 	
   6. Auto Load the new resource.
-      * In **Resource Explorer**, right click the new resource and select **Configuration**.
-      * In the **Internal Resources** pane, right click the switch and select **Exclude**. 
-      * Click the **Auto Load** button at the bottom of the **Configuration** tab.
+      1. In **Resource Explorer**, right click the new resource and select **Configuration**.
+      2. In the **Internal Resources** pane, right click the switch and select **Exclude**. 
+      3. Click the **Auto Load** button at the bottom of the **Configuration** tab.
 	
   7. Define the resource connections on the L1 switch.
-      * Right click the resource and select **Configuration>Connections**.
-      * Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
+      1. Right click the resource and select **Configuration>Connections**.
+      2. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
 
 
 ### Offline installation of a shell
@@ -163,13 +163,13 @@ This section explains how to update your Python dependencies folder. This is req
 
 2. Extract the zip file to the suitable offline package folder(s). 
 
-3. Restart any execution server that has a live instance of the relevant driver or script. This requires running the Execution Server's configuration wizard, as explained in the [Configure the Execution Server](http://help.quali.com/doc/9.0/CS-Install/content/ig/configure%20cloudshell%20products/cfg-ts-exec-srver.htm?Highlight=configure%20the%20execution%20server) topic of the CloudShell Suite Installation guide. 
+3. Terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). 
 
 ### Updating online Python dependencies
 In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
 
 **To update online Python dependencies:**
-* If there is a live instance of the shell's driver or script, restart the execution server, as explained above. If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
+* If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -179,3 +179,9 @@ For instructional training and documentation, see [Quali University](https://www
 To suggest an idea for the product, see [Quali's Idea box](https://community.quali.com/ideabox). 
 
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
+
+# Release Notes 
+
+### What's New
+
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire/releases).
