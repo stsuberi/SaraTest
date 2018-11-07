@@ -232,6 +232,8 @@ Before PyPi Server was introduced as CloudShell’s python package management me
 	• trex_controller-offline-dependencies-1.0.0.zip
 	
 	• trex_chassis_2g_offline_dependencies-1.0.0.zip
+	
+	• cloudshell-tg-trex-1.0.0.zip
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
