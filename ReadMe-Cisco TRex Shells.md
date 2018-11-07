@@ -41,7 +41,7 @@ To model a **Cisco TRex** device in CloudShell, use one of the following options
 
 **Virtual Option**
 
-▪ [CloudShell TRex Virtual Traffic Generator 1G Shell](https://community.quali.com/repos/3409/cloudshell-trex-virtual-traffic-generator-shell), which creates a virtual TRex device in CloudShell and a TRex application in CloudShell and associates them.
+▪ [CloudShell TRex Virtual Traffic Generator 1G Shell](https://community.quali.com/repos/3409/cloudshell-trex-virtual-traffic-generator-shell), which creates a CloudShell TRex virtual traffic generator shell to create Apps that, once deployed in a sandbox, will spin up VMs that model a Cisco TRex traffic generator. 
 
 • [Cisco TRex Controller 1G Shell (service)](https://community.quali.com/repos/3410/cloudshell-trex-controller-shell), which provides functionality to load test configuration, run tests, get tests results, etc.
 
