@@ -35,13 +35,13 @@ To model a **Cisco TRex** device in CloudShell, use one of the following options
 
 **Standard Option**
 
-▪ [Cisco TRex Chassis 2 Gen Shell](https://community.quali.com/repos/3412/cloudshell-trex-chassis-2-gen-shell), which provides data model and autoload functionality to model and load the Cisco TRec Chassis to resource management.
+▪ [Cisco TRex Chassis 2 Gen Shell](https://community.quali.com/repos/3412/cloudshell-trex-chassis-2-gen-shell), which provides data model and autoload functionality to model and load the Cisco TRex Chassis to resource management.
 
 ▪ [Cisco TRex Controller 1G Shell (service)](https://community.quali.com/repos/3410/cloudshell-trex-controller-shell), which provides functionality to load test configuration, run tests, get test results, etc.
 
 **Virtual Option**
 
-▪ [CloudShell TRex Virtual Traffic Generator 1G Shell](https://community.quali.com/repos/3409/cloudshell-trex-virtual-traffic-generator-shell), which creates a virtual TRex device in CloudShell and a TRex application in CloudShell and associates them. As well as for the Chassis shell, it provides data model and autoload functionality.
+▪ [CloudShell TRex Virtual Traffic Generator 1G Shell](https://community.quali.com/repos/3409/cloudshell-trex-virtual-traffic-generator-shell), which creates a virtual TRex device in CloudShell and a TRex application in CloudShell and associates them.
 
 • [Cisco TRex Controller 1G Shell (service)](https://community.quali.com/repos/3410/cloudshell-trex-controller-shell), which provides functionality to load test configuration, run tests, get tests results, etc.
 
@@ -110,7 +110,7 @@ The CloudShell TRex virtual traffic generator attribute names and types are list
 |Logical Name|String||Virtual port's logical name in the test configuration. If left empty, automatic allocation will be applied.|
 |Requested vNIC Name|String||VNic to be associated with the vPort.|
 |Update TRex|Boolean|False|If set to **True**, the shell will automatically try to install/update TRex.|
-|TRex Package URL|String|http://trex-tgn.cisco.com/trex/release/latest |Path to the TRex package. The path should include the protocol type, for example 'http://trex-tgn.cisco.com/trex/release/latest'.|
+|TRex Package URL|String|http://trex-tgn.cisco.com/trex/release/latest |Path to the TRex package.<br>The path should include the protocol type, for example *http://trex-tgn.cisco.com/trex/release/latest*.|
 |TRex Server Config|String||Path to the TRex server configuration.|
 
 **CloudShell TRex Controller Attributes**
@@ -138,7 +138,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |:-----|:-----|
 |Upload Server Configuration|Uploads the current TRex server configuration file to the remote FTP/TFTP server.|
 |Download Server Configuration|Downloads the configuration file from the remote FTP/TFTP server and sets it as the TRex server configuration file.|
-|Load Configuration|Loads the configuration file prepared by your admin.<br>The load configuration file includes the settings to run the traffic test, for example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports.<br>The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20Generators%20overview).|
+|Load Configuration|Loads the configuration file (configured by your admin).<br>The load configuration file includes the settings to run the traffic test, for example, packet size, number of packets to send in parallel, interval at which to send packet batches, etc. The file also reserves the necessary ports.<br>The load configuration file must be accessible from the Execution Server, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20Generators%20overview).|
 |Start Traffic|Starts a test to generate and send traffic from the traffic generator.|
 |Stop Traffic|Stops running a test to stop sending traffic from the traffic generator.|
 |Get Result|Gets the test result file and attaches it to the sandbox.|
@@ -310,11 +310,11 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 **Workflow 1** - *Creating a new blueprint* 
 
-1. Create a new blueprint.
-  	1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
-   	2. Give the blueprint a name.
+1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+
+2. Give the blueprint a name.
    
-2. Add Resources and Services to the blueprint. 
+3. Add Resources and Services to the blueprint. 
   	1. Click the **Resources** tab from the toolbar and add the TRex Chassis resource and all required ports.
    	2. Click the **App/Services** tab from the toolbar and add the Cisco TRex Controller service.
    	3. Specify the **Test Files Location**, where test files will be downloaded.
@@ -325,7 +325,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
 
-3. Click the arrow button next to the **Upload Server Configuration** command and specify the input values as follows: 
+3. Click the arrow button next to the **Upload Server Configuration** command and specify the input value as follows: 
 
 	* **URL Path (String)**: Enter the full path of the FTP/TFTP in which the current TRex server configuration file will be saved.
 	
@@ -339,7 +339,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
 
-4. Click the arrow button next to the **Download Server Configuration** command and specify the input values as follows: 
+4. Click the arrow button next to the **Download Server Configuration** command and specify the input value as follows: 
 
 	* **URL Path (String)**: Enter the full path to the TRex server configuration file, including the configuration file name.
 
@@ -351,7 +351,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
 
-3. Click the arrow button next to the **Load Test Configuration** command and specify the input values as follows: 
+3. Click the arrow button next to the **Load Test Configuration** command and specify the input value as follows: 
 
 	* **URL Path (String)**: Enter the path to the TRex test configuration file, including the configuration file name.<br> The path can be accessed in two ways:<br>• Path to the configuration file on the FTP/TFTP server<br>• Relative path to the configuration file under **Test Files Location**.
 	
