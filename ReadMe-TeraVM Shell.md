@@ -113,7 +113,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 #### **TeraVM Controller**
 
-**Note**: For detailed information on running a traffic test in CloudShell, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generators%20overview)
+**Note**: For detailed information on running a traffic test in CloudShell, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generators%20overview).
 
 |Command|Description|
 |:-----|:-----|
