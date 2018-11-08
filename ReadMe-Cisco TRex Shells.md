@@ -124,13 +124,15 @@ The Cloudshell TRex controller attribute names and types are listed in the follo
 ### Automation
 This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
-For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
+For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource. 
 
-|Shell|Command|Description|
-|:-----|:-----|:-----|
-|CloudShell TRex Chassis 2G|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
-|Cisco TRex Controller 1G|Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command is executed when creating the resource.|
-|CloudShell TRex Virtual Traffic Generator 1G|Autoload|Creates the device structure, its hierarchy and attributes when deploying the App.|
+The following table describes the process that occurrs during Autoload for the different TRex shells:
+
+|Shell|Description|
+|:-----|:-----|
+|CloudShell TRex Chassis 2G|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Cisco TRex Controller 1G|Discovers the chassis, its hierarchy and attributes when creating the resource. The command is executed when creating the resource.|
+|CloudShell TRex Virtual Traffic Generator 1G|Creates the device structure, its hierarchy and attributes when deploying the App.|
 
 **CloudShell TRex Controller 1G Shell**
 
