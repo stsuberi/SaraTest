@@ -100,7 +100,7 @@ This section describes the automation (driver) associated with the data model. T
 #### IxVM Chassis Deployment App 2G shell
 |Command|Description|
 |:-----|:-----|
-|Autoload|Creates the device structure, its hierarchy and attributes when deploying the App. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Autoload|Creates the device structure, its hierarchy and attributes when deploying the App. 
 
 # Downloading the Shell
 The **IxVM Chassis Deployment App 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
