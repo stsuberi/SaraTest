@@ -174,8 +174,8 @@ full path"/>`
 
 5. Restart the Execution Server.
 
-### Configuring a new app
-This section explains how to create an app template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
+### Configuring a new App
+This section explains how to create an App template for the IxVM Chassis to enable network connectivity between endpoints in the sandbox.
 
 1. In CloudShell Portal, as Global administrator, open the **Manage – Apps** page.
 
@@ -183,7 +183,7 @@ This section explains how to create an app template for the IxVM Chassis to enab
 
 3. Select **vCenter VM from Template**. You may use any deployment type and provider supported by Ixia. vCenter is used here as an example.
 
-4. Enter the **Name** of the app and click **Create**.
+4. Enter the **Name** of the App and click **Create**.
 
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter Template** to be used in VM creation. It should include the full path and template name, for example QualiFolder/Template.
 ![](https://github.com/stsuberi/SaraTest/blob/master/ixvm_deployment_app_2g_deployment_paths.PNG)
@@ -192,7 +192,7 @@ This section explains how to create an app template for the IxVM Chassis to enab
 
 7. Click **Done**.
 
-The app is ready to be used in CloudShell sandboxes. A dedicated VM will be created once the app is deployed in a sandbox. Note that you can deploy multiple instances of the same app in the sandbox.
+The App is ready to be used in CloudShell sandboxes. A dedicated VM will be created once the App is deployed in a sandbox. Note that you can deploy multiple instances of the same App in the sandbox.
 
 ### Configuring the setup script
 This section explains how to add the setup script for the **IxVM Deployment App Chassis 2G** shell.
