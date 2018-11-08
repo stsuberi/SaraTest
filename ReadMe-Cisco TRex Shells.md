@@ -319,8 +319,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. Give the blueprint a name.
    
 3. Add resources and services to the blueprint. 
-  	1. Click the **Resources** tab from the toolbar and add the TRex Chassis resource and all required ports.
-   	2. Click the **App/Services** tab from the toolbar and add the Cisco TRex Controller service.
+  	1. Click the **Resources** tab from the toolbar and add the **TRex Chassis** resource and all required ports.
+   	2. Click the **App/Services** tab from the toolbar and add the **Cisco TRex Controller** service.
    	3. Specify the **Test Files Location**, where test files will be downloaded.
 
 **Workflow 2** - *Getting the TRex server configuration file* 
@@ -363,7 +363,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 **Workflow 5** - *Running a test* 
 
-1. Reserve a blueprint that is configured to run traffic tests, like the one configured in Workflow 1..
+1. Reserve a blueprint that is configured to run traffic tests, like the one configured in Workflow 1.
 
 2. Run the **Start Test** command.
 	1. Hover over the **TRex Controller** resource and select the **Commands** button from the context menu.
