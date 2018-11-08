@@ -102,7 +102,7 @@ The controller attribute names and types are listed in the following table:
 |User|String||
 
 ### Automation
-This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
+This section describes the automation (drivers or scripts) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
@@ -112,6 +112,9 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Autoload|Discovers all switches, modules and leaf ports (free ports that can be used for connections) connected to the controller. It adds them as child resources for the current resource.|
 
 #### **TeraVM Controller**
+
+**Note**: For detailed information on running a traffic test in CloudShell, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generators%20overview)
+
 |Command|Description|
 |:-----|:-----|
 |Load Configuration|Loads the configuration file and reserves necessary ports.<br>* **TeraVM config file** (String) (Mandatory): The configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.<br>* **Use ports from reservation** (Enum): **True** or **False**. Updates the configuration file with ports from the current reservation based on their **Logical Name** attributes.
