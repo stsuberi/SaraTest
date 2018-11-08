@@ -49,7 +49,7 @@ For more information on the **Cisco TRex** traffic generators, see the official 
 
 ### Standard version
 
-For detailed information about the shell’s structure and attributes, see the **Traffic Shell Standard**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [**Traffic Shell Standard**](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
 
 ### Requirements
 
