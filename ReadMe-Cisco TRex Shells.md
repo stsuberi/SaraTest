@@ -327,7 +327,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. Log in to CloudShell Portal and reserve the blueprint.
 
-2. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
+2. Hover over the **TRex Controller** resource and select the **Commands** button from the context menu.
 
 3. Run the **Upload Server Configuration** command and specify the input value as follows: 
 
@@ -341,7 +341,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. Log in to CloudShell Portal and reserve the blueprint.
 
-2. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
+2. Hover over the **TRex Controller** resource and select the **Commands** button from the context menu.
 
 4. Run the **Download Server Configuration** command and specify the input value as follows: 
 
@@ -353,7 +353,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. Log in to CloudShell Portal and reserve the blueprint.
 
-2. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
+2. Hover over the **TRex Controller** resource and select the **Commands** button from the context menu.
 
 3. Run the **Load Test Configuration** command and specify the input value as follows: 
 
@@ -378,7 +378,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	4. Run the **Start Traffic** command.
 
 3. Run **Stop Test**.
-	1. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
+	1. Hover over the **TRex Controller** resource and select the **Commands** button from the context menu.
 	2. Run the **Stop Traffic** command and enter the **Run** menu.
 	3. Specify the following parameter, as required:
 	
