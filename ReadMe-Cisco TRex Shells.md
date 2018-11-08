@@ -41,7 +41,7 @@ To model a **Cisco TRex** device in CloudShell, use one of the following options
 
 **Virtual Option**
 
-▪ [CloudShell TRex Virtual Traffic Generator 1G Shell](https://community.quali.com/repos/3409/cloudshell-trex-virtual-traffic-generator-shell), which creates a CloudShell TRex virtual traffic generator shell to create Apps that, once deployed in a sandbox, will spin up VMs that model a Cisco TRex traffic generator. 
+▪ [CloudShell TRex Virtual Traffic Generator 1G Shell](https://community.quali.com/repos/3409/cloudshell-trex-virtual-traffic-generator-shell), which creates a CloudShell TRex virtual traffic generator shell. Using this shell, you can create an App that, once deployed in a sandbox, will spin up a VM that models a Cisco TRex traffic generator. 
 
 • [Cisco TRex Controller 1G Shell (service)](https://community.quali.com/repos/3410/cloudshell-trex-controller-shell), which provides functionality to load test configuration, run tests, get tests results, etc.
 
@@ -49,7 +49,7 @@ For more information on the **Cisco TRex** traffic generators, see the official 
 
 ### Standard version
 
-For detailed information about the shell’s structure and attributes, see the **Shells Standard: Traffic**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the **Traffic Shell Standard**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
 
 ### Requirements
 
@@ -167,7 +167,7 @@ This section describes how to import the **Cisco TRex** shells and configure and
 
 ### Importing the shells into CloudShell
 
-**To import the CloudShell TRex Controller and the CloudShell TRex Virtual Traffic Generator 1G shells into CloudShell:**
+**To import the CloudShell TRex Controller and the CloudShell TRex Virtual Traffic Generator 1G shells into CloudShell**
 
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
@@ -184,7 +184,7 @@ This section describes how to import the **Cisco TRex** shells and configure and
   6. Import the second shell by repeating steps 4 and 5.<br><br>The CloudShell TRex controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>You can now use the CloudShell TRex virtual traffic generator shell to create Apps that, once deployed in a sandbox, will spin up VMs that model a Cisco TRex traffic generator. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 
-**To import the CloudShell TRex Chassis 2G shell into CloudShell:**
+**To import the CloudShell TRex Chassis 2G shell into CloudShell**
 
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
@@ -193,6 +193,8 @@ This section describes how to import the **Cisco TRex** shells and configure and
   3. Click **Import**.
   
   4. In the dialog box, navigate to the shell's zip package, select it and click **Open**. <br><br>The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+  
+  5. Download the Cisco TRex Controller 1G shell, if you have not already done so. See [To import the CloudShell TRex Controller](#to-import-the-cloudshell-trex-controller-and-the-cloudchell-trex -virtual-traffic-generator-1g-shells-into-cloudshell)
 
 ### Offline installation of a shell
 
@@ -314,7 +316,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 2. Give the blueprint a name.
    
-3. Add Resources and Services to the blueprint. 
+3. Add resources and services to the blueprint. 
   	1. Click the **Resources** tab from the toolbar and add the TRex Chassis resource and all required ports.
    	2. Click the **App/Services** tab from the toolbar and add the Cisco TRex Controller service.
    	3. Specify the **Test Files Location**, where test files will be downloaded.
@@ -323,9 +325,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. Log in to CloudShell Portal and reserve the blueprint.
 
-2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+2. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
 
-3. Click the arrow button next to the **Upload Server Configuration** command and specify the input value as follows: 
+3. Run the **Upload Server Configuration** command and specify the input value as follows: 
 
 	* **URL Path (String)**: Enter the full path of the FTP/TFTP in which the current TRex server configuration file will be saved.
 	
@@ -337,9 +339,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. Log in to CloudShell Portal and reserve the blueprint.
 
-2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+2. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
 
-4. Click the arrow button next to the **Download Server Configuration** command and specify the input value as follows: 
+4. Run the **Download Server Configuration** command and specify the input value as follows: 
 
 	* **URL Path (String)**: Enter the full path to the TRex server configuration file, including the configuration file name.
 
@@ -349,9 +351,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 1. Log in to CloudShell Portal and reserve the blueprint.
 
-2. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+2. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
 
-3. Click the arrow button next to the **Load Test Configuration** command and specify the input value as follows: 
+3. Run the **Load Test Configuration** command and specify the input value as follows: 
 
 	* **URL Path (String)**: Enter the path to the TRex test configuration file, including the configuration file name.<br> The path can be accessed in two ways:<br>• Path to the configuration file on the FTP/TFTP server<br>• Relative path to the configuration file under **Test Files Location**.
 	
@@ -359,11 +361,11 @@ In online mode, the execution server automatically downloads and extracts the ap
 	
 **Workflow 5** - *Running a test* 
 
-1. Enter your sandbox.
+1. Reserve a blueprint that is configured to run traffic tests, like the one configured in Workflow 1..
 
-2. Run **Start Test**.
-	1. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
-	2. Click the right arrow next to the **Start Traffic** command and enter the **Run** menu.
+2. Run the **Start Test** command.
+	1. Hover over the **TRex Controller** resource and select the **Commands** button from the context menu.
+	2. Run the **Start Traffic** command.
 	3. Specify the following parameters, as required:
 	
 		• **Block**: Determines if this method is blocked until the TRex state changes from **Starting** to either **Idle** or **Running**.
@@ -374,7 +376,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	4. Run the **Start Traffic** command.
 
 3. Run **Stop Test**.
-	1. Hover over the TRex Controller resource and select the **Commands** option from the context menu.
+	1. Hover over the **TRex Controller** resource and select the **Commands** option from the context menu.
 	2. Click the right arrow next to the **Stop Traffic** command and enter the **Run** menu.
 	3. Specify the following parameter, as required:
 	
