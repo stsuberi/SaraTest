@@ -103,6 +103,7 @@ This section describes the automation (drivers) associated with the data model. 
 
 |Command|Description|
 |:-----|:-----|
+|Autoload|Discovers and creates the internal resources of the root resource (for example, switch cards and ports).|
 |MapBidi|Creates a bidir connection between two ports.|
 |MapClear|Clears any connection ending in this port.|
 |MapClearTo|Clears a unidir connection between two ports.|
