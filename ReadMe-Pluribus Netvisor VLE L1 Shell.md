@@ -139,20 +139,21 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
       3. Click **Open**.
 	
   5. Create an L1 resource.
-      1. In **Resource Explorer**, right click **Root** and select **New>Resource**.
+      1. In **Resource Explorer**, right-click **Root** and select **New>Resource**.
       2. Enter the **Name** and **Address**.
       3. Select the **L1 Switch** family.
       4. Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
       5. Click **OK**.
 	
   6. Auto Load the new resource.
-      1. In **Resource Explorer**, right click the new resource and select **Configuration**.
-      2. In the **Internal Resources** pane, right click the switch and select **Exclude**. 
+      1. In **Resource Explorer**, right-click the new resource and select **Configuration**.
+      2. In the **Internal Resources** pane, right-click the switch and select **Exclude**. 
       3. Click the **Auto Load** button at the bottom of the **Configuration** tab.
 	
   7. Define the resource connections on the L1 switch.
-      1. Right click the resource and select **Configuration>Connections**.
+      1. Right-click the resource and select **Configuration>Connections**.
       2. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
+      3. Click **OK** to save your changes.
 
 
 ### Offline installation of a shell
@@ -168,9 +169,9 @@ L1 shells do not have separate Python dependencies files. All dependencies are i
 ### Upgrading the L1 shell 
 
 **To upgrade L1 shell dependencies:**
-1. Remove or rename the L1 shell's folder located in the *drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
+1. Remove or rename the L1 shell's folder located in the *Drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
 
-2. Extract the new L1 shell to the *drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
+2. Extract the new L1 shell to the *Drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
 
 3. In the extracted L1 shell's folder, run *install_driver.bat*.
 
