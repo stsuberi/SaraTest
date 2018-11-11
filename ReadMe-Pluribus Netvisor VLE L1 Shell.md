@@ -35,9 +35,7 @@ CloudShell users can create routes and read values from the switch, using **Reso
 For more information on the **Pluribus Netvisor VLE L1**, see the official **Pluribus Netvisor** product documentation.
 
 ### Standard version
-The **Pluribus Netvisor VLE L1** shell is based on the **Layer 1 Switch Shell Standard**.
-
-For detailed information about the shell’s structure and attributes, see the **Layer 1 Switch Shell Standard**.(https://github.com/QualiSystems/shell-L1-template) in GitHub.
+The **Pluribus Netvisor VLE L1** shell is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
 
 ### Supported OS
 ▪ Pluribus Netvisor 3.0.0 and above
