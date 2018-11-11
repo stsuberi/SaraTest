@@ -198,7 +198,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 1. In CloudShell Portal, add the device resource to an active sandbox.
 
 2. Run the **Save** command on the device with the following inputs:
-    * **Folder Path**: For example, *tftp://ipaddress/shared folder* 
+    * **Folder Path**: For example, *tftp://ipaddress/shared folder*. 
     * **Configuration Type**: **Running** or **Startup**
 
 The configuration is saved to a file named *<ResourceName><startup/running-config>-<timestamp>*, which will reside in the folder path you entered.    
