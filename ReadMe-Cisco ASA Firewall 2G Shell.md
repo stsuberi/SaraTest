@@ -1,12 +1,12 @@
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **Cisco ASA Firewall 2G Shell**  
 
-Release date: [Month Year]
+Release date: June 2017
 
-Shell version: [x.x.x]
+Shell version: 2.0.0
 
-Document version: [x.x.x]
+Document version: 1.0
 
 # In This Guide
 
@@ -25,25 +25,24 @@ A shell integrates a device model, application or other technology with CloudShe
 ### Firewall Shells
 CloudShell's Firewall shells enable you to manage your Firewall device similar to your networking equipment but without connectivity. In CloudShell, a Firewall shell runs commands, such as Autoload, Load, and Save Configuration. 
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **Cisco ASA Firewall 2G Shell**
+The **Cisco ASA Firewall 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **Cisco ASA Firewall**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **Cisco ASA Firewall**, see the official **Cisco** product documentation.
 
 ### Standard version
-**[Shell Name x.x.x]** is based on the **[Name of Standard File]**.
+The **Cisco ASA Firewall 2G** shell is based on the **Firewall Shell Standard** version 2.0.
 
-For detailed information about the shell’s structure and attributes, see the **[Name of Standard File]**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/deployed_app_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [**Firewall Shell Standard**](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md) in GitHub.
 
 ### Supported OS
-▪ [**OS Name**]
+▪ Cisco Adaptive Security Appliance
 
 ### Requirements
 
-Release: **[Shell Name]**
+Release: **Cisco ASA Firewall 2G** shell
 
-* CloudShell [version x.x]
-* Other
+* CloudShell version: 8.0 and above
 
 ### Data Model
 
@@ -88,7 +87,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/f
 (Include additional information, as needed, to explain differences between this shell's commands and the commands documented in the Shell Standard.)
 
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Cisco ASA Firewall 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -96,11 +95,11 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|CiscoAsaFirewallShell2G.zip|Cisco ASA Firewall 2G shell package|
+|cloudshell-firewall-cisco-asa-2-gen-dependencies-package-1.0.6.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name]** and configure and modify the shell’s devices.
+This section describes how to import the **Cisco ASA Firewall 2G** shell and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -145,7 +144,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *cloudshell-firewall-cisco-asa-2-gen-dependencies-package-1.0.6.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -170,15 +169,15 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. From the list, select **Cisco ASA Firewall 2G**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  3. Enter the **Name** and **IP address** of the **Cisco ASA Firewall**.
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](#device-name-attributes).
+  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](#device-name-attributes). Make sure you enter the device's SNMP version and credentials.
   
-  6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+  6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
@@ -198,7 +197,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Typical Workflows 
-(edit as necessary depending on the shell)
 
 **Workflow 1 - _Save configuration_** 
 1. In CloudShell Portal, add the device resource to an active sandbox.
@@ -225,7 +223,8 @@ The configuration is saved to a file named *<ResourceName><startup/running-confi
 2. Run the **Load Firmware** resource command.
 
 3. Enter the following parameters:
-    * **Path** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/PanOS_200-5.0.5*. 
+    * **Remote Host** (mandatory): Enter the full path of the firmware file on the remote host. For example, *tftp://10.1.1.1/ios12.SE1-smp-k8.bin*.
+    * **Path** (mandatory): Destination file name on the device itself. For example, *bootflash:/ios12.SE1-smp-k8.bin*. 
    
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -237,14 +236,7 @@ To suggest an idea for the product, see [Quali's Idea box](https://community.qua
 To connect with Quali users and experts from around the world, ask questions and discuss issues, see [Quali's Community forums](https://community.quali.com/forums). 
 
 # Release Notes 
-(if not applicable - remove section)
+
 ### What's New
 
-[Note]: Insert link to the release section of the shell GitHub repository to view changes made in each release. You should include a brief description of the fixes and enhancements made in this release.
-
-For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Ixia-IxNetworkController-Shell/releases).
-
-### Known Issues
-* 
-* 
-* 
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Cisco-ASA-Firewall-Shell-2G/releases).
