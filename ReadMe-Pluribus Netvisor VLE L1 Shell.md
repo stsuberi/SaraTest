@@ -7,7 +7,7 @@ Release date: October 2018
 
 Shell version: 1.01
 
-Document version: (Rev A.01)
+Document version: 1.0
 
 # In This Guide
 
