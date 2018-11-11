@@ -48,9 +48,9 @@ Release: **Cisco ASA Firewall 2G** shell
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **Cisco ASA Firewall 2G Shell Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The Cisco ASA Firewall 2G shell families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -59,32 +59,28 @@ The [Device Name] families and models are listed in the following table:
 ||||
 ||||
 
-#### **[Device Name] Attributes**
+#### **Cisco ASA Firewall 2G Shell Attributes**
 
 The attribute names and types are listed in the following section of the Firewall Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#attributes
 
-**[Notes:]** <br>(Include additional information, as needed, to explain differences between this shell's attributes and the attributes documented in the Shell Standard.)
-
 
 ### Automation
 This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
-The following resource commands are available on the **[Device Name}**:
+The following resource commands are available on the **Cisco ASA Firewall 2G** shell:
 
-* 
-* 
-* 
-* 
-* 
+* Health Check
+* Run Custom Command
+* Save
+* Restore
+* Load Firmware
 
 For detailed information on each of the above commands, see the following section of the Firewall Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md#commands
 
-[Notes:] 
-(Include additional information, as needed, to explain differences between this shell's commands and the commands documented in the Shell Standard.)
 
 # Downloading the Shell
 The **Cisco ASA Firewall 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
