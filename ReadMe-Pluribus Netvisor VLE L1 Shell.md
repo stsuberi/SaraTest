@@ -166,21 +166,20 @@ This section explains how to update your Python dependencies folder. This is req
 L1 shells do not have separate Python dependencies files. All dependencies are included in the L1 shell itself and are installed along with the shell. Therefore, in order to update the shell's Python dependencies, you must upgrade the shell.
 
 ### Upgrading the L1 shell 
-(can we link to the new migration tool????)
 
 **To upgrade L1 shell dependencies:**
 1. Remove or rename the L1 shell's folder located in the *drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
 
 2. Extract the new L1 shell to the *drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
 
-3. In the extracted L1 shell's folder, run the *install_driver.bat* file.
+3. In the extracted L1 shell's folder, run *install_driver.bat*.
 
 **To upgrade the L1 shell datamodel:**
 1. Create a new folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Configuration*.
 
-2. Copy the datamodel file: *driver_name_ResourceConfiguration.xml* (usually located in *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-driver_name\datamodel*( to *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Configuration*.
+2. Copy the datamodel file: *driver_name_ResourceConfiguration.xml* (usually located in *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-driver_name\datamodel*) to *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Configuration*.
 
-3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\QsMigrationUtility.exe*.
+3. Run *C:\Program Files (x86)\QualiSystems\CloudShell\Server\QsMigrationUtility.exe*.
 
 
 # References
