@@ -34,6 +34,11 @@ CloudShell users can create routes and read values from the switch, using **Reso
 
 For more information on the **Pluribus Netvisor VLE L1**, see the official **Pluribus Netvisor** product documentation.
 
+### Standard version
+The **Pluribus Netvisor VLE L1** shell is based on the **Layer 1 Switch Shell Standard**.
+
+For detailed information about the shell’s structure and attributes, see the **Layer 1 Switch Shell Standard**.(https://github.com/QualiSystems/shell-L1-template) in GitHub.
+
 ### Supported OS
 ▪ Pluribus Netvisor 3.0.0 and above
 
@@ -156,7 +161,24 @@ Shell installation installs the required dependencies from the shell's zip packa
 The *install_driver.bat* script creates a virtual environment on the Quali Server machine under *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-l1-<drivername>* and installs the required dependencies in this virtual environment from the extracted L1 shell folder (under *~cloudshell-l1\packages*).
 
 # Updating Python Dependencies for Shells
-This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
+This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies. L1 shells do not have separate Python dependencies files. All dependencies are included in the L1 shell itself and are installed along with the shell. Therefore, in order to update the shell's Python dependencies, you must upgrade the shell.
+
+### Upgrading the L1 shell 
+(can we link to the new migration tool????)
+**To upgrade L1 shell dependencies:**
+1. Remove or rename the L1 shell's folder located in the *drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
+
+2. Extract the new L1 shell to the *drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
+
+3. In the extracted L1 shell's folder, run the *install_driver.bat* file.
+
+**To upgrade the L1 shell datamodel:**
+1. Create a new folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Configuration*.
+
+2. Copy the datamodel file: *driver_name_ResourceConfiguration.xml* (usually located in *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-driver_name\datamodel*( to *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Configuration*.
+
+3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\QsMigrationUtility.exe*.
+
 
 ### Updating offline Python dependencies
 **To update offline Python dependencies:**
