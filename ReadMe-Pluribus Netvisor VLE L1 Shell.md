@@ -161,10 +161,13 @@ Shell installation installs the required dependencies from the shell's zip packa
 The *install_driver.bat* script creates a virtual environment on the Quali Server machine under *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-l1-<drivername>* and installs the required dependencies in this virtual environment from the extracted L1 shell folder (under *~cloudshell-l1\packages*).
 
 # Updating Python Dependencies for Shells
-This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies. L1 shells do not have separate Python dependencies files. All dependencies are included in the L1 shell itself and are installed along with the shell. Therefore, in order to update the shell's Python dependencies, you must upgrade the shell.
+This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies. 
+
+L1 shells do not have separate Python dependencies files. All dependencies are included in the L1 shell itself and are installed along with the shell. Therefore, in order to update the shell's Python dependencies, you must upgrade the shell.
 
 ### Upgrading the L1 shell 
 (can we link to the new migration tool????)
+
 **To upgrade L1 shell dependencies:**
 1. Remove or rename the L1 shell's folder located in the *drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
 
@@ -179,20 +182,6 @@ This section explains how to update your Python dependencies folder. This is req
 
 3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\QsMigrationUtility.exe*.
 
-
-### Updating offline Python dependencies
-**To update offline Python dependencies:**
-1. Download the latest Python dependencies package zip file locally.
-
-2. Extract the zip file to the suitable offline package folder(s). 
-
-3. Terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). 
-
-### Updating online Python dependencies
-In online mode, the execution server automatically downloads and extracts the appropriate dependencies file to the online Python dependencies repository every time a new instance of the driver or script is created.
-
-**To update online Python dependencies:**
-* If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
