@@ -49,9 +49,9 @@ Release: **Cisco AireOS Wireless Controller 2G shell**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
+#### **Cisco AireOS Wireless Controller 2G Shell Families and Models**
 
-The [Device Name] families and models are listed in the following table:
+The Cisco AireOS Wireless Controller 2G shell families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
@@ -60,7 +60,7 @@ The [Device Name] families and models are listed in the following table:
 ||||
 ||||
 
-#### **[Device Name] Attributes**
+#### **Cisco AireOS Wireless Controller 2G Shell Attributes**
 
 The attribute names and types are listed in the following section of the Networking Shell Standard:
 
