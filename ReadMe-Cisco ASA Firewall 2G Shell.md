@@ -174,7 +174,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](#device-name-attributes). Make sure you enter the device's SNMP version and credentials.
+  5. In the **Resource** dialog box, enter the device's settings. For details, see [Cisco ASA Firewall 2G Shell Attributes](#cisco-asa-firewall-2g-shell-attributes). Make sure you enter the device's SNMP version and credentials.
   
   6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
@@ -198,7 +198,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 **Workflow 1 - _Save configuration_** 
-1. In CloudShell Portal, add the device resource to an active sandbox.
+1. In CloudShell Portal, add the device resource to your blueprint and reserve the blueprint.
 
 2. Run the **Save** command on the device with the following inputs:
     * **Folder Path**: For example, *tftp://ipaddress/shared folder*. 
@@ -207,7 +207,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 The configuration is saved to a file named *<ResourceName><startup/running-config>-<timestamp>*, which will reside in the folder path you entered.    
 
 **Workflow 2 - _Restore Configuration_**
-1. In CloudShell Portal, reserve the device resource.
+1. In CloudShell Portal, add the device resource to your blueprint and reserve the blueprint.
 
 2. Run the **Restore** resource command.
 
@@ -217,7 +217,7 @@ The configuration is saved to a file named *<ResourceName><startup/running-confi
     * **Configuration Type** (mandatory): **Startup** or **Running**. 
 	
 **Workflow 3 - _Load firmware_**
-1. In CloudShell Portal, reserve the device resource.
+1. In CloudShell Portal, add the device resource to your blueprint and reserve the blueprint.
 
 2. Run the **Load Firmware** resource command.
 
