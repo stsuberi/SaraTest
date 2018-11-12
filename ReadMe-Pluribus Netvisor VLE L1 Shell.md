@@ -164,11 +164,11 @@ The *install_driver.bat* script creates a virtual environment on the Quali Serve
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies. 
 
-L1 shells do not have separate Python dependencies files. All dependencies are included in the L1 shell itself and are installed along with the shell. Therefore, in order to update the shell's Python dependencies, you must upgrade the shell. See [Upgrading the L1 shell](#upgrading-the-l1-shell)
+L1 shells do not have separate Python dependencies files. All dependencies are included in the L1 shell itself and are installed along with the shell. Therefore, in order to update the shell's Python dependencies, you must upgrade the shell. See [Upgrading the L1 shell and datamodel](#upgrading-the-l1-shell-and-datamodel).
 
-# Upgrading the L1 shell 
+# Upgrading the L1 shell and datamodel
 
-**To upgrade L1 shell dependencies:**
+**To upgrade L1 shell:**
 1. Remove or rename the L1 shell's folder located in the *Drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
 
 2. Extract the new L1 shell to the *Drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
