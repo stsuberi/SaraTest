@@ -169,7 +169,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
      
   2. From the list, select **Cisco AireOS WC 2G**.
   
-  3. Enter the **Name** and **IP address** of the **Cisco AIREOS Wireless Controller 2G** shell.
+  3. Enter the **Name** and **IP address** of the **Cisco AIREOS Wireless Controller 2G** device.
   
   4. Click **Create**.
   
