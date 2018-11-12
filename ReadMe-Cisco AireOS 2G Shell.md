@@ -167,9 +167,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **Cisco AIREOS Wireless Controller Shell 2**.
+  2. From the list, select **Cisco AireOS WC 2G**.
   
-  3. Enter the **Name** and **IP address** of the **Cisco AireOS WC 2G**.
+  3. Enter the **Name** and **IP address** of the **Cisco AIREOS Wireless Controller 2G** shell.
   
   4. Click **Create**.
   
