@@ -54,10 +54,13 @@ The Cisco ASA Firewall 2G shell families and models are listed in the following 
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_ Firewall|Cisco ASA Firewall 2G|Generic Cisco ASA Firewall 2 Generation|
+|CS_Chassis|Generic Chassis|Default Firewall chassis|
+|CS_Module|Generic Module|Modules located on the chassis|
+|CS_SubModule|Generic Sub Module|Sub modules|
+|CS_Port|Generic Port|Interface|
+|CS_PortChannel|Generic Port Channel|Group of interfaces|
+|CS_PowerPort|Generic Power Port|Power Supply module|
 
 #### **Cisco ASA Firewall 2G Shell Attributes**
 
