@@ -166,7 +166,7 @@ This section explains how to update your Python dependencies folder. This is req
 
 L1 shells do not have separate Python dependencies files. All dependencies are included in the L1 shell itself and are installed along with the shell. Therefore, in order to update the shell's Python dependencies, you must upgrade the shell. See [Upgrading the L1 shell and datamodel](#upgrading-the-l1-shell-and-datamodel).
 
-# Upgrading the L1 shell and datamodel
+# Upgrading the L1 Shell and Datamodel
 
 **To upgrade L1 shell:**
 1. Remove or rename the L1 shell's folder located in the *Drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
