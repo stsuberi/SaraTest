@@ -65,19 +65,18 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|User|String||Username for ODL Controller|
-|Password|Password||Password for ODL Controller|
-|Controller TCP Port|Numeric|8181|Port for ODL Controller|
-|Scheme|String||Scheme for ODL Controller (http or https)|
-|Enable Full Trunk Ports|String||(Optional) Use in cases where you need to configure a full trunk port, for example: ports that a private cloud provider are connected to. The ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
-|Disable Full Trunk Ports|String||(Optional) Use in case you need to remove a full trunk port configuration. The ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
+|User|String||Username for ODL Controller.|
+|Password|Password||Password for ODL Controller.|
+|Controller TCP Port|Numeric|8181|Port for ODL Controller.|
+|Scheme|String||Scheme for ODL Controller (http or https).|
+|Enable Full Trunk Ports|String||(Optional) Used when configuring a full trunk port, for example: ports that a private cloud provider are connected to. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
+|Disable Full Trunk Ports|String||(Optional) Used when removing a full trunk port configuration. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
 |Model Name|String||Catalog name of the device. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-
-|Mac Address|String||Interface mac address|
+|**Mac Address|String||Interface mac address|
 |IPv4 Address|String||Interface IPv4 address|
 |IPv6 Address|String||Interface IPv6 address|
 |Port Description|String||Interface description|
-|Adjacent|String||Adjacent shows connected device name and interface|
+|Adjacent|String||Adjacent shows connected device name and interface**|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
