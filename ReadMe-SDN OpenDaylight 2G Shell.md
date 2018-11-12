@@ -242,9 +242,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 3. In the command input field, enter the following information: 
 
-	* Node ID (mandatory input field): Enter the node ID. For example: openflow:1
-	* Table ID (mandatory input field): Enter the table ID where openflow is located 
-	* Flow ID (mandatory input field): Enter the openflow identifier
+	* **Node ID** (mandatory): Enter the node ID, for example: openflow:1.
+	* **Table ID** (mandatory): Enter the table ID where openflow is located. 
+	* **Flow ID** (mandatory): Enter the openflow identifier.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -259,14 +259,4 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-[Note]: If previous releases exist, insert link to the release section of the shell GitHub repository to view changes made in each release. You should include a brief description of the fixes and enhancements made in this release.
-
-* 
-* 
-* 
-
-### Known Issues
-* 
-* 
-* 
-
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/SDN-Opendaylight-Shell-2G/releases).
