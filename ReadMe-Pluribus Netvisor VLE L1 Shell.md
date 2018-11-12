@@ -15,7 +15,7 @@ Document version: 1.0
 * [Downloading the Shell](#downloading-the-shell)
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
-* [Upgrading the L1 Shell](#upgrading-the-l1-shell)
+* [Upgrading the L1 Shell and Datamodel](#upgrading-the-l1-shell-and-datamodel)
 * [References](#references)
 * [Release Notes](#release-notes)
 
