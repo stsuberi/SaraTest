@@ -126,20 +126,26 @@ This section describes how to install the CloudShell SDN OpenDaylight plugin.
 
 There are two available options:
 
-1. Install the controller and plugin from source
+▪ **Install the controller and plugin from source**
 
 	1. Download CloudShell ODL plugin repository.
-	2. Install Jana and Maven: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Se
-tup
+	
+	2. Install Jana and Maven: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
+	
 	3. Compile the controller: mvn clean install -DskipTests
+	
 	4. Run the controller: ./karaf/target/assembly/bin/karaf
 	
-2. Add plugin feature to existing controller
+▪ **Add plugin feature to existing controller**
 
 	1. Copy CloudShell plugin files to the “system” folder
+	
 	2. Run controller: ./karaf/target/assembly/bin/karaf
+	
 	3. Install VTN feature: feature:install odl-vtn-manager-rest
+	
 	4. Add repository for CloudShell plugin: repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features
+	
 	5. Install plugin: feature:install odl-cloudshell 
 
 
