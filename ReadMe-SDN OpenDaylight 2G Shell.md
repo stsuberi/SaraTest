@@ -23,12 +23,12 @@ Document version: 1.0
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
 ### Networking Shells
-CloudShell's networking shells provide L2 or L3 connectivity between resources and/or Apps [remove "and/or Apps" if router].
+CloudShell's networking shells provide L2 or L3 connectivity between resources.
 
 ### **SDN OpenDaylight 2G Shell**
 **SDN OpenDaylight 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **SDN OpenDaylight**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+For more information on the **SDN OpenDaylight**, see the official **OpenDaylight** product documentation.
 
 ### Standard version
 The **SDN OpenDaylight 2G** shell is based on the Networking Shell Standard version **1.0.0**.
@@ -63,14 +63,16 @@ The attribute names and types are listed in the following section of the Network
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
-**[Notes:]** <br>(Include additional information, as needed, to explain differences between this shell's attributes and the attributes documented in the Shell Standard.)
-
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
 |User|String||Username for ODL Controller|
 |Password|Password||Password for ODL Controller|
 |Controller TCP Port|Numeric|8181|Port for ODL Controller|
 |Scheme|String||Scheme for ODL Controller (http or https)|
+|Enable Full Trunk Ports|String||(Optional) Use in cases where you need to configure a full trunk port, for example: ports that a private cloud provider are connected to. The ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
+|Disable Full Trunk Ports|String||(Optional) Use in case you need to remove a full trunk port configuration. The ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
+|Model Name|String||Catalog name of the device. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+
 |Mac Address|String||Interface mac address|
 |IPv4 Address|String||Interface IPv4 address|
 |IPv6 Address|String||Interface IPv6 address|
@@ -84,15 +86,12 @@ The following resource commands are available on the **SDN OpenDaylight 2G** Con
 
 |Command|Description|
 |:---|:---|
-|Autoload|Discovers connected to the controller vSwitches and their leaf ports|
-|Remove Openflow|Remove openflow entry from the controller.|
+|Autoload|Discovers connections to the controller's vSwitches and their leaf ports.|
+|Remove Openflow|Removes openflow entry from the controller. Input values include: **Node ID (String)**, **Table ID (String)**, and **Flow ID (String)**.|
 
 For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
-
-[Notes:] 
-(Include additional information, as needed, to explain differences between this shell's commands and the commands documented in the Shell Standard.)
 
 # Downloading the Shell
 The **SDN OpenDaylight 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -203,7 +202,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
      ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **SDN OpenDaylight Controller 2G** shell.
+  2. From the list, select **SDN Opendaylight 2G** shell.
   
   3. Enter the **Name** and **IP address** of the **Switch**.
   
