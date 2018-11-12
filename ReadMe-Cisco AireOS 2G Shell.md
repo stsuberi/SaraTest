@@ -71,7 +71,7 @@ https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/n
 
 
 ### Automation
-This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
+This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
 
 The following resource commands are available on the **Cisco AireOS Wireless Controller 2G** shell:
 
@@ -176,7 +176,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](#device-name-attributes). Make sure to fill in the device's SNMP version and credentials.
+  5. In the **Resource** dialog box, enter the device's settings. For details, see [Cisco AireOS Wireless Controller 2G Shell Attributes](#cisco-aireos-wireless-controller-2g-shell-attributes). Make sure to fill in the device's SNMP version and credentials.
   
   6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
@@ -231,7 +231,7 @@ The **Startup** or **Running** configuration is saved to a file named *<Resource
 
 2. Run the **Load Firmware** resource command. 
 
-3. In the command inputs field, enter the following information:
+3. In the **Command Inputs** field, enter the following information:
 	* **Remote Host** (Mandatory). Enter the full path to the firmware file on the remote host, for example: *tftp://10.1.1.1/ios12.SE1-smp-k8.bin*.
 	* **File Path** (Mandatory). Enter the destination filename on the device itself, for example: *bootflash:/ios12.SE1-smp-k8.bin*.
 	
