@@ -59,24 +59,22 @@ The SDN OpenDaylight families and models are listed in the following table:
 
 #### **SDN OpenDaylight Attributes**
 
-The attribute names and types are listed in the following section of the Networking Shell Standard:
+The attribute names and types are listed in the following table:
 
-https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
-
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|User|String||Username for ODL Controller.|
-|Password|Password||Password for ODL Controller.|
-|Controller TCP Port|Numeric|8181|Port for ODL Controller.|
-|Scheme|String||Scheme for ODL Controller (http or https).|
-|Enable Full Trunk Ports|String||(Optional) Used when configuring a full trunk port, for example: ports that a private cloud provider are connected to. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
-|Disable Full Trunk Ports|String||(Optional) Used when removing a full trunk port configuration. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
-|Model Name|String||Catalog name of the device. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|**Mac Address|String||Interface mac address|
-|IPv4 Address|String||Interface IPv4 address|
-|IPv6 Address|String||Interface IPv6 address|
-|Port Description|String||Interface description|
-|Adjacent|String||Adjacent shows connected device name and interface**|
+|Attribute|Type|Description|
+|:---|:---|:---|
+|User|String|Username for ODL Controller.|
+|Password|Password|Password for ODL Controller.|
+|Controller TCP Port|Numeric|Port for ODL Controller. Default value is 8181.|
+|Scheme|String|Scheme for ODL Controller (http or https).|
+|Enable Full Trunk Ports|String|(Optional) Used when configuring a full trunk port, for example: ports that a private cloud provider are connected to. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
+|Disable Full Trunk Ports|String|(Optional) Used when removing a full trunk port configuration. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
+|Model Name|String|Catalog name of the device. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|**Mac Address|String|Interface mac address|
+|IPv4 Address|String|Interface IPv4 address|
+|IPv6 Address|String|Interface IPv6 address|
+|Port Description|String|Interface description|
+|Adjacent|String|Adjacent shows connected device name and interface**|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
@@ -87,10 +85,6 @@ The following resource commands are available on the **SDN OpenDaylight 2G** Con
 |:---|:---|
 |Autoload|Discovers connections to the controller's vSwitches and their leaf ports.|
 |Remove Openflow|Removes openflow entry from the controller. Input values include: **Node ID (String)**, **Table ID (String)**, and **Flow ID (String)**.|
-
-For detailed information on each of the above commands, see the following section of the Networking Shell Standard:
-
-https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#commands
 
 # Downloading the Shell
 The **SDN OpenDaylight 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
