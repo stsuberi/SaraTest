@@ -2,7 +2,7 @@
 
 # **Cisco AireOS Wireless Controller 2G Shell**  
 
-Release date: July  2017
+Release date: November  2017
 
 Shell version: 1.0.0
 
