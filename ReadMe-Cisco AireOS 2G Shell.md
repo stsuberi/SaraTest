@@ -55,10 +55,13 @@ The Cisco AireOS Wireless Controller 2G shell families and models are listed in 
 
 |Family|Model|Description|
 |:---|:---|:---|
-||||
-||||
-||||
-||||
+|CS_WirelessController|Cisco AireOS Wireless Controller 2G|Generic Cisco AireOS Wireless Controller 2 Generation |
+|CS_Chassis|Generic Chassis|Default Wireless Controller chassis|
+|CS_Module|Generic Module|Modules located on the chassis|
+|CS_SubModule|Generic Sub Module|Sub modules|
+|CS_Port|Generic Port|Interface|
+|CS_PortChannel|Generic Port Channel|Group of interfaces|
+|CS_PowerPort|Generic Power Port|Power Supply module|
 
 #### **Cisco AireOS Wireless Controller 2G Shell Attributes**
 
