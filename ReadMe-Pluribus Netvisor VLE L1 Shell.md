@@ -133,7 +133,7 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
   3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\install_driver.bat* file.
   
   4. Import the new data model.
-      1. **In Resource Manager Client>Admin**, right-click **Resource Families** and select **Import**.
+      1. In **Resource Manager Client>Admin**, right-click **Resource Families** and select **Import**.
       2. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\datamodel\pluribus_netvisor_vle_ResourceConfiguration.xml* file.
       3. Click **Open**.
 	
