@@ -128,25 +128,25 @@ There are two available options:
 
 ▪ **Install the controller and plugin from source**
 
-	1. Download CloudShell ODL plugin repository.
+1. Download CloudShell ODL plugin repository.
 	
-	2. Install Jana and Maven: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
+2. Install Jana and Maven: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
 	
-	3. Compile the controller: mvn clean install -DskipTests
+3. Compile the controller: mvn clean install -DskipTests
 	
-	4. Run the controller: ./karaf/target/assembly/bin/karaf
+4. Run the controller: ./karaf/target/assembly/bin/karaf
 	
 ▪ **Add plugin feature to existing controller**
 
-	1. Copy CloudShell plugin files to the “system” folder
+1. Copy CloudShell plugin files to the “system” folder
 	
-	2. Run controller: ./karaf/target/assembly/bin/karaf
+2. Run controller: ./karaf/target/assembly/bin/karaf
 	
-	3. Install VTN feature: feature:install odl-vtn-manager-rest
+3. Install VTN feature: feature:install odl-vtn-manager-rest
 	
-	4. Add repository for CloudShell plugin: repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features
+4. Add repository for CloudShell plugin: repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features
 	
-	5. Install plugin: feature:install odl-cloudshell 
+5. Install plugin: feature:install odl-cloudshell 
 
 
 ### Offline installation of a shell
