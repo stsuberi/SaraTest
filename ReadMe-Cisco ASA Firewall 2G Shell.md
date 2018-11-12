@@ -31,7 +31,7 @@ The **Cisco ASA Firewall 2G** shell provides you with connectivity and managemen
 For more information on the **Cisco ASA Firewall**, see the official **Cisco** product documentation.
 
 ### Standard version
-The **Cisco ASA Firewall 2G** shell is based on the **Firewall Shell Standard** version 2.0.
+The **Cisco ASA Firewall 2G** shell is based on the **Firewall Shell Standard** version 3.0.0.
 
 For detailed information about the shell’s structure and attributes, see the [**Firewall Shell Standard**](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/firewall_standard.md) in GitHub.
 
