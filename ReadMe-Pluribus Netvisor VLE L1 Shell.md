@@ -5,7 +5,7 @@
 
 Release date: October 2018
 
-Shell version: 1.01
+Shell version: 1.0.1
 
 Document version: 1.0
 
@@ -30,7 +30,7 @@ For additional information, see the [L1 Switches](http://help.quali.com/Online%2
 ### **Pluribus Netvisor VLE L1 Shell**
 **Pluribus Netvisor VLE L1** shell provides you with the capability to communicate with network topology managed by the Pluribus Netvisor nvOS in VLE mode.
 
-CloudShell users can create routes and read values from the switch, using **Resource Manager Client** or CloudShell API.
+CloudShell users can create routes and retrieve values from the switch, using **Resource Manager Client** or CloudShell API.
 
 For more information on the **Pluribus Netvisor VLE L1**, see the official **Pluribus Netvisor** product documentation.
 
