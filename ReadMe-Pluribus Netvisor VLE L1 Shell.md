@@ -169,7 +169,7 @@ L1 shells do not have separate Python dependencies files. All dependencies are i
 
 # Upgrading the L1 Shell and Datamodel
 
-**To upgrade the L1 shell:**
+**To upgrade the L1 shell and datamodel:**
 1. In the Quali Server machine, remove or rename the L1 shell's folder located in the *Drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
 
 2. Extract the new L1 shell to the *Drivers* folder: *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*.
