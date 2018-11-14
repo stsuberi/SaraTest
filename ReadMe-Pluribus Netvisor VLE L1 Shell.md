@@ -31,7 +31,7 @@ For additional information, see the [L1 Switches](http://help.quali.com/Online%2
 ### **Pluribus Netvisor VLE L1 Shell**
 **Pluribus Netvisor VLE L1** shell provides you with the capability to communicate with network topology managed by the Pluribus Netvisor nvOS in VLE mode.
 
-CloudShell users can create routes and retrieve values from the switch, using **Resource Manager Client** or CloudShell API.
+The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
 For more information on the **Pluribus Netvisor VLE L1**, see the official **Pluribus Netvisor** product documentation.
 
@@ -153,7 +153,8 @@ This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and 
   7. Define the resource connections on the L1 switch.
       1. Right-click the resource and select **Configuration>Connections**.
       2. Connect a resource's port to a different port in the switch resource by clicking each port's **Connected To** button, selecting the resource's **Family** and **Resource**, and selecting the port to connect.
-      3. Click **OK** to save your changes.
+      3. Click **OK** in the **Resource connection** dialog box.
+      4. Save your changes.
 
 
 ### Offline installation of a shell
