@@ -91,7 +91,7 @@ This section describes the automation (drivers) associated with the data model. 
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 |Restore|Enter the restore path string.|
-|Save|Enter the save folder_pateh string.|
+|Save|Enter the save folder_path string.|
 
 # Downloading the Shell
 The **VyOS Deployment App 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
