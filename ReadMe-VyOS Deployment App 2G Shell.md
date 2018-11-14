@@ -228,7 +228,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 3. Add the **VyOS Deployment App** to the blueprint.
 	* Open the **App/Service** menu.
-	* Drag and drop the **VyOS Deployment App 2G** resource to the canvas.
+	* Drag and drop the **VyOS Deployment App 2G** App to the canvas.
 
 4. Update the blueprint setup script.
 	* In the **Blueprint** menu, open **Properties**.
