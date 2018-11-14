@@ -6,7 +6,7 @@ Release date: May 2018
 
 Shell version: 1.0.0
 
-Document version: 1.0.0
+Document version: 1.0
 
 # In This Guide
 
@@ -222,20 +222,22 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### *Deploying the VyOS Deployment App 2G shell* 
-1. Enter your blueprint.
+1. Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
 
-2. Add the **VyOS Deployment App** to the blueprint.
+2. Give the blueprint a name.
+
+3. Add the **VyOS Deployment App** to the blueprint.
 	* Open the **App/Service** menu.
 	* Drag and drop the **VyOS Deployment App 2G** resource to the canvas.
 
-3. Update the blueprint setup script.
+4. Update the blueprint setup script.
 	* In the **Blueprint** menu, open **Properties**.
 	* In the **Scripts** section, select the **Default Sandbox Setup 2.0** script and click the trash icon to the right of the script.
 	* Click **Add Scripts**.
 	* Select the **VyOS.Sandbox.Setup.1.0.1**.
 	* Click **Done**.
 
-4. Reserve the Blueprint.
+5. Reserve the blueprint.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
