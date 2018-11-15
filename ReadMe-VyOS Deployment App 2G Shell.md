@@ -64,14 +64,10 @@ The attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |Name*|String||CloudShell resource display name.|
 |Address*|String||IP address of the deployed VyOS App.|
-|Folder|String|Root|CloudShell folder in which to place the resource. Use the search bar to quickly find the desired folder.|
-|Visibility|Lookup|Family Default (Everyone)|Visibility determines who can see the resource in the diagram, search pane, and in the **Inventory** dashboard. By default, **Visibility** is defined in the resource family and can be changed for a specific resource.<br>Possible values: **Family Default (Everyone)**, **Admin only**, and **Everyone**.|
-|Remote Connection|Lookup|Family Default (Enable)|Remote connection determines if you can remotely connect to the resource. By default, **Remote Connection** is defined in the resource family and can be changed for a specific resource.<br> Possible values: **Family Default (Enable)**, **Enable**, and **Disable**.|
 |Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.|
 |Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
 |User|Boolean|String|Username for the deployed VyOS.|
 |Password|Password||Password for the deployed VyOS.|
-|PublicIP|String||Public IP address.|
 
 #### **VyOS Virtual Traffic Generator Port Attributes**
 
