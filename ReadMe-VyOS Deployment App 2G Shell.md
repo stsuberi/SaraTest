@@ -58,12 +58,9 @@ The families and models are listed in the following table:
 
 The attribute names and types are listed in the following table:
 
-**Note:** The following list of attributes appear in the **Edit** resource dialog box (Inventory>Resource>Edit). Those noted with an asterisk, appear in the **Discover** resource dialog box as well (Inventory>Resource>Discover).
-
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-|Name*|String||CloudShell resource display name.|
-|Address*|String||IP address of the deployed VyOS App.|
+
 |Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.|
 |Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
 |User|Boolean|String|Username for the deployed VyOS.|
