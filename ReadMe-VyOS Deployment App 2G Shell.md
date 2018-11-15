@@ -60,7 +60,6 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Default value|Description|
 |:---|:---|:---|:---|
-
 |Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.|
 |Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
 |User|Boolean|String|Username for the deployed VyOS.|
