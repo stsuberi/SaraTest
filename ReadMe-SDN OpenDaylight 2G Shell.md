@@ -235,15 +235,15 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 #### Workflow - *Remove Openflow* 
 
-1. Login to CloudShell portal, reserve the SDN OpenDaylight resource.
+1. Login to CloudShell portal, reserve the **SDN OpenDaylight** resource.
 
 2. Run the resource command **Remove Openflow**.
 
-3. In the command input field, enter the following information: 
+3. In the command input field, enter the following information (all are mandatory): 
 
-	* **Node ID** (mandatory): Enter the node ID, for example: openflow:1.
-	* **Table ID** (mandatory): Enter the table ID where openflow is located. 
-	* **Flow ID** (mandatory): Enter the openflow identifier.
+	* **Node ID**: Enter the node ID, for example: openflow:1.
+	* **Table ID**: Enter the table ID where openflow is located. 
+	* **Flow ID**: Enter the openflow identifier.
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
