@@ -139,7 +139,7 @@ There are two available options:
 	
 3. Install the VTN feature: **feature:install odl-vtn-manager-rest**.
 	
-4. Add the repository for the CloudShell plugin: ** repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features**.
+4. Add the repository for the CloudShell plugin: **repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features**.
 	
 5. Install the plugin: **feature:install odl-cloudshell**. 
 
