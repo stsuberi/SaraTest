@@ -97,7 +97,8 @@ The shell comprises:
 |:---|:---|
 |SDNOpenDaylightShell2G.zip|SDN OpenDaylight shell package|
 |cloudshell-sdn-odl-2-gendependencies-package-1.0.X.zip|Shell Python dependencies (for offline deployments only)|
-|ODL_CloudShell_plugin.zip|SDN OpenDaylight Controller plugin|
+
+The ODL_CloudShell_plugin.zip, SDN OpenDaylight Controller plugin, can be found [here](https://github.com/QualiSystems/ODL)connectivity_plugin/releases).
 
 # Importing and Configuring the Shell
 This section describes how to import the **SDN OpenDaylight 2G** shell and configure and modify the shell’s devices.
