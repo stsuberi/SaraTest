@@ -26,7 +26,7 @@ A shell integrates a device model, application or other technology with CloudShe
 CloudShell's networking shells provide L2 or L3 connectivity between resources.
 
 ### **SDN OpenDaylight 2G Shell**
-**SDN OpenDaylight 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **SDN OpenDaylight**. 
+The **SDN OpenDaylight 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **SDN OpenDaylight**. 
 
 For more information on the **SDN OpenDaylight**, see the official **OpenDaylight** product documentation.
 
