@@ -208,7 +208,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   4. Click **Create**.
   
-  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](*device-name-attributes). 
+  5. In the **Resource** dialog box, enter the device's settings. 
   
   6. Click **Continue**.
 
@@ -233,7 +233,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflows 
 
-#### **Workflow - *Remove Openflow* 
+#### *Workflow - *Remove Openflow* 
 
 1. Login to CloudShell portal, reserve the SDN OpenDaylight resource.
 
