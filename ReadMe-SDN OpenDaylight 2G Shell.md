@@ -63,17 +63,17 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|User|String|ODL Controller username.|
-|Password|Password|ODL Controller password.|
-|Controller TCP Port|Numeric|ODL Controller port. Default value is 8181.|
-|Scheme|String|ODL Controller URL scheme (http or https).|
+|User|String|ODL controller username.|
+|Password|Password|ODL controller password.|
+|Controller TCP Port|Numeric|ODL controller port. Default value is 8181.|
+|Scheme|String|ODL controller URL scheme (http or https).|
 |Enable Full Trunk Ports|String|(Optional) Used when configuring a full trunk port, for example: ports that a private cloud provider are connected to. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
 |Disable Full Trunk Ports|String|(Optional) Used when removing a full trunk port configuration. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
 |Model Name|String|Device catalog name. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Mac Address|String|Interface MAC address.|
-|IPv4 Address|String|Interface IPv4 address.|
-|IPv6 Address|String|Interface IPv6 address.|
-|Port Description|String|Interface port description.|
+|Mac Address|String|MAC address interface.|
+|IPv4 Address|String|IPv4 address interface.|
+|IPv6 Address|String|IPv6 address interface.|
+|Port Description|String|Port description interface.|
 |Adjacent|String|Adjacent connected device name and interface.|
 
 ### Automation
@@ -117,15 +117,15 @@ This section describes how to import the **SDN OpenDaylight 2G** shell and confi
 The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Installing the CloudShell OpenDaylight plugin
-This section describes how to install the CloudShell SDN OpenDaylight plugin. 
+This section describes how to install the *CloudShell SDN OpenDaylight* plugin. 
 
 There are two available options:
 
 ▪ **Install the controller and plugin from source:**
 
-1. Download the CloudShell ODL plugin repository, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *CloudShell ODL plugin repository*, see [Downloading the Shell](#downloading-the-shell).
 	
-2. Install Jana and Maven: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
+2. Install **Jana** and **Maven**: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
 	
 3. Compile the controller: **mvn clean install -DskipTests**.
 	
