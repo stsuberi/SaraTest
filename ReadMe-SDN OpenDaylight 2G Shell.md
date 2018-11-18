@@ -123,25 +123,25 @@ There are two available options:
 
 ▪ **Install the controller and plugin from source**
 
-1. Download CloudShell ODL plugin repository.
+1. Download the CloudShell ODL plugin repository, see [Downloading the Shell](#downloading-the-shell).
 	
 2. Install Jana and Maven: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
 	
-3. Compile the controller: mvn clean install -DskipTests
+3. Compile the controller: **mvn clean install -DskipTests**.
 	
-4. Run the controller: ./karaf/target/assembly/bin/karaf
+4. Run the controller: **./karaf/target/assembly/bin/karaf**.
 	
-▪ **Add plugin feature to existing controller**
+▪ **Add the plugin feature to the existing controller**
 
-1. Copy CloudShell plugin files to the “system” folder
+1. Copy the CloudShell plugin files to the *system* folder.
 	
-2. Run controller: ./karaf/target/assembly/bin/karaf
+2. Run the controller: **./karaf/target/assembly/bin/karaf**.
 	
-3. Install VTN feature: feature:install odl-vtn-manager-rest
+3. Install the VTN feature: **feature:install odl-vtn-manager-rest**.
 	
-4. Add repository for CloudShell plugin: repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features
+4. Add the repository for the CloudShell plugin: ** repo-add mvn:quali/cloudshellfeatures/0.1.0-SNAPSHOT/xml/features**.
 	
-5. Install plugin: feature:install odl-cloudshell 
+5. Install the plugin: **feature:install odl-cloudshell**. 
 
 
 ### Offline installation of a shell
@@ -212,7 +212,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   6. Click **Continue**.
 
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
@@ -233,13 +233,11 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflows 
 
-#### **Workflow 1** - *Autoload* - see [Installing CloudShell OpenDaylight plugin] 
-
-#### **Workflow 2** - *Remove Openflow* 
+#### **Workflow - *Remove Openflow* 
 
 1. Login to CloudShell portal, reserve the SDN OpenDaylight resource.
 
-2. Run the resource command Remove Openflow
+2. Run the resource command **Remove Openflow**.
 
 3. In the command input field, enter the following information: 
 
