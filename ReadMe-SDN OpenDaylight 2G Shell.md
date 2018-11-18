@@ -233,7 +233,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 # Typical Workflows 
 
-#### *Workflow - *Remove Openflow* 
+#### Workflow - *Remove Openflow* 
 
 1. Login to CloudShell portal, reserve the SDN OpenDaylight resource.
 
