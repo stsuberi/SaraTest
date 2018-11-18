@@ -63,13 +63,13 @@ The attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|User|String|Username for ODL Controller.|
-|Password|Password|Password for ODL Controller.|
-|Controller TCP Port|Numeric|Port for ODL Controller. Default value is 8181.|
-|Scheme|String|Scheme for ODL Controller (http or https).|
+|User|String|ODL Controller username.|
+|Password|Password|ODL Controller password.|
+|Controller TCP Port|Numeric|ODL Controller port. Default value is 8181.|
+|Scheme|String|ODL Controller URL scheme (http or https).|
 |Enable Full Trunk Ports|String|(Optional) Used when configuring a full trunk port, for example: ports that a private cloud provider are connected to. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
 |Disable Full Trunk Ports|String|(Optional) Used when removing a full trunk port configuration. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
-|Model Name|String|Catalog name of the device. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Model Name|String|Device catalog name. This attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Mac Address|String|Interface MAC address.|
 |IPv4 Address|String|Interface IPv4 address.|
 |IPv6 Address|String|Interface IPv6 address.|
@@ -121,7 +121,7 @@ This section describes how to install the CloudShell SDN OpenDaylight plugin.
 
 There are two available options:
 
-▪ **Install the controller and plugin from source**
+▪ **Install the controller and plugin from source:**
 
 1. Download the CloudShell ODL plugin repository, see [Downloading the Shell](#downloading-the-shell).
 	
@@ -131,7 +131,7 @@ There are two available options:
 	
 4. Run the controller: **./karaf/target/assembly/bin/karaf**.
 	
-▪ **Add the plugin feature to the existing controller**
+▪ **Add the plugin feature to the existing controller:**
 
 1. Copy the CloudShell plugin files to the *system* folder.
 	
