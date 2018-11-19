@@ -198,7 +198,7 @@ This section describes how to import the **Cisco TRex** shells and configure and
   
   4. In the dialog box, navigate to the shell's zip package, select it and click **Open**. <br><br>The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
   
-  5. Download the Cisco TRex Controller 1G shell, if you have not already done so. See [To import the CloudShell TRex Controller](#to-import-the-cloudshell-trex-controller-and-the-cloudchell-trex -virtual-traffic-generator-1g-shells-into-cloudshell)
+  5. Download the Cisco TRex Controller 1G shell, if you have not already done so. See [To import the CloudShell TRex Controller](#to-import-the-cloudshell-trex-controller-and-the-cloudchell-trex-virtual-traffic-generator-1g-shells-into-cloudshell)
 
 ### Offline installation of a shell
 
