@@ -23,6 +23,8 @@ Document version: 1.0
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
+**Note:** Unlike other shells, upgrading an L1 shell requires the use of the QsMigrationUtility, which is provided out0of0the0box with CloudShell.
+
 ### L1 Switch Shells
 L1 switch shells allow CloudShell to manage networking connectivity between physical resources and private cloud provider Apps, such as vCenter.
 
