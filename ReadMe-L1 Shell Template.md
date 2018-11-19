@@ -1,13 +1,13 @@
 
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
-# **Pluribus Netvisor VLE L1 Shell**  
+# **[Shell Name]**  
 
-Release date: October 2018
+Release date: [Month Year]
 
-Shell version: 1.0.1
+Shell version: [x.x.x]
 
-Document version: 1.0
+Document version: [x.x]
 
 # In This Guide
 
@@ -16,6 +16,7 @@ Document version: 1.0
 * [Importing and Configuring the Shell](#importing-and-configuring-the-shell)
 * [Updating Python Dependencies for Shells](#updating-python-dependencies-for-shells)
 * [Upgrading the L1 Shell and Datamodel](#upgrading-the-l1-shell-and-datamodel)
+* [Typical Workflows](#typical-workflows)
 * [References](#references)
 * [Release Notes](#release-notes)
 
@@ -30,53 +31,51 @@ L1 switch shells allow CloudShell to manage networking connectivity between phys
 
 For additional information, see the [L1 Switches](http://help.quali.com/Online%20Help/9.0/Portal/Content/Admn/Cnct-Ctrl-L1-Swch.htm?Highlight=L1%20switch) online help topic.
 
-### **Pluribus Netvisor VLE L1 Shell**
-**Pluribus Netvisor VLE L1** shell provides you with the capability to communicate with network topology managed by the Pluribus Netvisor nvOS in VLE mode.
+### **[Shell Name]**
+**[Shell Name]** shell provides you with the capability to communicate with network topology managed by the [Device Name].
 
 The shell allows CloudShell users to interact with the device, for example, create and modify route mappings, get device information, and more.
 
-For more information on the **Pluribus Netvisor VLE L1**, see the official **Pluribus Netvisor** product documentation.
+For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
 
 ### Standard version
-The **Pluribus Netvisor VLE L1** shell is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
+The **[Shell Name]** shell is based on the [**Layer 1 Switch Shell Standard**](https://github.com/QualiSystems/shell-L1-template).
 
 ### Supported OS
-▪ Pluribus Netvisor 3.0.0 and above
+▪ [OS Name]
 
 ### Requirements
 
-Release: **CloudShell Pluribus Netvisor VLE L1**
+Release: **[Shell Name]**
 
-▪ CloudShell version: 8.3 GA and above
+▪ CloudShell version: [version x.x]
 
-▪ Pluribus Netvisor VLE: all versions
-
-**Note**: For support on an earlier CloudShell version, contact your customer support representative.
+▪ Other: [version x.x]
 
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **Pluribus Netvisor VLE L1 Families and Models**
+#### **[Device Name] Families and Models**
 
 The L1 switch families and models are listed in the following table:
 
 |Family|Model|Description|
 |:---|:---|:---|
-|L1 Switch|Pluribus Netvisor VLE Fabric|Pluribus Netvisor fabric|
-|L1 Switch Blade|Generic L1 Module|Pluribus fabric node|
-|L1 Switch Port|Generic L1 Port|Pluribus port|
+|L1 Switch|||
+|L1 Switch Blade|||
+|L1 Switch Port|||
 
-#### **Pluribus Netvisor VLE L1 Attributes**
+#### **[Device Name] Attributes**
 
-The Pluribus Netvisor VLE Fabric attribute names and types are listed in the following table:
+The [Device Name] attribute names and types are listed in the following table:
 
 |Attribute|Type|Description|
 |:---|:---|:---|
-|Password|Password|CLI Password|
-|User|String|CLI Username|
-|Fabric Name|String|Fabric name|
-|Serial Number|String|Serial number|
+||||
+||||
+||||
+||||
 
 The Generic L1 Module attribute names and types are listed in the following table:
 
@@ -105,9 +104,13 @@ This section describes the automation (drivers) associated with the data model. 
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers and creates the internal resources of the root resource (for example, switch cards and ports).|
-|MapBidi|Creates a bidir connection between two ports.|
+|MapBidi|Creates a bi-directional mapping between between two ports.|
+|MapUni|Creates a uni-directional mapping between two ports.|
 |MapClear|Clears any connection ending in this port.|
-|MapClearTo|Clears a unidir connection between two ports.|
+|MapClearTo|Clears a uni-directional connection between two ports.|
+|GetAttributeValue|Extract attribute value from the device|
+|SetAttributeValue|Set attribute value to the device|
+|MapTap|Add monitor ports to an existing connection|
 
 **Note:** You can only activate a TAP connection after activating a parent mapuni/mapbidi connection. 
 
@@ -190,6 +193,10 @@ L1 shells do not have separate Python dependencies files. All dependencies are i
 
 6. Run *C:\Program Files (x86)\QualiSystems\CloudShell\Server\QsMigrationUtility.exe*.
 
+
+# Typical Workflows
+
+(add as necessary depending on the shell)
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
