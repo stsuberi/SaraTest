@@ -383,7 +383,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	2. Run the **Stop Traffic** command and enter the **Run** menu.
 	3. Specify the following parameter, as required:
 	
-		• **Force**: Forces killing the run TRex process (if it exists) on the server.
+		• **Force**: Forces the TRex process (if it exists) to stop running on the server.
 	4. Run the **Stop Traffic** command.
 	
 4. Run **Get Result** command.
