@@ -252,6 +252,10 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
+### What's New
+
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Juniper-JunOS-Switch-Shell-2G/releases).
+
 ### Known Issues
 
 * **Known Issue #15248**: Some switches don’t reflect the port channels' members correctly in the IEEE 802.3ad Link Aggregation MIB.
