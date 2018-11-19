@@ -375,7 +375,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 		
 		• **Timeout**: Maximum time (in seconds) to wait in the **Block** state until the TRex state changes from **Starting** to either **Idle** or **Running**.
 		
-		• **Latency**
+		• **Latency**: Latency packets rate (Hz).
 	3. Execute the **Start Traffic** command.
 
 3. Run **Stop Test**.
