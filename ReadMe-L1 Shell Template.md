@@ -108,46 +108,47 @@ This section describes the automation (drivers) associated with the data model. 
 |MapUni|Creates a uni-directional mapping between two ports.|
 |MapClear|Clears any connection ending in this port.|
 |MapClearTo|Clears a uni-directional connection between two ports.|
-|GetAttributeValue|Extract attribute value from the device|
-|SetAttributeValue|Set attribute value to the device|
-|MapTap|Add monitor ports to an existing connection|
+|GetAttributeValue|Extracts attribute values from the device.|
+|SetAttributeValue|Sets attribute values on the device.|
+|MapTap|Adds monitor ports to an existing connection.|
 
-**Note:** You can only activate a TAP connection after activating a parent mapuni/mapbidi connection. 
+**Note:** You can only activate a TAP connection after activating a parent MapUni/MapBidi connection. 
 
 # Downloading the Shell
-The **Pluribus Netvisor VLE L1** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **[Shell Name]** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|cloudshell-L1-pluribus_netvisor_vle\install_driver.bat|Pluribus Netvisor VLE L1 shell installation script.|
-|cloudshell-L1-pluribus_netvisor_vle\pluribus_netvisor_vle_runtime_config.yml|Pluribus Netvisor VLE L1 shell configuration file.|
-|cloudshell-L1-pluribus_netvisor_vle\datamodel\Pluribus Netvisor VLE_ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor.|
+|[Shell .zip File Name]|[Device Name] shell package|
+|[Shell install_driver.bat]|[Shell Name] shell installation script|
+|[Shell runtime_config.yml|[Shell Name] configuration file|
+|[Shell File Name] ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor.|
 
 # Importing and Configuring the Shell
-This section describes how to import the **Pluribus Netvisor VLE L1 Shell** and configure and modify the shell’s devices.
+This section describes how to import the **[Shell Name]** and configure and modify the shell’s devices.
 
 ### Importing and configuring the shell in CloudShell
 
 **To import and configure the shell in CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
-  2. Extract the *cloudshell-L1-pluribus_netvisor_vle-1.0.1.zip* package to the following location on the Quali Server machine: 
+  2. Extract the *[Device Name] shell package zip* package to the following location on the Quali Server machine: 
   *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers*
   
-  3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\install_driver.bat* file.
+  3. Run the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\[Shell install_driver.bat]* file.
   
   4. Import the new data model.
       1. In **Resource Manager Client>Admin**, right-click **Resource Families** and select **Import**.
-      2. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\cloudshell-L1-pluribus_netvisor_vle\datamodel\pluribus_netvisor_vle_ResourceConfiguration.xml* file.
+      2. Select the *C:\Program Files (x86)\QualiSystems\CloudShell\Server\Drivers\[Shell File Name] ResourceConfiguration.xml* file.
       3. Click **Open**.
 	
   5. Create an L1 resource.
       1. In **Resource Explorer**, right-click **Root** and select **New>Resource**.
       2. Enter the **Name** and **Address**.
       3. Select the **L1 Switch** family.
-      4. Ensure that the correct **Model** (Pluribus Netvisor VLE Fabric) and **Driver** (PLURIBUS NETVISOR VLE) are selected.
+      4. Ensure that the correct **Model** [Device Model] and **Driver** [Device Driver] are selected.
       5. Click **OK**.
 	
   6. Auto Load the new resource.
@@ -211,4 +212,4 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/cloudshell-L1-netvisor_virtualwire/releases).
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/[Shell Name]/releases).
