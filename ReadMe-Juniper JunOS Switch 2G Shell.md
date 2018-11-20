@@ -4,7 +4,7 @@
 
 Release date: April 2017
 
-Shell version: 1.0.0
+Shell version: 1.1.1
 
 Document version: 1.0
 
@@ -110,9 +110,7 @@ This section describes how to import the **Juniper JunOS Switch 2G** shell and c
   
   3. Click **Import**.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
-
-The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.<br>The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
 
 ### Offline installation of a shell
 
@@ -180,9 +178,7 @@ You can also modify existing resources, see [Managing Resources in the Inventory
   
   5. In the **Resource** dialog box, enter the device's settings. For details, see [Juniper JunOS Switch Attributes](#juniper-junos-switch-attributes). 
   
-  6. Click **Continue**.
-
-CloudShell validates the device’s settings and updates the new resource with the device’s structure.
+  6. Click **Continue**.<br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
@@ -204,34 +200,32 @@ In online mode, the execution server automatically downloads and extracts the ap
 # Typical Workflows 
 
 #### **Workflow 1** - *Save configuration* 
-1. In CloudShell Portal, reserve the **Juniper JunOS Switch** resource.
+1. In CloudShell Portal, add the **Juniper JunOS Switch** resource to your blueprint and reserve the blueprint.
 
 2. Run the **Save** resource command.
 
 3. In the command inputs field, enter the following information:
-	* **Folder Path**: For example, *tftp://ipaddress/shared folder*.
-	* **Configuration Type**: **Startup** or **Running**.
-	* **VRF Management Name**: Provide the VRF Management name, if relevant.
+	* **Folder Path**: Enter the folder path where the configuration file will be saved, for example, *tftp://ipaddress/shared folder*.
+	* **Configuration Type**: Enter either **Startup** or **Running**.
+	* **VRF Management Name**: Provide the **VRF Management Name**, if relevant.
 	
-4. Click **Run**.
-
-The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
+4. Click **Run**.<br>The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
 #### **Workflow 2** - *Restore configuration* 
-1. In CloudShell Portal, reserve the **Juniper JunOS Switch** resource.
+1. In CloudShell Portal, add the **Juniper JunOS Switch** resource to your blueprint and reserve the blueprint.
 
 2. Run the **Restore** resource command.
 
 3. In the command inputs field, enter the following information:
 	* **Path**: (Mandatory) Enter the full path of the configuration file. 
 	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
-	* **Configuration Type**: (Mandatory) Possible values are **Startup** or **Running**.
+	* **Configuration Type**: (Mandatory) Enter either **Startup** or **Running**.
 	* **VRF Management Name**: (Optional) Provide the **VRF Management Name**, if relevant.
 	
 4. Click **Run**.
 
 #### **Workflow 3** - *Load firmware* 
-1. In CloudShell portal, reserve the **Juniper JunOS Switch** resource.
+1. In CloudShell Portal, add the **Juniper JunOS Switch** resource to your blueprint and reserve the blueprint.
 
 2. Run the **Load Firmware** resource command. 
 
