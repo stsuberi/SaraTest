@@ -205,9 +205,9 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. Run the **Save** resource command.
 
 3. In the command inputs field, enter the following information:
-	* **Folder Path**: Folder path where configuration file will be saved, for example, *tftp://ipaddress/shared folder*.
-	* **Configuration Type**: Type of configuration that will be saved. Possible values are: **Startup** or **Running**. If left empty, the **Running** default configuration type will be used.
-	* **VRF Management Name**: Virtual Routing and Forwrding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
+	* **Folder Path**: (Mandatory) Folder path where configuration file will be saved, for example, *tftp://ipaddress/shared folder*.
+	* **Configuration Type**: (Mandatory) Type of configuration that will be saved. Possible values are: **Startup** or **Running**. If left empty, the **Running** default configuration type will be used.
+	* **VRF Management Name**: (Optional) Virtual routing and forwarding name used to share same/overlapping sub-nets on the same core. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
 4. Click **Run**.<br><br>The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
@@ -220,7 +220,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 	* **Path**: (Mandatory) Full path of the configuration file, for example, *tftp://10.10.10.10/asdf*.
 	* **Configuration Type**: (Mandatory) Type of configuration to restore. Possible values are: **Startup** or **Running**. If left empty, the **Running** default configuration type will be restored.
 	* **Restore Method**: (Optional) Restore method to use when restoring the configuration file. Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
-	* **VRF Management Name**: (Optional) Virtual Routing and Forwrding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
+	* **VRF Management Name**: (Optional) Virtual routing and forwarding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
 4. Click **Run**.
 
@@ -231,7 +231,7 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 3. In the command inputs field, enter the following information:
 	* **Remote Host**: (Mandatory) Full path to the firmware file to load on the device.
-	* **VRF Management Name**: (Optional) Virtual Routing and Forwrding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
+	* **VRF Management Name**: (Optional) Virtual routing and forwarding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
 4. Click **Run**.
 
