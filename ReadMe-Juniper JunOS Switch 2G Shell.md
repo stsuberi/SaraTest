@@ -207,6 +207,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 3. In the command inputs field, enter the following information:
 	* **Folder Path**: (Mandatory) Folder path where configuration file will be saved, for example, *tftp://ipaddress/shared folder*.
 	* **Configuration Type**: (Mandatory) Type of configuration that will be saved. Possible values are: **Startup** or **Running**. If left empty, the **Running** default configuration type will be used.
+		- **Startup**: Configuration that is loaded when the device boots or powers up.
+		- **Running**: Current configuration in the device. It may have been modified since the last boot.
 	* **VRF Management Name**: (Optional) Virtual routing and forwarding name used to share same/overlapping sub-nets on the same core. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
 4. Click **Run**.<br><br>The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
@@ -219,6 +221,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 3. In the command inputs field, enter the following information:
 	* **Path**: (Mandatory) Full path of the configuration file, for example, *tftp://10.10.10.10/asdf*.
 	* **Configuration Type**: (Mandatory) Type of configuration to restore. Possible values are: **Startup** or **Running**. If left empty, the **Running** default configuration type will be restored.
+		- **Startup**: Configuration that is loaded when the device boots or powers up.
+		- **Running**: Current configuration in the device. It may have been modified since the last boot.
 	* **Restore Method**: (Optional) Restore method to use when restoring the configuration file. Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
 	* **VRF Management Name**: (Optional) Virtual routing and forwarding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
