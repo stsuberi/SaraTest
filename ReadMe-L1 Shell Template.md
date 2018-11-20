@@ -122,7 +122,7 @@ The shell comprises:
 |[Shell .zip File Name]|[Device Name] shell package|
 |[Shell install_driver.bat]|[Shell Name] shell installation script|
 |[Shell runtime_config.yml|[Shell Name] configuration file|
-|[Shell File Name] ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor.|
+|[Shell File Name] ResourceConfiguration.xml|XML file containing the resource structure, attributes and capabilities of the L1 switches of the same vendor|
 
 # Importing and Configuring the Shell
 This section describes how to import the **[Shell Name]** and configure and modify the shell’s devices.
