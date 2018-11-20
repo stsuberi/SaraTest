@@ -206,8 +206,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 3. In the command inputs field, enter the following information:
 	* **Folder Path**: Folder path where configuration file will be saved, for example, *tftp://ipaddress/shared folder*.
-	* **Configuration Type**: **Startup** or **Running**.
-	* **VRF Management Name**: **VRF Management Name**, if relevant.
+	* **Configuration Type**: Type of configuration that will be saved. Possible values are: **Startup** or **Running**. If left empty, the **Running** default configuration type will be used.
+	* **VRF Management Name**: Virtual Routing and Forwrding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
 4. Click **Run**.<br><br>The **Startup** or **Running** configuration is saved to a file named *<ResourceName>-<startup/running-config>-<timestamp>*, which will be stored in the folder path you entered above.
 
@@ -217,10 +217,10 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. Run the **Restore** resource command.
 
 3. In the command inputs field, enter the following information:
-	* **Path**: (Mandatory) Full path of the configuration file. 
-	* **Restore Method**: (Optional) Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
-	* **Configuration Type**: (Mandatory) **Startup** or **Running**.
-	* **VRF Management Name**: (Optional) **VRF Management Name**, if relevant.
+	* **Path**: (Mandatory) Full path of the configuration file, for example, *tftp://10.10.10.10/asdf*.
+	* **Configuration Type**: (Mandatory) Type of configuration to restore. Possible values are: **Startup** or **Running**. If left empty, the **Running** default configuration type will be restored.
+	* **Restore Method**: (Optional) Restore method to use when restoring the configuration file. Possible values are **Override** or **Append**. If left empty, the **Override** method is used. 
+	* **VRF Management Name**: (Optional) Virtual Routing and Forwrding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
 4. Click **Run**.
 
@@ -230,8 +230,8 @@ In online mode, the execution server automatically downloads and extracts the ap
 2. Run the **Load Firmware** resource command. 
 
 3. In the command inputs field, enter the following information:
-	* **Remote Host**: (Mandatory) Full path to the firmware file on the remote host, for example, *tftp://10.1.1.1/ios12.SE1-smp-k8.bin*.
-	* **File Path**: (Mandatory) Destination file name on the device itself, for example, *bootflash:/ios12.SE1-smp-k8.bin* .
+	* **Remote Host**: (Mandatory) Full path to the firmware file to load on the device.
+	* **VRF Management Name**: (Optional) Virtual Routing and Forwrding name used to share same/overlapping sub-nets on the same core, if relevant. If left empty, the **VRF Management Name** attribute on the root model will be used.
 	
 4. Click **Run**.
 
