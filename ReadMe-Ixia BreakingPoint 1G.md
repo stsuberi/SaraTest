@@ -255,7 +255,7 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 **To associate the BreakingPoint Controller 1G service to a non-global domain:**
 
-**Note:** The process by which a service shell is associated with a non-global domain differs between 1G and 2G shells. The instructions below detail the steps for a 1G service shell.
+**Note:** The association process differs depending on the type of shell - second generation (2G) shell or first generation (1G) shell. The instructions below detail the steps for a 1G service shell.
 
 1. (Optional) You can associate the service to a service category that already exists in CloudShell or associate the service to a new category.
 
