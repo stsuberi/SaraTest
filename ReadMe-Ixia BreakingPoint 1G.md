@@ -272,7 +272,7 @@ The association process differs depending on the type of shell - second generati
 	
 	or
 
-	* Modify the 1G category(s) in the shell project’s configuration files to add a new category(s). See Associating categories to 1st Gen Service Shells.
+	* Modify the 1G category(s) in the shell project’s configuration files to add a new category(s). See [Associating categories to 1st Gen Service Shells](https://devguide.quali.com/reference/9.0.0/associating-service-categories.html).
 
 2. Associate the shell’s service category to a domain.
 	1. In the **Manage** dashboard, click **Categories** from the left sidebar, or **Domains** if you are a domain admin.
