@@ -33,7 +33,7 @@ For more information on the **F5 BIG-IP LoadBalancer**, see the official **F5** 
 ### Standard version
 **F5 BIG-IP LoadBalancer 1.0.0** is based on the Networking Shell Standard version **5.0.0**.
 
-For detailed information about the shell’s structure and attributes, see the [Networking Shell Standard](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the [Load Balancer Standard](https://community.quali.com/repos/3293/shell-standard-load-balancer) in GitHub.
 
 ### Supported OS
 
