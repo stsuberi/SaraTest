@@ -258,7 +258,7 @@ The association process differs depending on the type of shell - second generati
 **To associate a 1G service shell to a domain:**
 1. (Optional) You can associate the service to a service category that already exists in CloudShell or associate the service to a new category.
 
-**Note:** If you do not want to change the category(s) of this shell, you can use the default category that comes out-of-the-box (if it exists).
+	**Note:** If you do not want to change the category(s) of this shell, you can use the default category that comes out-of-the-box (if it exists).
 	 
 	* Associate the service family to an existing category(s).
 	1. In Resource Manager Client, open the Resource Families explorer and click the relevant service family.
