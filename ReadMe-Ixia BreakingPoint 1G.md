@@ -261,28 +261,29 @@ The association process differs depending on the type of shell - second generati
 	**Note:** If you do not want to change the category(s) of this shell, you can use the default category that comes out-of-the-box (if it exists).
 	 
 	* Associate the service family to an existing category(s).
-	1. In Resource Manager Client, open the Resource Families explorer and click the relevant service family.
 	
-	2. From the right pane, open the Categories tab.
+		1. In Resource Manager Client, open the **Resource Families** explorer and click the relevant service family.
 	
-	3. Click Add. The Select Category dialog box is displayed. 
+		2. From the right pane, open the **Categories** tab.
 	
-	4. Select a category from the catalog and click OK.
+		3. Click **Add**. The **Select Category** dialog box is displayed. 
+	
+		4. Select a category from the catalog and click **OK**.
 	
 	or
 
 	* Modify the 1G category(s) in the shell project’s configuration files to add a new category(s). See Associating categories to 1st Gen Service Shells.
 
 2. Associate the shell’s service category to a domain.
-	1. In the Manage dashboard, click Categories from the left sidebar, or Domains if you are a domain admin.
+	1. In the **Manage** dashboard, click **Categories** from the left sidebar, or **Domains** if you are a domain admin.
 	
-	2. Select Services Categories.
+	2. Select **Services Categories**.
 	
 	3. Click the service category that is associated with your service shell.
 	
-	4. In the Edit Category dialog box, from the Domains drop-down list, select the desired domain(s).
+	4. In the **Edit Category** dialog box, from the **Domains** drop-down list, select the desired domain(s).
 	
-	5. Click Save.
+	5. Click **Save**.
 
 
 ## Typical Workflows
