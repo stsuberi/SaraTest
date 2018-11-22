@@ -70,7 +70,7 @@ The attribute names and types are listed in the following section of the Network
 
 https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md#attributes
 
-**[Notes:]** <br>(Include as needed to explain differences between this shell's attributes and attributes documented in the Shell Standard.)
+**[Notes:]** The **Monitors** attribute was added specifically to this shell. It displays all monitors attached to a certain Real Server.
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource.  Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
@@ -229,7 +229,7 @@ To connect with Quali users and experts from around the world, ask questions and
 
 # Release Notes 
 
-**F5 BIG-IP LoadBalancer 2G Shell 1.0.0**
+**F5 BIG-IP LoadBalancer 2G Shell**
 
 ### What's New
 
@@ -237,4 +237,4 @@ To connect with Quali users and experts from around the world, ask questions and
 
 * **Monitors** attribute was added for Real Servers to list all monitors applied for a particular server.
 
-* **Load Firmware** command does not delete previous firmware boot volumes, so it is now possible to rollback.
+* **Load Firmware** command does not delete previous firmware OS boot versions. It is, therefore, now possible to rollback to previous OS versions.
