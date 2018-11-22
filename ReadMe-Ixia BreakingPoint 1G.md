@@ -251,11 +251,11 @@ In online mode, the execution server automatically downloads and extracts the ap
 
 In order to expose a service to users of a domain that is not the Global domain, you must associate the service to the domain. To do this, you need to associate the service to a category that is assigned to the domain.
 
-**Note:** When you import a service shell, most shells are automatically assigned a default service category which is associated with the Global domain. For custom shells, this may not be true.
+When you import a service shell, most shells are automatically assigned a default service category which is associated with the Global domain. For custom shells, this may not be true.
 
 **To associate the BreakingPoint Controller 1G service to a domain:**
 
-Note: The process by which a service shell is associated with a non-global domain differs between 1G and 2G shells. The instructions below details the steps for a 1G service shell.
+**Note:** The process by which a service shell is associated with a non-global domain differs between 1G and 2G shells. The instructions below details the steps for a 1G service shell.
 
 1. (Optional) You can associate the service to a service category that already exists in CloudShell or associate the service to a new category.
 
