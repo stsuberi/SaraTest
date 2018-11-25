@@ -70,10 +70,10 @@ The attribute names and types are listed in the following table:
 |Enable Full Trunk Ports|String|(Optional) Used when configuring a full trunk port, for example: ports that a private cloud provider are connected to. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
 |Disable Full Trunk Ports|String|(Optional) Used when removing a full trunk port configuration. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
 |Model Name|String|Device catalog name. This attribute will be displayed in CloudShell instead of the CloudShell model.|
-|Mac Address|String|MAC address interface.|
-|IPv4 Address|String|IPv4 address interface.|
-|IPv6 Address|String|IPv6 address interface.|
-|Port Description|String|Port description interface.|
+|Mac Address|String|MAC address of the network interface.|
+|IPv4 Address|String|IPv4 address of the network interface.|
+|IPv6 Address|String|IPv6 address of the network interface.|
+|Port Description|String|Port description of the network interface.|
 |Adjacent|String|Adjacent connected device name and interface.|
 
 ### Automation
@@ -119,13 +119,13 @@ The shell is displayed in the **Shells** page and can be used by domain administ
 ### Installing the CloudShell OpenDaylight plugin
 This section describes how to install the *CloudShell SDN OpenDaylight* plugin. 
 
-There are two available options:
+There are two available options (all these steps should be executed on the dedicated server, with the specific environment):
 
 ▪ **Install the controller and plugin from source:**
 
-1. Download the *CloudShell ODL plugin repository*, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *ODL_CloudShell_plugin_zip* file, see [Downloading the Shell](#downloading-the-shell).
 	
-2. Install **Jana** and **Maven**: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
+2. Install **Java** and **Maven**: https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup
 	
 3. Compile the controller: **mvn clean install -DskipTests**.
 	
