@@ -84,7 +84,7 @@ The following resource commands are available on the **SDN OpenDaylight 2G** Con
 |Command|Description|
 |:---|:---|
 |Autoload|Discovers connections to the controller's vSwitches and their leaf ports.|
-|Remove Openflow|Removes openflow entry from the controller. Input values include: **Node ID (String)**, **Table ID (String)**, and **Flow ID (String)**.|
+|Remove Openflow|Removes a specific openflow entry from the controller. Input values include: **Node ID (String)**, **Table ID (String)**, and **Flow ID (String)**.|
 
 # Downloading the Shell
 The **SDN OpenDaylight 2G** shell is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -133,7 +133,7 @@ There are two available options (all these steps should be executed on the dedic
 	
 ▪ **Add the plugin feature to the existing controller:**
 
-1. Copy the CloudShell plugin files to the *system* folder.
+1. Copy the CloudShell plugin files to the *system* folder. The system folder refers to the system folder for the karaf distribution located in the OpenDaylight controller. 
 	
 2. Run the controller: **./karaf/target/assembly/bin/karaf**.
 	
