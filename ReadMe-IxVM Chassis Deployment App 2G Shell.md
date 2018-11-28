@@ -44,6 +44,8 @@ Release: **IxVM Chassis Deployment App 2G Shell**
 
 ▪ Ixia Virtual Test Appliance versions: 8.2 and above
 
+**Note:** If your CloudShell version does not support this shell, you should consider upgrading to a later version of CloudShell or contact customer support.
+
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
