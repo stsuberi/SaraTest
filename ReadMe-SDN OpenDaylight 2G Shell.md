@@ -43,6 +43,8 @@ Release: **SDN OpenDaylight 2G** shell
 
 ▪ OpenDaylight versions: Boron SR3
 
+**Note:** If your CloudShell version does not support this shell, you should consider upgrading to a later version of CloudShell or contact customer support.
+
 ### Data Model
 
 The shell's data model includes all shell metadata, families, and attributes.
