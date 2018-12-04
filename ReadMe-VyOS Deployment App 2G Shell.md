@@ -24,7 +24,7 @@ A shell integrates a device model, application or other technology with CloudShe
 CloudShell's networking shells provide L2 connectivity between resources and/or private cloud Apps.
 
 ### **VyOS Deployment App 2G Shell**
-**VyOS Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **VyOS** deployment App. 
+**VyOS Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **VyOS** deployment App. The device is provided as a virtual device within a vCenter App.
 
 For more information on the **VyOS** operating system, see the official **VyOS** product documentation.
 
