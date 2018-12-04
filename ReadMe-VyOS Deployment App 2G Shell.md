@@ -175,7 +175,11 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 5. In the **Deployment Paths** tab, select the **Cloud Provider** and enter the **vCenter VM** to be used in VM creation. It should include the full path from the datacenter and template name, for example *QualiFolder/VM121*.
 ![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_deployment_paths.PNG)
 
-6. In the **App Resource** tab, select the **Vyos** shell. You must specify the **User** and **Password** of the shell. All other attributes are optional.<br>![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
+6. In the **App Resource** tab, select the **Vyos** shell. You must specify the **User** and **Password** of the shell. All other attributes are optional.
+
+**Note:** Contact your Admin to obtain the correct credentials to be set on the deployed App shell. They are generally provided  along with the VM image. 
+
+<br>![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
 7. Click **Done**.
 
