@@ -177,7 +177,7 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 
 6. In the **App Resource** tab, select the **Vyos** shell. You must specify the **User** and **Password** of the shell. All other attributes are optional.
 
-	**Note:** Contact your Admin to obtain the correct credentials to be set on the deployed App shell. They are generally provided  along with the VM image. 
+	**Note:** Contact your Admin to obtain the correct credentials to set on the deployed App shell. They are generally provided  along with the VM image. 
 
 	<br>![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
