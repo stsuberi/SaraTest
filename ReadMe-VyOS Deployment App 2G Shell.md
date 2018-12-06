@@ -24,7 +24,7 @@ A shell integrates a device model, application or other technology with CloudShe
 CloudShell's networking shells provide L2 connectivity between resources and/or private cloud Apps.
 
 ### **VyOS Deployment App 2G Shell**
-**VyOS Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **VyOS** deployment App. The device is provided as a virtual device within a vCenter App.
+**VyOS Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management for the **VyOS** deployment App. The device is provided as a virtual machine within a vCenter App.
 
 For more information on the **VyOS** operating system, see the official **VyOS** product documentation.
 
@@ -64,8 +64,8 @@ The attribute names and types are listed in the following table:
 |:---|:---|:---|:---|
 |Configuration File|String||Path to the configuration file, including the configuration file name. Path should include the protocol type, for example *tftp://10.10.10.10/asdf*.|
 |Enable SSH|Boolean|True|Enable SSH on the deployed VM through vCenter.|
-|User|Boolean|String|Username for the deployed VyOS.|
-|Password|Password||Password for the deployed VyOS.|
+|User|Boolean|String|Username for the deployed VyOS virtual machine.|
+|Password|Password||Password for the deployed VyOS virtual machine.|
 
 #### **VyOS Virtual Traffic Generator Port Attributes**
 
@@ -177,7 +177,7 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 
 6. In the **App Resource** tab, select the **Vyos** shell. You must specify the **User** and **Password** of the shell. All other attributes are optional.
 
-	**Note:** Contact your Admin to obtain the correct credentials to set on the deployed App shell. They are generally provided  along with the VM image. 
+	**Note:** The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new Deployed App templates, as explained in [Adding App templates](https://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Apps.htm?Highlight=deployed%20app%20templates#Adding). – An App template is the App replica you create in the Manage – Apps page, which can then be pulled into blueprints to create instances of those replicas. When an App instance is deployed in the sandbox, it becomes a deployed App, which behaves like a resource, according to the shell that is attached to the app template, in our case the VyOS Deployment App Shell.  
 
 	<br>![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
