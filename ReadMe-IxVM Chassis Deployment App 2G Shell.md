@@ -27,7 +27,7 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **IxVM Chassis Deployment App 2G Shell**
-The **IxVM Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management. The device is provided as a virtual device within a vCenter App.
+The **IxVM Deployment App 2G** shell provides you with connectivity and management capabilities such as device structure discovery and power management. The device is provided as a virtual machine within a vCenter App.
 
 For more information on the **IxVM Traffic Chassis**, see the official **IxVM** product documentation.
 
