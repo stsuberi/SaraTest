@@ -177,7 +177,7 @@ This section explains how to create an App template for the **VyOS Deployment Ap
 
 6. In the **App Resource** tab, select the **Vyos** shell. You must specify the **User** and **Password** of the shell. All other attributes are optional.
 
-	**Note:** The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new Deployed App templates, as explained in [Adding App templates](https://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Apps.htm?Highlight=deployed%20app%20templates#Adding). – An App template is the App replica you create in the Manage – Apps page, which can then be pulled into blueprints to create instances of those replicas. When an App instance is deployed in the sandbox, it becomes a deployed App, which behaves like a resource, according to the shell that is attached to the app template, in our case the VyOS Deployment App Shell.  
+	**Note:** Contact your Admin to obtain the correct credentials to set on the deployed App shell. They are generally provided  along with the VM image.  
 
 	<br>![](https://github.com/stsuberi/SaraTest/blob/master/vyos_deployment_app_2g_app_resource.PNG)
 
