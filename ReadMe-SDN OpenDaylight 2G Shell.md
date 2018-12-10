@@ -71,12 +71,12 @@ The attribute names and types are listed in the following table:
 |Scheme|String|ODL controller URL scheme (http or https).|
 |Enable Full Trunk Ports|String|(Optional) Used when configuring a full trunk port, for example: ports that a private cloud provider are connected to. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
 |Disable Full Trunk Ports|String|(Optional) Used when removing a full trunk port configuration. Ports should be listed in this format: *openflow:1::eth1;openflow:eth2*.|
-|Model Name|String|Device catalog name. This attribute will be displayed in CloudShell instead of the CloudShell model.|
+|Model Name|String|This attribute will be displayed in CloudShell instead of the CloudShell model.|
 |Mac Address|String|MAC address of the network interface.|
 |IPv4 Address|String|IPv4 address of the network interface.|
 |IPv6 Address|String|IPv6 address of the network interface.|
 |Port Description|String|Port description of the network interface.|
-|Adjacent|String|Adjacent connected device name and interface.|
+|Adjacent|String|Adjacent device (system name) and port, based on LLDP or CDP protocol.|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
