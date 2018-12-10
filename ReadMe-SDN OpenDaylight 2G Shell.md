@@ -76,7 +76,7 @@ The attribute names and types are listed in the following table:
 |IPv4 Address|String|IPv4 address of the network interface.|
 |IPv6 Address|String|IPv6 address of the network interface.|
 |Port Description|String|Port description of the network interface.|
-|Adjacent|String|Adjacent device (system name) and port, based on LLDP or CDP protocol.|
+|Adjacent|String|(not used in this shell) Adjacent device (system name) and port, based on LLDP or CDP protocol.|
 
 ### Automation
 This section describes the automation (drivers) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
