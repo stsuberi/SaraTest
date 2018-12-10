@@ -67,7 +67,7 @@ The attribute names and types are listed in the following table:
 |User|Boolean|String|Username for the deployed VyOS virtual machine.|
 |Password|Password||Password for the deployed VyOS virtual machine.|
 
-#### **VyOS Virtual Traffic Generator Port Attributes**
+#### **VyOS Deployment App 2G Port Attributes**
 
 The attribute names and types are listed in the following table:
 
