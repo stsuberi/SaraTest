@@ -1,12 +1,12 @@
 ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
-# **[Shell Name]**  
+# **Spirent TestCenter Controller 1G Shell**  
 
-Release date: [Month Year]
+Release date: July 2018
 
-Shell version: [x.x.x]
+Shell version: 1.5.0
 
-Document version: [x.x]
+Document version: A
 
 # In This Guide
 
@@ -28,8 +28,8 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **[Shell Name]**
-**[Shell Name]** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
+### **Spirent TestCenter Controller 1G Shell**
+The **Spirent TestCenter Controller 1G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
 
 For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
 
@@ -44,23 +44,15 @@ To model an **[Device Name]** device in CloudShell, use one of the following con
 For detailed information about the shell’s structure and attributes, see the **Shells Standard: Traffic**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
 
 ### Supported OS
-▪ **[OS Name]**
+▪ **Windows**
 
 ### Requirements
 
-Release: **[Shell Name]**
+Release: **Spirent TestCenter Controller 1G Shell**
 
-▪ CloudShell version: **[Version Number]**
+▪ CloudShell version: **7.1 and above**
 
-▪ [Device Name]: **[Version Number]**
-
-▪ [Chassis Shell Name]: CloudShell version **[Version Number]**
-
-▪ [Controller Name]: CloudShell version **[Version Number]**
-
-[Include this note only if the shell is a 2G shell]
-
-**Note:** If your CloudShell version does not support this shell, you should consider upgrading to a later version of CloudShell or contact customer support. 
+▪ TestCenter Rest Server: Lab Server or STC web services
 
 ### Data Model
 
@@ -98,7 +90,7 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
 # Downloading the Shell
-The **[Shell Name]** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **Spirent TestCenter Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -106,22 +98,28 @@ The shell comprises:
 
 |File name|Description|
 |:---|:---|
-|[Shell .zip File Name]|[Device Name] shell package|
-|[Shell Offline Requirements .zip File Name]|Shell Python dependencies (for offline deployments only)|
+|Spirent_TestCenter_controller.zip|Spirent TestCenter Controller shell package|
+|Spirent_TestCenter_controller_offline_requirements.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **[Shell Name]** and configure and modify the shell’s devices.
+This section describes how to import the **Spirent TestCenter Controller 1G Shell** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
 **To import the shell into CloudShell:**
   1. Make sure you have the shell’s zip package. If not, download the shell from the [Quali Community's Integrations](https://community.quali.com/integrations) page.
   
-  2. In CloudShell Portal, as Global administrator, open the **Manage – Shells** page.
+  2. Backup your database.
   
-  3. Click **Import**.
+  3. Log in to CloudShell Portal as administrator and access the relevant domain.
   
-  4. In the dialog box, navigate to the shell's zip package, select it and click **Open**. <br><br>The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new inventory resources, as explained in [Adding Inventory Resources](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Add-Rsrc-Tmplt.htm?Highlight=adding%20inventory%20resources). 
+  4. In the user menu select **Import Package**.
+  
+     ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/import_package.png)
+     
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
+  
+The Spirent TestCenter controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services).<br><br>You can now use the CloudShell TRex virtual traffic generator shell to create Apps that, once deployed in a sandbox, will spin up VMs that model a Cisco TRex traffic generator. See [Configuring a new App](#configuring-a-new-app). For more information, see [Apps Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Apps.htm?Highlight=applications). 
 
 ### Offline installation of a shell
 
@@ -156,7 +154,7 @@ For more information, see [Configuring CloudShell to Execute Python Commands in 
 Before PyPi Server was introduced as CloudShell’s Python package management mechanism, the `PythonOfflineRepositoryPath` key was used to set the default offline package repository on the Quali Server machine, and could be used on specific Execution Server machines to set a different folder. 
 
 **To set the offline Python repository:**
-1. Download the *[Shell Offline Requirements .zip File Name]* file, see [Downloading the Shell](#downloading-the-shell).
+1. Download the *Spirent_TestCenter_controller_offline_requirements.zip* file, see [Downloading the Shell](#downloading-the-shell).
 
 2. Unzip it to a local repository. Make sure the execution server has access to this folder. 
 
@@ -170,26 +168,24 @@ full path"/>`
 
 5. Restart the Execution Server.
 
-### Configuring a new resource
-This section explains how to create a new resource from the shell.
+### Configuring a new service
 
-In CloudShell, the component that models the device is called a resource. It is based on the shell that models the device and allows the CloudShell user and API to remotely control the device from CloudShell.
-
-You can also modify existing resources, see [Managing Resources in the Inventory](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/INVN/Mng-Rsrc-in-Invnt.htm?Highlight=managing%20resources).
-
-**To create a resource for the device:**
-  1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-     ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/create_a_resource_device.png)
+**To configure a service for the device:**
+  1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
+     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **[Shell Name]**.
+  2. In the **Traffic Generator Controller** folder, select **TestCenter Controller**.
   
-  3. Enter the **Name** and **IP address** of the **[Device Name]** (if applicable).
+  3. In the **Attributes** tab, enter the **Default Values** for the TestCenter Controller service as follows:
   
-  4. Click **Create**.
+    * Client Install Path - Path where IxChariot Python API library was downloaded to.
+    * Controller Address - IP address of the IxChariot Server.
+    * User - User name for the IxChariot Server.
+    * Password - Password for the IxChariot Server.
+    
+  4. Click **Save**.
   
-  5. In the **Resource** dialog box, enter the device's settings. For details, see [Device Name Attributes](#device-name-attributes). 
-  
-  6. Click **Continue**. <br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
