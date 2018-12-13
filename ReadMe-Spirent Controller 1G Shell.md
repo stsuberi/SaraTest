@@ -256,11 +256,13 @@ When you import a service shell, most shells are automatically assigned a defaul
    
 2. Add resources and services to the blueprint. 
 
+	* Click the **App/Services** tab and add the **TestCenter Controller** service.
+
    * Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, for a configuration with two ports:
    
    ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
    
-   * Click the **App/Services** tab and add the **TestCenter Controller** service.
+  
    
 3. Create a blueprint with two TestCenter ports:
 
