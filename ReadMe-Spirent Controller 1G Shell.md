@@ -248,13 +248,21 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 **Workflow 1** - *Using a Controller to run TestCenter traffic* 
 
-1. Log in to CloudShell Portal and create a blueprint.
+1. Create a new blueprint.
 
-2. Add to the blueprint a TestCenter Controller service and a TestCenter chassis resource ports. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration.
-     * For example, for a configuration with a two ports:
+   * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   
+   * Give the blueprint a name.
+   
+2. Add resources and services to the blueprint. 
 
-![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
-     * Create a blueprint with two TestCenter ports:
+   * Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, for a configuration with two ports:
+   
+   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
+   
+   * Click the **App/Services** tab and add the **TestCenter Controller** service.
+   
+3. Create a blueprint with two TestCenter ports:
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_blueprint_ports.png)
 
@@ -266,7 +274,7 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 See [Configuring a new service](#configuring-a-new-service).
 
-5. Map the configuration ports to the Sandbox ports.
+5. Map the configuration ports to the sandbox ports.
 For each port in the TestCenter configuration, assign physical port from the ports in the sandbox. Open the attributes tab and set the **Logical Name** to the port name in the configuration:
           
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_port_logical_name.png)  
