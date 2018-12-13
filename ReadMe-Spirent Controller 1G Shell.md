@@ -89,14 +89,14 @@ The following table describes the commands executed from the controller service:
 
 |Command|Description|
 |:-----|:-----|
-|Load configuration|Reserve ports and load configuration. STC config file name (String) (Mandatory) - full path to STC condiguration file name - tcc or xml|
+|Load configuration|Reserves ports and loads the configuration file. <br>Set the command input as follows:<br>▪ **STC config file name** (String) (Mandatory): Full path to the STC configuration file name - tcc or xml.|
 |Start ARP/ND|Send ARP/ND for all devices and streams.|
 |Start All Devices|Send all emulations on all devices.|
 |Stop All Devices|Stop all emulations on all devices|
-|Start Traffic|Send traffic on all ports. Blocking (Enum) - True: return after traffic finishes runningl False: return immediateley.|
-|Stop Traffic|Stop traffic on all ports.|
-|Get Statistics|Get view statistics. View Name (String) (Mandatory) - generatorPortResults, analyzerPortResults, etc.; Output Type (Enum) CSV or JSON. If CSV, the statistics will be attached to the reservation csv file.|
-|Perform sequencer command|Command (Enum) Start, Stop or Wait for Sequencer end (Blocking).|
+|Start Traffic|Send traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: True: Returns after traffic finishes running; False: Returns immediateley.|
+|Stop Traffic|Stops traffic on all ports.|
+|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
+|Perform sequencer command|Command (Enum) Starts, Stops or Waits for sequencer end (Blocking).|
 
 # Downloading the Shell
 The **Spirent TestCenter Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
