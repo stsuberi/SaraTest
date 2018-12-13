@@ -179,15 +179,14 @@ full path"/>`
   1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
          
   2. In the **Traffic Generator Controller** folder, select **TestCenter Controller**.
+  
    ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_controller.png)
   
   3. In the **Attributes** tab, enter the **Default Values** for the Spirent TestCenter Controller service as follows:
   * Controller Address: IP address of the STC REST server, either lab server or the machine running stcweb.
   * Controller TCP Port: TCP port of the STC REST server, either lab server or the machine running stcweb.
 	     
-  4. Click **Save**.
-  
-CloudShell validates the device’s settings and updates the new resource with the device’s structure.
+  4. Click **Save**.<br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
@@ -212,13 +211,7 @@ In order to expose a service to users of a domain that is not the Global domain,
 
 When you import a service shell, most shells are automatically assigned a default service category which is associated with the Global domain. For custom shells, this may not be true.
 
-## Associating a CloudShell Service to a Non-Global Domain
-
-In order to expose a service to users of a domain that is not the Global domain, you must associate the service to the domain. To do this, you need to associate the service to a category that is assigned to the domain.
-
-When you import a service shell, most shells are automatically assigned a default service category which is associated with the Global domain. For custom shells, this may not be true.
-
-**To associate the BreakingPoint Controller 1G service to a non-global domain:**
+**To associate the Spirent TestCenter Controller 1G service to a non-global domain:**
 
 **Note:** The association process differs depending on the type of shell - second generation (2G) shell or first generation (1G) shell. The instructions below detail the steps for a 1G service shell.
 
@@ -255,7 +248,9 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 **Workflow 1** - *Using a Controller to run TestCenter traffic* 
 
-1. Create a Blueprint with an TestCenter Controller service and TestCenter chassis resource ports. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration.
+1. Log in to CloudShell Portal and create a blueprint.
+
+2. Add to the blueprint a TestCenter Controller service and a TestCenter chassis resource ports. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration.
      * For example, for a configuration with a two ports:
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
@@ -263,14 +258,15 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_blueprint_ports.png)
 
-2. Create a Sandbox from the Blueprint.
-3. Edit the TestCenter Controller Service parameters if required.
+3. Reserve the blueprint to create a sandbox.
+
+4. Edit the TestCenter Controller Service parameters if required.
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_service_parameters.png)
 
 See [Configuring a new service](#configuring-a-new-service).
 
-4. Map the configuration ports to the Sandbox ports.
+5. Map the configuration ports to the Sandbox ports.
 For each port in the TestCenter configuration, assign physical port from the ports in the sandbox. Open the attributes tab and set the **Logical Name** to the port name in the configuration:
           
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_port_logical_name.png)  
