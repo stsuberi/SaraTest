@@ -23,21 +23,22 @@ Document version: A
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
+**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
+
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
 ### **Spirent TestCenter Controller 1G Shell**
-The **Spirent TestCenter Controller 1G Shell** provides you with connectivity and management capabilities such as device structure discovery and power management for the **[Device Name]**. 
 
-For more information on the **[Device Name]**, see the official **[Device Manufacturer]** product documentation.
+To model a Spirent TestCenter device in CloudShell, use the following shells:
 
-To model an **[Device Name]** device in CloudShell, use one of the following controllers, which provides automation commands to run on the chassis, such as Load Configuration, Start Traffic/Test, Get Statistics: 
+▪ <a href="**[https://community.quali.com/repos/4080/spirent-test-center-chassis-2-gen-shell**" target="_blank">**Spirent TestCenter Chassis 2G Shell**</a>, which provides data model and autoload functionality to model and load the Spirent TestCenter Chassis to resource management.
 
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+▪ <a href="**[https://community.quali.com/repos/1280/spirent-test-center-controller-shel]**" target="_blank">**Spirent TestCenter Controller 1G Shell (service)**</a>, which provides functionality to load test configuration, run tests, get test results, etc.
 
-▪ <a href="**[Controller Shell https from Quali's Community Integrations page]**" target="_blank">**[Controller Shell Name]**</a>
+For more information on the **Spirent TestCenter**, see the official device manufacturer product documentation.
 
 ### Standard version
 
