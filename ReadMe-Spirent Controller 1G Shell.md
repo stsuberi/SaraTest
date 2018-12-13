@@ -181,7 +181,7 @@ full path"/>`
 
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
-     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
+     ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_controller.png)
      
   2. In the **Traffic Generator Controller** folder, select **TestCenter Controller**.
   
@@ -264,22 +264,22 @@ When you import a service shell, most shells are automatically assigned a defaul
 1. Create a Blueprint with an TestCenter Controller service and TestCenter chassis resource ports. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration.
      * For example, for a configuration with a two ports:
 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_single_flow.png)
+![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
      * Create a blueprint with two TestCenter ports:
 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_blueprint_two_endpoints.png)
+![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_blueprint_ports.png)
 
 2. Create a Sandbox from the Blueprint.
 3. Edit the TestCenter Controller Service parameters if required.
 
-![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_parameters.png)
+![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_service_parameters.png)
 
 See [Configuring a new service](#configuring-a-new-service).
 
 4. Map the configuration ports to the Sandbox ports.
 For each port in the TestCenter configuration, assign physical port from the ports in the sandbox. Open the attributes tab and set the **Logical Name** to the port name in the configuration:
           
-![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_resource_attributes.png)  
+![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_port_logical_name.png)  
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
