@@ -176,13 +176,11 @@ full path"/>`
      
   2. In the **Traffic Generator Controller** folder, select **TestCenter Controller**.
   
-  3. In the **Attributes** tab, enter the **Default Values** for the TestCenter Controller service as follows:
+  3. In the **Attributes** tab, enter the **Default Values** for the Spirent TestCenter Controller service as follows:
   
-    * Client Install Path - Path where IxChariot Python API library was downloaded to.
-    * Controller Address - IP address of the IxChariot Server.
-    * User - User name for the IxChariot Server.
-    * Password - Password for the IxChariot Server.
-    
+    * Controller Address - The IP address of STC REST server – either lab server or machine running stcweb.
+    * Controller TCP Port - The TCP port of STC REST server – either lab server or machine running stcweb.
+        
   4. Click **Save**.
   
 CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
