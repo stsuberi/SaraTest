@@ -187,12 +187,13 @@ full path"/>`
   
   3. In the **Attributes** tab, enter the **Default Values** for the Spirent TestCenter Controller service as follows:
   
-    * Controller Address - The IP address of STC REST server – either lab server or machine running stcweb.
-    * Controller TCP Port - The TCP port of STC REST server – either lab server or machine running stcweb.
-        
+  ▪ **Controller Address** - IP address of STC REST server – either lab server or the machine running stcweb.
+  
+  ▪ **Controller TCP Port** - TCP port of STC REST server – either lab server or the machine running stcweb.
+       
   4. Click **Save**.
   
-CloudShell validates the device’s settings and updates the new resource with the device’s structure (if the device has a structure).
+CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
 # Updating Python Dependencies for Shells
 This section explains how to update your Python dependencies folder. This is required when you upgrade a shell that uses new/updated dependencies. It applies to both online and offline dependencies.
@@ -212,7 +213,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 * If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
 # Associating a CloudShell Service to a Non-Global Domain
-(if this is not a service shell - remove section)
 
 In order to expose a service to users of a domain that is not the Global domain, you must associate the service to the domain. To do this, you need to associate the service to a category that is assigned to the domain.
 
