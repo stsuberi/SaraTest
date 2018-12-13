@@ -187,9 +187,9 @@ full path"/>`
   
   3. In the **Attributes** tab, enter the **Default Values** for the Spirent TestCenter Controller service as follows:
   
-  	▪ **Controller Address** - IP address of STC REST server – either lab server or the machine running stcweb.
+*  **Controller Address** - IP address of STC REST server – either lab server or the machine running stcweb.
   
- 	▪ **Controller TCP Port** - TCP port of STC REST server – either lab server or the machine running stcweb.
+* **Controller TCP Port** - TCP port of STC REST server – either lab server or the machine running stcweb.
        
   4. Click **Save**.
   
