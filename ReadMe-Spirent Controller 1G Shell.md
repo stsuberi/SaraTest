@@ -85,6 +85,8 @@ This section describes the automation (driver) associated with the data model. T
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
+**What about including hidden developer commands?**
+
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
@@ -239,13 +241,28 @@ When you import a service shell, most shells are automatically assigned a defaul
 	5. Click **Save**.
 
 # Typical Workflows 
-(if not applicable - remove section)
 
-**Workflow 1** - *[Name of Scenario 1]* 
+**Workflow 1** - *Using a Controller to run TestCenter traffic* 
 
-**Workflow 2** - *[Name of Scenario 2]* 
+1. Create a Blueprint with an TestCenter Controller service and TestCenter chassis resource ports. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration.
+     * For example, for a configuration with a two ports:
 
-**Workflow 3** - *[Name of Scenario 3]* 
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_single_flow.png)
+     * Create a blueprint with two TestCenter ports:
+
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_blueprint_two_endpoints.png)
+
+2. Create a Sandbox from the Blueprint.
+3. Edit the TestCenter Controller Service parameters if required.
+
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_controller_parameters.png)
+
+See [Configuring a new service](#configuring-a-new-service).
+
+4. Map the configuration ports to the Sandbox ports.
+For each port in the TestCenter configuration, assign physical port from the ports in the sandbox. Open the attributes tab and set the **Logical Name** to the port name in the configuration:
+          
+![](https://github.com/stsuberi/SaraTest/blob/master/ixchariot_resource_attributes.png)  
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
@@ -265,5 +282,3 @@ To connect with Quali users and experts from around the world, ask questions and
 • Added Perform sequencer command.
 
 For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Spirent-TestCenterController-Shell/releases). 
-
-
