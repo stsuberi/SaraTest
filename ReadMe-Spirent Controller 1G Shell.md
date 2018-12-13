@@ -88,6 +88,14 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+|Load configuration|Reserve ports and load configuration. STC config file name (String) (Mandatory) - full path to STC condiguration file name - tcc or xml|
+|Start ARP/ND|Send ARP/ND for all devices and streams.|
+|Start All Devices|Send all emulations on all devices.|
+|Stop All Devices|Stop all emulations on all devices|
+|Start Traffic|Send traffic on all ports. Blocking (Enum) - True: return after traffic finishes runningl False: return immediateley.|
+|Stop Traffic|Stop traffic on all ports.|
+|Get Statistics|Get view statistics. View Name (String) (Mandatory) - generatorPortResults, analyzerPortResults, etc.; Output Type (Enum) CSV or JSON. If CSV, the statistics will be attached to the reservation csv file.|
+|Perform sequencer command|Command (Enum) Start, Stop or Wait for Sequencer end (Blocking).|
 
 # Downloading the Shell
 The **Spirent TestCenter Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -255,8 +263,3 @@ To connect with Quali users and experts from around the world, ask questions and
 [Note]: If previous releases exist, insert link to the release section of the shell GitHub repository to view changes made in each release. You should include a brief description of the fixes and enhancements made in this release.
 
 For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Ixia-IxNetworkController-Shell/releases). 
-
-### Known Issues
-* 
-* 
-* 
