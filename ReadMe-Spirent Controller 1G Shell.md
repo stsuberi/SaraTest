@@ -23,7 +23,7 @@ Document version: A
 # Overview
 A shell integrates a device model, application or other technology with CloudShell. A shell consists of a data model that defines how the device and its properties are modeled in CloudShell, along with automation that enables interaction with the device via CloudShell.
 
-**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/8.3/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
+**Note:** We recommend using a 2nd gen shell where possible. Using a 1st gen shell may limit some shell management capabilities. For more information, see [Shell Overview – “Our Shell”](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Shells.htm?Highlight=shell%20overview).
 
 ### Traffic Generator Shells
 CloudShell's traffic generator shells enable you to conduct traffic test activities on Devices Under Test (DUT) or Systems Under Test (SUT) from a sandbox. In CloudShell, a traffic generator is typically modeled using a chassis resource, which represents the traffic generator device and ports, and a controller service that runs the chassis commands, such as Load Configuration File, Start Traffic and Get Statistics. Chassis and controllers are modeled by different shells, allowing you to accurately model your real-life architecture. For example, scenarios where the chassis and controller are located on different machines.
@@ -45,7 +45,7 @@ For more information on the **Spirent TestCenter**, see the official device manu
 For detailed information about the shell’s structure and attributes, see the **Shells Standard: Traffic**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
 
 ### Supported OS
-▪ **Windows**
+▪ Windows
 
 ### Requirements
 
@@ -75,8 +75,6 @@ This section describes the automation (driver) associated with the data model. T
 
 For Traffic Generator shells, commands are configured and executed from the controller service in the sandbox, with the exception of the Autoload command, which is executed when creating the resource.
 
-**What about including hidden developer commands?**
-
 The following table describes the process that occurrs during Autoload for the controller shell:
 
 |Command|Description|
@@ -93,10 +91,10 @@ The following table describes the commands executed from the controller service:
 |Start ARP/ND|Send ARP/ND for all devices and streams.|
 |Start All Devices|Send all emulations on all devices.|
 |Stop All Devices|Stop all emulations on all devices.|
-|Start Traffic|Send traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: True: Returns after traffic finishes running; False: Returns immediateley.|
+|Start Traffic|Send traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: **True**: Returns after traffic finishes running; **False**: Returns immediateley.|
 |Stop Traffic|Stops traffic on all ports.|
-|Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
-|Perform sequencer command|Set the command's inputs as follows:<br>Command (Enum)<br> ▪ **Start**, **Stop** or **Wai**t for sequencer to end (Blocking).|
+|Get Statistics|Gets real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
+|Perform sequencer command|Set the command's inputs as follows:<br>**Command** (Enum)<br> ▪ **Start**, **Stop** or **Wai**t for sequencer to end (Blocking).|
 
 # Downloading the Shell
 The **Spirent TestCenter Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
@@ -126,9 +124,7 @@ This section describes how to import the **Spirent TestCenter Controller 1G Shel
   
      ![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/import_package.png)
      
-  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.
-  
-The Spirent TestCenter controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services). 
+  5. Browse to the location of the downloaded shell file, select the relevant *.zip* file and Click **Open**. Alternatively, drag the shell’s .zip file into CloudShell Portal.<br><br>The Spirent TestCenter controller shell is displayed in the **App/Service>Applications** section of your blueprint, and can be used to run custom code and automation processes in the sandbox. For more information, see [Services Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Services.htm?Highlight=services). 
 
 ### Offline installation of a shell
 
@@ -181,16 +177,14 @@ full path"/>`
 
 **To configure a service for the device:**
   1. In CloudShell Resource Manager, in the **Inventory** tab, click **Resource Families**. 
-     ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_controller.png)
-     
+         
   2. In the **Traffic Generator Controller** folder, select **TestCenter Controller**.
+   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_controller.png)
   
   3. In the **Attributes** tab, enter the **Default Values** for the Spirent TestCenter Controller service as follows:
-  
-*  **Controller Address** - IP address of STC REST server – either lab server or the machine running stcweb.
-  
-* **Controller TCP Port** - TCP port of STC REST server – either lab server or the machine running stcweb.
-       
+  * Controller Address: IP address of the STC REST server, either lab server or the machine running stcweb.
+  * Controller TCP Port: TCP port of the STC REST server, either lab server or the machine running stcweb.
+	     
   4. Click **Save**.
   
 CloudShell validates the device’s settings and updates the new resource with the device’s structure.
