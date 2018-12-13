@@ -291,7 +291,9 @@ To connect with Quali users and experts from around the world, ask questions and
 ### What's New
 
 • Added support for STC chassis 2nd gen shell.
+
 • Moved from TCL API to REST API.
+
 • Added Perform sequencer command.
 
 For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Spirent-TestCenterController-Shell/releases). 
