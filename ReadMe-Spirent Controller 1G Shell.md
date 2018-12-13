@@ -34,9 +34,9 @@ For additional information on traffic generator shell architecture, and setting 
 
 To model a Spirent TestCenter device in CloudShell, use the following shells:
 
-▪ <a href="**[https://community.quali.com/repos/4080/spirent-test-center-chassis-2-gen-shell**" target="_blank">**Spirent TestCenter Chassis 2G Shell**</a>, which provides data model and autoload functionality to model and load the Spirent TestCenter Chassis to resource management.
+▪ [Spirent TestCenter Chassis 2G Shell](https://community.quali.com/repos/4080/spirent-test-center-chassis-2-gen-shell), which provides data model and autoload functionality to model and load the Spirent TestCenter Chassis to resource management.
 
-▪ <a href="**[https://community.quali.com/repos/1280/spirent-test-center-controller-shel]**" target="_blank">**Spirent TestCenter Controller 1G Shell (service)**</a>, which provides functionality to load test configuration, run tests, get test results, etc.
+▪ [Spirent TestCenter Controller 1G Shell (service)](https://community.quali.com/repos/1280/spirent-test-center-controller-shell), which provides functionality to load test configuration, run tests, get test results, etc.
 
 For more information on the **Spirent TestCenter**, see the official device manufacturer product documentation.
 
