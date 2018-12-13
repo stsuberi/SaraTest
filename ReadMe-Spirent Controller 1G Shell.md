@@ -59,18 +59,7 @@ Release: **Spirent TestCenter Controller 1G Shell**
 
 The shell's data model includes all shell metadata, families, and attributes.
 
-#### **[Device Name] Families and Models**
-
-The chassis families and models are listed in the following table:
-
-|Family|Model|Description|
-|:---|:---|:---|
-||||
-||||
-||||
-||||
-
-#### **[Device Name] Attributes**
+#### **Spirent TestCenter Controller Attributes**
 
 The attribute names and types are listed in the following table:
 
@@ -88,9 +77,18 @@ For Traffic Generator shells, commands are configured and executed from the cont
 
 **What about including hidden developer commands?**
 
+The following table describes the process that occurrs during Autoload for the controller shell:
+
 |Command|Description|
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
+
+The following table describes the commands executed from the controller service:
+
+**Note**: For detailed information on running a traffic test in CloudShell, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generators%20overview).
+
+|Command|Description|
+|:-----|:-----|
 |Load configuration|Reserve ports and load configuration. STC config file name (String) (Mandatory) - full path to STC condiguration file name - tcc or xml|
 |Start ARP/ND|Send ARP/ND for all devices and streams.|
 |Start All Devices|Send all emulations on all devices.|
