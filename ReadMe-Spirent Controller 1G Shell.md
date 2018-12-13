@@ -96,7 +96,7 @@ The following table describes the commands executed from the controller service:
 |Start Traffic|Send traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: True: Returns after traffic finishes running; False: Returns immediateley.|
 |Stop Traffic|Stops traffic on all ports.|
 |Get Statistics|Get real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
-|Perform sequencer command|Command (Enum).<br>Set the command's inputs as follows: ▪ **Start**, **Stop** or **Wai**t for sequencer to end (Blocking).|
+|Perform sequencer command|Set the command's inputs as follows:<br>Command (Enum)<br> ▪ **Start**, **Stop** or **Wai**t for sequencer to end (Blocking).|
 
 # Downloading the Shell
 The **Spirent TestCenter Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
