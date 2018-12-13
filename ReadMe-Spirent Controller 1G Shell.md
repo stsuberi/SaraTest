@@ -51,7 +51,7 @@ For detailed information about the shell’s structure and attributes, see the *
 
 Release: **Spirent TestCenter Controller 1G Shell**
 
-▪ CloudShell version: **7.1 and above**
+▪ CloudShell version: 7.1 and above
 
 ▪ TestCenter Rest Server: Lab Server or STC web services
 
