@@ -218,17 +218,35 @@ In order to expose a service to users of a domain that is not the Global domain,
 
 When you import a service shell, most shells are automatically assigned a default service category which is associated with the Global domain. For custom shells, this may not be true.
 
-**To associate the [Device Name] 2G service to a domain:**
+## Associating a CloudShell Service to a Non-Global Domain
 
-**Note:** The association process differs depending on the type of shell - second generation (2G) shell or first generation (1G) shell. The instructions below detail the steps for a 2G service shell.
+In order to expose a service to users of a domain that is not the Global domain, you must associate the service to the domain. To do this, you need to associate the service to a category that is assigned to the domain.
 
-1. (Optional) To associate the service to a new service category(s): 
+When you import a service shell, most shells are automatically assigned a default service category which is associated with the Global domain. For custom shells, this may not be true.
 
-	**Note:** If you do not want to add a new category(s) to this shell, you can use the default category that comes out-of-the-box (if it exists).
+**To associate the BreakingPoint Controller 1G service to a non-global domain:**
+
+**Note:** The association process differs depending on the type of shell - second generation (2G) shell or first generation (1G) shell. The instructions below detail the steps for a 1G service shell.
+
+1. (Optional) You can associate the service to a service category that already exists in CloudShell or associate the service to a new category.
+
+	**Note:** If you do not want to change the category(s) of this shell, you can use the default category that comes out-of-the-box (if it exists).
+	 
+	* Associate the service family to an existing category(s).
 	
-	• Modify the *shelldefinition.yaml* file to add a service category(s) to the shell. See the CloudShell Developer Guide’s [Associating categories to a service shell](https://devguide.quali.com/shells/9.0.0/customizing-shells.html#associating-categories-to-a-service-shell) article. Note that when importing the shell into CloudShell, the new categories will be linked automatically with the Global domain.
+		1. In Resource Manager Client, open the **Resource Families** explorer and click the relevant service family.
 	
-2. Associate the shell’s service category (either the out-of-the-box category or the new category you created in step 1) to a non-Global domain.
+		2. From the right pane, open the **Categories** tab.
+	
+		3. Click **Add**. The **Select Category** dialog box is displayed. 
+	
+		4. Select a category from the catalog and click **OK**.
+	
+	or
+
+	* Modify the 1G category(s) in the shell project’s configuration files to add a new category(s). See [Associating categories to 1st Gen Service Shells](https://devguide.quali.com/reference/9.0.0/associating-service-categories.html).
+
+2. Associate the shell’s service category to a domain.
 	1. In the **Manage** dashboard, click **Categories** from the left sidebar, or **Domains** if you are a domain admin.
 	
 	2. Select **Services Categories**.
