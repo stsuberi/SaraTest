@@ -1,4 +1,4 @@
-![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
+![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
 # **SDN OpenDaylight 2G Shell**  
 
