@@ -114,7 +114,7 @@ This section describes how to import the **VyOS Deployment App 2G** shell and co
   
   4. In the dialog box, navigate to the shell's zip package, select it and click **Open**.
 
-The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new Deployed App templates, as explained in [Adding App templates](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Apps.htm?Highlight=deployed%20app%20templates#Adding). 
+The shell is displayed in the **Shells** page and can be used by domain administrators in all CloudShell domains to create new Deployed Apps, as explained in [Add Apps](https://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Sndbx-Use-Apps.htm#Adding). 
 
 ### Offline installation of a shell
 
