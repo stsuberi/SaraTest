@@ -113,6 +113,6 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
 
    To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
    
-```autodiscovery echo-input-template --save-to-file <input filename>.[yml|json]```
+   ```autodiscovery echo-input-template --save-to-file <input filename>.[yml|json]```
 
 3. 
