@@ -121,7 +121,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
    |Field|Description|
    |:---|:---|
-   |IP of devices to discover|**devices-ips:** Add a single device ip or a range of device ips and the domain in which to create them.<br> •	**range:** If you want to add a string of devices, it must follow this format: xxx.xxx.xx.100-110. You can have a range within the IP address in any segment of the address, for example xxx.xxx.9.1-10.xxx.•	**domain:** Specify the CloudShell domain. If you want the devices to be created in the Global domain (default), omit this line.|
+   |IP of devices to discover|**devices-ips:** Add a single device ip or a range of device ips and the domain in which to create them.<br> •	**range:** If you want to add a string of devices, it must follow this format: xxx.xxx.xx.100-110. You can have a range within the IP address in any segment of the address, for example xxx.xxx.9.1-10.xxx.<br>•	**domain:** Specify the CloudShell domain. If you want the devices to be created in the Global domain (default), omit this line.|
    |IP and credentials for the CloudShell API||
    |Possible SNMP community strings|
    |Additional settings per Vendor|
