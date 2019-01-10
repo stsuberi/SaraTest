@@ -73,3 +73,7 @@ To use the tool, navigate to this folder in command-line, unless you have set th
 You can perform these procedures in either offline or online mode. In online mode, you generate the autodiscovered device configurations and create them as is, while in offline mode, you can optionally modify the autodiscovered device configurations before creating and discovering them into CloudShell. 
 
 **Help Commands
+
+To list the commands available in this tool, run the following command-line: 
+
+```autodiscovery --help```
