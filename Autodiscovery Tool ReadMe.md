@@ -11,7 +11,7 @@ Document version: 1.0
     * [Installation Prerequisites](#installation-prerequisites)
     * [Workflow](#workflow)
     * [Installing the Autodiscovery tool](#installing-the-autodiscovery-tool)
-
+* [Using the Autodiscovery Tool](#using-the-autodiscovery-tool)
 
 # Introduction
 The Autodiscovery tool enables CloudShell admins to discover a large number of devices at once “into” CloudShell, instead of having to manually create them one by one in CloudShell Portal. 
@@ -61,3 +61,6 @@ There are two ways to install the Autodiscovery tool:
       
       git clone https://github.com/QualiSystems/cloudshell-autodiscovery.git
       
+# Using the Autodiscovery Tool
+The tool is installed in the machine’s default Python27 folder. For example: *c:\Python27\Scripts folder*. 
+
