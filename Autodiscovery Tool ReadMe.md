@@ -58,6 +58,6 @@ There are two ways to install the Autodiscovery tool:
    ```
    If git is not installed, replace the first line with the following: 
    
-      ```
+      
       git clone https://github.com/QualiSystems/cloudshell-autodiscovery.git
-      ```
+      
