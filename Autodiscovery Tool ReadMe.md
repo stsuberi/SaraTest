@@ -167,3 +167,39 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
 
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
     
+   **To edit device details before discovery:**
+   
+   1. To generate an Excel report, run the following command-line from the folder containing the input file:
+   
+   autodiscovery run --input-file input.yml --report-file <report filename> --offline
+   
+    - By default the report file is saved to the current user’s C: drive folder. However, you can choose to save the file in a different existing folder, for example: 
+    
+    autodiscovery run --input-file input.yml --report-file C:\Users\Administrator\temp\<report filename> --offline
+    
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
+   
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To generate the report in console format instead of .xlsx (default), add the following tag:
+ 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--report-type console
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate a log file, add the following tag:
+   
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --log-file <log filename>
+
+  2. Update the report file as appropriate.
+  
+  3. To discover the devices into CloudShell from the report, run the following command-line:
+  
+  autodiscovery run-from-report --input-file input.yml --report-file <report filename>.xlsx
+   
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
+   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
+    
+    To generate a log file, add the following tag: 
+   -- log-file <log filename>
+
+    
+   
+   
