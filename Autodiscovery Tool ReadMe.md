@@ -64,3 +64,4 @@ There are two ways to install the Autodiscovery tool:
 # Using the Autodiscovery Tool
 The tool is installed in the machine’s default Python27 folder. For example: *c:\Python27\Scripts folder*. 
 
+ ![](https://github.com/stsuberi/SaraTest/blob/master/autodiscovery-install-files.png)
