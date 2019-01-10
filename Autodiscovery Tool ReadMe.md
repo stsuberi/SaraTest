@@ -56,8 +56,8 @@ There are two ways to install the Autodiscovery tool:
    
    python setup.py install
    ```
-If git is not installed, replace the first line with the following: 
-
-   ```
-   git clone https://github.com/QualiSystems/cloudshell-autodiscovery.git
-   ```
+   If git is not installed, replace the first line with the following: 
+   
+      ```
+      git clone https://github.com/QualiSystems/cloudshell-autodiscovery.git
+      ```
