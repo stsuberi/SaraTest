@@ -13,6 +13,8 @@ Document version: 1.0
     * [Installing the Autodiscovery tool](#installing-the-autodiscovery-tool)
 * [Using the Autodiscovery Tool](#using-the-autodiscovery-tool)
     * [Help Commands](#help-commands)
+* [Autodiscover devices in CloudShell](#autodiscover-devices-in-cloudshell)
+    * [Autodiscovering devices modeled in CloudShell](#autodiscovering-devices-modeled-in-cloudshell)
 
 # Introduction
 The Autodiscovery tool enables CloudShell admins to discover a large number of devices at once “into” CloudShell, instead of having to manually create them one by one in CloudShell Portal. 
@@ -77,3 +79,40 @@ You can perform these procedures in either offline or online mode. In online mod
 To list the commands available in this tool, run the following command-line: 
 
 ```autodiscovery --help```
+
+To learn what version of the Autodiscovery tool you are using, run the following command-line: 
+
+```autodiscovery version --help```
+
+To view specific options associated with any autodiscovery command, type the command and add --help. For example:
+
+```autodiscovery <echo-input-template> --help```
+
+# Autodiscover devices in CloudShell
+
+This chapter explains how to discover devices in CloudShell using the Autodiscovery tool. The tool supports devices that are modeled by Quali-published shells and devices for which you have a new or extended shell. 
+
+   * [Autodiscovering devices modeled in CloudShell](#autodiscovering-devices-modeled-in-cloudShell)
+   * [Autodiscovering devices not modeled in CloudShell](#autodiscovering-devices-not-modeled-in-cloudShell)
+   
+## Autodiscovering devices modeled in CloudShell  
+
+**To autodiscover devices modeled in CloudShell:**
+
+1. Open command line and navigate to the autodiscovery tool’s installation folder. 
+
+2. To generate the input file, run the following command-line.
+
+```autodiscovery echo-input-template --save-to-file input.yml```
+
+   To generate the file in json format, change “yml” to “json”.
+   
+   The *input* file is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+   
+   For reference, see sample input files: Input file in YAML format or Input file in JSON format.
+
+   To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
+   
+```autodiscovery echo-input-template --save-to-file <input filename>.[yml|json]```
+
+3. 
