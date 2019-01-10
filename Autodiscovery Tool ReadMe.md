@@ -125,3 +125,44 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    |IP and credentials for the CloudShell API|**cloudshell:**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•**ip:** Address of the CloudShell API<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•**user:** Admin user on CloudShell<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•**password:** Admin user's password|
    |Possible SNMP community strings|**community-strings:** Add possible SNMP read community strings for the devices, such as public, public2 etc.|
    |Additional settings per Vendor|**vendor-settings:** <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•**Default:**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- **cli-credentials**: (mandatory) Add default values to be used if all devices have the same CLI credentials, including user, password, enable password etc.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- **folder-path:** Add the folder path as it appears in CloudShell Resource Manager Client.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•**Cisco/Juniper:** (vendor specific information) Add other device credentials as required for specific vendors.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- **cli-credentials:** Add user and password<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- **folder-path:** Add the folder path as it appears in CloudShell Resource Manager Client.|
+   
+   2. Save your changes. Make sure you do not save the file to a different folder.
+   
+4. At this point, you can choose to immediately discover the devices as resources into CloudShell or make modifications to the device settings before discovering them. Perform the appropriate procedure:
+
+   **To immediately discover the devices in CloudShell:**
+   
+   * Run the following command-line from the folder containing the input file:
+   
+         ```autodiscovery run --input-file input.yml```
+         
+   **If you changed the file name, make sure you replace “input.yml” with the new name.**
+
+   The devices are discovered in CloudShell. A *discovery_report.xlsx* file is produced in the input file’s containing folder, providing the following information about the discovered devices:
+   
+   |Field|Description|
+   |:---|:---|
+   |IP|Device IP|
+   |Vendor|Device vendor, for example: Cisco|
+   |sysObjectID|OID unique name for each device|
+   |Description|Device description|
+   |SNMP Read Community|SNMP Read Community string, for example: Public|
+   |Model Type|Device model type, for example: router, switch, etc.|
+   |Device Name|Resource’s display name in CloudShell| 
+   |Domain|**Global** (default) or other domain assigned in the input file in CloudShell|
+   |Folder|Containing folder of the resource, as displayed in CloudShell Portal’s **Inventory** dashboard and the Resource catalog in the blueprint and sandbox diagrams.|
+   |Attributes|Resource attributes, for example: Enable SNMP=False, SNMP Read Community=Public. User can add any attribute defined in the shell model. 
+   |Added to CloudShell|Indicates the devices that were added to CloudShell as resources. Possible values are: Skipped, Failed, and Success.|
+   |Comment|Any issues related to the processing of a specific device|
+   
+   * **Notes:**
+   
+   To generate a log file, add the following tag:
+ 
+   --log-file <log filename>
+
+   To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag. 
+   --no-autoload
+
+   After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
+    
