@@ -136,9 +136,9 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
          autodiscovery run --input-file input.yml
          
-   **If you changed the file name, make sure you replace “input.yml” with the new name.**
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**If you changed the file name, make sure you replace “input.yml” with the new name.**
 
-   The devices are discovered in CloudShell. A *discovery_report.xlsx* file is produced in the input file’s containing folder, providing the following information about the discovered devices:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The devices are discovered in CloudShell. A *discovery_report.xlsx* file is produced in the input file’s containing folder, providing the following information about the discovered devices:
    
    |Field|Description|
    |:---|:---|
@@ -155,14 +155,15 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    |Added to CloudShell|Indicates the devices that were added to CloudShell as resources. Possible values are: Skipped, Failed, and Success.|
    |Comment|Any issues related to the processing of a specific device|
    
-   * **Notes:**
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* **Notes:**
    
-   To generate a log file, add the following tag:
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To generate a log file, add the following tag:
  
-   --log-file <log filename>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-file <log filename>
 
-   To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag. 
-   --no-autoload
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag. 
+   
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --no-autoload
 
-   After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
     
