@@ -12,6 +12,7 @@ Document version: 1.0
     * [Workflow](#workflow)
     * [Installing the Autodiscovery tool](#installing-the-autodiscovery-tool)
 * [Using the Autodiscovery Tool](#using-the-autodiscovery-tool)
+    * [Help Commands](#help-commands)
 
 # Introduction
 The Autodiscovery tool enables CloudShell admins to discover a large number of devices at once “into” CloudShell, instead of having to manually create them one by one in CloudShell Portal. 
@@ -57,8 +58,7 @@ There are two ways to install the Autodiscovery tool:
    python setup.py install
    ```
    If git is not installed, replace the first line with the following: 
-   
-      
+         
       git clone https://github.com/QualiSystems/cloudshell-autodiscovery.git
       
 # Using the Autodiscovery Tool
@@ -71,3 +71,5 @@ To use the tool, navigate to this folder in command-line, unless you have set th
 * **Note:** It is recommended to add the python and pip installation folder paths to your local environment variables. For example, C:\Python27 and C:\Python27\Scripts. This will enable you to run the python/pip commands from any folder.
 
 You can perform these procedures in either offline or online mode. In online mode, you generate the autodiscovered device configurations and create them as is, while in offline mode, you can optionally modify the autodiscovered device configurations before creating and discovering them into CloudShell. 
+
+**Help Commands
