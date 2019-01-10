@@ -155,7 +155,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    |Added to CloudShell|Indicates the devices that were added to CloudShell as resources. Possible values are: Skipped, Failed, and Success.|
    |Comment|Any issues related to the processing of a specific device|
    
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* **Notes:**
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
    
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To generate a log file, add the following tag:
  
