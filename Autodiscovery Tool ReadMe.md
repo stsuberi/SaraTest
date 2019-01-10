@@ -103,7 +103,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
 
 2. To generate the input file, run the following command-line.
 
-```autodiscovery echo-input-template --save-to-file input.yml```
+   ```autodiscovery echo-input-template --save-to-file input.yml```
 
    To generate the file in json format, change “yml” to “json”.
    
