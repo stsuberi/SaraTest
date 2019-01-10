@@ -9,6 +9,8 @@ Document version: 1.0
 * [Introduction](#introduction)
 * [Installation](#installation)
     * [Installation Prerequisites](#installation-prerequisites)
+    * [Workflow](#workflow)
+    * [Installing the Autodiscovery tool](#installing-the-autodiscovery-tool)
 
 
 # Introduction
@@ -36,3 +38,9 @@ The tool supports devices that are modeled in CloudShell, but can also be custom
 4.	Import the shells into CloudShell - see [Importing Shells](https://help.quali.com/Online%20Help/9.1/Portal/Content/CSP/MNG/Mng-Shells.htm#Adding) in the CloudShell online help.
 5.	Run the Autodiscovery tool. When the process completes, the discovered device resources are included in the Inventory dashboard in CloudShell Portal. 
 
+## Installing the Autodiscovery tool
+
+There are two ways to install the Autodiscovery tool:
+* Install via pip (public PyPi repository): 
+___
+pip install cloudshell-autodiscovery
