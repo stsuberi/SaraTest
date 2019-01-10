@@ -48,6 +48,6 @@ There are two ways to install the Autodiscovery tool:
 * Install from the tool’s GitHub repository source:  
 
    ```git clone git@github.com:QualiSystems/cloudshell-autodiscovery.git 
-cd cloudshell-autodiscovery 
-pip install -r requirements.txt 
-python setup.py install```
+   cd cloudshell-autodiscovery 
+   pip install -r requirements.txt 
+   python setup.py install```
