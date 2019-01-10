@@ -8,7 +8,7 @@ Document version: 1.0
 
 * [Introduction](#introduction)
 * [Installation](#installation)
-*   [Installation Prerequisites](#installation-prerequisites)
+* 
 
 
 # Introduction
@@ -20,11 +20,12 @@ The tool supports devices that are modeled in CloudShell, but can also be custom
 
 # Installation
 ## Installation Prerequisites
-•	Windows, Linux, or Mac OS versions that support Python v2
-•	Network access to the devices you want to discover
-•	SNMP enabled on all devices
-•	CloudShell version 8.0 and above
-•	Python 2.7.x
-  **Important:** If you have another version of Python installed on the autodiscovery machine, this may cause unexpected behavior.
-•	pip
+*	Windows, Linux, or Mac OS versions that support Python v2
+*	Network access to the devices you want to discover
+*	SNMP enabled on all devices
+*	CloudShell version 8.0 and above
+*	Python 2.7.x
+
+    **Important:** If you have another version of Python installed on the autodiscovery machine, this may cause unexpected behavior.
+*	pip
 
