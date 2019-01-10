@@ -43,4 +43,4 @@ The tool supports devices that are modeled in CloudShell, but can also be custom
 There are two ways to install the Autodiscovery tool:
 * Install via pip (public PyPi repository): 
 
-```pip install cloudshell-autodiscovery```
+   ```pip install cloudshell-autodiscovery```
