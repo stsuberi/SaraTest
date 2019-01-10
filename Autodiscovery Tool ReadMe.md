@@ -8,7 +8,7 @@ Document version: 1.0
 
 * [Introduction](#introduction)
 * [Installation](#installation)
-    * [Installation Prerequisites](#installation-prerequisites)
+    - [Installation Prerequisites](#installation-prerequisites)
 
 
 # Introduction
