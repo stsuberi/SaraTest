@@ -253,21 +253,21 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 3.	Create and update the extended vendors configuration file. 
 
-   i.	Run the following command-line: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.	Run the following command-line: 
    
 ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
 
-The *extended_vendors.json* file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The *extended_vendors.json* file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
 
-For reference, see a sample input file: [Additional vendors configuration in JSON format](#additonal-vendors-configuration-in-json-format).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see a sample input file: [Additional vendors configuration in JSON format](#additonal-vendors-configuration-in-json-format).
 
-This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well.
 
-To change the name of the file from the default *extended_vendors.json*, replace the <extended_vendors filename> in the command-line below:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To change the name of the file from the default *extended_vendors.json*, replace the <extended_vendors filename> in the command-line below:
 
 ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
 
-   ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration (JSON) editable parameters table for details](#additional-vendors-configuration(json)-editable-parameters-table-for-details).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration (JSON) editable parameters table for details](#additional-vendors-configuration(json)-editable-parameters-table-for-details).
    
 4.	Generate the *discovery_report.xlsx* Excel file that combines the information from the input file with the information in the additional vendors configuration file - *extended_vendors.json*. This file is used to discover the devices in CloudShell.
 
