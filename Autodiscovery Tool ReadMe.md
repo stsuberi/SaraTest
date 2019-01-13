@@ -208,7 +208,6 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
     
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --log-file <log filename>
 
-    
 ## Autodiscovering devices not modeled in CloudShell 
 
 When autodiscovering unmodeled devices, you must ensure that:
