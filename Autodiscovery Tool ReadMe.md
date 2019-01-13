@@ -378,3 +378,236 @@ CloudShell discovers the devices and generates a *discovery_report.xlsx* file co
 |enable_prompt|Regexp string for the enable prompt|
 |operation_systems|•	name: Name of the operating system<br>• aliases: Regex string which is an alias for the OS name. You can include a single alias or a list of aliases.<br>• default_model: Model type of the device (switch, router, etc.)<br>• models_map: Add the aliases that will be used to refer to “switch” or “router”. If Autodiscovery cannot identify the model, the tool will use the default.<br>• families: Resource family names for the device on CloudShell.<br>o	Switch<br>	first_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>	second_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>o	router<br>	first_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>	second_gen<br>•	family_name<br>•	model_name<br>•	driver_name|
 
+# Create connections on discovered devices
+
+This section describes how to connect the discovered resources to your physical network. 
+
+In order to model the device connections on your switches in CloudShell, you need to connect the ports on the resources to the appropriate ports on the switch resources. 
+
+This is a three-step process. First, you must generate a “device connections” Excel file, then edit the file with the required connections, and finally run it using the Autodiscovery tool.
+
+**To connect resource ports to switch ports:**
+
+1.	Create the resource connections Excel file. 
+
+   i.	In the following command-line, replace <connections filename> with a name for the file and run this command-line:
+   
+```autodiscovery echo-excel-connections-report-template --save-to-file <connections filename>```
+
+An Excel file *<connections filename>.xlsx* is generated in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+   
+   ii.	Specify the physical port connections between the devices. 
+   
+   **Note:** For sub-resources, you must include the full address of each port in CloudShell.
+   
+|Field|Description|
+|:---|:---|
+|Source Port Full Name|Full path to the resource’s port on CloudShell.<br>For example:  DUT 1/Chassis 1/Module 1/Port 1| 
+|Target Port Full Name	Full path to the resource’s port on CloudShell.<br>For example: Switch 2/Chassis 1/Module 1/Port 1|
+|Domain|CloudShell domain of the resources|
+|Connection Status|Read-only field indicating the status after running the **connect-ports** command.<br>•	**Success** - Ports were successfully connected<br>•	**Failed** - Ports were not successfully connected|
+|Comment	Read-only field indicating any additional information/error messages returned in case of a connection failure.|
+
+   iii.	Save your changes. Do not change the file name.
+   
+2.	To apply the resource connections, run the following command-line from the folder containing the input file and the *extended_vendors.json* file: 
+
+```autodiscovery connect-ports --<input filename>.[yml|json] --connections-report-file <connections filename>```
+
+**Note:** To generate a log file, add the following tag: 
+
+--log-file <log filename>
+   
+# Input Data Files
+
+This section provides the files you will receive when you run the command to produce the input file in YAML and JSON format as well as the additional vendors configuration file in JSON format. 
+
+•	[Input file in YAML format](#input-file-in-yaml-format)
+•	[Input file in JSON format](#input-file-in-json-format)
+•	[Additional vendors configuration file in JSON format](#additonal-vendors-configuration-file-in-json-format)
+
+## Input file in YAML format
+
+```
+# IP of devices to discover (could be a range or single one)
+devices-ips:
+    -   range: 192.168.10.3-45
+        domain: Some Domain
+    -   range: 192.168.8.1-9.10
+        domain: Some other Domain
+    -   192.168.42.235
+
+# IP and credentials for the CloudShell API
+cloudshell:
+    ip: 192.168.85.9
+    user: admin
+    password: admin
+
+# Possible SNMP community strings
+community-strings:
+    -   public
+    -   public2
+
+# Additional settings per Vendor (Possible CLI credentials (user/password), resource folder)
+vendor-settings:
+    default:
+        cli-credentials:
+            -   user: root
+                password: Password1
+                enable password: Password2we
+            -   user: root1
+                password: Password2
+        folder-path: autodiscovery
+    Cisco:
+        cli-credentials:
+            -   user: cisco
+                password: Password1
+            -   user: cisco2
+                password: Password2
+        folder-path: cisco
+    Juniper:
+        cli-credentials:
+            -   user: juniper
+                password: Password1
+            -   user: juniper2
+                password: Password2
+                enable_password: Password2
+```
+
+## Input file in JSON format
+
+```
+{
+    "cloudshell": {
+        "ip": "192.168.85.9", 
+        "password": "admin", 
+        "user": "admin"
+    }, 
+    "community-strings": [
+        "public", 
+        "public2"
+    ], 
+    "devices-ips": [
+        {
+            "domain": "Some Domain", 
+            "range": "192.168.10.3-45"
+        }, 
+        {
+            "domain": "Some other Domain", 
+            "range": "192.168.8.1-9.10"
+        }, 
+        "192.168.42.235"
+    ], 
+    "vendor-settings": {
+        "Cisco": {
+            "cli-credentials": [
+                {
+                    "password": "Password1", 
+                    "user": "cisco"
+                }, 
+                {
+                    "password": "Password2", 
+                    "user": "cisco2"
+                }
+            ], 
+            "folder-path": "cisco"
+        }, 
+        "Juniper": {
+            "cli-credentials": [
+                {
+                    "password": "Password1", 
+                    "user": "juniper"
+                }, 
+                {
+                    "enable_password": "Password2", 
+                    "password": "Password2", 
+                    "user": "juniper2"
+                }
+            ]
+        }, 
+        "default": {
+            "cli-credentials": [
+                {
+                    "enable password": "Password2we", 
+                    "password": "Password1", 
+                    "user": "root"
+                }, 
+                {
+                    "password": "Password2", 
+                    "user": "root1"
+                }
+            ], 
+            "folder-path": "autodiscovery"
+        }
+    }
+}
+```
+
+## Additional vendors configuration file in JSON format
+
+```
+[
+   {
+      "name": "Cisco",
+      "aliases": [
+         "[Cc]iscoSystems"
+      ],
+      "type": "networking",
+      "default_os": "IOS",
+      "default_prompt": ">\\s*$",
+      "enable_prompt": "(?:(?!\\)).)#\\s*$",
+      "operation_systems": [
+         {
+            "name": "IOS",
+            "aliases": [
+               "CAT[ -]?OS",
+               "IOS[ -]?X?[E]?"
+            ],
+            "default_model": "switch",
+            "models_map": [
+               {
+                  "model": "switch",
+                  "aliases": [
+                     "[Cc]atalyst",
+                     "C2950"
+                  ]
+               },
+               {
+                  "model": "router",
+                  "aliases": [
+                     "IOS[ -]?X?[E]?"
+                  ]
+               }
+            ],
+            "families": {
+               "switch": {
+                  "first_gen": {
+                     "family_name": "Switch",
+                     "model_name": "Cisco IOS Switch",
+                     "driver_name": "Generic Cisco IOS Driver Version3"
+                  },
+                  "second_gen": {
+                     "family_name": "CS_Switch",
+                     "model_name": "Cisco IOS Switch 2G",
+                     "driver_name": "Cisco IOS Switch 2G"
+                  }
+               },
+               "router": {
+                  "first_gen": {
+                     "family_name": "Router",
+                     "model_name": "Cisco IOS Router",
+                     "driver_name": "Generic Cisco IOS Driver Version3"
+                  },
+                  "second_gen": {
+                     "family_name": "CS_Router",
+                     "model_name": "Cisco IOS Router 2G",
+                     "driver_name": "Cisco IOS Router 2G"
+                  }
+               }
+            }
+         }
+      ]
+   }
+]
+```
+
