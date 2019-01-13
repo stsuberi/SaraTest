@@ -266,7 +266,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration (JSON) editable parameters](#additional-vendors-configuration(json)-editable-parameters) table for details.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration (JSON) editable parameters](#additional-vendors-configuration (json)-editable-parameters) table for details.
    
 4.	Generate the *discovery_report.xlsx* Excel file that combines the information from the input file with the information in the additional vendors configuration file - *extended_vendors.json*. This file is used to discover the devices in CloudShell.
 
@@ -274,20 +274,21 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
    
 ```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
 
-**If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
 
- - You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
  
-A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
 
-**Notes:** 
-To generate the report in console format instead of .xlsx (default), add the following tag:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:** 
 
---report-type console
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate the report in console format instead of .xlsx (default), add the following tag:
 
-To generate a log file, add the following tag: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--report-type console
 
---log-file <log filename>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate a log file, add the following tag: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-file <log filename>
    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Review the *discovery_report.xlsx* file and update the configurations accordingly. 
    
@@ -297,7 +298,7 @@ To generate a log file, add the following tag:
    
 ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
 
- - You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:** To generate a log file, add the following tag: 
 
