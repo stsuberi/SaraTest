@@ -194,7 +194,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
 
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate a log file, add the following tag:
    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --log-file <log filename>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `--log-file <log filename>`
 
   2. Update the report file as appropriate.
   
