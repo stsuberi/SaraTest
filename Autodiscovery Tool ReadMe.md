@@ -242,7 +242,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The *input file* is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json=format).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
 
