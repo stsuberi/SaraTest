@@ -300,7 +300,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
  
-   **Note:** To generate a log file, add the following tag: 
+    **Note:** To generate a log file, add the following tag: 
 
     ```--log-file <log filename>```
 
@@ -328,7 +328,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 
 3.	Generate the vendor configurations data file. 
 
-   i.	Run the following command-line: 
+    i.	Run the following command-line: 
    
    ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
 
@@ -340,11 +340,11 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 
    For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
 
-   ii.	Edit the generated *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
+    ii.	Edit the generated *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
    
 4.	Generate the input file that combines the information from the *input* file with the information in the additional vendors configuration file (*extended_vendors.json*).
 
-   i.	Run the following command-line: 
+    i.	Run the following command-line: 
    
    ```autodiscovery run --input-file input.yml --config-file extended_vendors.json```
 
@@ -392,13 +392,13 @@ This is a three-step process. First, you must generate a “device connections�
 
 1.	Create the resource connections Excel file. 
 
-   i.	In the following command-line, replace <connections filename> with a name for the file and run this command-line:
+    i.	In the following command-line, replace <connections filename> with a name for the file and run this command-line:
    
    ```autodiscovery echo-excel-connections-report-template --save-to-file <connections filename>```
 
    An Excel file *<connections filename>.xlsx* is generated in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
    
-   ii.	Specify the physical port connections between the devices. 
+    ii.	Specify the physical port connections between the devices. 
    
    **Note:** For sub-resources, you must include the full address of each port in CloudShell.
    
@@ -410,7 +410,7 @@ This is a three-step process. First, you must generate a “device connections�
 |Connection Status|Read-only field indicating the status after running the **connect-ports** command.<br>•	**Success** - Ports were successfully connected<br>•	**Failed** - Ports were not successfully connected|
 |Comment|Read-only field indicating any additional information/error messages returned in case of a connection failure.|
 
-   iii.	Save your changes. Do not change the file name.
+    iii.	Save your changes. Do not change the file name.
    
 2.	To apply the resource connections, run the following command-line from the folder containing the input file and the *extended_vendors.json* file: 
 
