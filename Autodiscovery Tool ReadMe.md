@@ -164,17 +164,17 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    |Added to CloudShell|Indicates the devices that were added to CloudShell as resources. Possible values are: Skipped, Failed, and Success.|
    |Comment|Any issues related to the processing of a specific device|
    
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
+    **Notes:**
    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To generate a log file, add the following tag:
+    To generate a log file, add the following tag:
  
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-file <log filename>
+       ```--log-file <log filename>```
 
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
+   To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --no-autoload
+   ```--no-autoload```
 
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
+   After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
     
    **To edit device details before discovery:**
    
@@ -182,19 +182,19 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
       ```autodiscovery run --input-file input.yml --report-file <report filename> --offline```
    
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - By default the report file is saved to the current user’s *C: drive* folder. However, you can choose to save the file in a different existing folder, for example: 
+   - By default the report file is saved to the current user’s *C: drive* folder. However, you can choose to save the file in a different existing folder, for example: 
     
   ```autodiscovery run --input-file input.yml --report-file C:\Users\Administrator\temp\<report filename> --offline```
     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
+     **Notes:**
    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To generate the report in console format instead of .xlsx (default), add the following tag:
+     To generate the report in console format instead of .xlsx (default), add the following tag:
  
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--report-type console
+      --report-type console
 
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate a log file, add the following tag:
+      To generate a log file, add the following tag:
    
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `--log-file <log filename>`
+     `--log-file <log filename>`
 
   2. Update the report file as appropriate.
   
@@ -202,11 +202,11 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
   
   ```autodiscovery run-from-report --input-file input.yml --report-file <report filename>.xlsx```
    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
+   - You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:** To generate a log file, add the following tag: 
     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --log-file <log filename>
+   --log-file <log filename>
 
 ## Autodiscovering devices not modeled in CloudShell 
 
@@ -238,13 +238,13 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 ```autodiscovery echo-input-template --save-to-file input.yml```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate the file in json format, change “yml” to “json”.
+   To generate the file in json format, change “yml” to “json”.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The *input file* is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+   The *input file* is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
+   For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
+   To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
 
 ```autodiscovery echo-input-template   <input filename>.[yml|json]```
 
@@ -252,13 +252,13 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 3.	Create and update the extended vendors configuration file. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.	Run the following command-line: 
+   i.	Run the following command-line: 
    
 ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The *extended_vendors.json* file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+   The *extended_vendors.json* file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
+   For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well.
 
