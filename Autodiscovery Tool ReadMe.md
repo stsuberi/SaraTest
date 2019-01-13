@@ -226,7 +226,7 @@ You can autodiscover devices, for which you created or extended your own shell(s
 
 •	[Offline mode](#offline-mode) – should be used when you want to verify the information before creating and discovering the devices in CloudShell. This is the recommended mode when you want to autodiscover devices for which you created or extended your own shell (s) or when running the tool for the first time. 
 
-•	[Online mode](#online-mode)-  should be used when you do not need to verify the information before creating and discovering the devices in CloudShell.
+•	[Online mode](#online-mode) – should be used when you do not need to verify the information before creating and discovering the devices in CloudShell.
 
 ### Offline Mode
 
