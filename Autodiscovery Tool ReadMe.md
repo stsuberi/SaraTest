@@ -164,13 +164,13 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    |Added to CloudShell|Indicates the devices that were added to CloudShell as resources. Possible values are: Skipped, Failed, and Success.|
    |Comment|Any issues related to the processing of a specific device|
    
-    **Notes:**
+    **Additional options:**
    
-    To generate a log file, add the following tag:
+    **To generate a log file, add the following tag:**
     
-         ```--log-file <log filename>```
+    ```--log-file <log filename>```
       
-    To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
+    **To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag:** 
    
    ```--no-autoload```
 
@@ -186,7 +186,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
     
       ```autodiscovery run --input-file input.yml --report-file C:\Users\Administrator\temp\<report filename> --offline```
     
-      **Notes:**
+      **Additional options:**
    
      To generate the report in console format instead of .xlsx (default), add the following tag:
  
@@ -204,7 +204,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
    You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
    
-      **Note:** To generate a log file, add the following tag: 
+      **Additional option** To generate a log file, add the following tag: 
       
       ```--log-file <log filename>      ```
 
@@ -280,7 +280,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
  
     A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
 
-    **Notes:** 
+    **Additional options:** 
 
     To generate the report in console format instead of .xlsx (default), add the following tag:
 
@@ -300,7 +300,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
  
-    **Note:** To generate a log file, add the following tag: 
+    **Additional option:** To generate a log file, add the following tag: 
 
     ```--log-file <log filename>```
 
@@ -354,7 +354,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
  
    An Excel file *discovery_report.xlsx* is generated in the folder where you ran the command.
    
-    **Notes:** 
+    **Additional options:** 
     
     To generate a log file, add the following tag: 
 
@@ -416,7 +416,7 @@ This is a three-step process. First, you must generate a â€œdevice connectionsâ€
 
    ```autodiscovery connect-ports --<input filename>.[yml|json] --connections-report-file <connections filename>```
 
-   **Note:** To generate a log file, add the following tag: 
+   **Additional option:** To generate a log file, add the following tag: 
 
   ```--log-file <log filename>```
    
