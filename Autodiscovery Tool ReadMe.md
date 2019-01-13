@@ -428,7 +428,7 @@ This section provides the files you will receive when you run the command to pro
 
 •	[Input file in JSON format](#input-file-in-json-format)
 
-•	[Additional vendors configuration file in JSON format](#additonal-vendors-configuration-file-in-json-format)
+•	[Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format)
 
 ## Input file in YAML format
 
