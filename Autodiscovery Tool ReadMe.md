@@ -407,7 +407,7 @@ This is a three-step process. First, you must generate a “device connections�
 |Target Port Full Name|Full path to the resource’s port on CloudShell.<br>For example: Switch 2/Chassis 1/Module 1/Port 1|
 |Domain|CloudShell domain of the resources|
 |Connection Status|Read-only field indicating the status after running the **connect-ports** command.<br>•	**Success** - Ports were successfully connected<br>•	**Failed** - Ports were not successfully connected|
-|Comment	Read-only field indicating any additional information/error messages returned in case of a connection failure.|
+|Comment|Read-only field indicating any additional information/error messages returned in case of a connection failure.|
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii.	Save your changes. Do not change the file name.
    
