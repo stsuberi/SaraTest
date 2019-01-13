@@ -13,13 +13,13 @@ Document version: 1.0
     * [Installing the Autodiscovery tool](#installing-the-autodiscovery-tool)
 * [Using the Autodiscovery Tool](#using-the-autodiscovery-tool)
     * [Help Commands](#help-commands)
-* [Autodiscover devices in CloudShell](#autodiscover-devices-in-cloudshell)
+* [Autodiscover Devices in CloudShell](#autodiscover-devices-in-cloudshell)
     * [Autodiscovering devices modeled in CloudShell](#autodiscovering-devices-modeled-in-cloudshell)
     * [Autodiscovering devices not modeled in CloudShell](#autodiscovering-devices-not-modeled-in-cloudshell)
         * [Offline Mode](#offline-mode)
         * [Online Mode](#online-mode)
         * [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters)
-* [Create connections on discovered devices](#create-connections-on-discovered-devices)
+* [Create Connections on Discovered Devices](#create-connections-on-discovered-devices)
 * [Input Data Files](#input-data-files)
     * [Input file in YAML format](#input-file-in-yaml-format)
     * [Input file in JSON format](#input-file-in-json-format)
@@ -97,7 +97,7 @@ To view specific options associated with any autodiscovery command, type the com
 
 ```autodiscovery <echo-input-template> --help```
 
-# Autodiscover devices in CloudShell
+# Autodiscover Devices in CloudShell
 
 This chapter explains how to discover devices in CloudShell using the Autodiscovery tool. The tool supports devices that are modeled by Quali-published shells and devices for which you have a new or extended shell. 
 
@@ -380,7 +380,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 |enable_prompt|Regexp string for the enable prompt|
 |operation_systems|•	name: Name of the operating system<br>• aliases: Regex string which is an alias for the OS name. You can include a single alias or a list of aliases.<br>• default_model: Model type of the device (switch, router, etc.)<br>• models_map: Add the aliases that will be used to refer to “switch” or “router”. If Autodiscovery cannot identify the model, the tool will use the default.<br>• families: Resource family names for the device on CloudShell.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	Switch<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	first_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	second_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	router<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	first_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	second_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name|
 
-# Create connections on discovered devices
+# Create Connections on Discovered Devices
 
 This section describes how to connect the discovered resources to your physical network. 
 
