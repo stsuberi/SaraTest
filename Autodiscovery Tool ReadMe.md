@@ -398,11 +398,11 @@ This is a three-step process. First, you must generate a â€œdevice connectionsâ€
    
     ```autodiscovery echo-excel-connections-report-template --save-to-file <connections filename>```
 
-   An Excel file *<connections filename>.xlsx* is generated in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+       An Excel file *<connections filename>.xlsx* is generated in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
    
        ii. Specify the physical port connections between the devices. 
    
-   **Note:** For sub-resources, you must include the full address of each port in CloudShell.
+       **Note:** For sub-resources, you must include the full address of each port in CloudShell.
    
 |Field|Description|
 |:---|:---|
@@ -416,7 +416,7 @@ This is a three-step process. First, you must generate a â€œdevice connectionsâ€
    
 2.	To apply the resource connections, run the following command-line from the folder containing the input file and the *extended_vendors.json* file: 
 
-   ```autodiscovery connect-ports --<input filename>.[yml|json] --connections-report-file <connections filename>```
+    ```autodiscovery connect-ports --<input filename>.[yml|json] --connections-report-file <connections filename>```
 
    **Additional option:** 
    
