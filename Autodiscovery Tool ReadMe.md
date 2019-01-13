@@ -271,7 +271,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
    
 4.	Generate the *discovery_report.xlsx* Excel file that combines the information from the input file with the information in the additional vendors configuration file - *extended_vendors.json*. This file is used to discover the devices in CloudShell.
 
-   i.	Run the following command-line:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.	Run the following command-line:
    
 ```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
 
@@ -290,11 +290,11 @@ To generate a log file, add the following tag:
 
 --log-file <log filename>
    
-   ii.	Review the *discovery_report.xlsx* file and update the configurations accordingly. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Review the *discovery_report.xlsx* file and update the configurations accordingly. 
    
-   iii.	Save your changes.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii.	Save your changes.
    
-   iv.	Create CloudShell resources for the devices by running the following command-line:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iv.	Create CloudShell resources for the devices by running the following command-line:
    
 ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
 
