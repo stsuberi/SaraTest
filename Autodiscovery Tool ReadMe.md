@@ -23,7 +23,7 @@ Document version: 1.0
 * [Input Data Files](#input-data-files)
     * [Input file in YAML format](#input-file-in-yaml-format)
     * [Input file in JSON format](#input-file-in-json-format)
-    * [Additional vendors configuration file in JSON format](#additonal-vendors-configuration-file-in-json-format)
+    * [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-JSON-format)
 
 # Introduction
 The Autodiscovery tool enables CloudShell admins to discover a large number of devices at once “into” CloudShell, instead of having to manually create them one by one in CloudShell Portal. 
