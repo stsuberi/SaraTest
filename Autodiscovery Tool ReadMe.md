@@ -391,31 +391,31 @@ This is a three-step process. First, you must generate a “device connections�
 
 1.	Create the resource connections Excel file. 
 
-   i.	In the following command-line, replace <connections filename> with a name for the file and run this command-line:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.	In the following command-line, replace <connections filename> with a name for the file and run this command-line:
    
 ```autodiscovery echo-excel-connections-report-template --save-to-file <connections filename>```
 
-An Excel file *<connections filename>.xlsx* is generated in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An Excel file *<connections filename>.xlsx* is generated in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
    
-   ii.	Specify the physical port connections between the devices. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Specify the physical port connections between the devices. 
    
-   **Note:** For sub-resources, you must include the full address of each port in CloudShell.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:** For sub-resources, you must include the full address of each port in CloudShell.
    
 |Field|Description|
 |:---|:---|
 |Source Port Full Name|Full path to the resource’s port on CloudShell.<br>For example:  DUT 1/Chassis 1/Module 1/Port 1| 
-|Target Port Full Name	Full path to the resource’s port on CloudShell.<br>For example: Switch 2/Chassis 1/Module 1/Port 1|
+|Target Port Full Name|Full path to the resource’s port on CloudShell.<br>For example: Switch 2/Chassis 1/Module 1/Port 1|
 |Domain|CloudShell domain of the resources|
 |Connection Status|Read-only field indicating the status after running the **connect-ports** command.<br>•	**Success** - Ports were successfully connected<br>•	**Failed** - Ports were not successfully connected|
 |Comment	Read-only field indicating any additional information/error messages returned in case of a connection failure.|
 
-   iii.	Save your changes. Do not change the file name.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii.	Save your changes. Do not change the file name.
    
 2.	To apply the resource connections, run the following command-line from the folder containing the input file and the *extended_vendors.json* file: 
 
 ```autodiscovery connect-ports --<input filename>.[yml|json] --connections-report-file <connections filename>```
 
-**Note:** To generate a log file, add the following tag: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:** To generate a log file, add the following tag: 
 
 --log-file <log filename>
    
