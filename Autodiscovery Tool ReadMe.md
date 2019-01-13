@@ -195,9 +195,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
    
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
-    
-    To generate a log file, add the following tag: 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:**To generate a log file, add the following tag: 
     
    --log-file <log filename>
 
