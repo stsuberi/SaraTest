@@ -141,7 +141,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
 
    **To immediately discover the devices in CloudShell:**
    
-   * Run the following command-line from the folder containing the input file:
+   Run the following command-line from the folder containing the input file:
    
    ```autodiscovery run --input-file input.yml```
          
