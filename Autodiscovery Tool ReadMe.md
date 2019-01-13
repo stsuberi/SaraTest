@@ -184,7 +184,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - By default the report file is saved to the current user’s *C: drive* folder. However, you can choose to save the file in a different existing folder, for example: 
     
-     ```autodiscovery run --input-file input.yml --report-file C:\Users\Administrator\temp\<report filename> --offline```
+  ```autodiscovery run --input-file input.yml --report-file C:\Users\Administrator\temp\<report filename> --offline```
     
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
    
@@ -200,7 +200,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
   
   3. To discover the devices into CloudShell from the report, run the following command-line:
   
-  autodiscovery run-from-report --input-file input.yml --report-file <report filename>.xlsx
+  ```autodiscovery run-from-report --input-file input.yml --report-file <report filename>.xlsx```
    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
    
