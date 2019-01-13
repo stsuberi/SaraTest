@@ -19,7 +19,7 @@ Document version: 1.0
         * [Offline Mode](#offline-mode)
         * [Online Mode](#online-mode)
         * [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters)
-* [Create connections on discovered devices](#create-connections-on-disocvered-devices)
+* [Create connections on discovered devices](#create-connections-on-discovered-devices)
 * [Input Data Files](#input-data-files)
     * [Input file in YAML format](#input-file-in-yaml-format)
     * [Input file in JSON format](#input-file-in-json-format)
