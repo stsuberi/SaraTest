@@ -145,7 +145,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
          autodiscovery run --input-file input.yml
          
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**If you changed the file name, make sure you replace “input.yml” with the new name.**
+   **If you changed the file name, make sure you replace “input.yml” with the new name.**
 
    The devices are discovered in CloudShell. A *discovery_report.xlsx* file is produced in the input file’s containing folder, providing the following information about the discovered devices:
    
