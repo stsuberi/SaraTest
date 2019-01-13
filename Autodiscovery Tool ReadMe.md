@@ -202,7 +202,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
   
   autodiscovery run-from-report --input-file input.yml --report-file <report filename>.xlsx
    
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:** To generate a log file, add the following tag: 
     
@@ -229,47 +229,82 @@ You can autodiscover devices, for which you created or extended your own shell(s
 
 •	[Online mode](#online-mode)-  should be used when you do not need to verify the information before creating and discovering the devices in CloudShell.
 
-Offline Mode
+### Offline Mode
+
 In offline mode, the Autodiscovery tool gives you an opportunity to verify the information before creating the devices in CloudShell. 
- To autodiscover devices not modeled in CloudShell in offline mode:
+
+**To autodiscover devices not modeled in CloudShell in offline mode:**
+
 1.	To generate the input file, run the following command-line. 
-autodiscovery echo-input-template --save-to-file input.yml
-To generate the file in json format, change “yml” to “json”.
-The input file is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
-For reference, see sample input files: Input file in YAML format or Input file in JSON format.
-To change the name of the file from the default input.yml, replace the <input filename> in the command below: 
-autodiscovery echo-input-template   <input filename>.[yml|json]
-2.	Open the input file in your preferred editor and update the device info and CloudShell server credentials as explained in To autodiscover devices modeled in CloudShell.
+
+```autodiscovery echo-input-template --save-to-file input.yml```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate the file in json format, change “yml” to “json”.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The *input file* is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json=format).
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
+
+```autodiscovery echo-input-template   <input filename>.[yml|json]```
+
+2.	Open the *input* file in your preferred editor and update the device info and CloudShell server credentials as explained in [To autodiscover devices modeled in CloudShell](#to-autodiscover-devices-modeled-in-cloudshell).
+
 3.	Create and update the extended vendors configuration file. 
-i.	Run the following command-line: 
-autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json 
-The extended_vendors.json file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
-For reference, see a sample input file: Additional vendors configuration in JSON format.
+
+   i.	Run the following command-line: 
+   
+```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
+
+The *extended_vendors.json* file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+
+For reference, see a sample input file: [Additional vendors configuration in JSON format](#additonal-vendors-configuration-in-json-format).
+
 This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well.
-To change the name of the file from the default extended_vendors.json, replace the <extended_vendors filename> in the command-line below:
-autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json
-ii.	Edit the extended_vendors.json file with additional vendor information. See the Additional vendors configuration (JSON) editable parameters table for details.
-4.	Generate the discovery_report.xlsx Excel file that combines the information from the input file with the information in the additional vendors configuration file - extended_vendors.json. This file is used to discover the devices in CloudShell.
-i.	Run the following command-line:  
-autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline 
-If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.
-	You must run this command from the same folder where the input file and the extended_vendors.json files are saved.
-A discovery_report.xlsx Excel file is saved to the folder where you ran the command.
-Notes: 
+
+To change the name of the file from the default *extended_vendors.json*, replace the <extended_vendors filename> in the command-line below:
+
+```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
+
+   ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration (JSON) editable parameters table for details](#additional-vendors-configuration(json)-editable-parameters-table-for-details).
+   
+4.	Generate the *discovery_report.xlsx* Excel file that combines the information from the input file with the information in the additional vendors configuration file - *extended_vendors.json*. This file is used to discover the devices in CloudShell.
+
+   i.	Run the following command-line:
+   
+```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
+
+**If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
+
+ - You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
+ 
+A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
+
+**Notes:** 
 To generate the report in console format instead of .xlsx (default), add the following tag:
+
 --report-type console
 
 To generate a log file, add the following tag: 
+
 --log-file <log filename>
-ii.	Review the discovery_report.xlsx file and update the configurations accordingly. 
-iii.	Save your changes.
-iv.	Create CloudShell resources for the devices by running the following command-line:
- autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx
-	You must run this command from the folder containing the input file and the discovery_report.xlsx files.
-Note: To generate a log file, add the following tag: 
+   
+   ii.	Review the *discovery_report.xlsx* file and update the configurations accordingly. 
+   
+   iii.	Save your changes.
+   
+   iv.	Create CloudShell resources for the devices by running the following command-line:
+   
+```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
+
+ - You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
+ 
+**Note:** To generate a log file, add the following tag: 
+
 --log-file <log filename>
 
-CloudShell discovers the devices and generates a discovery_report.xlsx file, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
+CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
 
 ### Online Mode
 
