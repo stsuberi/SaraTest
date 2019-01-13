@@ -266,7 +266,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration (JSON) editable parameters table for details](#additional-vendors-configuration(json)-editable-parameters-table-for-details).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration (JSON) editable parameters](#additional-vendors-configuration(json)-editable-parameters) table for details.
    
 4.	Generate the *discovery_report.xlsx* Excel file that combines the information from the input file with the information in the additional vendors configuration file - *extended_vendors.json*. This file is used to discover the devices in CloudShell.
 
