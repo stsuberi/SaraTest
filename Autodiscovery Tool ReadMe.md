@@ -248,7 +248,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 ```autodiscovery echo-input-template   <input filename>.[yml|json]```
 
-2.	Open the *input* file in your preferred editor and update the device info and CloudShell server credentials as explained in [To autodiscover devices modeled in CloudShell](#to-autodiscover-devices-modeled-in-cloudshell).
+2.	Open the *input* file in your preferred editor and update the device info and CloudShell server credentials as explained in [To autodiscover devices modeled in CloudShell:](#to-autodiscover-devices-modeled-in-cloudshell:).
 
 3.	Create and update the extended vendors configuration file. 
 
