@@ -168,9 +168,9 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
     To generate a log file, add the following tag:
     
-       ```--log-file <log filename>```
- 
-   To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
+         ```--log-file <log filename>```
+      
+    To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
    
    ```--no-autoload```
 
@@ -264,13 +264,13 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     To change the name of the file from the default *extended_vendors.json*, replace the <extended_vendors filename> in the command-line below:
 
-```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
+    ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
 
     ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
    
 4.	Generate the *discovery_report.xlsx* Excel file that combines the information from the input file with the information in the additional vendors configuration file - *extended_vendors.json*. This file is used to discover the devices in CloudShell.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.	Run the following command-line:
+ i.	Run the following command-line:
    
 ```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
 
