@@ -300,11 +300,11 @@ To generate a log file, add the following tag:
 
  - You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
  
-**Note:** To generate a log file, add the following tag: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:** To generate a log file, add the following tag: 
 
---log-file <log filename>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-file <log filename>
 
-CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
 
 ### Online Mode
 
