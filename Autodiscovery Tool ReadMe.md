@@ -367,3 +367,14 @@ After the resources are created in CloudShell, you will have to manually discove
 CloudShell discovers the devices and generates a *discovery_report.xlsx* file containing the autodiscovery details. Use this file to troubleshoot any issues.
 
 ### Additional vendors configuration file editable parameters
+
+|Field|Description|
+|:---|:---|
+|name|Name of the vendor|
+|aliases|Regex string which is an alias for the vendor name. You can include a single alias or a list of aliases.|
+|type|Device type<br>Currently, the tool only supports “networking” devices. A “networking” device is any device whose device statistics are accessed via SNMP.|
+|default_os|(Optional) If the OS on the device cannot be identified, this OS is used.| 
+|default_prompt|Regexp string for the default prompt|
+|enable_prompt|Regexp string for the enable prompt|
+|operation_systems|•	name: Name of the operating system<br>• aliases: Regex string which is an alias for the OS name. You can include a single alias or a list of aliases.<br>• default_model: Model type of the device (switch, router, etc.)<br>• models_map: Add the aliases that will be used to refer to “switch” or “router”. If Autodiscovery cannot identify the model, the tool will use the default.<br>• families: Resource family names for the device on CloudShell.<br>o	Switch<br>	first_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>	second_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>o	router<br>	first_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>	second_gen<br>•	family_name<br>•	model_name<br>•	driver_name|
+
