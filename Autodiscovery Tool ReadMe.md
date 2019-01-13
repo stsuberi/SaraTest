@@ -296,7 +296,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
    
     iv.	Create CloudShell resources for the devices by running the following command-line:
    
-   ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
+    ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
 
     You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
  
