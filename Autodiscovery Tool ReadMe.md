@@ -378,7 +378,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 |default_os|(Optional) If the OS on the device cannot be identified, this OS is used.| 
 |default_prompt|Regexp string for the default prompt|
 |enable_prompt|Regexp string for the enable prompt|
-|operation_systems|•	name: Name of the operating system<br>• aliases: Regex string which is an alias for the OS name. You can include a single alias or a list of aliases.<br>• default_model: Model type of the device (switch, router, etc.)<br>• models_map: Add the aliases that will be used to refer to “switch” or “router”. If Autodiscovery cannot identify the model, the tool will use the default.<br>• families: Resource family names for the device on CloudShell.<br>o	Switch<br>	first_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>	second_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>o	router<br>	first_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>	second_gen<br>•	family_name<br>•	model_name<br>•	driver_name|
+|operation_systems|•	name: Name of the operating system<br>• aliases: Regex string which is an alias for the OS name. You can include a single alias or a list of aliases.<br>• default_model: Model type of the device (switch, router, etc.)<br>• models_map: Add the aliases that will be used to refer to “switch” or “router”. If Autodiscovery cannot identify the model, the tool will use the default.<br>• families: Resource family names for the device on CloudShell.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	Switch<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	first_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	second_gen<br>•	family_name<br>•	model_name<br>•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	router<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	first_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	second_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name|
 
 # Create connections on discovered devices
 
@@ -418,14 +418,16 @@ This is a three-step process. First, you must generate a “device connections�
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note:** To generate a log file, add the following tag: 
 
---log-file <log filename>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-file <log filename>
    
 # Input Data Files
 
 This section provides the files you will receive when you run the command to produce the input file in YAML and JSON format as well as the additional vendors configuration file in JSON format. 
 
 •	[Input file in YAML format](#input-file-in-yaml-format)
+
 •	[Input file in JSON format](#input-file-in-json-format)
+
 •	[Additional vendors configuration file in JSON format](#additonal-vendors-configuration-file-in-json-format)
 
 ## Input file in YAML format
