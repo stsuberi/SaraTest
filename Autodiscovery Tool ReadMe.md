@@ -186,17 +186,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
     
       ```autodiscovery run --input-file input.yml --report-file C:\Users\Administrator\temp\<report filename> --offline```
     
-      **Additional options:**
-   
-     **To generate the report in console format instead of .xlsx (default), add the following tag:**
- 
-      ```--report-type console```
-
-      **To generate a log file, add the following tag:**
-   
-     ```--log-file <log filename>```
-
-      ii. Update the report file as appropriate.
+       ii. Update the report file as appropriate.
   
       iii. To discover the devices into CloudShell from the report, run the following command-line:
   
@@ -204,7 +194,13 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
    You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
    
-      **Additional option:** **To generate a log file, add the following tag:** 
+      **Additional options:**
+      
+      **To generate the report in console format instead of .xlsx (default), add the following tag:**
+ 
+       ```--report-type console```
+      
+      **To generate a log file, add the following tag:** 
       
       ```--log-file <log filename>      ```
 
@@ -279,17 +275,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
     You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
  
     A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
-
-    **Additional options:** 
-
-    **To generate the report in console format instead of .xlsx (default), add the following tag:**
-
-    ```--report-type console```
-
-    **To generate a log file, add the following tag:** 
-
-    ```--log-file <log filename>```
-   
+  
     ii.	Review the *discovery_report.xlsx* file and update the configurations accordingly. 
  
     iii.	Save your changes.
@@ -300,8 +286,12 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
  
-    **Additional option:** 
-    
+    **Additional options:** 
+
+    **To generate the report in console format instead of .xlsx (default), add the following tag:**
+
+    ```--report-type console```
+
     **To generate a log file, add the following tag:** 
 
     ```--log-file <log filename>```
@@ -418,11 +408,11 @@ This is a three-step process. First, you must generate a â€œdevice connectionsâ€
 
     ```autodiscovery connect-ports --<input filename>.[yml|json] --connections-report-file <connections filename>```
 
-   **Additional option:** 
+      **Additional option:** 
    
-   **To generate a log file, add the following tag:** 
+      **To generate a log file, add the following tag:** 
 
-  ```--log-file <log filename>```
+       ```--log-file <log filename>```
    
 # Input Data Files
 
