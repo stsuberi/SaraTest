@@ -188,11 +188,11 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
     
       **Additional options:**
    
-     To generate the report in console format instead of .xlsx (default), add the following tag:
+     **To generate the report in console format instead of .xlsx (default), add the following tag:**
  
       ```--report-type console```
 
-      To generate a log file, add the following tag:
+      **To generate a log file, add the following tag:**
    
      ```--log-file <log filename>```
 
@@ -204,7 +204,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
    You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
    
-      **Additional option** To generate a log file, add the following tag: 
+      **Additional option:** **To generate a log file, add the following tag:** 
       
       ```--log-file <log filename>      ```
 
@@ -282,11 +282,11 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     **Additional options:** 
 
-    To generate the report in console format instead of .xlsx (default), add the following tag:
+    **To generate the report in console format instead of .xlsx (default), add the following tag:**
 
     ```--report-type console```
 
-    To generate a log file, add the following tag: 
+    **To generate a log file, add the following tag:** 
 
     ```--log-file <log filename>```
    
