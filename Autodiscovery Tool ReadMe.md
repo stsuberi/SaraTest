@@ -48,7 +48,7 @@ The tool supports devices that are modeled in CloudShell, but can also be custom
 2.	Make sure you have an appropriate shell for each device you wish to discover. 
 3.	We recommend to first search for the shells in the [Quali Community Integrations](https://community.quali.com/integrations) page. Note that you can also extend existing shells to match the device’s specifications or create new shells from scratch - see the [CloudShell Dev guide](https://devguide.quali.com/introduction/9.0.0/the-cloudshell-devguide.html) for more information.
 4.	Import the shells into CloudShell - see [Importing Shells](https://help.quali.com/Online%20Help/9.1/Portal/Content/CSP/MNG/Mng-Shells.htm#Adding) in the CloudShell online help.
-5.	Run the Autodiscovery tool. When the process completes, the discovered device resources are included in the Inventory dashboard in CloudShell Portal. 
+5.	Run the Autodiscovery tool. When the process completes, the discovered device resources are included in the **Inventory** dashboard in CloudShell Portal. 
 
 ## Installing the Autodiscovery tool
 
