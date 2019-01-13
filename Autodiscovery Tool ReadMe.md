@@ -338,7 +338,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 
 ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see a sample input file: [Additional vendors configuration file in JSON format}(#additional-vendors-configuration-file-in-json-format.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.	Edit the generated *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
    
