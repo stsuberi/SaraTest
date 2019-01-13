@@ -216,7 +216,7 @@ When autodiscovering unmodeled devices, you must ensure that:
 
 2. You created a vendor configuration input file called *extended_vendors.json*. The *extended_vendors.json* file provides the device details (device name, model etc.), see [Offline Mode](#offline-mode). 
 
-   **Note:** For assistance using the *extended_vendors.json* file, contact customer support. 
+   **Note: For assistance using the *extended_vendors.json* file, contact customer support.** 
    
 The autodiscovery tool attempts to recognize the devices, using the *extended_vendors.json*, and associate each one with the relevant loaded shell. 
 
