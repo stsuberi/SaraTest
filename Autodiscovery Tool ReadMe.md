@@ -79,9 +79,7 @@ The tool is installed in the machine’s default Python27 folder. For example: *
 
  ![](https://github.com/stsuberi/SaraTest/blob/master/autodiscovery-install-files.png)
 
-To use the tool, navigate to this folder in command-line, unless you have set these folders as env variables which will allow you to run the tool from anywhere on the machine.
-
-* **Note:** It is recommended to add the python and pip installation folder paths to your local environment variables. For example, *C:\Python27 and C:\Python27\Scripts*. This will enable you to run the python/pip commands from any folder.
+To use the tool, navigate to this folder in command-line, unless you have set these folders as env variables which will allow you to run the tool from anywhere on the machine. To do so, add the python/pip installation folder paths to your local environment variables. For example *C:\Python27 and C:\Python27\Scripts*.
 
 You can perform these procedures in either offline or online mode. In online mode, you generate the autodiscovered device configurations and create them as is, while in offline mode, you can optionally modify the autodiscovered device configurations before creating and discovering them into CloudShell. 
 
