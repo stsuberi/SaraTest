@@ -272,9 +272,9 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     i. Run the following command-line:
    
-```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
+    ```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
 
-   **If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
+    **If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
 
     - You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
  
