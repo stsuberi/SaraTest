@@ -276,19 +276,19 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     **If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
 
-    - You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
+    You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
  
     A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
 
-   **Notes:** 
+    **Notes:** 
 
     To generate the report in console format instead of .xlsx (default), add the following tag:
 
-    '--report-type console'
+    ```--report-type console```
 
     To generate a log file, add the following tag: 
 
- '--log-file <log filename>'
+    ```--log-file <log filename>```
    
     ii.	Review the *discovery_report.xlsx* file and update the configurations accordingly. 
  
@@ -298,11 +298,11 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
    
    ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
 
-    - You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
+    You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
  
    **Note:** To generate a log file, add the following tag: 
 
-    '--log-file <log filename>'
+    ```--log-file <log filename>```
 
    CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
 
