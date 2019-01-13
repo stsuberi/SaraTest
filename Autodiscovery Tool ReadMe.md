@@ -355,6 +355,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An Excel file *discovery_report.xlsx* is generated in the folder where you ran the command.
    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Notes:**
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate a log file, add the following tag: 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-file <log filename>
