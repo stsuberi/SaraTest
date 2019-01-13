@@ -188,7 +188,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
     
        ii. Update the report file as appropriate.
   
-      iii. To discover the devices into CloudShell from the report, run the following command-line:
+       iii. To discover the devices into CloudShell from the report, run the following command-line:
   
       ```autodiscovery run-from-report --input-file input.yml --report-file <report filename>.xlsx```
    
@@ -198,7 +198,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
       
       **To generate the report in console format instead of .xlsx (default), add the following tag:**
  
-       ```--report-type console```
+         ```--report-type console```
       
       **To generate a log file, add the following tag:** 
       
