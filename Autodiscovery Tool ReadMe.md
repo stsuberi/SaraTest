@@ -110,7 +110,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
 
 1. Open command line and navigate to the autodiscovery tool’s installation folder. 
 
-2. To generate the input file, run the following command-line.
+2. To generate the input file, run the following command-line:
 
    ```autodiscovery echo-input-template --save-to-file input.yml```
 
@@ -170,7 +170,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--log-file <log filename>
 
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag. 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
    
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --no-autoload
 
@@ -234,7 +234,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 **To autodiscover devices not modeled in CloudShell in offline mode:**
 
-1.	To generate the input file, run the following command-line. 
+1.	To generate the input file, run the following command-line: 
 
 ```autodiscovery echo-input-template --save-to-file input.yml```
 
