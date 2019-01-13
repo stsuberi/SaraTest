@@ -258,7 +258,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The *extended_vendors.json* file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see a sample input file: [Additional vendors configuration in JSON format](#additional-vendors-configuration-in-json-format).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well.
 
