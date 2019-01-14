@@ -278,14 +278,14 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
     ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
 
     You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
+    
+    CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
  
     **Additional options:** 
 
     To generate the report in console format instead of .xlsx (default), add the tag: ```--report-type console```
 
     To generate a log file, add the tag: ```--log-file <log filename>```
-
-     CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
 
 ### Online Mode
 
