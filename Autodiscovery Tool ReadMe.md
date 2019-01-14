@@ -171,7 +171,7 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
       
     **To edit device details before discovery:**
    
-     i. To generate an Excel report, run the following command-line from the folder containing the input file:
+   1. To generate an Excel report, run the following command-line from the folder containing the input file:
    
       &nbsp;&nbsp;&nbsp;```autodiscovery run --input-file input.yml --report-file <report filename> --offline```
     
