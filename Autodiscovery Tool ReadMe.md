@@ -227,7 +227,7 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
 3.	Create and update the extended vendors configuration file. 
 
-   1.	Run the following command-line: 
+    1.	Run the following command-line: 
    
          ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
 
