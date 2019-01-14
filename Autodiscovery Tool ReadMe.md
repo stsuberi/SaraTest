@@ -183,9 +183,9 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
       You must run this command from the same folder where the report file is saved. By default, the file is saved to the location where you ran the command.  
             
-    * *To generate the report in console format instead of .xlsx (default), add the tag:* ```--report-type console```
+      * *To generate the report in console format instead of .xlsx (default), add the tag:* ```--report-type console```
               
-    * *To generate a log file, add the tag:* ```--log-file <log filename>```
+      * *To generate a log file, add the tag:* ```--log-file <log filename>```
 
 ## Autodiscovering devices not modeled in CloudShell 
 
