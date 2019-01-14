@@ -115,15 +115,13 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
 
    ```autodiscovery echo-input-template --save-to-file input.yml```
 
-   To generate the file in json format, change “yml” to “json”.
+   **Additional options:**
+   
+   To generate the file in json format, change “yml” to “json”. For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
    
    The *input* file is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
-   
-   For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
-
-   To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
-   
-   ```autodiscovery echo-input-template --save-to-file <input filename>.[yml|json]```
+  
+   To rename the input file, use ```autodiscovery echo-input-template --save-to-file <input filename>.[yml|json]```
 
 3. Open the *input* file in your preferred editor and update the device info and CloudShell server credentials.
 
@@ -227,15 +225,13 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
 
     ```autodiscovery echo-input-template --save-to-file input.yml```
 
-       To generate the file in json format, change “yml” to “json”.
+      **Additional options:**
+       
+      To generate the file in json format, change “yml” to “json”.
 
-       The *input file* is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+      The *input file* is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location. For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
 
-       For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
-
-       To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
-
-    ```autodiscovery echo-input-template <input filename>.[yml|json]```
+      To rename of the input file, use ```autodiscovery echo-input-template <input filename>.[yml|json]```
 
 2.	Open the *input* file in your preferred editor and update the device info and CloudShell server credentials as explained in [Autodiscovering devices modeled in CloudShell](#autodiscovering-devices-modeled-in-cloudshell).
 
@@ -245,15 +241,17 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
    
      ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
 
-      The *extended_vendors.json* file is created and saved to the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+      The *extended_vendors.json* file is created and saved to the folder where you ran the command. 
+      
+      This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well.
+      
+      **Additional options**
+      
+      If you want the file to be created in a different location, specify the full path to this location. 
 
       For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
 
-    This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well.
-
-    To change the name of the file from the default *extended_vendors.json*, replace the <extended_vendors filename> in the command-line below:
-
-    ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
+    To rename the *extended_vendors.json* file, use: ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
 
     ii.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
    
@@ -295,15 +293,13 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 
    ```autodiscovery echo-input-template --save-to-file input.yml```
 
+   **Additional options**:
+   
    To generate the file in json format, change “yml” to “json”.
 
-   The *input* file is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+   The *input* file is created in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location. For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
 
-   For reference, see sample input files: [Input file in YAML format](#input-file-in-yaml-format) or [Input file in JSON format](#input-file-in-json-format).
-
-   To change the name of the file from the default *input.yml*, replace the <input filename> in the command below: 
-
-   ```autodiscovery echo-input-template <input filename>.[yml|json]```
+   To rename the input file, use: ```autodiscovery echo-input-template <input filename>.[yml|json]```
 
 2.	Open the *input* file in your preferred editor and update the device info and CloudShell server credentials, as explained in [Autodiscovering devices modeled in CloudShell](#Autodiscovering-devices-modeled-in-cloudshell).
 
@@ -313,14 +309,12 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
    
     ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
 
-     The *extended_vendors.json* file is saved in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location.
+     **Additional options: 
+     
+       The *extended_vendors.json* file is saved in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location. For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
 
-       To change the name of the file from the default *extended_vendors.json*, replace the <extended_vendors filename> in the command-line:
-  
-    ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
-
-       For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
-
+       To rename the *extended_vendors.json* file, use: ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
+      
     ii. Edit the generated *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
    
 4.	Generate the input file that combines the information from the *input* file with the information in the additional vendors configuration file (*extended_vendors.json*).
