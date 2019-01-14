@@ -199,8 +199,8 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
       
       To generate the report in console format instead of .xlsx (default), add the following tag:
  
-         --report-type console
-      
+      ```report-type console```
+              
       To generate a log file, add the following tag: 
       
       ```--log-file <log filename>      ```
