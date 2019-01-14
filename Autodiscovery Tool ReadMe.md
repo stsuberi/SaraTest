@@ -289,11 +289,11 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 
     1. Run the following command-line: 
    
-      ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
+         ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
          
-      * *The extended_vendors.json file is saved in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location. For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).*
+         * *The extended_vendors.json file is saved in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location. For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).*
 
-      * *To rename the *extended_vendors.json* file, use:* ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
+         * *To rename the *extended_vendors.json* file, use:* ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
       
     2. Edit the generated *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
    
@@ -301,17 +301,17 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 
     1. Run the following command-line: 
    
-      ```autodiscovery run --input-file input.yml --config-file extended_vendors.json```
+         ```autodiscovery run --input-file input.yml --config-file extended_vendors.json```
 
-      **If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
+         **If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
 
-      You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
+         You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
  
-      CloudShell discovers the devices and generates an Excel file *discovery_report.xlsx* in the folder where you ran the command,  containing the autodiscovery details. Use this file to troubleshoot any issues.
+         CloudShell discovers the devices and generates an Excel file *discovery_report.xlsx* in the folder where you ran the command,  containing the autodiscovery details. Use this file to troubleshoot any issues.
          
-       * *To generate a log file, add the tag:* ```--log-file <log filename>```
+         * *To generate a log file, add the tag:* ```--log-file <log filename>```
 
-       * *To run this command-line without discovering the resources on CloudShell, i.e. only creating the resources in CloudShell without discovering them, add the tag:* ```--no-autoload``` <br><br>*Note that if you use* ```--no-autoload```*, after the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.*
+         * *To run this command-line without discovering the resources on CloudShell, i.e. only creating the resources in CloudShell without discovering them, add the tag:* ```--no-autoload``` <br><br>*Note that if you use* ```--no-autoload```*, after the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.*
       
 ### Additional vendors configuration file editable parameters
 
