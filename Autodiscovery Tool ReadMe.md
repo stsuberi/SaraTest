@@ -243,15 +243,15 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
    
 4.	Generate the *discovery_report.xlsx* Excel file that combines the information from the input file with the information in the additional vendors configuration file - *extended_vendors.json*. This file is used to discover the devices in CloudShell.
 
-    1. Run the following command-line:
+    1.	Run the following command-line:
    
-      ```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
+         ```autodiscovery run --input-file input.yml --config-file extended_vendors.json --offline```
 
-      **If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
+         **If you changed the file names, you need to replace “input.yml” and/or “extended_vendors.json” with the new name(s) here.**
 
-      You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
+         You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
  
-      A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
+         A *discovery_report.xlsx* Excel file is saved to the folder where you ran the command.
   
     2.	Review the *discovery_report.xlsx* file and update the configurations accordingly. 
  
@@ -259,11 +259,11 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
    
     4.	Create CloudShell resources for the devices by running the following command-line:
    
-      ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
+         ```autodiscovery run-from-report --input-file input.yml --report-file discovery_report.xlsx```
 
-      You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
+         You must run this command from the folder containing the *input* file and the *discovery_report.xlsx* files.
     
-      CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
+         CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
  
       * *To generate the report in console format instead of .xlsx (default), add the tag:* ```--report-type console```
 
