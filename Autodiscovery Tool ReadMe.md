@@ -215,9 +215,9 @@ When autodiscovering unmodeled devices, you must ensure that:
 
    **Note:** For assistance using the *extended_vendors.json* file, contact customer support. 
    
-The autodiscovery tool attempts to recognize the devices, using the *extended_vendors.json*, and associate each one with the relevant loaded shell. 
+   The autodiscovery tool attempts to recognize the devices, using the *extended_vendors.json*, and associate each one with the relevant loaded shell. 
 
-The additional vendor configuration input file does not override the *input* file but is added to it. This process, therefore, requires two configuration files: an “input” file and an “extended vendors configuration” file. 
+   The additional vendor configuration input file does not override the *input* file but is added to it. This process, therefore, requires two configuration files: an “input” file and an “extended vendors configuration” file. 
 
 You can autodiscover devices, for which you created or extended your own shell(s), in two modes: 
 
