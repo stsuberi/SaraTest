@@ -172,10 +172,8 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
     To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: ```--no-autoload```. 
     
     Note that if you use ```--no-autoload```, after the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
-    
-    Note that if you use `--no-autolod`, after the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
- 
-   **To edit device details before discovery:**
+      
+    **To edit device details before discovery:**
    
      i. To generate an Excel report, run the following command-line from the folder containing the input file:
    
