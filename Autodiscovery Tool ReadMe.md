@@ -265,9 +265,9 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
     
          CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
  
-      * *To generate the report in console format instead of .xlsx (default), add the tag:* ```--report-type console```
+         * *To generate the report in console format instead of .xlsx (default), add the tag:* ```--report-type console```
 
-      * *To generate a log file, add the tag:* ```--log-file <log filename>```
+         * *To generate a log file, add the tag:* ```--log-file <log filename>```
 
 ### Online Mode
 
