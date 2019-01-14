@@ -307,7 +307,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
    
     ```autodiscovery echo-vendors-configuration-template --save-to-file extended_vendors.json```
 
-     **Additional options: 
+     **Additional options:** 
      
        The *extended_vendors.json* file is saved in the folder where you ran the command. If you want the file to be created in a different location, specify the full path to this location. For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
 
