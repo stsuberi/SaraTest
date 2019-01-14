@@ -13,13 +13,13 @@ Document version: 1.0
     * [Installing the Autodiscovery tool](#installing-the-autodiscovery-tool)
 * [Using the Autodiscovery Tool](#using-the-autodiscovery-tool)
     * [Help Commands](#help-commands)
-* [Autodiscover Devices in CloudShell](#autodiscover-devices-in-cloudshell)
+* [Autodiscovering Devices in CloudShell](#autodiscovering-devices-in-cloudshell)
     * [Autodiscovering devices modeled in CloudShell](#autodiscovering-devices-modeled-in-cloudshell)
     * [Autodiscovering devices not modeled in CloudShell](#autodiscovering-devices-not-modeled-in-cloudshell)
         * [Offline Mode](#offline-mode)
         * [Online Mode](#online-mode)
         * [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters)
-* [Create Connections on Discovered Devices](#create-connections-on-discovered-devices)
+* [Creating Connections on Discovered Devices](#creating-connections-on-discovered-devices)
 * [Input Data Files](#input-data-files)
     * [Input file in YAML format](#input-file-in-yaml-format)
     * [Input file in JSON format](#input-file-in-json-format)
@@ -32,12 +32,13 @@ Since the tool performs a bulk discovery of devices, the relevant shells must be
 
 The tool supports devices that are modeled in CloudShell, but can also be customized to discover devices that are not modeled in CloudShell, see [Autodiscovering devices not modeled in CloudShell](#autodiscovering-devices-not-modeled-in-cloudshell). 
 
+## Workflow
+
 The basic flow for autodiscovering resources is as follows:
 
-## Workflow
 1.	Create a list of the devices you want to discover, by providing specific IPs and/or IP ranges.
 2.	Make sure you have an appropriate shell for each device you wish to discover. 
-3.	We recommend to first search for the shells in the [Quali Community Integrations](https://community.quali.com/integrations) page. Note that you can also extend existing shells to match the device’s specifications or create new shells from scratch - see the [CloudShell Dev guide](https://devguide.quali.com/introduction/9.0.0/the-cloudshell-devguide.html) for more information.
+3.	We recommend to first search for the shells in the [Quali Community Integrations](https://community.quali.com/integrations) page. Note that you can also extend existing shells to match the device’s specifications or create new shells from scratch - see the [CloudShell Dev guide](https://devguide.quali.com/) for more information.
 4.	Import the shells into CloudShell - see [Importing Shells](https://help.quali.com/Online%20Help/9.1/Portal/Content/CSP/MNG/Mng-Shells.htm#Adding) in the CloudShell online help.
 5.	Run the Autodiscovery tool. When the process completes, the discovered device resources are included in the **Inventory** dashboard in CloudShell Portal.
 
@@ -97,7 +98,7 @@ To view specific options associated with any autodiscovery command, type the com
 
 ```autodiscovery <echo-input-template> --help```
 
-# Autodiscover Devices in CloudShell
+# Autodiscovering Devices in CloudShell
 
 This chapter explains how to discover devices in CloudShell using the Autodiscovery tool. The tool supports devices that are modeled by Quali-published shells and devices for which you have a new or extended shell. 
 
@@ -166,11 +167,11 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
     **Additional options:**
    
-    **To generate a log file, add the following tag:**
+    To generate a log file, add the following tag:
     
     ```--log-file <log filename>```
       
-    **To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag:** 
+    To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
    
    ```--no-autoload```
 
@@ -196,11 +197,11 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
       **Additional options:**
       
-      **To generate the report in console format instead of .xlsx (default), add the following tag:**
+      To generate the report in console format instead of .xlsx (default), add the following tag:
  
          ```--report-type console```
       
-      **To generate a log file, add the following tag:** 
+      To generate a log file, add the following tag: 
       
       ```--log-file <log filename>      ```
 
@@ -212,7 +213,7 @@ When autodiscovering unmodeled devices, you must ensure that:
 
 2. You created a vendor configuration input file called *extended_vendors.json*. The *extended_vendors.json* file provides the device details (device name, model etc.), see [Offline Mode](#offline-mode). 
 
-   **Note: For assistance using the *extended_vendors.json* file, contact customer support.** 
+   **Note:** For assistance using the *extended_vendors.json* file, contact customer support. 
    
 The autodiscovery tool attempts to recognize the devices, using the *extended_vendors.json*, and associate each one with the relevant loaded shell. 
 
@@ -288,11 +289,11 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
  
     **Additional options:** 
 
-    **To generate the report in console format instead of .xlsx (default), add the following tag:**
+    To generate the report in console format instead of .xlsx (default), add the following tag:
 
     ```--report-type console```
 
-    **To generate a log file, add the following tag:** 
+    To generate a log file, add the following tag: 
 
     ```--log-file <log filename>```
 
@@ -348,11 +349,11 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
    
     **Additional options:** 
     
-       **To generate a log file, add the following tag:** 
+       To generate a log file, add the following tag:
 
     ```--log-file <log filename>```
 
-     **To run this command-line without discovering the resources on CloudShell, i.e. only creating the resources in CloudShell without discovering them, add the following tag:**
+     To run this command-line without discovering the resources on CloudShell, i.e. only creating the resources in CloudShell without discovering them, add the following tag:
 
     ```--no-autoload```
 
@@ -372,7 +373,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 |enable_prompt|Regexp string for the enable prompt|
 |operation_systems|•	name: Name of the operating system<br>• aliases: Regex string which is an alias for the OS name. You can include a single alias or a list of aliases.<br>• default_model: Model type of the device (switch, router, etc.)<br>• models_map: Add the aliases that will be used to refer to “switch” or “router”. If Autodiscovery cannot identify the model, the tool will use the default.<br>• families: Resource family names for the device on CloudShell.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	Switch<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	first_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	second_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o	router<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	first_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	second_gen<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	family_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	model_name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•	driver_name|
 
-# Create Connections on Discovered Devices
+# Creating Connections on Discovered Devices
 
 This section describes how to connect the discovered resources to your physical network. 
 
@@ -410,7 +411,7 @@ This is a three-step process. First, you must generate a “device connections�
 
       **Additional option:** 
    
-      **To generate a log file, add the following tag:** 
+      To generate a log file, add the following tag: 
 
        ```--log-file <log filename>```
    
