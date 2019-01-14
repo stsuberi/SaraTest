@@ -235,9 +235,9 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
       
          This data file is generated only in JSON format. In the future, you will be able to generate the file in YAML format as well. For reference, see a sample input file: [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-json-format).
                   
-      * *If you want the file to be created in a different location, specify the full path to this location.* 
+         * *If you want the file to be created in a different location, specify the full path to this location.* 
 
-      * *To rename the *extended_vendors.json* file, use:* ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
+         * *To rename the *extended_vendors.json* file, use:* ```autodiscovery echo-vendors-configuration-template --save-to-file <extended_vendors filename>.json```
 
     2.	Edit the *extended_vendors.json* file with additional vendor information. See the [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters) table for details.
    
