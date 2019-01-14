@@ -172,11 +172,11 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
     ```--log-file <log filename>```
       
     To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: 
+    
+    **Note:** After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
    
    ```--no-autoload```
-
-   After the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
-    
+ 
    **To edit device details before discovery:**
    
       i. To generate an Excel report, run the following command-line from the folder containing the input file:
@@ -345,7 +345,7 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
 
       You must run this command from the same folder where the *input* file and the *extended_vendors.json* files are saved.
  
-      An Excel file *discovery_report.xlsx* is generated in the folder where you ran the command.
+      CloudShell discovers the devices and generates an Excel file *discovery_report.xlsx* in the folder where you ran the command,  containing the autodiscovery details. Use this file to troubleshoot any issues.
    
     **Additional options:** 
     
@@ -354,13 +354,11 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
     ```--log-file <log filename>```
 
      To run this command-line without discovering the resources on CloudShell, i.e. only creating the resources in CloudShell without discovering them, add the following tag:
+     
+     **Note:** After the resources are created in CloudShell, you will have to manually discover each individual resource in CloudShell.
 
     ```--no-autoload```
-
-     After the resources are created in CloudShell, you will have to manually discover each individual resource in CloudShell.
-
-     CloudShell discovers the devices and generates a *discovery_report.xlsx* file containing the autodiscovery details. Use this file to troubleshoot any issues.
-
+    
 ### Additional vendors configuration file editable parameters
 
 |Field|Description|
