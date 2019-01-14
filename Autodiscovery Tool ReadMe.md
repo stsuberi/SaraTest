@@ -167,13 +167,11 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
     **Additional options:**
    
-    To generate a log file, add the following tag:
-    
-    ```--log-file <log filename>```
+    To generate a log file, add the following tag: ```--log-file <log filename>```
       
-    To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag:
+    To run this command-line without discovering the resources on CloudShell, i.e. only create the resources in CloudShell but do not discover them, add the following tag: ```--no-autoload```. 
     
-    ```--no-autoload```
+    Note that if you use ```--no-autoload```, after the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
     
     Note that if you use `--no-autolod`, after the tool creates the resources in CloudShell, you will have to manually discover each individual resource in CloudShell.
  
@@ -197,13 +195,9 @@ This chapter explains how to discover devices in CloudShell using the Autodiscov
    
       **Additional options:**
       
-      To generate the report in console format instead of .xlsx (default), add the following tag:
- 
-      ```--report-type console```
+      To generate the report in console format instead of .xlsx (default), add the following tag: ```--report-type console```
               
-      To generate a log file, add the following tag: 
-      
-      ```--log-file <log filename>      ```
+      To generate a log file, add the following tag: ```--log-file <log filename>      ```
 
 ## Autodiscovering devices not modeled in CloudShell 
 
@@ -289,13 +283,9 @@ In offline mode, the Autodiscovery tool gives you an opportunity to verify the i
  
     **Additional options:** 
 
-    To generate the report in console format instead of .xlsx (default), add the following tag:
+    To generate the report in console format instead of .xlsx (default), add the tag: ```--report-type console```
 
-    ```--report-type console```
-
-    To generate a log file, add the following tag: 
-
-    ```--log-file <log filename>```
+    To generate a log file, add the tag: ```--log-file <log filename>```
 
      CloudShell discovers the devices and generates a *discovery_report.xlsx file*, containing the autodiscovery details, in the folder where you ran the command. Use this file to troubleshoot any issues.
 
@@ -349,16 +339,12 @@ In online mode, the Autodiscovery tool immediately attempts to create and discov
    
     **Additional options:** 
     
-       To generate a log file, add the following tag:
+       To generate a log file, add the tag: ```--log-file <log filename>```
 
-    ```--log-file <log filename>```
-
-     To run this command-line without discovering the resources on CloudShell, i.e. only creating the resources in CloudShell without discovering them, add the following tag:
+     To run this command-line without discovering the resources on CloudShell, i.e. only creating the resources in CloudShell without discovering them, add the tag: ```--no-autoload```
      
      **Note:** After the resources are created in CloudShell, you will have to manually discover each individual resource in CloudShell.
-
-    ```--no-autoload```
-    
+      
 ### Additional vendors configuration file editable parameters
 
 |Field|Description|
@@ -409,9 +395,7 @@ This is a three-step process. First, you must generate a â€œdevice connectionsâ€
 
       **Additional option:** 
    
-      To generate a log file, add the following tag: 
-
-       ```--log-file <log filename>```
+      To generate a log file, add the tag: ```--log-file <log filename>```
    
 # Input Data Files
 
