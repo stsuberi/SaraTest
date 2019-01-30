@@ -246,11 +246,11 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 # Typical Workflows 
 
-**Workflow 1** - *Using a Controller to run TestCenter traffic* 
+**Workflow 1** - *Using the Spirent controller to run TestCenter traffic* 
 
 1. Create a new blueprint.
 
-   * Log in to CloudShell Portal and create a new blueprint (**Blueprint Catalog>Create Blueprint**).
+   * In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
    
    * Give the blueprint a name.
    
@@ -258,7 +258,7 @@ When you import a service shell, most shells are automatically assigned a defaul
 
    * Click the **App/Services** tab and add the **TestCenter Controller** service.
 
-   * Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, for a configuration with two ports:
+   * Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, if you have a configuration with two ports:
    
    ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
  
@@ -272,8 +272,9 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 See [Configuring a new service](#configuring-a-new-service).
 
-5. Map the configuration ports to the sandbox ports.
-For each port in the TestCenter configuration, assign physical port from the ports in the sandbox. Open the attributes tab and set the **Logical Name** to the port name in the configuration:
+5. Map the configuration ports to the sandbox ports. For each port in the TestCenter configuration, assign a physical port from the ports in the sandbox. 
+
+   * Open the attributes tab and set the **Logical Name** to the port name in the configuration:
           
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_port_logical_name.png)  
 
