@@ -99,7 +99,7 @@ The following table describes the commands executed from the controller service:
 The following table describes the hidden developer commands from the controller service:
 
 |Command|Description|Parameters|
-|:-----|:-----|
+|:-----|:-----|:-----|
 |get_session_id|Returns the REST session. This ID can be used to run any STC REST command directly.||
 |get_children|Returns list of all children of a specific type of the requested object.<br>If child_type == None all children will be returned.|obj_ref: Requested object reference; child_type: Requested child type.|
 |get_attributes|Returns dictionary of all <attribute: value> of the requested object attributes.|obj_ref: Requested object reference.|
