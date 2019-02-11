@@ -96,6 +96,60 @@ The following table describes the commands executed from the controller service:
 |Get Statistics|Gets real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
 |Perform sequencer command|Set the command's inputs as follows:<br>**Command** (Enum)<br> ▪ **Start**, **Stop** or **Wai**t for sequencer to end (Blocking).|
 
+The following table describes the hidden developer commands from the controller service:
+
+|Command|Description|Parameters|
+|:-----|:-----|
+|get_session_id|Returns the REST session. This ID can be used to run any STC REST command directly.||
+|get_children|Returns list of all children of a specific type of the requested object.<br>If child_type == None all children will be returned.|obj_ref: Requested object reference; child_type: Requested child type.|
+|get_attributes|Returns dictionary of all <attribute: value> of the requested object attributes.|obj_ref: Requested object reference.|
+|set_attribute|Sets value of specific attribute of the requested object.|obj_ref: Requested object reference; attr_name:	Requested attribute name.; attr_value:Value to set.|
+|perform_command|Performs any STC command.|command:Requested command (without the Command suffix); parameters_json: Command parameters dict {name: value} as serialized json.|
+
+The following is a simple code snippet demonstrating the hidden commands:
+
+The code assumes that *reservation_id* holds the reservation ID and *session* holds the CS session.
+
+# Get session ID
+session_id = session.ExecuteCommand(reservation_id, 'TestCenter Controller',                                                 'Service', 'get_session_id')
+
+# Get project object reference.        
+project = session.ExecuteCommand(reservation_id, 'TestCenter Controller',                                              'Service', 'get_children',
+[InputNameValue('obj_ref', 'system1'),
+ InputNameValue('child_type', 'project')])
+project_obj = json.loads(project.Output)[0]
+
+# Get all children of project.        
+project_childs = session.ExecuteCommand(reservation_id, 'TestCenter Controller',                                                     'Service', 'get_children',
+[InputNameValue('obj_ref', project_obj)])
+
+# Get automation-options object reference.        
+options = session.ExecuteCommand(reservation_id, 'TestCenter Controller',
+'Service', 'get_children',                                              [InputNameValue('obj_ref', 'system1'),
+ InputNameValue('child_type', 'AutomationOptions')])
+options_ref = json.loads(options.Output)[0]
+
+# Get automation-options attributes.
+options_attrs = session.ExecuteCommand(reservation_id, 'TestCenter Controller',
+'Service', 'get_attributes',                                                    [InputNameValue('obj_ref', options_ref)])
+
+# Set automation-options log-level attribute.
+session.ExecuteCommand(reservation_id,
+'TestCenter Controller',
+'Service', 'set_attribute',                                    [InputNameValue('obj_ref', options_ref),
+ InputNameValue('attr_name', 'LogLevel'),
+ InputNameValue('attr_value', 'INFO')])
+ 
+# Perform subscribe command.
+parameters = {'Parent': project_obj,
+              'ResultParent': project_obj,
+              'ConfigType': 'Generator',
+              'ResultType': 'GeneratorPortResults'}
+session.ExecuteCommand(reservation_id,
+'TestCenter Controller',
+'Service', 'perform_command',                                                    [InputNameValue('command', 'ResultsSubscribe'), InputNameValue('parameters_json',json.dumps(parameters))])
+
+
 # Downloading the Shell
 The **Spirent TestCenter Controller 1G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
