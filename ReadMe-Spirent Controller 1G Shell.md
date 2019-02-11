@@ -111,29 +111,35 @@ The following is a simple code snippet demonstrating the hidden commands:
 The code assumes that *reservation_id* holds the reservation ID and *session* holds the CS session.
 
 **Get session ID**
+
 session_id = session.ExecuteCommand(reservation_id, 'TestCenter Controller',                                                 'Service', 'get_session_id')
 
-**Get project object reference**        
+**Get project object reference** 
+
 project = session.ExecuteCommand(reservation_id, 'TestCenter Controller',                                              'Service', 'get_children',
 [InputNameValue('obj_ref', 'system1'),
  InputNameValue('child_type', 'project')])
 project_obj = json.loads(project.Output)[0]
 
-**Get all children of project**        
+**Get all children of project**
+
 project_childs = session.ExecuteCommand(reservation_id, 'TestCenter Controller',                                                     'Service', 'get_children',
 [InputNameValue('obj_ref', project_obj)])
 
-**Get automation-options object reference**        
+**Get automation-options object reference** 
+
 options = session.ExecuteCommand(reservation_id, 'TestCenter Controller',
 'Service', 'get_children',                                              [InputNameValue('obj_ref', 'system1'),
  InputNameValue('child_type', 'AutomationOptions')])
 options_ref = json.loads(options.Output)[0]
 
 **Get automation-options attributes**
+
 options_attrs = session.ExecuteCommand(reservation_id, 'TestCenter Controller',
 'Service', 'get_attributes',                                                    [InputNameValue('obj_ref', options_ref)])
 
 **Set automation-options log-level attribute**
+
 session.ExecuteCommand(reservation_id,
 'TestCenter Controller',
 'Service', 'set_attribute',                                    [InputNameValue('obj_ref', options_ref),
@@ -141,6 +147,7 @@ session.ExecuteCommand(reservation_id,
  InputNameValue('attr_value', 'INFO')])
  
 **Perform subscribe command**
+
 parameters = {'Parent': project_obj,
               'ResultParent': project_obj,
               'ConfigType': 'Generator',
