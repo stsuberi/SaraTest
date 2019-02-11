@@ -146,6 +146,7 @@ session.ExecuteCommand(reservation_id,
  InputNameValue('attr_name', 'LogLevel'),
  InputNameValue('attr_value', 'INFO')])
  
+ 
 **Perform subscribe command**
 
 parameters = {'Parent': project_obj,
