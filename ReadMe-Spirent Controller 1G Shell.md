@@ -100,11 +100,11 @@ The following table describes the hidden developer commands from the controller 
 
 |Command|Description|Parameters|
 |:-----|:-----|:-----|
-|get_session_id|Returns the REST session. This ID can be used to run any STC REST command directly.||
-|get_children|Returns list of all children of a specific type of the requested object.<br>If child_type == None all children will be returned.|obj_ref: Requested object reference; child_type: Requested child type.|
+|get_session_id|Returns the REST session. This ID can be used to run directly any STC REST command.||
+|get_children|Returns a list of all children of a specific type of requested object.<br>If *child_type* **== None**, all children will be returned.|*obj_ref*: Requested object reference<br>*child_type*: Requested child type.|
 |get_attributes|Returns dictionary of all <attribute: value> of the requested object attributes.|obj_ref: Requested object reference.|
-|set_attribute|Sets value of specific attribute of the requested object.|obj_ref: Requested object reference; attr_name:	Requested attribute name.; attr_value:Value to set.|
-|perform_command|Performs any STC command.|command:Requested command (without the Command suffix); parameters_json: Command parameters dict {name: value} as serialized json.|
+|set_attribute|Sets value of specific attribute of the requested object.|*obj_ref*: Requested object reference<br>*attr_name*:	Requested attribute name<br>*attr_value*: Value to set.|
+|perform_command|Performs any STC command.|*command*: Requested command (without the Command suffix)<br>*parameters_json*: Command parameters dict {name: value} as serialized json.|
 
 The following is a simple code snippet demonstrating the hidden commands:
 
