@@ -63,12 +63,11 @@ The shell's data model includes all shell metadata, families, and attributes.
 
 The attribute names and types are listed in the following table:
 
-|Attribute|Type|Default value|Description|
-|:---|:---|:---|:---|
-|||||
-|||||
-|||||
-|||||
+|Attribute|Description|
+|:---|:---|
+|Controller Address|IP address of the traffic server. Relevant only if an external server is configured.|
+|Controller TCP Port|TCP port of the traffic server. Relevant only if an external server is configured. If left empty, the Default TCP port should be used.|
+|Test Files Location|Location for test related files|
 
 ### Automation
 This section describes the automation (driver) associated with the data model. The shell’s driver is provided as part of the shell package. There are two types of automation processes, Autoload and Resource. Autoload is executed when creating the resource in the **Inventory** dashboard, while resource commands are run in the sandbox.
