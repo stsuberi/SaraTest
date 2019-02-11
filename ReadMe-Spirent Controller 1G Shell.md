@@ -61,7 +61,7 @@ The shell's data model includes all shell metadata, families, and attributes.
 
 #### **Spirent TestCenter Controller Attributes**
 
-The attribute names and types are listed in the following table:
+The attribute names and descriptions are listed in the following table:
 
 |Attribute|Description|
 |:---|:---|
