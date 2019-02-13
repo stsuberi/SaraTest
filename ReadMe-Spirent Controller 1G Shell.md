@@ -241,8 +241,8 @@ full path"/>`
    ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_controller.png)
   
   3. In the **Attributes** tab, enter the **Default Values** for the Spirent TestCenter Controller service as follows:
-  * Controller Address: IP address of the STC REST server, either lab server or the machine running stcweb.
-  * Controller TCP Port: TCP port of the STC REST server, either lab server or the machine running stcweb.
+  * **Controller Address**: IP address of the STC REST server, either lab server or the machine running stcweb.
+  * **Controller TCP Port**: TCP port of the STC REST server, either lab server or the machine running stcweb.
 	     
   4. Click **Save**.<br><br>CloudShell validates the device’s settings and updates the new resource with the device’s structure.
 
@@ -273,9 +273,11 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 **Note:** The association process differs depending on the type of shell - second generation (2G) shell or first generation (1G) shell. The instructions below detail the steps for a 1G service shell.
 
-1. (Optional) You can associate the service to a service category that already exists in CloudShell or associate the service to a new category.
+*  (Optional) You can associate the service to a service category that already exists in CloudShell or associate the service to a new category.
 
 	**Note:** If you do not want to change the category(s) of this shell, you can use the default category that comes out-of-the-box (if it exists).
+	
+	Do one of the following:
 	 
 	* Associate the service family to an existing category(s).
 	
@@ -291,7 +293,7 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 	* Modify the 1G category(s) in the shell project’s configuration files to add a new category(s). See [Associating categories to 1st Gen Service Shells](https://devguide.quali.com/reference/9.0.0/associating-service-categories.html).
 
-2. Associate the shell’s service category to a domain.
+* Associate the shell’s service category to a domain.
 	1. In the **Manage** dashboard, click **Categories** from the left sidebar, or **Domains** if you are a domain admin.
 	
 	2. Select **Services Categories**.
@@ -304,19 +306,19 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 # Typical Workflows 
 
-**Workflow 1** - *Using the Spirent controller to run TestCenter traffic* 
+**Workflow** - *Using the Spirent controller to run TestCenter traffic* 
 
 1. Create a new blueprint.
 
-   * In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
+   1. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
    
-   * Give the blueprint a name.
+   2. Give the blueprint a name.
    
 2. Add resources and services to the blueprint. 
 
-   * Click the **App/Services** tab and add the **TestCenter Controller** service.
+   1. Click the **App/Services** tab and add the **TestCenter Controller** service.
 
-   * Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, if you have a configuration with two ports:
+   2. Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, if you have a configuration with two ports:
    
    ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
  
@@ -330,9 +332,9 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 See [Configuring a new service](#configuring-a-new-service).
 
-5. Map the configuration ports to the sandbox ports. For each port in the TestCenter configuration, assign a physical port from the ports in the sandbox. 
+5. Click **Add**.
 
-   * Open the attributes tab and set the **Logical Name** to the port name in the configuration:
+6. Map the configuration ports to the sandbox ports. For each port in the TestCenter configuration, assign a physical port from the ports in the sandbox. To do this, open the attributes tab and set the **Logical Name** to the port name in the configuration:
           
 ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_port_logical_name.png)  
 
