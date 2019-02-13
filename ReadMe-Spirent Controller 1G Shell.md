@@ -42,7 +42,7 @@ For more information on **Spirent TestCenter**, see the official device manufact
 
 ### Standard version
 
-For detailed information about the shell’s structure and attributes, see the **Shells Standard: Traffic**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/traffic_standard.md) in GitHub.
+For detailed information about the shell’s structure and attributes, see the **Shells Standard: Traffic Generator Controller**.(https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/Traffic%20Generator%20Controller%20Shell%20Standard.md) in GitHub.
 
 ### Supported OS
 ▪ Windows
