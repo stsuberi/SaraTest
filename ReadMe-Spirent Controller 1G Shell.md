@@ -38,7 +38,7 @@ To model a Spirent TestCenter device in CloudShell, use the following shells:
 
 ▪ [Spirent TestCenter Controller 1G Shell (service)](https://community.quali.com/repos/1280/spirent-test-center-controller-shell), which provides functionality to load test configuration, run tests, get test results, etc.
 
-For more information on the **Spirent TestCenter**, see the official device manufacturer product documentation.
+For more information on **Spirent TestCenter**, see the official device manufacturer product documentation.
 
 ### Standard version
 
