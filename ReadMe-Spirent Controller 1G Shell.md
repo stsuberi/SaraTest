@@ -2,9 +2,9 @@
 
 # **Spirent TestCenter Controller 1G Shell**  
 
-Release date: July 2018
+Release date: January 2019
 
-Shell version: 1.5.0
+Shell version: 1.5.3
 
 Document version: A
 
@@ -345,10 +345,6 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-• Added support for STC chassis 2nd gen shell.
-
-• Moved from TCL API to REST API.
-
-• Added Perform sequencer command.
+• Does not fail on empty results; returns empty table.
 
 For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Spirent-TestCenterController-Shell/releases). 
