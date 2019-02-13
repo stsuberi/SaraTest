@@ -92,7 +92,7 @@ The following table lists the commands the sandbox end-user can run from the con
 |Start ARP/ND|Sends ARP/ND for all devices and streams.|
 |Start All Devices|Sends all emulations on all devices.|
 |Stop All Devices|Stops all emulations on all devices.|
-|Start Traffic|Send traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: **True**: Returns after traffic finishes running; **False**: Returns immediateley.|
+|Start Traffic|Sends traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: **True**: Returns after traffic finishes running; **False**: Returns immediateley.|
 |Stop Traffic|Stops traffic on all ports.|
 |Get Statistics|Gets real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
 |Perform sequencer command|Set the command's inputs as follows:<br>**Command** (Enum)<br> ▪ **Start**, **Stop** or **Wai**t for sequencer to end (Blocking).|
