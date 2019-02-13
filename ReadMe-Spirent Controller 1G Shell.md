@@ -322,21 +322,21 @@ When you import a service shell, most shells are automatically assigned a defaul
    
    ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
  
-![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_blueprint_ports.png)
+   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_blueprint_ports.png)
 
 3. Reserve the blueprint to create a sandbox.
 
 4. Edit the TestCenter Controller Service parameters if required.
 
-![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_service_parameters.png)
+   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_service_parameters.png)
 
-See [Configuring a new service](#configuring-a-new-service).
+   See [Configuring a new service](#configuring-a-new-service).
 
 5. Click **Add**.
 
 6. Map the configuration ports to the sandbox ports. For each port in the TestCenter configuration, assign a physical port from the ports in the sandbox. To do this, open the attributes tab and set the **Logical Name** to the port name in the configuration:
           
-![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_port_logical_name.png)  
+   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_port_logical_name.png)  
 
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
