@@ -310,15 +310,15 @@ When you import a service shell, most shells are automatically assigned a defaul
 
 1. Create a new blueprint.
 
-   1. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
+   a. In CloudShell Portal, in the top left section of the **Blueprint Catalog**, click **+ Create Blueprint**.
    
-   2. Give the blueprint a name.
+   b. Give the blueprint a name.
    
 2. Add resources and services to the blueprint. 
 
-   1. Click the **App/Services** tab and add the **TestCenter Controller** service.
+   a. Click the **App/Services** tab and add the **TestCenter Controller** service.
 
-   2. Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, if you have a configuration with two ports:
+   b. Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, if you have a configuration with two ports:
    
    ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
  
