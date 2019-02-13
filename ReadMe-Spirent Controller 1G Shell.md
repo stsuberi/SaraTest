@@ -80,20 +80,24 @@ The following table describes the process that occurrs during Autoload for the c
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-The following table describes the commands executed from the controller service:
+**User Commands**
+
+The following table lists the commands the sandbox end-user can run from the controller service:
 
 **Note**: For detailed information on running a traffic test in CloudShell, see [Traffic Generators Overview](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generators%20overview).
 
 |Command|Description|
 |:-----|:-----|
 |Load configuration|Reserves ports and loads the configuration file. <br>Set the command input as follows:<br>▪ **STC config file name** (String) (Mandatory): Full path to the STC configuration file name - tcc or xml.|
-|Start ARP/ND|Send ARP/ND for all devices and streams.|
-|Start All Devices|Send all emulations on all devices.|
-|Stop All Devices|Stop all emulations on all devices.|
+|Start ARP/ND|Sends ARP/ND for all devices and streams.|
+|Start All Devices|Sends all emulations on all devices.|
+|Stop All Devices|Stops all emulations on all devices.|
 |Start Traffic|Send traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: **True**: Returns after traffic finishes running; **False**: Returns immediateley.|
 |Stop Traffic|Stops traffic on all ports.|
 |Get Statistics|Gets real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
 |Perform sequencer command|Set the command's inputs as follows:<br>**Command** (Enum)<br> ▪ **Start**, **Stop** or **Wai**t for sequencer to end (Blocking).|
+
+**Hidden Commands**
 
 The following table describes the hidden developer commands from the controller service:
 
