@@ -351,6 +351,6 @@ To connect with Quali users and experts from around the world, ask questions and
 
 ### What's New
 
-• **Get Statistics** does not fail if there are no available results on the STC chassis, for example, if traffic was not started. In the new release if no results are available, Get Statistics would not fail but return empty statistics table. 
+• The **Get Statistics** command does not fail, if there are no results available on the STC chassis (for example, if traffic did not start) and instead, returns an empty statistics table. 
 
 For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/Spirent-TestCenterController-Shell/releases). 
