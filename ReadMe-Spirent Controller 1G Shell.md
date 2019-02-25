@@ -289,7 +289,7 @@ When you import a service shell, most shells are automatically assigned a defaul
 	
 		4. Select a category from the catalog and click **OK**.
 	
-	or
+	  or
 
 	* Modify the 1G category(s) in the shell project’s configuration files to add a new category(s). See [Associating categories to 1st Gen Service Shells](https://devguide.quali.com/reference/9.0.0/associating-service-categories.html).
 
