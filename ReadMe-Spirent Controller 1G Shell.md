@@ -238,7 +238,7 @@ full path"/>`
          
   2. In the **Traffic Generator Controller** folder, select **TestCenter Controller**.
   
-   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_controller.png)
+     ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_controller.png)
   
   3. In the **Attributes** tab, enter the **Default Values** for the Spirent TestCenter Controller service as follows:
   * **Controller Address**: IP address of the STC REST server, either lab server or the machine running stcweb.
