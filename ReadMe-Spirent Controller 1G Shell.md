@@ -91,7 +91,7 @@ The following table lists the commands the sandbox end-user can run from the con
 |Load configuration|Reserves ports and loads the configuration file. <br>Set the command input as follows:<br>▪ **STC config file name** (String) (Mandatory): Full path to the STC configuration file name - tcc or xml.|
 |Start ARP/ND|Sends ARP/ND for all devices and streams.|
 |Start All Devices|Starts devices (these are the STC objects that emulate network devices). There are parallel commands in the STC GUI that are called start devices.|
-|Stop All Devices|Stop devices (these are the STC objects that emulate network devices). There are parallel commands in STC GUI that are called stop devices.|
+|Stop All Devices|Stops devices (these are the STC objects that emulate network devices). There are parallel commands in STC GUI that are called stop devices.|
 |Start Traffic|Sends traffic on all ports.<br>Set the command input as follows:<br>▪ **Blocking (Enum)**: **True**: Returns after traffic finishes running; **False**: Returns immediateley.|
 |Stop Traffic|Stops traffic on all ports.|
 |Get Statistics|Gets real time statistics of the traffic test in either JSON or CSV format. <br>Set the command's inputs as follows: <br>▪ **View Name**: (String) (Mandatory) - Type of statistics to return, such as generatorPortResults, analyzerPortResults, etc.<br>▪ **Output Type (Enum)**: **JSON** or **CSV**. JSON prints the statistics to the sandbox's output, which is useful for API calls that can then use the output, while CSV attaches a CSV file with the test's statistics to the sandbox.|
