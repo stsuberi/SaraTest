@@ -320,9 +320,9 @@ When you import a service shell, most shells are automatically assigned a defaul
 
    b. Click the **Resource** button and add the TestCenter chassis resource and all needed ports into the diagram. The number of STC ports in the blueprint should match the number of ports in the TestCenter configuration. For example, if you have a configuration with two ports:
    
-   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
+     ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_ports.png)
  
-   ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_blueprint_ports.png)
+     ![](https://github.com/stsuberi/SaraTest/blob/master/spirent_testcenter_blueprint_ports.png)
 
 3. Reserve the blueprint to create a sandbox.
 
