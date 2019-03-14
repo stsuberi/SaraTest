@@ -49,13 +49,13 @@ Quali’s upgraded L1 shells include certain enhancements, such as the following
 
 1.	Create a list of the L1 resources you want to migrate. See [Showing Resources](#showing-resources) to generate a list of the L1 resources currently in CloudShell.
 2.	Install the new L1 shell versions. You do not need to create a resource from these shells.
-    a.	Search the Quali Community Integrations page for the new shells.
-    b.	Import the shells into CloudShell. See Importing Shells in the CloudShell online help.
-3.	Install the L1 Migration tool. See Installing the L1 Migration tool.
-4.	Configure the L1 Migration tool. See Configure the L1 Migration tool.
-5.	Back up the routes and connections of the L1 resources you want to migrate. See Backup resource connections and routes.
-6.	Run the L1 Migration tool. See Migrating L1 resources. 
-7.	If you are not satisfied with your results, you can restore the L1 resource routes and connections to their state prior to the migration. See Restore resource connections and routes.<br>
+    a.	Search the [Quali Community Integrations](https://community.quali.com/integrations) page for the new shells.
+    b.	Import the shells into CloudShell. See [Importing Shells](https://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Shells.htm#Adding) in the CloudShell online help.
+3.	Install the L1 Migration tool. See [Installing the L1 Migration tool](#installing-the-l1-migration-tool).
+4.	Configure the L1 Migration tool. See [Configuration](#configuration).
+5.	Back up the routes and connections of the L1 resources you want to migrate. See [Backing up resource connections and routes](#backing-up-resource-connections-and-routes#.
+6.	Run the L1 Migration tool. See [Migrating L1 Resources](#migrating-l1-resources). 
+7.	If you are not satisfied with your results, you can restore the L1 resource routes and connections to their state prior to the migration. See [Appendix Restoring Resource Mappings](#appendix-restoring-resource-mappings).<br>
 The new resources are displayed in **Resource Manager Client’s Resource Explorer** with the prefix (“New_”). The migration process copies physical connections to the new resources. In active sandboxes, all existing routes are updated to use the new L1 resources.
 8.	Following a successful migration, you are advised to remove the old resources.
 
@@ -84,7 +84,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    
    To use the tool, navigate to the folder in command-line.
 
-   **Note:** It is recommended to add the python and pip installation folder paths to your local environment variables. For example, C:\Python27 and C:\Python27\Scripts. This will enable you to run the python/pip commands from any folder.
+   **Note:** It is recommended to add the python and pip installation folder paths to your local environment variables. For example, *C:\Python27 and C:\Python27\Scripts*. This will enable you to run the python/pip commands from any folder.
 
 **To view the tool’s version number:**
 
@@ -149,7 +149,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    
       ```migration_tool config backup_location C:\<FOLDER_PATH>```
    
-      The L1 Migration tool automatically creates a new backup file each time you run a migration command, saving your existing connections and routes in the following default location: C:\Users\<user>\AppData\Roaming\Quali\migration_tool\Backup. The file is generated in yaml format.
+      The L1 Migration tool automatically creates a new backup file each time you run a migration command, saving your existing connections and routes in the following default location: *C:\Users\<user>\AppData\Roaming\Quali\migration_tool\Backup*. The file is generated in yaml format.
 
    * **To change the prefix for your new migrated resources:**
 
@@ -205,7 +205,7 @@ This command produces a list of all L1 resources, which helps when you need to i
 
    ```migration_tool show --config <FILE-PATH>```
    
-   Replace <FILE-PATH> with the relative file path and name of the custom config file you generated here: Generate a new configuration file. 
+   Replace <FILE-PATH> with the relative file path and name of the custom config file you generated here: "To generate a custom config file based on the tool's default configuration". 
    
 **To generate a list of all L1 resources for a particular family:**
 
@@ -291,7 +291,7 @@ This section explains how to migrate L1 resources. In order to run a migration p
 
    ```migration_tool migrate "*/Old Family/Old Model" "*/New Family/New Model"```
    
-   The default prefix (_new) or the prefix configured in: Designate a prefix for naming of new resources will be used to create new resources containing the prefix in their names. For example, if you have an old L1 resource named “TestL1Shell”, which relates to Old Family/Old Model, a new L1 resource will be created named “new_TestL1Shell” under the New Family/New Model.
+   The default prefix (_new) or the prefix configured in: "To change the prefix for your new migrated resources" will be used to create new resources containing the prefix in their names. For example, if you have an old L1 resource named “TestL1Shell”, which relates to Old Family/Old Model, a new L1 resource will be created named “new_TestL1Shell” under the New Family/New Model.
 
 ## Migrate a list of resources
 
@@ -339,7 +339,7 @@ Running the migrate command as a dry run creates new resources but does not swit
 
    ```migration_tool migrate --config <FILE-PATH> SRC_RESOURCES DST_RESOURCES```
    
-   Where <FILE-PATH> is the relative file-path and name of the config file you created in Specify a new configuration file.
+   Where <FILE-PATH> is the relative file-path and name of the config file you created in "To generate a custom config file based on the tool's default configuration".
    
 ### Migrate resources from a backup file
 
@@ -369,7 +369,7 @@ This section explains the steps you should take after completing the migration p
 2. Test the new resources to ensure that they were migrated successfully.
 3. Delete the old ones (or exclude them if you want to keep them for reference purposes). 
 
-   If you are not happy with the migration, you can always restore from a config file, see Restoring  Resource Mappings.
+   If you are not happy with the migration, you can always restore from a config file, see [Restoring  Resource Mappings](#appendix-resotring-resource-mappings).
    
 # Appendix Restoring Resource Mappings
 
@@ -415,7 +415,7 @@ This section explains how to restore resource connections and routes after runni
 
    ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch X” --dry-run```
    
-   **Note:** For additional information about dry-runs, see Migrate resources using dry run.
+   **Note:** For additional information about dry-runs, see [Migrate resources using dry run](#migrate-resources-using-dry-run).
 
 **Restore using a custom config file:**
 
