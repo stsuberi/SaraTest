@@ -117,20 +117,20 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
 
    * **To view the tool’s current configuration, run the following command-line:**
 
-   ```migration_tool config```
+      ```migration_tool config```
    
-   After running this command, the following output (sample) is generated:
+      After running this command, the following output (sample) is generated:
    
 
-   ```username: admin
-   domain: Global
-   name_prefix: new_
-   logging_level: INFO
-   host: localhost
-   backup_location: C:\Users\Administrator\AppData\Roaming\Quali\migration_tool\Backup
-   password: ******
-   port: 8029
-   ```
+      ```username: admin
+      domain: Global
+      name_prefix: new_
+      logging_level: INFO
+      host: localhost
+      backup_location: C:\Users\Administrator\AppData\Roaming\Quali\migration_tool\Backup
+      password: ******
+      port: 8029
+      ```
 
 •	**To specify the tool’s log level information:**
 
