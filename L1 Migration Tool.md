@@ -102,14 +102,16 @@ To use the tool, navigate to the folder in command-line.
 **To configure the L1 Migration tool:**
 
 1. Configure your CloudShell credentials: 
+
 Run the following command-lines and replace your CS credentials within the <>. For example, replace <CSHost> with your CloudShell host, etc.: 
    
-   ```migration_tool config host <CSHost>
-migration_tool config username <CSUserName>
-migration_tool config password <CSPassword>
-migration_tool config domain <CSDomain>
-migration_tool config port <CSPort>```
-
+   ```
+   migration_tool config host <CSHost>
+   migration_tool config username <CSUserName>
+   migration_tool config password <CSPassword>
+   migration_tool config domain <CSDomain>
+   migration_tool config port <CSPort>
+   ```
 
 2. Configure other elements of the tool:
 •	**To view the tool’s current configuration, run the following command-line:**
