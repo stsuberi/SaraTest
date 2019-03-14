@@ -313,7 +313,7 @@ This section explains how to migrate L1 resources. In order to run a migration p
 
    ```migration_tool migrate "L1 Switch1,L1 Switch2" "New Switch1,New Switch2"```
    
-   This command migrates the old resources to the new resources, if you already created the new resources in Resource Manager Client. If you do not have new resources, the migration process will create new resources with the names you provided.
+   This command migrates the old resources to the new resources, if you already created the new resources in **Resource Manager Client**. If you do not have new resources, the migration process will create new resources with the names you provided.
    
 ## Migration options
 
