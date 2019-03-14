@@ -115,7 +115,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
 
 2. Configure other elements of the tool:
 
-•	**To view the tool’s current configuration, run the following command-line:**
+   * **To view the tool’s current configuration, run the following command-line:**
 
    ```migration_tool config```
    
