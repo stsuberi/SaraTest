@@ -159,7 +159,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    
       ```migration_tool config name_prefix "<New>_"```
 
-      Replace <New> with the desired prefix. 
+      Replace **New** with the desired prefix. 
 
    * **To generate a custom config file based on the tool’s default configuration:**
 
@@ -167,7 +167,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    
       ```migration_tool config --config <FILE-PATH> <config command>```
    
-      Replace <FILE-PATH> with the relative file path and name of the custom config file and <config command> with any command that updates a parameter in the config file. For example:
+      Replace **FILE-PATH** with the relative file path and name of the custom config file and **config command** with any command that updates a parameter in the config file. For example:
 
       ```migration_tool config --config test.conf name_prefix "test"```
    
