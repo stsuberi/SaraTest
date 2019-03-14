@@ -183,3 +183,28 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    
       ```migration_tool config --patterns_table "L1 Switch/Test Switch Chassis" ".*/(.*)/(.*)"```
 
+# Showing Resources
+
+This command produces a list of all L1 resources, which helps when you need to include the names of resources in other commands within the tool.
+
+**To generate a list of all L1 resources based on the default config file:**
+
+* Run the following command-line: 
+
+   ```migration_tool show```
+    
+**To generate a list of all L1 resources that exist on the CloudShell server specified in a custom config file:**
+
+* Run the following command-line: 
+
+   ```migration_tool show --config <FILE-PATH>```
+   
+   Replace <FILE-PATH> with the relative file path and name of the custom config file you generated here: Generate a new configuration file. 
+   
+**To generate a list of all L1 resources for a particular family:**
+
+* Run the following command-line: 
+
+   ```migration_tool show --family <TEXT>```
+   
+   Replace <TEXT> with the name of the family. If the family name contains spaces, place quotes around the name of the family, for example “L1 Switch”.
