@@ -364,4 +364,63 @@ This section explains the steps you should take after completing the migration p
 3. Delete the old ones (or exclude them if you want to keep them for reference purposes). 
 
    If you are not happy with the migration, you can always restore from a config file, see Restoring  Resource Mappings.
+   
+# Appendix: Restoring Resource Mappings
+
+This section explains how to restore resource connections and routes after running the migration from a backup file if you are not satisfied with the migration.
+
+## Restoring from a backup file:
+
+* Run the following command-line: 
+
+   ```migration_tool restore --backup-file [BACKUP FILE-PATH]```
+   
+   Where Backup file path is the full path to the backup file.
+
+## Restoring a specific resource from a backup file: 
+
+* Run the following command-line: 
+
+   ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch1 X"```
+
+   Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
+
+## Restoring a specific resource from a backup file:
+
+* Run the following command-line: 
+
+   ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch X" --connections```
+
+   Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
+
+## Restoring a specific resource from a backup file:
+
+* Run the following command-line: 
+
+   ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch X" --routes```
+
+   Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
+   
+## Additional Restore options
+
+**Restore as a dry run:**
+
+* Run the following command-line: 
+
+   ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch X” --dry-run```
+   
+   **Note:** For additional information about dry-runs, see Migrate resources using dry run.
+
+**Restore using a custom config file:**
+
+* Run the following command-line: 
+
+   ```migration_tool restore --backup-file [BACKUPFILE-PATH] [Resources] --config [FILE-PATH]```
+   
+**Restore while override existing routes and connections:**
+
+* Run the following command-line: 
+
+   ```migration_tool restore --backup-file [BACKUP FILE-PATH] --override```
+ 
 
