@@ -32,10 +32,7 @@ Written in Python 2.7.10
  * [Post Migration Operations](#showing-resources)
  * [Appendix: Restoring Resource Mappings](#showing-resources)
      
-     
- 
- 
-    
+   
 
 # Introduction
 In order to benefit from the capabilities of Quali’s upgraded L1 shells, you must migrate your existing L1 resources (based on the old shells) to new resources based on the new shells. The L1 Migration tool automates the L1 resource migration process, automatically mapping the physical connections in the new L1 resources and updating active sandbox routes in the process.
@@ -380,7 +377,7 @@ This section explains the steps you should take after completing the migration p
 
 This section explains how to restore resource connections and routes after running the migration from a backup file if you are not satisfied with the migration.
 
-## Restoring from a backup file:
+**Restoring from a backup file:**
 
 * Run the following command-line: 
 
@@ -388,7 +385,7 @@ This section explains how to restore resource connections and routes after runni
    
    Where Backup file path is the full path to the backup file.
 
-## Restoring a specific resource from a backup file: 
+**Restoring a specific resource from a backup file:** 
 
 * Run the following command-line: 
 
@@ -396,7 +393,7 @@ This section explains how to restore resource connections and routes after runni
 
    Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
 
-## Restoring a specific resource connections from a backup file:
+**Restoring a specific resource connections from a backup file:**
 
 * Run the following command-line: 
 
@@ -404,7 +401,7 @@ This section explains how to restore resource connections and routes after runni
 
    Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
 
-## Restoring a specific resource routes from a backup file:
+**Restoring a specific resource routes from a backup file:**
 
 * Run the following command-line: 
 
