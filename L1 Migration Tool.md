@@ -207,7 +207,7 @@ This command produces a list of all L1 resources, which helps when you need to i
 
    ```migration_tool show --config <FILE-PATH>```
    
-   Replace <FILE-PATH> with the relative file path and name of the custom config file you generated here: "To generate a custom config file based on the tool's default configuration". 
+   Replace **FILE-PATH** with the relative file path and name of the custom config file you generated here: "To generate a custom config file based on the tool's default configuration". 
    
 **To generate a list of all L1 resources for a particular family:**
 
@@ -215,7 +215,7 @@ This command produces a list of all L1 resources, which helps when you need to i
 
    ```migration_tool show --family <TEXT>```
    
-   Replace <TEXT> with the name of the family. If the family name contains spaces, place quotes around the name of the family, for example “L1 Switch”.
+   Replace **TEXT** with the name of the family. If the family name contains spaces, place quotes around the name of the family, for example “L1 Switch”.
    
 # Backing up Resource Connections and Routes
 
