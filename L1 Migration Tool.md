@@ -19,7 +19,7 @@ Document version: 1.0
     * [Backing up resource connections only](#backing-up-resource-connections-only)
     * [Backing up resources using a different config file](#backing-up-resources-using-a-different-config-file)
  * [Migrating L1 Resources](#migrating-l1-resources)  
-     * [Migrate resources of a specific Family/Model](#migrate-resources-of-a-specific-family/Model)
+     * [Migrate resources of a specific Family and Model](#migrate-resources-of-a-specific-family-and-model)
      * [Migrate a list of resources](#migrate-a-list-of-resources)
      * [Migrate resources to existing resources](#migrate-resources-to-existing-resources)
      * [Migration options](#migration-options)
@@ -283,9 +283,9 @@ This section explains how to migrate L1 resources. In order to run a migration p
 * The migration process migrates only routes and mappings, not additional settings on the L1 resource, like attributes and metadata.
 * You do not need to specify the full path from the root of the desired resource(s). However, the tool will create the new resource(s) in the root.
  
-## Migrate resources of a specific Family/Model
+## Migrate resources of a specific Family and Model
 
-**To migrate resources of a specific Family/Model:**
+**To migrate resources of a specific Family and Model:**
 
 * Run the following command-line: 
 
