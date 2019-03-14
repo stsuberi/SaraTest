@@ -100,7 +100,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
 
    ```migration_tool <command> --help```
    
-   Where **<command>** is the name of the main command.
+   Where **command** is the name of the main command.
 
 
 # Configuration
