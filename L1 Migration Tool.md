@@ -319,7 +319,7 @@ This section explains how to migrate L1 resources. In order to run a migration p
 
 ### Migrate resources using dry run
 
-Running the migrate command as a dry run creates new resources but does not switch the physical connections or create or remove active routes. Instead, it lists the actions to be performed, allowing the user can check these actions and decide if to proceed with the migration. You can add this option to any of the migrate commands.
+Running the migrate command as a dry run creates new resources but does not switch the physical connections or create or remove active routes. Instead, it lists the actions to be performed, allowing the user to check these actions and decide if to proceed with the migration. You can add this option to any of the migrate commands.
 
 **To migrate resources using dry-run:**
 
