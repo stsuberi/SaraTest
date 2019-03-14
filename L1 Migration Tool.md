@@ -11,20 +11,31 @@ Written in Python 2.7.10
     * [Workflow](#workflow)
 * [Installation](#installation)
     * [Installation Prerequisites](#installation-prerequisites)
-    * [Installing the Autodiscovery tool](#installing-the-autodiscovery-tool)
-* [Using the Autodiscovery Tool](#using-the-autodiscovery-tool)
-    * [Help Commands](#help-commands)
-* [Autodiscovering Devices in CloudShell](#autodiscovering-devices-in-cloudshell)
-    * [Autodiscovering devices modeled in CloudShell](#autodiscovering-devices-modeled-in-cloudshell)
-    * [Autodiscovering devices not modeled in CloudShell](#autodiscovering-devices-not-modeled-in-cloudshell)
-        * [Offline Mode](#offline-mode)
-        * [Online Mode](#online-mode)
-        * [Additional vendors configuration file editable parameters](#additional-vendors-configuration-file-editable-parameters)
-* [Creating Connections on Discovered Devices](#creating-connections-on-discovered-devices)
-* [Input Data Files](#input-data-files)
-    * [Input file in YAML format](#input-file-in-yaml-format)
-    * [Input file in JSON format](#input-file-in-json-format)
-    * [Additional vendors configuration file in JSON format](#additional-vendors-configuration-file-in-JSON-format)
+    * [Installing the L1 Migration tool](#installing-the-l1-migration-tool)
+* [Help Commands](#help-commands)
+* [Configuration](#configuration)
+* [Showing Resources](#showing-resources)
+* [Backing up Resource Connections and Routes] (#backing-up-resource-connections-and-routes)
+    * [Backing up resource connections and routes](#input-file-in-yaml-format)
+    * [Backing up resource routes only](#input-file-in-json-format)
+    * [Backing up resource connections only](#additional-vendors-configuration-file-in-JSON-format)
+    * [Backing up resources using a different config file](#additional-vendors-configuration-file-in-JSON-format)
+ * [Migrating L1 Resources](#showing-resources)  
+     * [Migrate resources of a specific Family/Model](#input-file-in-yaml-format)
+     * [Migrate a list of resources](#input-file-in-yaml-format)
+     * [Migrate resources to existing resources](#input-file-in-yaml-format)
+     * [Migration options](#input-file-in-yaml-format)
+          * [Migrate resources using dry run](#input-file-in-yaml-format)
+          * [Migrate resources using a different config file](#input-file-in-yaml-format)
+          * [Migrate resources from a backup file](#input-file-in-yaml-format)
+          * [Migrate resources while overriding existing connections](#input-file-in-yaml-format)
+ * [Post Migration Operations](#showing-resources)
+ * [Appendix: Restoring Resource Mappings](#showing-resources)
+     
+     
+ 
+ 
+    
 
 # Introduction
 In order to benefit from the capabilities of Quali’s upgraded L1 shells, you must migrate your existing L1 resources (based on the old shells) to new resources based on the new shells. The L1 Migration tool automates the L1 resource migration process, automatically mapping the physical connections in the new L1 resources and updating active sandbox routes in the process.
