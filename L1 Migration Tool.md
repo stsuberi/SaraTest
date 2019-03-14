@@ -109,7 +109,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
 
 1. Configure your CloudShell credentials: 
 
-   Run the following command-lines and replace your CS credentials within the <>. For example, replace <CSHost> with your CloudShell host, etc.: 
+   Run the following command-lines and replace your CS credentials within the <>. For example, replace **CSHost** with your CloudShell host, etc.: 
    
    ```
    migration_tool config host <CSHost>
