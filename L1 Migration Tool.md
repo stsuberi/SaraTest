@@ -114,6 +114,7 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    ```
 
 2. Configure other elements of the tool:
+
 •	**To view the tool’s current configuration, run the following command-line:**
 
    ```migration_tool config```
@@ -122,19 +123,20 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    
 
    ```username: admin
-domain: Global
-name_prefix: new_
-logging_level: INFO
-host: localhost
-backup_location: C:\Users\Administrator\AppData\Roaming\Quali\migration_tool\Backup
-password: ******
-port: 8029```
+   domain: Global
+   name_prefix: new_
+   logging_level: INFO
+   host: localhost
+   backup_location: C:\Users\Administrator\AppData\Roaming\Quali\migration_tool\Backup
+   password: ******
+   port: 8029
+   ```
 
 •	**To specify the tool’s log level information:**
 
-Run the following command-line:
+   Run the following command-line:
 
-Specify either **DEBUG** to obtain the most detailed logging information or **INFO** for basic logging information. If you do not specify a value here, the default value **(INFO)** will be used. Logging information is displayed in the output in your Command Prompt window after running a command.
+   Specify either **DEBUG** to obtain the most detailed logging information or **INFO** for basic logging information. If you do not specify a value here, the default value **(INFO)** will be used. Logging information is displayed in the output in your Command Prompt window after running a command.
 
    ```migration tool config logging_level <DEBUG or INFO>```
 
@@ -144,7 +146,7 @@ Specify either **DEBUG** to obtain the most detailed logging information or **IN
    
    ```migration_tool config backup_location C:\<FOLDER_PATH>```
    
-The L1 Migration tool automatically creates a new backup file each time you run a migration command, saving your existing connections and routes in the following default location: C:\Users\<user>\AppData\Roaming\Quali\migration_tool\Backup. The file is generated in yaml format.
+   The L1 Migration tool automatically creates a new backup file each time you run a migration command, saving your existing connections and routes in the following default location: C:\Users\<user>\AppData\Roaming\Quali\migration_tool\Backup. The file is generated in yaml format.
 
 •	**To change the prefix for your new migrated resources:**
 
@@ -160,15 +162,15 @@ The L1 Migration tool automatically creates a new backup file each time you run 
    
    ```migration_tool config --config <FILE-PATH> <config command>```
    
-Replace <FILE-PATH> with the relative file path and name of the custom config file and <config command> with any command that updates a parameter in the config file. For example:
+   Replace <FILE-PATH> with the relative file path and name of the custom config file and <config command> with any command that updates a parameter in the config file. For example:
 
    ```migration_tool config --config test.conf name_prefix "test"```
    
-You now have a custom config file, based on the default configuration, in the location specified.
+   You now have a custom config file, based on the default configuration, in the location specified.
 
-The config file uses the “Yaml” format, however, any of the following file extensions can be used: .conf, .yaml, .or yml.
+   The config file uses the “Yaml” format, however, any of the following file extensions can be used: .conf, .yaml, .or yml.
 
-This file can now be used later as needed. It is helpful if you have more than one configuration. You can specify this config file when running a command.
+   This file can now be used later as needed. It is helpful if you have more than one configuration. You can specify this config file when running a command.
 
 •	**To list the patterns table (For Quali support use only!):**
 
