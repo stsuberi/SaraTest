@@ -285,7 +285,7 @@ This section explains how to migrate L1 resources. In order to run a migration p
 
    ```migration_tool migrate "*/Old Family/Old Model" "*/New Family/New Model"```
    
-The default prefix (_new) or the prefix configured in: Designate a prefix for naming of new resources will be used to create new resources containing the prefix in their names. For example, if you have an old L1 resource named “TestL1Shell”, which relates to Old Family/Old Model, a new L1 resource will be created named “new_TestL1Shell” under the New Family/New Model.
+   The default prefix (_new) or the prefix configured in: Designate a prefix for naming of new resources will be used to create new resources containing the prefix in their names. For example, if you have an old L1 resource named “TestL1Shell”, which relates to Old Family/Old Model, a new L1 resource will be created named “new_TestL1Shell” under the New Family/New Model.
 
 ## Migrate a list of resources
 
