@@ -77,5 +77,117 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
 * Run the following command-line: 
 
    ```pip install cloudshell-l1-migration```
+   
+# Help Commands
 
+**To list the tool’s main commands:**
+
+* Run the following command-line: 
+
+   ```migration_tool --help```
+   
+To use the tool, navigate to the folder in command-line.
+
+**Note:** It is recommended to add the python and pip installation folder paths to your local environment variables. For example, C:\Python27 and C:\Python27\Scripts. This will enable you to run the python/pip commands from any folder.
+
+**To view the tool’s version number:**
+
+* Run the following command-line: 
+
+   ```migration_tool --version```
+   
+**To show detailed information for a main command:**
+
+* Run the following command-line: 
+
+   ```migration_tool <command> --help```
+   
+   Where **<command>** is the name of the main command.
+
+
+# Configuration
+
+**To configure the L1 Migration tool:**
+
+1. Configure your CloudShell credentials: 
+Run the following command-lines and replace your CS credentials within the <>. For example, replace <CSHost> with your CloudShell host, etc.: 
+   
+   ```migration_tool config host <CSHost>
+migration_tool config username <CSUserName>
+migration_tool config password <CSPassword>
+migration_tool config domain <CSDomain>
+migration_tool config port <CSPort>```
+
+
+2. Configure other elements of the tool:
+•	**To view the tool’s current configuration, run the following command-line:**
+
+   ```migration_tool config```
+   
+   After running this command, the following output (sample) is generated:
+   
+
+   ```username: admin
+domain: Global
+name_prefix: new_
+logging_level: INFO
+host: localhost
+backup_location: C:\Users\Administrator\AppData\Roaming\Quali\migration_tool\Backup
+password: ******
+port: 8029```
+
+•	**To specify the tool’s log level information:**
+
+Run the following command-line:
+
+Specify either **DEBUG** to obtain the most detailed logging information or **INFO** for basic logging information. If you do not specify a value here, the default value **(INFO)** will be used. Logging information is displayed in the output in your Command Prompt window after running a command.
+
+   ```migration tool config logging_level <DEBUG or INFO>```
+
+•	**To change the backup file’s containing folder:**
+
+   Run the following command-line:
+   
+   ```migration_tool config backup_location C:\<FOLDER_PATH>```
+   
+The L1 Migration tool automatically creates a new backup file each time you run a migration command, saving your existing connections and routes in the following default location: C:\Users\<user>\AppData\Roaming\Quali\migration_tool\Backup. The file is generated in yaml format.
+
+•	**To change the prefix for your new migrated resources:**
+
+   Run the following command-line:
+   
+   ```migration_tool config name_prefix "<New>_"```
+
+   Replace <New> with the desired prefix. 
+
+•	**To generate a custom config file based on the tool’s default configuration:**
+
+   Run the following command-line:
+   
+   ```migration_tool config --config <FILE-PATH> <config command>```
+   
+Replace <FILE-PATH> with the relative file path and name of the custom config file and <config command> with any command that updates a parameter in the config file. For example:
+
+   ```migration_tool config --config test.conf name_prefix "test"```
+   
+You now have a custom config file, based on the default configuration, in the location specified.
+
+The config file uses the “Yaml” format, however, any of the following file extensions can be used: .conf, .yaml, .or yml.
+
+This file can now be used later as needed. It is helpful if you have more than one configuration. You can specify this config file when running a command.
+
+•	**To list the patterns table (For Quali support use only!):**
+
+   Run the following command-line:
+   
+   ```migration_tool config --patterns-table```
+   
+   Patterns distinguish blocks of relative addresses which are used for port association.  
+
+•	**To add a new pattern associated with a resource Family/Model (For Quali support use only!):**
+
+   Run the following command-line:
+   
+
+   ```migration_tool config --patterns_table "L1 Switch/Test Switch Chassis" ".*/(.*)/(.*)"```
 
