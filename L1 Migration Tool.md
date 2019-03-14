@@ -51,6 +51,7 @@ Quali’s upgraded L1 shells include certain enhancements, such as the following
 2.	Install the new L1 shell versions. You do not need to create a resource from these shells.
 
     a.	Search the [Quali Community Integrations](https://community.quali.com/integrations) page for the new shells.
+    
     b.	Import the shells into CloudShell. See [Importing Shells](https://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Shells.htm#Adding) in the CloudShell online help.
 3.	Install the L1 Migration tool. See [Installing the L1 Migration tool](#installing-the-l1-migration-tool).
 4.	Configure the L1 Migration tool. See [Configuration](#configuration).
