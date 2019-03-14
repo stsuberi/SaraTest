@@ -19,7 +19,7 @@ Written in Python 2.7.10
     * [Backing up resource connections and routes](#backing-up-resource-connections-and-routes)
     * [Backing up resource routes only](#backing-up-resource-routes-only)
     * [Backing up resource connections only](#backing-up-resource-connections-only)
-    * [Backing up resources using a different config file](#backing-up resources-using-a-different-config-file)
+    * [Backing up resources using a different config file](#backing-up-resources-using-a-different-config-file)
  * [Migrating L1 Resources](#migrating-l1-resources)  
      * [Migrate resources of a specific Family/Model](#migrate-resources-of-a-specific-family/model)
      * [Migrate a list of resources](#migrate-a-list-of-resources)
