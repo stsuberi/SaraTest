@@ -369,7 +369,7 @@ This section explains the steps you should take after completing the migration p
 2. Test the new resources to ensure that they were migrated successfully.
 3. Delete the old ones (or exclude them if you want to keep them for reference purposes). 
 
-   If you are not happy with the migration, you can always restore from a config file, see [Restoring  Resource Mappings](#appendix-resotring-resource-mappings).
+   If you are not happy with the migration, you can always restore from a config file, see [Appendix Restoring  Resource Mappings](#appendix-restoring-resource-mappings).
    
 # Appendix Restoring Resource Mappings
 
