@@ -383,7 +383,7 @@ This section explains how to restore resource connections and routes after runni
 
    ```migration_tool restore --backup-file [BACKUP FILE-PATH]```
    
-   Where Backup file path is the full path to the backup file.
+   Where [BACKUP FILE-PATH] is the full path to the backup file.
 
 **Restoring a specific resource from a backup file:** 
 
@@ -391,7 +391,7 @@ This section explains how to restore resource connections and routes after runni
 
    ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch1 X"```
 
-   Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
+   Where [BACKUP FILE-PATH] is the full path to the backup file, and L1 Switch X is the name of the switch.
 
 **Restoring a specific resource connections from a backup file:**
 
@@ -399,7 +399,7 @@ This section explains how to restore resource connections and routes after runni
 
    ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch X" --connections```
 
-   Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
+   Where [BACKUP FILE-PATH] is the full path to the backup file, and L1 Switch X is the name of the switch.
 
 **Restoring a specific resource routes from a backup file:**
 
@@ -407,7 +407,7 @@ This section explains how to restore resource connections and routes after runni
 
    ```migration_tool restore --backup-file [BACKUP FILE-PATH] "L1 Switch X" --routes```
 
-   Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
+   Where [BACKUP FILE-PATH] is the full path to the backup file, and L1 Switch X is the name of the switch.
    
 ## Additional Restore options
 
