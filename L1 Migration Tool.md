@@ -208,3 +208,64 @@ This command produces a list of all L1 resources, which helps when you need to i
    ```migration_tool show --family <TEXT>```
    
    Replace <TEXT> with the name of the family. If the family name contains spaces, place quotes around the name of the family, for example “L1 Switch”.
+   
+# Backing up Resource Connections and Routes
+
+This section explains how to back up resource connections and routes. If you are not happy with the results of your migration, you can use this file to restore connections and routes etc. 
+
+By default, a backup file is saved in the folder you specified in the config file. For example:
+
+*C:\Users\<Username>\AppData\Roaming\Quali\migration_tool\Backup\2018-12-12_01-19-39.yaml*
+
+## Backing up resource connections and routes
+
+**To back up resource connections and routes:**
+
+1. Run the following command-line and include the name of your resource(s) you want to backup:
+
+   ```migration_tool backup “RESOURCE1,RESOURCE2,etc.”```
+   
+   The names of the **Resources to backup** are presented in the command-line.
+   
+   [Optional] To change the path to the backup yaml file, add the file path as follows:
+   
+   ```migration_tool backup --backup-file [BACKUP FILE-PATH]” “RESOURCE1,RESOURCE2,etc.”```
+
+2. Type “y” when the system asks you: Do you want to continue?
+
+   The resource connections and routes are saved in the default location defined in the config file or in the location you specified here.
+
+## Backing up resource routes only
+
+**To back up resource routes only:**
+
+* Run the following command-line: 
+
+   ```migration_tool backup --routes “RESOURCE1,RESOURCE2,etc.”```
+   
+[Optional] To change the path to the backup file, add the file-path as follows:
+
+   ```migration_tool backup --backup-file [BACKUP FILE-PATH] --routes “RESOURCE1,RESOURCE2,etc.”```
+
+## Backing up resource connections only
+
+**To backup resource connections only:**
+
+* Run the following command-line: 
+
+   ```migration_tool backup --connections “RESOURCE1,RESOURCE2,etc.”```
+   
+[Optional] To change the path to the backup file, add the path as follows:
+
+   ```migration_tool backup --backup-file [BACKUP FILE-PATH] --connections “RESOURCE1,RESOURCE2,etc.”```
+
+## Backing up resources using a different config file
+
+**To back up resources from a config file other than the default config file:**
+
+* Run the following command-line: 
+
+   ```migration_tool backup --config [FILE-PATH] “RESOURCE1,RESOURCE2,etc.”```
+   
+Where [FILE-PATH] is the full path to the config file.
+
