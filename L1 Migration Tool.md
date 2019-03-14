@@ -255,7 +255,7 @@ By default, a backup file is saved in the folder you specified in the config fil
 
    ```migration_tool backup --connections “RESOURCE1,RESOURCE2,etc.”```
    
-[Optional] To change the path to the backup file, add the path as follows:
+   [Optional] To change the path to the backup file, add the path as follows:
 
    ```migration_tool backup --backup-file [BACKUP FILE-PATH] --connections “RESOURCE1,RESOURCE2,etc.”```
 
