@@ -269,3 +269,50 @@ By default, a backup file is saved in the folder you specified in the config fil
    
    Where [FILE-PATH] is the full path to the config file.
 
+# Migrating L1 Resources
+
+This section explains how to migrate L1 resources. In order to run a migration process, you must specify the source resources (SRC) and the destination resources (DST).
+
+**Notes:** 
+* The migration process migrates only routes and mappings, not additional settings on the L1 resource, like attributes and metadata.
+* You do not need to specify the full path from the root of the desired resource(s). However, the tool will create the new resource(s) in the root.
+ 
+Migrate resources of a specific Family/Model
+To migrate resources of a specific Family/Model:
+•	Run the following command-line:
+migration_tool migrate "*/Old Family/Old Model" "*/New Family/New Model"
+The default prefix (_new) or the prefix configured in: Designate a prefix for naming of new resources will be used to create new resources containing the prefix in their names. For example, if you have an old L1 resource named “TestL1Shell”, which relates to Old Family/Old Model, a new L1 resource will be created named “new_TestL1Shell” under the New Family/New Model.
+Migrate a list of resources
+To migrate a list of resources:
+•	Run the following command-line with the name of each resource:
+migration_tool migrate "L1 Switch1,L1 Switch2" "*/New Family/New Model"
+Provide the name of each resource that you want to migrate.
+Migrate resources to existing resources
+To migrate resources to existing resources:
+•	Run the following command-line:
+migration_tool migrate "L1 Switch1,L1 Switch2" "New Switch1,New Switch2"
+This command migrates the old resources to the new resources, if you already created the new resources in Resource Manager Client. If you do not have new resources, the migration process will create new resources with the names you provided.
+Migration options
+Migrate resources using dry run
+Running the migrate command as a dry run creates new resources but does not switch the physical connections or create or remove active routes. Instead, it lists the actions to be performed, allowing the user can check these actions and decide if to proceed with the migration. You can add this option to any of the migrate commands.
+To migrate resources using dry-run:
+1.	Run the following command-line:
+migration_tool migrate --dry-run SRC_RESOURCES DST_RESOURCES
+A list of actions to be taken on active routes and connections is displayed, such as remove, update or create.
+2.	Answer “y” to the question: Do you want to continue?
+The L1 connections and active routes are migrated to the new resources. 
+Migrate resources using a different config file
+To migrate resources using a config file (other than default):
+•	Run the following command-line:
+migration_tool migrate --config <FILE-PATH> SRC_RESOURCES DST_RESOURCES
+Where < FILE-PATH> is the relative file-path and name of the config file you created in Specify a new configuration file.
+Migrate resources from a backup file
+To migrate resources from a backup file:
+•	Run the following command-line:
+migration_tool migrate --backup-file [BACKUP FILE-PATH] SRC_RESOURCES DST_RESOURCES
+Where [BACKUP FILE-PATH] is the full path to the backup file.
+Migrate resources while overriding existing connections
+Add the ‘override’ tag if you want the port connections on your source resource to override any existing port connections on your destination resource. In other words, if a port on your destination resource is being used for any other connection, this command will override these connections. Without this tag, the process will add new connections and routes, and ignore existing ones. 
+To migrate resources while existing port connections (if they exist):
+•	Run the following command-line:
+migration_tool migrate --override SRC_RESOURCES DST_RESOURCES
