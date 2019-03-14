@@ -385,7 +385,7 @@ This section explains how to restore resource connections and routes after runni
 
    Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
 
-## Restoring a specific resource from a backup file:
+## Restoring a specific resource connections from a backup file:
 
 * Run the following command-line: 
 
@@ -393,7 +393,7 @@ This section explains how to restore resource connections and routes after runni
 
    Where Backup file path is the full path to the backup file, and L1 Switch X is the name of the switch.
 
-## Restoring a specific resource from a backup file:
+## Restoring a specific resource routes from a backup file:
 
 * Run the following command-line: 
 
