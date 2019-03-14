@@ -43,9 +43,7 @@ Quali’s upgraded L1 shells include certain enhancements, such as the following
 
 1.	Create a list of the L1 resources you want to migrate. See Show resources to generate a list of the L1 resources currently in CloudShell.
 2.	Install the new L1 shell versions. You do not need to create a resource from these shells.
-
     a.	Search the Quali Community Integrations page for the new shells.
-    
     b.	Import the shells into CloudShell. See Importing Shells in the CloudShell online help.
 3.	Install the L1 Migration tool. See Installing the L1 Migration tool.
 4.	Configure the L1 Migration tool. See Configure the L1 Migration tool.
@@ -121,7 +119,6 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
    
       After running this command, the following output (sample) is generated:
    
-
       ```username: admin
       domain: Global
       name_prefix: new_
@@ -132,58 +129,57 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
       port: 8029
       ```
 
-•	**To specify the tool’s log level information:**
+   * **To specify the tool’s log level information:**
 
-   Run the following command-line:
+      Run the following command-line:
 
-   Specify either **DEBUG** to obtain the most detailed logging information or **INFO** for basic logging information. If you do not specify a value here, the default value **(INFO)** will be used. Logging information is displayed in the output in your Command Prompt window after running a command.
+      Specify either **DEBUG** to obtain the most detailed logging information or **INFO** for basic logging information. If you do not specify a value here, the default value **(INFO)** will be used. Logging information is displayed in the output in your Command Prompt window after running a command.
 
-   ```migration tool config logging_level <DEBUG or INFO>```
+      ```migration tool config logging_level <DEBUG or INFO>```
 
-•	**To change the backup file’s containing folder:**
+   * **To change the backup file’s containing folder:**
 
-   Run the following command-line:
+      Run the following command-line:
    
-   ```migration_tool config backup_location C:\<FOLDER_PATH>```
+      ```migration_tool config backup_location C:\<FOLDER_PATH>```
    
-   The L1 Migration tool automatically creates a new backup file each time you run a migration command, saving your existing connections and routes in the following default location: C:\Users\<user>\AppData\Roaming\Quali\migration_tool\Backup. The file is generated in yaml format.
+      The L1 Migration tool automatically creates a new backup file each time you run a migration command, saving your existing connections and routes in the following default location: C:\Users\<user>\AppData\Roaming\Quali\migration_tool\Backup. The file is generated in yaml format.
 
-•	**To change the prefix for your new migrated resources:**
+   * **To change the prefix for your new migrated resources:**
 
-   Run the following command-line:
+      Run the following command-line:
    
-   ```migration_tool config name_prefix "<New>_"```
+      ```migration_tool config name_prefix "<New>_"```
 
-   Replace <New> with the desired prefix. 
+      Replace <New> with the desired prefix. 
 
-•	**To generate a custom config file based on the tool’s default configuration:**
+   * **To generate a custom config file based on the tool’s default configuration:**
 
-   Run the following command-line:
+      Run the following command-line:
    
-   ```migration_tool config --config <FILE-PATH> <config command>```
+      ```migration_tool config --config <FILE-PATH> <config command>```
    
-   Replace <FILE-PATH> with the relative file path and name of the custom config file and <config command> with any command that updates a parameter in the config file. For example:
+      Replace <FILE-PATH> with the relative file path and name of the custom config file and <config command> with any command that updates a parameter in the config file. For example:
 
-   ```migration_tool config --config test.conf name_prefix "test"```
+      ```migration_tool config --config test.conf name_prefix "test"```
    
-   You now have a custom config file, based on the default configuration, in the location specified.
+      You now have a custom config file, based on the default configuration, in the location specified.
 
-   The config file uses the “Yaml” format, however, any of the following file extensions can be used: .conf, .yaml, .or yml.
+      The config file uses the “Yaml” format, however, any of the following file extensions can be used: .conf, .yaml, .or yml.
 
-   This file can now be used later as needed. It is helpful if you have more than one configuration. You can specify this config file when running a command.
+      This file can now be used later as needed. It is helpful if you have more than one configuration. You can specify this config file when running a command.
 
-•	**To list the patterns table (For Quali support use only!):**
+   * **To list the patterns table (For Quali support use only!):**
 
-   Run the following command-line:
+      Run the following command-line:
    
-   ```migration_tool config --patterns-table```
+      ```migration_tool config --patterns-table```
    
-   Patterns distinguish blocks of relative addresses which are used for port association.  
+      Patterns distinguish blocks of relative addresses which are used for port association.  
 
-•	**To add a new pattern associated with a resource Family/Model (For Quali support use only!):**
+   * **To add a new pattern associated with a resource Family/Model (For Quali support use only!):**
 
-   Run the following command-line:
+      Run the following command-line:
    
-
-   ```migration_tool config --patterns_table "L1 Switch/Test Switch Chassis" ".*/(.*)/(.*)"```
+      ```migration_tool config --patterns_table "L1 Switch/Test Switch Chassis" ".*/(.*)/(.*)"```
 
