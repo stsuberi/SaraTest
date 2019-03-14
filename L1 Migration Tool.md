@@ -35,9 +35,9 @@ Quali’s upgraded L1 shells include certain enhancements, such as the following
 * New shells now support different operating system versions of a particular device. This reduces the need to continuously release new shells each time a shell is released with a new OS version. 
 * New shells offer enhanced shell management and customization capabilities.
 
-**Notes:**
-* You can continue using your L1 resources based on the old L1 shells. However, you will not benefit from the capabilities of the new shells. 
-* Quali provides support for these older shells. However, bug fixing services are only provided for the new shell versions. 
+   **Notes:**
+   * You can continue using your L1 resources based on the old L1 shells. However, you will not benefit from the capabilities of the new shells. 
+   * Quali provides support for these older shells. However, bug fixing services are only provided for the new shell versions. 
 
 ## Workflow
 
