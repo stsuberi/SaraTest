@@ -28,7 +28,7 @@ Document version: 1.0
           * [Migrate resources from a backup file](#migrate-resources-from-a-backup-file)
           * [Migrate resources while overriding existing connections](#migrate-resources-while-overriding-existing-connections)
  * [Post Migration Operations](#post-migration-operations)
- * [Appendix: Restoring Resource Mappings](#appendix:-restoring-resource-mappings)
+ * [Appendix Restoring Resource Mappings](#appendix-restoring-resource-mappings)
  * [Additional Restore options](#additional-restore-options)
   
 
@@ -371,7 +371,7 @@ This section explains the steps you should take after completing the migration p
 
    If you are not happy with the migration, you can always restore from a config file, see Restoring  Resource Mappings.
    
-# Appendix: Restoring Resource Mappings
+# Appendix Restoring Resource Mappings
 
 This section explains how to restore resource connections and routes after running the migration from a backup file if you are not satisfied with the migration.
 
