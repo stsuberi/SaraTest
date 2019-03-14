@@ -76,5 +76,6 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
 
 * Run the following command-line: 
 
+```pip install cloudshell-l1-migration```
 
 
