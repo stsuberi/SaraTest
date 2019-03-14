@@ -341,7 +341,7 @@ Running the migrate command as a dry run creates new resources but does not swit
 
    ```migration_tool migrate --config <FILE-PATH> SRC_RESOURCES DST_RESOURCES```
    
-   Where <FILE-PATH> is the relative file-path and name of the config file you created in "To generate a custom config file based on the tool's default configuration".
+   Where **FILE-PATH** is the relative file-path and name of the config file you created in "To generate a custom config file based on the tool's default configuration".
    
 ### Migrate resources from a backup file
 
