@@ -42,25 +42,17 @@ Quali’s upgraded L1 shells include certain enhancements, such as the following
 ## Workflow
 
 1.	Create a list of the L1 resources you want to migrate. See Show resources to generate a list of the L1 resources currently in CloudShell.
-
 2.	Install the new L1 shell versions. You do not need to create a resource from these shells.
 
     a.	Search the Quali Community Integrations page for the new shells.
     
     b.	Import the shells into CloudShell. See Importing Shells in the CloudShell online help.
-    
 3.	Install the L1 Migration tool. See Installing the L1 Migration tool.
-
 4.	Configure the L1 Migration tool. See Configure the L1 Migration tool.
-
 5.	Back up the routes and connections of the L1 resources you want to migrate. See Backup resource connections and routes.
-
 6.	Run the L1 Migration tool. See Migrating L1 resources. 
-
-7.	If you are not satisfied with your results, you can restore the L1 resource routes and connections to their state prior to the migration. See Restore resource connections and routes.
-
+7.	If you are not satisfied with your results, you can restore the L1 resource routes and connections to their state prior to the migration. See Restore resource connections and routes.<br>
 The new resources are displayed in **Resource Manager Client’s Resource Explorer** with the prefix (“New_”). The migration process copies physical connections to the new resources. In active sandboxes, all existing routes are updated to use the new L1 resources.
-
 8.	Following a successful migration, you are advised to remove the old resources.
 
 # Installation
