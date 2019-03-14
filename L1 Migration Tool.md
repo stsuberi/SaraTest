@@ -19,7 +19,7 @@ Document version: 1.0
     * [Backing up resource connections only](#backing-up-resource-connections-only)
     * [Backing up resources using a different config file](#backing-up-resources-using-a-different-config-file)
  * [Migrating L1 Resources](#migrating-l1-resources)  
-     * [Migrate resources of a specific Family/Model](#migrate-resources-of-a-specific-family/model)
+     * [Migrate resources of a specific Family/Model](#migrate-resources-of-a-specific-family/Model)
      * [Migrate a list of resources](#migrate-a-list-of-resources)
      * [Migrate resources to existing resources](#migrate-resources-to-existing-resources)
      * [Migration options](#migration-options)
