@@ -4,8 +4,6 @@ Release date: March 2019
 
 Document version: 1.0
 
-Written in Python 2.7.10
-
 # In This Guide
 * [Introduction](#introduction)
     * [Workflow](#workflow)
