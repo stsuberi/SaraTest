@@ -354,3 +354,14 @@ Add the ‘override’ tag if you want the port connections on your source resou
 * Run the following command-line: 
 
    ```migration_tool migrate --override SRC_RESOURCES DST_RESOURCES```
+   
+# Post Migration Operations
+
+This section explains the steps you should take after completing the migration process.
+
+1.	Move the new resources to their rightful place in the folder hierarchy.
+2.	Test the new resources to ensure that they were migrated successfully.
+3.	Delete the old ones (or exclude them if you want to keep them for reference purposes). 
+
+   If you are not happy with the migration, you can always restore from a config file, see Restoring  Resource Mappings.
+
