@@ -78,9 +78,9 @@ The new resources are displayed in **Resource Manager Client’s Resource Explor
 
    ```migration_tool --help```
    
-To use the tool, navigate to the folder in command-line.
+   To use the tool, navigate to the folder in command-line.
 
-**Note:** It is recommended to add the python and pip installation folder paths to your local environment variables. For example, C:\Python27 and C:\Python27\Scripts. This will enable you to run the python/pip commands from any folder.
+   **Note:** It is recommended to add the python and pip installation folder paths to your local environment variables. For example, C:\Python27 and C:\Python27\Scripts. This will enable you to run the python/pip commands from any folder.
 
 **To view the tool’s version number:**
 
